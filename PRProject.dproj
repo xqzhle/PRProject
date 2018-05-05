@@ -1,0 +1,270 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{B1ABF254-D0A3-4F6D-B275-DD5178FC2402}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<MainSource>PRProject.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclimg;vcl;vclx;dbrtl;Rave90VCL;bdertl;VclSmp;rtl;svnui;svn;TeeUI;TeeDB;Tee;vclactnband;vcldb;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_110_150;Intraweb_110_150;websnap;webdsnap;inetdb;vclie;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;CodeSiteExpressVcl;tmsd2011;tmsexd2011;Spcom;CPortLibDXE;AutoUpgraderProD2010;reg;wmp;RaizeComponentsVcl;RaizeComponentsVclDb;CoolTrayIcon2009;CnPack_D15;acntDelphiXE_R;oraprovider150;unidac150;dac150;dacvcl150;unidacvcl150;dxCoreD15;cxLibraryD15;cxEditorsD15;cxExtEditorsD15;dxBarD15;dxBarDBNavD15;dxBarExtDBItemsD15;dxBarExtItemsD15;dxRibbonD15;cxBarEditItemD15;dxdbtrD15;dxtrmdD15;dxmdsD15;dxDockingD15;dxThemeD15;dxGDIPlusD15;dxFlowChartD15;cxPageControlD15;dxLayoutControlD15;dxNavBarD15;dxorgcD15;dxdborD15;cxGridD15;cxPivotGridD15;cxPivotGridChartD15;cxTreeListD15;cxTreeListdxBarPopupMenuD15;cxSchedulerD15;cxSchedulerGridD15;dxComnD15;dxsbD15;dcldxSkinsCoreD15;dxSkinsCoreD15;dxSkinscxPCPainterD15;dxSkinscxScheduler3PainterD15;dxSkinsdxDLPainterD15;dxSkinsdxBarPainterD15;dxSkinsdxNavBar2PainterD15;dxSpellCheckerD15;cxSpreadSheetD15;cxVerticalGridD15;dxPSCoreD15;dxPSLnksD15;dxPScxCommonD15;dxPScxExtCommonD15;dxPScxGrid6LnkD15;dxPScxPivotGrid2LnkD15;dxPScxScheduler3LnkD15;dxPScxSSLnkD15;dxPScxTL5LnkD15;dxPScxVGridLnkD15;dxPSTeeChartD15;dxPSDBTeeChartD15;dxPSdxOCLnkD15;dxPSdxDBOCLnkD15;dxPSdxDBTVLnkD15;dxPSdxFCLnkD15;dxPSdxLC2LnkD15;dxPScxPCProdD15;dxPsPrVwAdvD15;dxPSPrVwRibbonD15;dxSkinsdxRibbonPainterD15;RemObjects_WebBroker_D15;RemObjects_Synapse_D15;RemObjects_Indy_D15;DataAbstract_Core_D15;DataAbstract_DBXDriver_Pro_D15;DataAbstract_SQLiteDriver_D15;DataAbstract_ActiveScripting_D15;DataAbstract_SpiderMonkeyScripting_D15;speech;tmswizd2011;tmsxlsd2011;ImgTrackBarPackage;RealStyle;SynEdit_R2011;uniGUI15VCL;uniGUI15Chart;NativeExcelD2011;cxPivotGridOLAPD15;DDuilibVcl;AcRptEngine;CTI2;EntityDac</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_DcuOutput>.\$(Config)\$(Platform)</DCC_DcuOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>.\$(Config)\$(Platform)</DCC_ExeOutput>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_ExeOutput>.\Bin</DCC_ExeOutput>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="PRProject.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="MainUnit.pas">
+				<Form>MainForm</Form>
+			</DCCReference>
+			<DCCReference Include="ComapUnit.pas">
+				<Form>ComapFrame</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DbUnit.pas">
+				<Form>Data1</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="SpLxUnit.pas">
+				<Form>SpLxiFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="SpXxUnit.pas">
+				<Form>SpXxFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="GpjUnit.pas">
+				<Form>GpjFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MdJgUnit.pas">
+				<Form>MdJgFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DjYfUnit.pas">
+				<Form>DjYfFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="KhLxUnit.pas">
+				<Form>KhLxFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DqSzUnit.pas">
+				<Form>DqSzFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="KhXxUnit.pas">
+				<Form>KhXxForm</Form>
+			</DCCReference>
+			<DCCReference Include="KhEditUnit.pas">
+				<Form>KhEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="TsYhUnit.pas">
+				<Form>TsYhFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="SelKhUnit.pas">
+				<Form>SelKhForm</Form>
+			</DCCReference>
+			<DCCReference Include="GsKhYhUnit.pas">
+				<Form>GsKhYhFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DeptInfoUnit.pas">
+				<Form>DeptInfoFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="GwInfoUnit.pas">
+				<Form>GwInfoFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="YgInfoUnit.pas">
+				<Form>YgInfoFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CallCentUnit.pas">
+				<Form>CallCentForm</Form>
+			</DCCReference>
+			<DCCReference Include="UpwxUnit.pas">
+				<Form>UpwxForm</Form>
+			</DCCReference>
+			<DCCReference Include="WxUnit.pas">
+				<Form>WxForm</Form>
+			</DCCReference>
+			<DCCReference Include="SaveBXUnit.pas">
+				<Form>SaveBXForm</Form>
+			</DCCReference>
+			<DCCReference Include="Unit30.pas">
+				<Form>Form30</Form>
+			</DCCReference>
+			<DCCReference Include="Unit31.pas">
+				<Form>Form31</Form>
+			</DCCReference>
+			<DCCReference Include="Unit33.pas">
+				<Form>Form33</Form>
+			</DCCReference>
+			<DCCReference Include="Unit32.pas">
+				<Form>Form32</Form>
+			</DCCReference>
+			<DCCReference Include="Unit41.pas">
+				<Form>Form41</Form>
+			</DCCReference>
+			<DCCReference Include="Unit77.pas">
+				<Form>Form77</Form>
+			</DCCReference>
+			<DCCReference Include="Unit28.pas">
+				<Form>Form28</Form>
+			</DCCReference>
+			<DCCReference Include="SqgUnit.pas">
+				<Form>SqgForm</Form>
+			</DCCReference>
+			<DCCReference Include="Unit29.pas">
+				<Form>Form29</Form>
+			</DCCReference>
+			<DCCReference Include="Unit49.pas">
+				<Form>Form49</Form>
+			</DCCReference>
+			<DCCReference Include="Unit89.pas">
+				<Form>Form89</Form>
+			</DCCReference>
+			<DCCReference Include="Unit88.pas">
+				<Form>Form88</Form>
+			</DCCReference>
+			<DCCReference Include="ajjpegUnit.pas">
+				<Form>ajjpegForm</Form>
+			</DCCReference>
+			<DCCReference Include="SqgUnitpas.pas">
+				<Form>Form94</Form>
+			</DCCReference>
+			<DCCReference Include="SelajUnit.pas">
+				<Form>SelajForm</Form>
+			</DCCReference>
+			<DCCReference Include="Unit96.pas">
+				<Form>Form96</Form>
+			</DCCReference>
+			<DCCReference Include="Unit71.pas">
+				<Form>Form71</Form>
+			</DCCReference>
+			<DCCReference Include="Unit72.pas">
+				<Form>Form72</Form>
+			</DCCReference>
+			<DCCReference Include="PowerUnit.pas">
+				<Form>PowerForm</Form>
+			</DCCReference>
+			<DCCReference Include="UserInfoUnit.pas">
+				<Form>UserInfoFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MdPgUnit.pas">
+				<Form>MdPgFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Unit38.pas">
+				<Form>Form38</Form>
+			</DCCReference>
+			<DCCReference Include="Unit57.pas">
+				<Form>Form57</Form>
+			</DCCReference>
+			<DCCReference Include="MdHdUnit.pas">
+				<Form>MdHdFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DdListUnit.pas">
+				<Form>DdListFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">2052</VersionInfo>
+						<VersionInfo Name="CodePage">936</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription">普燃配送管理平台</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">普燃配送管理平台</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp150.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\RemObjects Software\Data Abstract for Delphi\Dcu\D15\DataAbstract_IDE_D15.bpl">RemObjects Data Abstract - IDE Package</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files (x86)\RemObjects Software\Data Abstract for Delphi\Dcu\D15\DataAbstract_DBXDriver_Enterprise_D15.bpl">RemObjects Data Abstract - dbExpress Driver Enterprise</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">PRProject.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{A194E2A7-D859-41AD-801C-AA8BAC4EF2B7}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="PRProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="F:\ZM\燃气呼叫中心2.0射频卡 - 两层结构\client.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="PRProject">
+			<MSBuild Projects="PRProject.dproj"/>
+		</Target>
+		<Target Name="PRProject:Clean">
+			<MSBuild Projects="PRProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PRProject:Make">
+			<MSBuild Projects="PRProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="client">
+			<MSBuild Projects="F:\ZM\燃气呼叫中心2.0射频卡 - 两层结构\client.dproj"/>
+		</Target>
+		<Target Name="client:Clean">
+			<MSBuild Projects="F:\ZM\燃气呼叫中心2.0射频卡 - 两层结构\client.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="client:Make">
+			<MSBuild Projects="F:\ZM\燃气呼叫中心2.0射频卡 - 两层结构\client.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="PRProject;client"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="PRProject:Clean;client:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="PRProject:Make;client:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>
