@@ -22,7 +22,6 @@ object SpXxFrame: TSpXxFrame
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 862
     object Label1: TLabel
       Left = 40
       Top = 24
@@ -927,6 +926,7 @@ object SpXxFrame: TSpXxFrame
       Height = 25
       ItemIndex = 0
       TabOrder = 8
+      Text = #29942
       Items.Strings = (
         #29942
         #21544

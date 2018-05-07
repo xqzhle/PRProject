@@ -48,7 +48,11 @@ uses
   Unit38 in 'Unit38.pas' {Form38},
   Unit57 in 'Unit57.pas' {Form57},
   MdHdUnit in 'MdHdUnit.pas' {MdHdFrame: TUniFrame},
-  DdListUnit in 'DdListUnit.pas' {DdListFrame: TUniFrame};
+  DdListUnit in 'DdListUnit.pas' {DdListFrame: TUniFrame},
+  BottleTypeUnit in 'BottleTypeUnit.pas' {BottleTypeFrame: TUniFrame},
+  BottleSpecUnit in 'BottleSpecUnit.pas' {BottleSpecFrame: TUniFrame},
+  BottleClassUnit in 'BottleClassUnit.pas' {BottleClassFrame: TUniFrame},
+  BottleWorkUnit in 'BottleWorkUnit.pas' {BottleWorkFrame: TUniFrame};
 
 {$R *.res}
 

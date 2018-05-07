@@ -205,6 +205,22 @@
 				<Form>DdListFrame</Form>
 				<DesignClass>TUniFrame</DesignClass>
 			</DCCReference>
+			<DCCReference Include="BottleTypeUnit.pas">
+				<Form>BottleTypeFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="BottleSpecUnit.pas">
+				<Form>BottleSpecFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="BottleClassUnit.pas">
+				<Form>BottleClassFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="BottleWorkUnit.pas">
+				<Form>BottleWorkFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>

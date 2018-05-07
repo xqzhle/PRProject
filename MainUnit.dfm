@@ -1613,12 +1613,15 @@ object MainForm: TMainForm
       Caption = #38050#29942#31649#29702
       object N12: TMenuItem
         Caption = #38050#29942#31867#22411
+        OnClick = N12Click
       end
       object N21: TMenuItem
         Caption = #38050#29942#35268#26684
+        OnClick = N21Click
       end
       object N41: TMenuItem
         Caption = #20805#35013#20171#36136
+        OnClick = N41Click
       end
       object N42: TMenuItem
         Caption = #21378#23478#20449#24687

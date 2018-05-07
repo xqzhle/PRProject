@@ -229,7 +229,22 @@ begin
    t:=(Height-Panel2.Height) div 2;
    Panel2.Top:=t;
    Panel2.Left:=l;
+   ComboBox3.Items.Clear;
+   with Data1.sqlcmd1 do
+   begin
+      Close;
+      sql.Text:='select spec_name from tbBottle_spec order by spec_id';
+      Open;
+      if not IsEmpty then
+      while not Eof do
+      begin
+        ComboBox3.Items.Add(FieldByName('spec_name').AsString);
+        Next;
+      end;
+      Close;
+   end;
    Panel2.Visible:=true;
+
 end;
 
 procedure TSpXxFrame.UniFrameCreate(Sender: TObject);
