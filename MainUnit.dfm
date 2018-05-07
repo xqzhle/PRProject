@@ -1611,9 +1611,69 @@ object MainForm: TMainForm
     end
     object N6: TMenuItem
       Caption = #38050#29942#31649#29702
+      object N12: TMenuItem
+        Caption = #38050#29942#31867#22411
+      end
+      object N21: TMenuItem
+        Caption = #38050#29942#35268#26684
+      end
+      object N41: TMenuItem
+        Caption = #20805#35013#20171#36136
+      end
+      object N42: TMenuItem
+        Caption = #21378#23478#20449#24687
+      end
+      object N43: TMenuItem
+        Caption = #26816#39564#21333#20301
+      end
+      object N44: TMenuItem
+        Caption = '-'
+      end
+      object N45: TMenuItem
+        Caption = #26032#22686#38050#29942
+      end
+      object N46: TMenuItem
+        Caption = '-'
+      end
+      object N47: TMenuItem
+        Caption = #38050#29942#20449#24687
+      end
+      object N48: TMenuItem
+        Caption = #23548#20837#38050#29942#20449#24687
+      end
+      object N49: TMenuItem
+        Caption = #38050#29942#26597#35810
+        object N50: TMenuItem
+          Caption = #38050#29942#26597#35810
+        end
+        object N52: TMenuItem
+          Caption = #38050#29942#36712#36857#26597#35810
+        end
+        object N51: TMenuItem
+          Caption = #25276#29942#22825#25968#26597#35810
+        end
+        object N53: TMenuItem
+          Caption = #23458#25143#25276#29942#32479#35745
+        end
+      end
+      object N54: TMenuItem
+        Caption = '-'
+      end
+      object N55: TMenuItem
+        Caption = #38050#29942#32508#21512#31649#29702
+      end
     end
     object N7: TMenuItem
       Caption = #27668#31449#31649#29702
+      object N56: TMenuItem
+        Caption = #27668#31449#20449#24687
+      end
+      object N57: TMenuItem
+        Caption = #20805#35013#21488#31204
+      end
+      object N58: TMenuItem
+        Caption = #36710#36742#20449#24687
+      end
     end
     object N8: TMenuItem
       Caption = #36130#21153#31649#29702
@@ -1799,7 +1859,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C010107001000680020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101070010006C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
