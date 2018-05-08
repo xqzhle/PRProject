@@ -59,7 +59,7 @@ var
 begin
  if TreeView1.SelectionCount = 0 then
  begin
-  ShowMessage('ÇëÑ¡ÔñÒ»Ïî');
+  ShowMessage('è¯·é€‰æ‹©ä¸€é¡¹');
   Exit;
  end;
    for i := 1 to 7 do
@@ -76,19 +76,19 @@ var
 begin
    if Edit1.Text='' then
    begin
-     ShowMessage('ÇëÊäÈë¹«Ë¾Ãû³Æ');
+     ShowMessage('è¯·è¾“å…¥å…¬å¸åç§°');
      Exit;
    end;
    if isadd then
    begin
     if ComboBox1.ItemIndex=0 then
     begin
-     ShowMessage('Ö»ÄÜÒ»¸ö¹«Ë¾');
+     ShowMessage('åªèƒ½ä¸€ä¸ªå…¬å¸');// æ˜¯çš„
      exit;
     end;
     if (Edit9.Text='1') and (combobox1.ItemIndex=1) then
     begin
-     ShowMessage('·Ö¹«Ë¾ÏÂ²»ÄÜĞÂÔö·Ö¹«Ë¾');
+     ShowMessage('åˆ†å…¬å¸ä¸‹ä¸èƒ½æ–°å¢åˆ†å…¬å¸');
       exit;
     end;
     if (Edit9.Text='0') or (Edit9.Text='1') then
@@ -124,13 +124,13 @@ begin
      try
        ExecSQL;
        MainForm.TreeUtil.FillTree;
-       ShowMessage('²Ù×÷³É¹¦');
+       ShowMessage('æ“ä½œæˆåŠŸ');
        isadd:=False;
         for i := 1 to 7 do
        TEdit(FindComponent('edit'+inttostr(i))).Text:='';
      except
       on E: Exception do
-      ShowMessage('²Ù×÷Ê§°Ü'+e.Message);
+      ShowMessage('æ“ä½œå¤±è´¥'+e.Message);
      end;
 
    end;
@@ -142,10 +142,10 @@ procedure TComapFrame.Button3Click(Sender: TObject);
 begin
  if TreeView1.SelectionCount = 0 then
  begin
-  ShowMessage('ÇëÑ¡ÔñÒ»Ïî');
+  ShowMessage('è¯·é€‰æ‹©ä¸€é¡¹');
   Exit;
  end;
-    if (IDYES = Application.MessageBox('È·¶¨ÒªÉ¾³ıÂğ£¿',pwidechar(Application.Title),MB_YesNo+MB_IconQuestion)) then
+    if (IDYES = Application.MessageBox('ç¡®å®šè¦åˆ é™¤å—ï¼Ÿ',pwidechar(Application.Title),MB_YesNo+MB_IconQuestion)) then
      begin
          with Data1.sqlcmd1 do
       begin
@@ -154,13 +154,13 @@ begin
       try
        ExecSQL;
        MainForm.TreeUtil.FillTree;
-       ShowMessage('²Ù×÷³É¹¦');
+       ShowMessage('æ“ä½œæˆåŠŸ');
        isadd:=False;
         for i := 1 to 7 do
        TEdit(FindComponent('edit'+inttostr(i))).Text:='';
       except
         on E: Exception do
-       ShowMessage('²Ù×÷Ê§°Ü'+e.Message);
+       ShowMessage('æ“ä½œå¤±è´¥'+e.Message);
        end;
 
       end;
