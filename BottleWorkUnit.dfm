@@ -80,7 +80,7 @@ object BottleWorkFrame: TBottleWorkFrame
     Height = 644
     Cursor = crDefault
     Align = alClient
-    ColCount = 8
+    ColCount = 9
     DrawingStyle = gdsClassic
     RowCount = 2
     FixedRows = 1
@@ -325,6 +325,32 @@ object BottleWorkFrame: TBottleWorkFrame
         CheckFalse = 'N'
         CheckTrue = 'Y'
         Color = clWindow
+        FieldName = 'stype'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        Header = #26159#21542#22312#29992
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -13
+        HeaderFont.Name = 'Segoe UI'
+        HeaderFont.Style = []
+        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+        PrintFont.Charset = DEFAULT_CHARSET
+        PrintFont.Color = clWindowText
+        PrintFont.Height = -11
+        PrintFont.Name = 'Segoe UI'
+        PrintFont.Style = []
+        Width = 93
+      end
+      item
+        Borders = []
+        BorderPen.Color = clSilver
+        CheckFalse = 'N'
+        CheckTrue = 'Y'
+        Color = clWindow
         FieldName = 'CreateUser'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -544,6 +570,7 @@ object BottleWorkFrame: TBottleWorkFrame
       114
       145
       146
+      93
       131
       192
       147)
@@ -731,7 +758,7 @@ object BottleWorkFrame: TBottleWorkFrame
     Left = 304
     Top = 464
     Bitmap = {
-      494C01010F001300000120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300040120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

@@ -105,6 +105,7 @@ begin
      end
     else  Edit2.Text := 'DB1000';
    end;
+   CheckBox1.Checked:=False;
    isadd:=True;
    initpanel;
 end;
@@ -170,11 +171,11 @@ begin
      Exit;
    end;
    if isadd then
-    sqlstr:='INSERT INTO tbWorks_Info (Factory_ID,namec,createuser,creATEdate,Remark,lnamec) VALUES('''+edit2.Text+''','''+edit3.Text+''', '+
-      ''''+loginname+''','''+formatdatetime('yyyy-mm-dd hh:mm:ss',Now)+''','''+Edit5.Text+''','''+Edit4.Text+''')'
+    sqlstr:='INSERT INTO tbWorks_Info (Factory_ID,namec,createuser,creATEdate,Remark,lnamec,Instate) VALUES('''+edit2.Text+''','''+edit3.Text+''', '+
+      ''''+loginname+''','''+formatdatetime('yyyy-mm-dd hh:mm:ss',Now)+''','''+Edit5.Text+''','''+Edit4.Text+''','''+botostr(CheckBox1.Checked)+''')'
       else
-       sqlstr:='update tbWorks_Info set spec_name='''+edit3.Text+''',spec_id='''+edit2.Text+''','+
-      'Remark='''+Edit5.Text+''' where id='''+edit7.Text+'''';
+       sqlstr:='update tbWorks_Info set namec='''+edit3.Text+''',Factory_id='''+edit2.Text+''','+
+      'Remark='''+Edit5.Text+''',lnamec='''+Edit4.Text+''',Instate='''+botostr(CheckBox1.Checked)+''' where id='''+edit7.Text+'''';
       with Data1 do
       begin
         sqlcmd1.close;
@@ -210,7 +211,9 @@ begin
      Edit4.Text:=FieldByName('LNameC').AsString;
      Edit5.Text:=FieldByName('Remark').AsString;
      Edit7.Text:=FieldByName('id').AsString;
-
+     if FieldByName('Instate').AsInteger=1 then
+     CheckBox1.Checked:=true
+     else CheckBox1.Checked:=False;
    end;
    initpanel;
 end;
@@ -231,7 +234,7 @@ var
  sqlstr:string;
 begin
     Panel2.Visible:=False;
-    sqlstr:='select * from tbWorks_Info order by id';
+    sqlstr:='select *,case when Instate=''0'' then ''Õ£”√'' else ''‘⁄”√'' end as stype from tbWorks_Info order by id';
     UniQuery1.Close;
     UniQuery1.SQL.Text:= sqlstr;
     UniQuery1.Open;

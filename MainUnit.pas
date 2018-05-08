@@ -104,6 +104,7 @@ type
     procedure N12Click(Sender: TObject);
     procedure N21Click(Sender: TObject);
     procedure N41Click(Sender: TObject);
+    procedure N42Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -119,7 +120,7 @@ implementation
 
 uses
   ComapUnit,SpLxUnit,SpXxUnit,GpjUnit,MdJgUnit,DjYfUnit, KhLxUnit,DqSzUnit,KhXxUnit,TsYhUnit,GsKhYhUnit, DbUnit
-  ,DeptInfoUnit,GwInfoUnit,YgInfoUnit, CallCentUnit, PowerUnit, UserInfoUnit, MdPgUnit, MdHdUnit, DdListUnit, Unit28, BottleTypeUnit, BottleSpecUnit, BottleClassUnit;
+  ,DeptInfoUnit,GwInfoUnit,YgInfoUnit, CallCentUnit, PowerUnit, UserInfoUnit, MdPgUnit, MdHdUnit, DdListUnit, Unit28, BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit;
 
 {$R *.dfm}
 
@@ -710,6 +711,32 @@ begin
    comap:=TBottleClassFrame.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
+end;
+
+procedure TMainForm.N42Click(Sender: TObject);
+var
+ comap:TBottleWorkFrame;
+ aop: TAdvOfficePage;
+ i:Integer;
+begin
+  for i := 0 to AdvOfficePager1.AdvPageCount-1 do
+  begin
+    aop:=AdvOfficePager1.AdvPages[i];
+    if aop.Caption=N41.Caption then
+    begin
+      AdvOfficePager1.ActivePage:=aop;
+      exit;
+    end;
+  end;
+
+   aop:=TAdvOfficePage.Create(AdvOfficePager1);
+   aop.AdvOfficePager := AdvOfficePager1;
+   aop.Caption := N41.Caption;
+   AdvOfficePager1.ActivePage := aop;
+   comap:=TBottleWorkFrame.Create(aop);
+   comap.Align:=alClient;
+   comap.Parent:=aop;
+
 end;
 
 end.
