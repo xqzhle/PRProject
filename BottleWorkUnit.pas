@@ -178,7 +178,7 @@ begin
       'Remark='''+Edit5.Text+''',lnamec='''+Edit4.Text+''',Instate='''+botostr(CheckBox1.Checked)+''' where id='''+edit7.Text+'''';
       with Data1 do
       begin
-        sqlcmd1.close;
+        sqlcmd1.close;               //
         sqlcmd1.SQL.Text:=sqlstr;
         try
            sqlcmd1.ExecSQL;
