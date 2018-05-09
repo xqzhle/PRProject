@@ -4,7 +4,7 @@ interface
 
 uses
   SysUtils, Classes, ImgList, Controls, Uni, DB, MemDS, DBAccess, UniProvider,
-  SQLServerUniProvider,Dialogs;
+  SQLServerUniProvider,Dialogs, tmsAdvGridExcel;
 
 type
   TData1 = class(TDataModule)
@@ -183,7 +183,6 @@ type
     UniQuery6: TUniQuery;
     DataSource74: TDataSource;
     UniQuery7: TUniQuery;
-    ImageList1: TImageList;
     spdata: TUniQuery;
     DataSource75: TDataSource;
     UniQuery8: TUniQuery;
@@ -194,11 +193,39 @@ type
     DataSource77: TDataSource;
     ss8: TUniQuery;
     DataSource78: TDataSource;
+    Code: TUniQuery;
+    Data_Code: TDataSource;
+    Customer: TUniQuery;
+    Data_Customer: TDataSource;
+    Letter: TUniQuery;
+    Data_Letter: TDataSource;
+    CustMoney: TUniQuery;
+    Data_CustMoney: TDataSource;
+    CustMoney_list: TUniQuery;
+    Data_CustMoney_list: TDataSource;
+    CustBlend: TUniQuery;
+    Data_CustBlend: TDataSource;
+    UniLGP: TUniQuery;
+    Data_LGP: TDataSource;
+    UniLOG: TUniQuery;
+    Data_LOG: TDataSource;
+    UniBill: TUniQuery;
+    Data_Bill: TDataSource;
+    UniGive: TUniQuery;
+    Data_Give: TDataSource;
+    UniSqf: TUniQuery;
+    Data_Sqf: TDataSource;
+    work: TUniQuery;
+    AdvGridExcelIO1: TAdvGridExcelIO;
+    SaveDialog1: TSaveDialog;
+    ImageList1: TImageList;
+    UniTransaction1: TUniTransaction;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    procedure WriteLog(stype,memo,cuser:string);  //写操作日志 操作类型，操作内容，操作人
   end;
 
 var
@@ -229,6 +256,20 @@ begin
       DatasetForm.Edit3.Text := UniConnection1.Username;
       DatasetForm.Edit4.Text := UniConnection1.Password;
       DatasetForm.ShowModal;
+    end;
+  end;
+end;
+
+procedure TData1.WriteLog(stype, memo, cuser: string);
+begin
+  if (stype<>'') and (memo<>'') and (cuser<>'') then
+  begin
+    try
+      work.Close;
+      work.sql.Text :='insert into tbLog (stype,memo,cuser,cdate) values ('''+stype+''','''+memo+''','''+cuser+''',GETDATE())';
+      work.ExecSQL;
+      work.Close;
+    except
     end;
   end;
 end;

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, AdvPanel, Grids, AdvObj, BaseGrid, AdvGrid,
-  DBAdvGrid, DB, MemDS, DBAccess, Uni;
+  DBAdvGrid, DB, MemDS, DBAccess, Uni, AdvUtil;
 
 type
   TSelKhForm = class(TForm)
@@ -58,7 +58,7 @@ var
 implementation
 
 uses
-  DbUnit, TsYhUnit, GsKhYhUnit;
+  DbUnit, TsYhUnit, GsKhYhUnit,CustBillUnit,CustBlendUnit,EditCustMoneyUnit,EditLetterUnit;
 
 {$R *.dfm}
 var
@@ -101,6 +101,26 @@ begin
      GsKhYhFrame.Edit9.Text:=UniStoredProc1.FieldByName('cid').AsString;
      GsKhYhFrame.Edit10.Text:=UniStoredProc1.FieldByName('ctel').AsString;
      GsKhYhFrame.Edit11.Text:=UniStoredProc1.FieldByName('khtype').AsString;
+   end;
+   if seltype=2 then
+   begin
+     CustBillForm.Edit10.Text:=UniStoredProc1.FieldByName('cname').AsString;
+     CustBillForm.Edit9.Text:=UniStoredProc1.FieldByName('cid').AsString;
+   end;
+   if seltype=3 then
+   begin
+     CustBlendForm.Edit2.Text:=UniStoredProc1.FieldByName('cname').AsString;
+     CustBlendForm.Edit1.Text:=UniStoredProc1.FieldByName('cid').AsString;
+   end;
+   if seltype=4 then
+   begin
+     EditCustMoneyForm.Edit2.Text:=UniStoredProc1.FieldByName('cname').AsString;
+     EditCustMoneyForm.Edit1.Text:=UniStoredProc1.FieldByName('cid').AsString;
+   end;
+   if seltype=5 then
+   begin
+     EditLetterForm.Edit2.Text:=UniStoredProc1.FieldByName('cname').AsString;
+     EditLetterForm.Edit1.Text:=UniStoredProc1.FieldByName('cid').AsString;
    end;
    Close;
 end;

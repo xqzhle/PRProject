@@ -1,339 +1,126 @@
-object SelKhForm: TSelKhForm
+object CustBlendForm: TCustBlendForm
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu, biMinimize]
-  Caption = #23458#25143#36164#26009#26597#35810
-  ClientHeight = 539
-  ClientWidth = 821
+  Caption = #25910#27454#20914#36134#65288#21246#20817#65289
+  ClientHeight = 514
+  ClientWidth = 615
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -13
-  Font.Name = 'Segoe UI'
+  Font.Height = -11
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   Position = poMainFormCenter
   OnClose = FormClose
-  OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 17
+  TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 821
-    Height = 65
+    Width = 615
+    Height = 100
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
     object Label1: TLabel
-      Left = 24
-      Top = 23
-      Width = 60
-      Height = 17
+      Left = 29
+      Top = 26
+      Width = 48
+      Height = 13
+      Caption = #23458#25143#32534#21495
+    end
+    object Label2: TLabel
+      Left = 29
+      Top = 69
+      Width = 48
+      Height = 13
       Caption = #23458#25143#21517#31216
     end
-    object Label9: TLabel
-      Left = 213
-      Top = 23
-      Width = 98
-      Height = 17
-      Caption = #23458#25143#26465#30721'('#32534#21495')'
+    object Label3: TLabel
+      Left = 318
+      Top = 26
+      Width = 48
+      Height = 13
+      Caption = #24212#25910#37329#39069
     end
-    object Label10: TLabel
-      Left = 441
-      Top = 23
-      Width = 60
-      Height = 17
-      Caption = #23458#25143#30005#35805
+    object Label4: TLabel
+      Left = 318
+      Top = 69
+      Width = 48
+      Height = 13
+      Caption = #21246#20817#37329#39069
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 276
+      Top = 22
+      Width = 23
+      Height = 22
+      Caption = '>>'
+      OnClick = SpeedButton1Click
     end
     object Edit1: TEdit
-      Left = 90
-      Top = 20
-      Width = 103
-      Height = 25
+      Left = 100
+      Top = 22
+      Width = 170
+      Height = 21
+      Enabled = False
+      ReadOnly = True
       TabOrder = 0
     end
-    object Button1: TButton
-      Left = 636
-      Top = 20
-      Width = 75
-      Height = 25
-      Caption = #26597#35810
-      TabOrder = 1
-      OnClick = Button1Click
-    end
     object Edit2: TEdit
-      Left = 315
-      Top = 20
-      Width = 103
-      Height = 25
-      TabOrder = 2
+      Left = 100
+      Top = 66
+      Width = 200
+      Height = 21
+      Enabled = False
+      ReadOnly = True
+      TabOrder = 1
     end
     object Edit3: TEdit
-      Left = 507
-      Top = 20
-      Width = 103
-      Height = 25
+      Left = 389
+      Top = 22
+      Width = 200
+      Height = 21
+      Enabled = False
+      ReadOnly = True
+      TabOrder = 2
+    end
+    object Edit4: TEdit
+      Left = 389
+      Top = 66
+      Width = 200
+      Height = 21
+      Enabled = False
+      ReadOnly = True
       TabOrder = 3
     end
   end
-  object advpnl1: TAdvPanel
+  object DBAdvGrid1: TDBAdvGrid
     Left = 0
-    Top = 500
-    Width = 821
-    Height = 39
-    Align = alBottom
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    UseDockManager = True
-    Version = '2.5.4.1'
-    Caption.Color = clHighlight
-    Caption.ColorTo = clNone
-    Caption.Font.Charset = DEFAULT_CHARSET
-    Caption.Font.Color = clWindowText
-    Caption.Font.Height = -11
-    Caption.Font.Name = 'Tahoma'
-    Caption.Font.Style = []
-    Caption.Indent = 0
-    DoubleBuffered = True
-    StatusBar.Font.Charset = DEFAULT_CHARSET
-    StatusBar.Font.Color = clWindowText
-    StatusBar.Font.Height = -11
-    StatusBar.Font.Name = 'Tahoma'
-    StatusBar.Font.Style = []
-    FullHeight = 200
-    object Label23: TLabel
-      Left = 180
-      Top = 13
-      Width = 54
-      Height = 13
-      Caption = #20849'0'#26465#35760#24405
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Label24: TLabel
-      Left = 283
-      Top = 13
-      Width = 25
-      Height = 13
-      Caption = '/ 0'#39029
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Label25: TLabel
-      Left = 275
-      Top = 13
-      Width = 6
-      Height = 13
-      Alignment = taRightJustify
-      Caption = '0'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clRed
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Label26: TLabel
-      Left = 366
-      Top = 13
-      Width = 24
-      Height = 13
-      Cursor = crHandPoint
-      Hint = #31532#19968#39029
-      Caption = #39318#39029
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlue
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsUnderline]
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
-      Transparent = True
-      OnClick = Label26Click
-    end
-    object Label27: TLabel
-      Left = 404
-      Top = 13
-      Width = 24
-      Height = 13
-      Cursor = crHandPoint
-      Hint = #19978#19968#39029
-      Caption = #19978#39029
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlue
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsUnderline]
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = Label27Click
-    end
-    object Label28: TLabel
-      Left = 446
-      Top = 13
-      Width = 24
-      Height = 13
-      Cursor = crHandPoint
-      Hint = #19979#19968#39029
-      Caption = #19979#39029
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlue
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsUnderline]
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = Label28Click
-    end
-    object Label29: TLabel
-      Left = 486
-      Top = 13
-      Width = 24
-      Height = 13
-      Cursor = crHandPoint
-      Hint = #26368#21518#19968#39029
-      Caption = #23614#39029
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlue
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsUnderline]
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
-      OnClick = Label29Click
-    end
-    object Label30: TLabel
-      Left = 524
-      Top = 13
-      Width = 24
-      Height = 13
-      Cursor = crHandPoint
-      Hint = #36716#21040#31532'X'#39029
-      Caption = #36716#21040
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlue
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsUnderline]
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
-    end
-    object lbl1: TLabel
-      Left = 28
-      Top = 12
-      Width = 48
-      Height = 13
-      Caption = #27599#39029#35760#24405
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
-    object SelPageBox: TComboBox
-      Left = 554
-      Top = 8
-      Width = 69
-      Height = 22
-      Style = csOwnerDrawVariable
-      DropDownCount = 10
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnChange = SelPageBoxChange
-    end
-    object cbbPageSizebox: TComboBox
-      Left = 82
-      Top = 7
-      Width = 58
-      Height = 22
-      Style = csOwnerDrawVariable
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ItemIndex = 0
-      ParentFont = False
-      TabOrder = 1
-      Text = '50'
-      OnChange = cbbPageSizeboxChange
-      Items.Strings = (
-        '50'
-        '100'
-        '200'
-        '300'
-        '10000'
-        '50000')
-    end
-    object Button2: TButton
-      Left = 717
-      Top = 6
-      Width = 75
-      Height = 25
-      Caption = #36873#25321
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-      OnClick = Button2Click
-    end
-  end
-  object DBAdvGrid2: TDBAdvGrid
-    Left = 0
-    Top = 65
-    Width = 821
-    Height = 435
+    Top = 100
+    Width = 615
+    Height = 359
     Cursor = crDefault
     Align = alClient
-    ColCount = 7
+    ColCount = 2
     DrawingStyle = gdsClassic
     RowCount = 2
     FixedRows = 1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'Segoe UI'
+    Font.Name = 'Tahoma'
     Font.Style = []
-    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goColMoving]
     ParentFont = False
     ScrollBars = ssBoth
-    TabOrder = 2
-    OnDblClick = Button2Click
+    TabOrder = 1
     HoverRowCells = [hcNormal, hcSelected]
     ActiveCellFont.Charset = DEFAULT_CHARSET
     ActiveCellFont.Color = clWindowText
-    ActiveCellFont.Height = -13
-    ActiveCellFont.Name = 'Segoe UI'
+    ActiveCellFont.Height = -11
+    ActiveCellFont.Name = 'Tahoma'
     ActiveCellFont.Style = [fsBold]
-    AutoFilterUpdate = False
     ControlLook.FixedGradientHoverFrom = clGray
     ControlLook.FixedGradientHoverTo = clWhite
     ControlLook.FixedGradientDownFrom = clGray
@@ -418,8 +205,8 @@ object SelKhForm: TSelKhForm
     SearchFooter.MatchCaseCaption = 'Match case'
     SortSettings.DefaultFormat = ssAutomatic
     Version = '2.4.0.2'
-    AutoCreateColumns = False
-    AutoRemoveColumns = False
+    AutoCreateColumns = True
+    AutoRemoveColumns = True
     Columns = <
       item
         Borders = []
@@ -451,17 +238,15 @@ object SelKhForm: TSelKhForm
         CheckFalse = 'N'
         CheckTrue = 'Y'
         Color = clWindow
-        FieldName = 'shopname'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
+        Font.Height = -11
+        Font.Name = 'Tahoma'
         Font.Style = []
-        Header = #38376#24215#21517#31216
         HeaderFont.Charset = DEFAULT_CHARSET
         HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
+        HeaderFont.Height = -11
+        HeaderFont.Name = 'Tahoma'
         HeaderFont.Style = []
         PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
         PrintFont.Charset = DEFAULT_CHARSET
@@ -469,141 +254,9 @@ object SelKhForm: TSelKhForm
         PrintFont.Height = -11
         PrintFont.Name = 'Tahoma'
         PrintFont.Style = []
-        Width = 104
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'cid'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #23458#25143#26465#30721'('#32534#21495')'
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Tahoma'
-        PrintFont.Style = []
-        ReadOnly = True
-        Width = 114
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'cname'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #23458#25143#21517#31216
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Tahoma'
-        PrintFont.Style = []
-        ReadOnly = True
-        Width = 180
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'ctel'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #30005#35805
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Segoe UI'
-        PrintFont.Style = []
-        Width = 121
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'yhdj'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #20248#24800#31561#32423
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Segoe UI'
-        PrintFont.Style = []
-        Width = 125
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'khtype'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #23458#25143#31867#22411
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Segoe UI'
-        PrintFont.Style = []
-        Width = 103
+        Width = 64
       end>
-    DataSource = DataSource1
+    DataSource = Data1.Data_CustBlend
     InvalidPicture.Data = {
       055449636F6E0000010001002020200000000000A81000001600000028000000
       2000000040000000010020000000000000100000000000000000000000000000
@@ -743,93 +396,45 @@ object SelKhForm: TSelKhForm
     ShowUnicode = False
     ColWidths = (
       20
-      104
-      114
-      180
-      121
-      125
-      103)
+      64)
   end
-  object UniQuery1: TUniQuery
-    DataTypeMap = <>
-    Connection = Data1.UniConnection1
-    Left = 568
-    Top = 176
-  end
-  object DataSource1: TDataSource
-    DataSet = UniStoredProc1
-    Left = 608
-    Top = 176
-  end
-  object UniStoredProc1: TUniStoredProc
-    StoredProcName = 'PageShowOne;1'
-    DataTypeMap = <>
-    Connection = Data1.UniConnection1
-    Left = 258
-    Top = 632
-    ParamData = <
-      item
-        DataType = ftInteger
-        Name = 'RETURN_VALUE'
-        ParamType = ptResult
-        Size = 538970637
-        Value = 0
-      end
-      item
-        DataType = ftInteger
-        Name = 'PageSize'
-        ParamType = ptInput
-        Size = 623322912
-      end
-      item
-        DataType = ftInteger
-        Name = 'PageCurrent'
-        ParamType = ptInput
-        Size = 661416561
-      end
-      item
-        DataType = ftString
-        Name = 'FdName'
-        ParamType = ptInput
-        Size = 100
-      end
-      item
-        DataType = ftString
-        Name = 'SelectStr'
-        ParamType = ptInput
-        Size = 2000
-      end
-      item
-        DataType = ftString
-        Name = 'FromStr'
-        ParamType = ptInput
-        Size = 1000
-      end
-      item
-        DataType = ftString
-        Name = 'WhereStr'
-        ParamType = ptInput
-        Size = 2000
-      end
-      item
-        DataType = ftString
-        Name = 'OrderByStr'
-        ParamType = ptInput
-        Size = 1000
-      end
-      item
-        DataType = ftInteger
-        Name = 'CountRows'
-        ParamType = ptInputOutput
-        Size = 65536
-      end
-      item
-        DataType = ftInteger
-        Name = 'CountPage'
-        ParamType = ptInputOutput
-        Size = 532356929
-      end>
-    CommandStoredProcName = 'PageShowOne;1'
-    StoredProcIsQuery = True
+  object Panel2: TPanel
+    Left = 0
+    Top = 459
+    Width = 615
+    Height = 55
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 2
+    object RzToolButton3: TRzToolButton
+      Left = 100
+      Top = 12
+      Width = 79
+      Height = 32
+      ImageIndex = 4
+      Images = Data1.ImageList1
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      Caption = #20445#23384
+      ParentShowHint = False
+      ShowHint = False
+      OnClick = RzToolButton3Click
+    end
+    object RzToolButton4: TRzToolButton
+      Left = 389
+      Top = 12
+      Width = 79
+      Height = 32
+      ImageIndex = 3
+      Images = Data1.ImageList1
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      Caption = #20851#38381
+      ParentShowHint = False
+      ShowHint = False
+      OnClick = RzToolButton4Click
+    end
   end
 end

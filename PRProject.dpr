@@ -52,7 +52,17 @@ uses
   BottleTypeUnit in 'BottleTypeUnit.pas' {BottleTypeFrame: TUniFrame},
   BottleSpecUnit in 'BottleSpecUnit.pas' {BottleSpecFrame: TUniFrame},
   BottleClassUnit in 'BottleClassUnit.pas' {BottleClassFrame: TUniFrame},
-  BottleWorkUnit in 'BottleWorkUnit.pas' {BottleWorkFrame: TUniFrame};
+  BottleWorkUnit in 'BottleWorkUnit.pas' {BottleWorkFrame: TUniFrame},
+  LPGUnit in 'LPGUnit.pas' {LPGForm},
+  CustBillUnit in 'CustBillUnit.pas' {CustBillForm},
+  LogUnit in 'LogUnit.pas' {LogForm},
+  CodeUnit in 'CodeUnit.pas' {CodeForm},
+  CustBlendUnit in 'CustBlendUnit.pas' {CustBlendForm},
+  CustMoneyUnit in 'CustMoneyUnit.pas' {CustMoneyForm},
+  EditCustMoneyUnit in 'EditCustMoneyUnit.pas' {EditCustMoneyForm},
+  LetterUnit in 'LetterUnit.pas' {LetterForm},
+  EditLetterUnit in 'EditLetterUnit.pas' {EditLetterForm},
+  GiveUnitpas in 'GiveUnitpas.pas' {GiveForm};
 
 {$R *.res}
 
@@ -89,5 +99,15 @@ begin
   Application.CreateForm(TPowerForm, PowerForm);
   Application.CreateForm(TForm38, Form38);
   Application.CreateForm(TForm57, Form57);
+  Application.CreateForm(TLPGForm, LPGForm);
+  Application.CreateForm(TCustBillForm, CustBillForm);
+  Application.CreateForm(TLogForm, LogForm);
+  Application.CreateForm(TCodeForm, CodeForm);
+  Application.CreateForm(TCustBlendForm, CustBlendForm);
+  Application.CreateForm(TCustMoneyForm, CustMoneyForm);
+  Application.CreateForm(TEditCustMoneyForm, EditCustMoneyForm);
+  Application.CreateForm(TLetterForm, LetterForm);
+  Application.CreateForm(TEditLetterForm, EditLetterForm);
+  Application.CreateForm(TGiveForm, GiveForm);
   Application.Run;
 end.

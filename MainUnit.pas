@@ -79,6 +79,14 @@ type
     N56: TMenuItem;
     N57: TMenuItem;
     N58: TMenuItem;
+    k1: TMenuItem;
+    N59: TMenuItem;
+    N60: TMenuItem;
+    N61: TMenuItem;
+    N62: TMenuItem;
+    N63: TMenuItem;
+    N64: TMenuItem;
+    N65: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure N22Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
@@ -105,6 +113,14 @@ type
     procedure N21Click(Sender: TObject);
     procedure N41Click(Sender: TObject);
     procedure N42Click(Sender: TObject);
+    procedure N63Click(Sender: TObject);
+    procedure N62Click(Sender: TObject);
+    procedure N65Click(Sender: TObject);
+    procedure N61Click(Sender: TObject);
+    procedure k1Click(Sender: TObject);
+    procedure N59Click(Sender: TObject);
+    procedure N60Click(Sender: TObject);
+    procedure N28Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -119,8 +135,11 @@ var
 implementation
 
 uses
-  ComapUnit,SpLxUnit,SpXxUnit,GpjUnit,MdJgUnit,DjYfUnit, KhLxUnit,DqSzUnit,KhXxUnit,TsYhUnit,GsKhYhUnit, DbUnit
-  ,DeptInfoUnit,GwInfoUnit,YgInfoUnit, CallCentUnit, PowerUnit, UserInfoUnit, MdPgUnit, MdHdUnit, DdListUnit, Unit28, BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit;
+  ComapUnit,SpLxUnit,SpXxUnit,GpjUnit,MdJgUnit,DjYfUnit, KhLxUnit,DqSzUnit,
+  KhXxUnit,TsYhUnit,GsKhYhUnit, DbUnit,DeptInfoUnit,GwInfoUnit,YgInfoUnit,
+  CallCentUnit, PowerUnit, UserInfoUnit, MdPgUnit, MdHdUnit, DdListUnit, Unit28,
+  BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit,LPGUnit,
+  CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,GiveUnitpas;
 
 {$R *.dfm}
 
@@ -141,6 +160,11 @@ end;
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
     Caption:=Application.Title;
+end;
+
+procedure TMainForm.k1Click(Sender: TObject);
+begin
+  LetterForm.ShowModal;
 end;
 
 procedure TMainForm.N12Click(Sender: TObject);
@@ -457,6 +481,11 @@ begin
 
 end;
 
+procedure TMainForm.N28Click(Sender: TObject);
+begin
+  GiveForm.ShowModal;
+end;
+
 procedure TMainForm.N30Click(Sender: TObject);
 var
  comap:TGpjFrame;
@@ -737,6 +766,36 @@ begin
    comap.Align:=alClient;
    comap.Parent:=aop;
 
+end;
+
+procedure TMainForm.N59Click(Sender: TObject);
+begin
+  CustMoneyForm.ShowModal;
+end;
+
+procedure TMainForm.N60Click(Sender: TObject);
+begin
+  CustBlendForm.ShowModal;
+end;
+
+procedure TMainForm.N61Click(Sender: TObject);
+begin
+  CodeForm.ShowModal;
+end;
+
+procedure TMainForm.N62Click(Sender: TObject);
+begin
+  CustBillForm.ShowModal;
+end;
+
+procedure TMainForm.N63Click(Sender: TObject);
+begin
+  LPGForm.Show;
+end;
+
+procedure TMainForm.N65Click(Sender: TObject);
+begin
+  LogForm.ShowModal;
 end;
 
 end.

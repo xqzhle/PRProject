@@ -1,23 +1,24 @@
 object BottleWorkFrame: TBottleWorkFrame
   Left = 0
   Top = 0
-  Width = 1114
-  Height = 709
-  OnCreate = UniFrameCreate
-  OnDestroy = UniFrameDestroy
-  Align = alNone
-  Anchors = [akLeft, akTop]
-  ShowHint = False
-  Visible = True
+  ClientHeight = 671
+  ClientWidth = 1098
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
   Font.Height = -13
   Font.Name = 'Segoe UI'
-  TabOrder = 0
-  ParentRTL = False
-  RTL = False
+  Font.Style = []
+  OldCreateOrder = True
+  Visible = True
+  OnCreate = UniFrameCreate
+  OnDestroy = UniFrameDestroy
+  PixelsPerInch = 96
+  TextHeight = 17
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1114
+    Width = 1098
     Height = 65
     Align = alTop
     BevelOuter = bvNone
@@ -76,8 +77,8 @@ object BottleWorkFrame: TBottleWorkFrame
   object DBAdvGrid2: TDBAdvGrid
     Left = 0
     Top = 65
-    Width = 1114
-    Height = 644
+    Width = 1098
+    Height = 606
     Cursor = crDefault
     Align = alClient
     ColCount = 9
@@ -184,7 +185,7 @@ object BottleWorkFrame: TBottleWorkFrame
     SearchFooter.HintHighlight = 'Highlight occurrences'
     SearchFooter.MatchCaseCaption = 'Match case'
     SortSettings.DefaultFormat = ssAutomatic
-    Version = '2.3.8.6'
+    Version = '2.4.0.2'
     AutoCreateColumns = False
     AutoRemoveColumns = False
     Columns = <
@@ -742,6 +743,7 @@ object BottleWorkFrame: TBottleWorkFrame
     end
   end
   object UniQuery1: TUniQuery
+    DataTypeMap = <>
     Connection = Data1.UniConnection1
     Left = 144
     Top = 232
@@ -758,7 +760,7 @@ object BottleWorkFrame: TBottleWorkFrame
     Left = 304
     Top = 464
     Bitmap = {
-      494C01010F001300040120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300080120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
