@@ -4,7 +4,7 @@ interface
 
 uses
   SysUtils, Classes, ImgList, Controls, Uni, DB, MemDS, DBAccess, UniProvider,
-  SQLServerUniProvider,Dialogs, tmsAdvGridExcel;
+  SQLServerUniProvider,Dialogs, tmsAdvGridExcel, ADODB;
 
 type
   TData1 = class(TDataModule)
@@ -216,10 +216,11 @@ type
     UniSqf: TUniQuery;
     Data_Sqf: TDataSource;
     work: TUniQuery;
-    AdvGridExcelIO1: TAdvGridExcelIO;
     SaveDialog1: TSaveDialog;
     ImageList1: TImageList;
     UniTransaction1: TUniTransaction;
+    AdvGridExcelIO1: TAdvGridExcelIO;
+    ADOConnection1: TADOConnection;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -238,14 +239,21 @@ uses zcomm,DatasetUnit;
 {$R *.dfm}
 
 procedure TData1.DataModuleCreate(Sender: TObject);
+var
+ connstr:string;
 begin
     UniConnection1.Close;
   UniConnection1.Database := zReadString('database', 'DBNAME', 'shangsoft');
   UniConnection1.Server := zReadString('database', 'SERVER', '');
   UniConnection1.Username := Dec(zReadString('database', 'USERNAME', ''));
   UniConnection1.Password := Dec(zReadString('database', 'PASSWORD', ''));
+  connstr:='Provider=SQLOLEDB.1;Password='''+UniConnection1.Password+''';Persist Security Info=False;User ID='''+UniConnection1.Username+''';'+
+    'Initial Catalog='''+UniConnection1.Database+''';Data Source='''+UniConnection1.Server+'''';
   try
     UniConnection1.Open;
+    ADOConnection1.Close;
+    ADOConnection1.ConnectionString:=connstr;
+    ADOConnection1.Connected:=True;
   except
     on E: Exception do
     begin

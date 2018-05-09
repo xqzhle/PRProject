@@ -348,7 +348,6 @@ object Data1: TData1
     Top = 128
   end
   object UniConnection1: TUniConnection
-    DataTypeMap = <>
     ProviderName = 'SQL Server'
     Left = 254
     Top = 5
@@ -358,181 +357,151 @@ object Data1: TData1
     Top = 5
   end
   object z1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 482
     Top = 506
   end
   object ClientDataSet2: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 539
     Top = 506
   end
   object ClientDataSet1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 596
     Top = 506
   end
   object sqlcmd1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 311
     Top = 506
   end
   object sqlcmd11: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 368
     Top = 506
   end
   object cmd2: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 425
     Top = 506
   end
   object cd13: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 653
     Top = 506
   end
   object cd12: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 881
     Top = 506
   end
   object cd11: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 938
     Top = 506
   end
   object cd17: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 995
     Top = 506
   end
   object ds14: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 710
     Top = 506
   end
   object ds141: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 767
     Top = 506
   end
   object ds142: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 824
     Top = 506
   end
   object ds143: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 824
     Top = 443
   end
   object ds144: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 881
     Top = 443
   end
   object cd1112: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 938
     Top = 443
   end
   object cc5: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 653
     Top = 443
   end
   object cc4: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 710
     Top = 443
   end
   object cc6: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 767
     Top = 443
   end
   object cc3: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 995
     Top = 443
   end
   object qphh: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 140
     Top = 506
   end
   object cc8: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 197
     Top = 506
   end
   object cc9: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 254
     Top = 506
   end
   object mdbisent: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1052
     Top = 443
   end
   object cwsk: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1109
     Top = 443
   end
   object qh: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1166
     Top = 443
   end
   object qhss: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 938
     Top = 569
   end
   object boole15: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 995
     Top = 569
   end
   object ds31: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1052
     Top = 569
   end
   object ClientDataSet8: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     SQL.Strings = (
       'select * from tbkh_qy')
@@ -540,360 +509,301 @@ object Data1: TData1
     Top = 569
   end
   object ClientDataSet9: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 824
     Top = 569
   end
   object selajdata: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 881
     Top = 569
   end
   object ds22: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1109
     Top = 569
   end
   object cd14: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 254
     Top = 632
   end
   object cd15: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 311
     Top = 632
   end
   object cd16: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 197
     Top = 632
   end
   object cc1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1166
     Top = 569
   end
   object cc7: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 140
     Top = 632
   end
   object cc2: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 710
     Top = 569
   end
   object bottle5: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 140
     Top = 569
   end
   object yjreport: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 197
     Top = 569
   end
   object mdzpxc: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 254
     Top = 569
   end
   object allmdzpxc: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1052
     Top = 506
   end
   object ClientDataSet3: TUniQuery
     LocalUpdate = True
-    DataTypeMap = <>
     Connection = UniConnection1
     LockMode = lmOptimistic
     Left = 1109
     Top = 506
   end
   object ClientDataSet6: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1166
     Top = 506
   end
   object ds1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 311
     Top = 569
   end
   object ds2: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 539
     Top = 569
   end
   object ds3: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 596
     Top = 569
   end
   object ds13: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 653
     Top = 569
   end
   object ds12: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 368
     Top = 569
   end
   object ds21: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 425
     Top = 569
   end
   object ClientDataSet7: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 482
     Top = 569
   end
   object ds5: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 140
     Top = 380
   end
   object ds6: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 995
     Top = 317
   end
   object ds9: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1166
     Top = 317
   end
   object ds7: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1109
     Top = 317
   end
   object ds11: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1052
     Top = 317
   end
   object ds4: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 938
     Top = 317
   end
   object cd22: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 368
     Top = 380
   end
   object ds71: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 425
     Top = 380
   end
   object cd19: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 311
     Top = 380
   end
   object cd18: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 197
     Top = 380
   end
   object cd2: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 254
     Top = 380
   end
   object cd1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 425
     Top = 317
   end
   object ds111: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 482
     Top = 317
   end
   object ss1: TUniQuery
     LocalUpdate = True
-    DataTypeMap = <>
     Connection = UniConnection1
     LockMode = lmOptimistic
     Left = 539
     Top = 317
   end
   object ss2: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 311
     Top = 317
   end
   object ss3: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 368
     Top = 317
   end
   object ss4: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 767
     Top = 317
   end
   object ss5: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 824
     Top = 317
   end
   object ss6: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 881
     Top = 317
   end
   object z2: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 596
     Top = 317
   end
   object cs1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 653
     Top = 317
   end
   object cd111: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 710
     Top = 317
   end
   object sqlcmd5: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 197
     Top = 443
   end
   object sqlcmd8: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 254
     Top = 443
   end
   object sqlcmd6: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 140
     Top = 443
   end
   object cmd1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1109
     Top = 380
   end
   object sqlcmd4: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1166
     Top = 380
   end
   object ds8: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 311
     Top = 443
   end
   object sqlcmd3: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 539
     Top = 443
   end
   object sqlcmd2: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 596
     Top = 443
   end
   object sds1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 482
     Top = 443
   end
   object sds111: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 368
     Top = 443
   end
   object lzcx: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 425
     Top = 443
   end
   object cmd3: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 653
     Top = 380
   end
   object sqlcmd9: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 710
     Top = 380
   end
   object sqlcmd7: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 596
     Top = 380
   end
   object UniStoredProc1: TUniStoredProc
     StoredProcName = 'PageShowOne;1'
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 368
     Top = 632
@@ -968,13 +878,11 @@ object Data1: TData1
     Top = 128
   end
   object hyyh: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 482
     Top = 380
   end
   object UniQuery1: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 539
     Top = 380
@@ -990,13 +898,11 @@ object Data1: TData1
     Top = 128
   end
   object UniQuery2: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 767
     Top = 380
   end
   object UniQuery3: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 995
     Top = 380
@@ -1007,7 +913,6 @@ object Data1: TData1
     Top = 128
   end
   object UniQuery4: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1052
     Top = 380
@@ -1018,7 +923,6 @@ object Data1: TData1
     Top = 128
   end
   object UniQuery5: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 938
     Top = 380
@@ -1029,7 +933,6 @@ object Data1: TData1
     Top = 128
   end
   object UniQuery6: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 824
     Top = 380
@@ -1040,13 +943,11 @@ object Data1: TData1
     Top = 128
   end
   object UniQuery7: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 881
     Top = 380
   end
   object spdata: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 525
     Top = 641
@@ -1057,13 +958,11 @@ object Data1: TData1
     Top = 638
   end
   object UniQuery8: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 525
     Top = 641
   end
   object UniQuery9: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 709
     Top = 633
@@ -1074,13 +973,11 @@ object Data1: TData1
     Top = 638
   end
   object UniQuery10: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 709
     Top = 633
   end
   object ss7: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 893
     Top = 641
@@ -1091,7 +988,6 @@ object Data1: TData1
     Top = 646
   end
   object ss8: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 1077
     Top = 641
@@ -1102,7 +998,6 @@ object Data1: TData1
     Top = 646
   end
   object Code: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 15
     Top = 74
@@ -1113,7 +1008,6 @@ object Data1: TData1
     Top = 74
   end
   object Customer: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 16
     Top = 131
@@ -1124,7 +1018,6 @@ object Data1: TData1
     Top = 130
   end
   object Letter: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 15
     Top = 17
@@ -1135,7 +1028,6 @@ object Data1: TData1
     Top = 21
   end
   object CustMoney: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 18
     Top = 193
@@ -1146,7 +1038,6 @@ object Data1: TData1
     Top = 195
   end
   object CustMoney_list: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 16
     Top = 253
@@ -1157,7 +1048,6 @@ object Data1: TData1
     Top = 255
   end
   object CustBlend: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 12
     Top = 308
@@ -1168,7 +1058,6 @@ object Data1: TData1
     Top = 310
   end
   object UniLGP: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 14
     Top = 361
@@ -1179,7 +1068,6 @@ object Data1: TData1
     Top = 364
   end
   object UniLOG: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 14
     Top = 416
@@ -1190,7 +1078,6 @@ object Data1: TData1
     Top = 417
   end
   object UniBill: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 13
     Top = 478
@@ -1201,7 +1088,6 @@ object Data1: TData1
     Top = 479
   end
   object UniGive: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     LockMode = lmOptimistic
     Left = 16
@@ -1213,7 +1099,6 @@ object Data1: TData1
     Top = 544
   end
   object UniSqf: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     LockMode = lmOptimistic
     Left = 10
@@ -1225,18 +1110,9 @@ object Data1: TData1
     Top = 604
   end
   object work: TUniQuery
-    DataTypeMap = <>
     Connection = UniConnection1
     Left = 19
     Top = 658
-  end
-  object AdvGridExcelIO1: TAdvGridExcelIO
-    Options.ExportOverwriteMessage = 'File %s already exists'#13'Ok to overwrite ?'
-    Options.ExportRawRTF = False
-    UseUnicode = False
-    Version = '3.13'
-    Left = 417
-    Top = 8
   end
   object SaveDialog1: TSaveDialog
     Filter = 'excel file |*.xls'
@@ -1250,7 +1126,7 @@ object Data1: TData1
     Left = 158
     Top = 321
     Bitmap = {
-      494C010109006000540020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010109006000580020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000008000000060000000010020000000000000C0
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -2845,5 +2721,17 @@ object Data1: TData1
     DefaultConnection = UniConnection1
     Left = 316
     Top = 10
+  end
+  object AdvGridExcelIO1: TAdvGridExcelIO
+    Options.ExportOverwriteMessage = 'File %s already exists'#13'Ok to overwrite ?'
+    Options.ExportRawRTF = False
+    UseUnicode = False
+    Version = '3.13'
+    Left = 440
+    Top = 640
+  end
+  object ADOConnection1: TADOConnection
+    Left = 232
+    Top = 320
   end
 end

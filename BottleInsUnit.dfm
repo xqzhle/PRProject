@@ -1,8 +1,8 @@
-object BottleWorkFrame: TBottleWorkFrame
+object BottleInsFrame: TBottleInsFrame
   Left = 0
   Top = 0
-  Width = 1058
-  Height = 665
+  Width = 1114
+  Height = 709
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Align = alNone
@@ -17,18 +17,17 @@ object BottleWorkFrame: TBottleWorkFrame
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1058
+    Width = 1114
     Height = 65
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 320
     object Label1: TLabel
       Left = 24
       Top = 23
       Width = 60
       Height = 17
-      Caption = #21378#23478#31616#31216
+      Caption = #21333#20301#21517#31216
     end
     object Edit1: TEdit
       Left = 90
@@ -77,8 +76,8 @@ object BottleWorkFrame: TBottleWorkFrame
   object DBAdvGrid2: TDBAdvGrid
     Left = 0
     Top = 65
-    Width = 1058
-    Height = 600
+    Width = 1114
+    Height = 644
     Cursor = crDefault
     Align = alClient
     ColCount = 9
@@ -246,13 +245,13 @@ object BottleWorkFrame: TBottleWorkFrame
         CheckFalse = 'N'
         CheckTrue = 'Y'
         Color = clWindow
-        FieldName = 'Factory_ID'
+        FieldName = 'name_ID'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Header = #21378#23478#32534#21495
+        Header = #21333#20301#32534#21495
         HeaderFont.Charset = DEFAULT_CHARSET
         HeaderFont.Color = clWindowText
         HeaderFont.Height = -13
@@ -273,13 +272,13 @@ object BottleWorkFrame: TBottleWorkFrame
         CheckFalse = 'N'
         CheckTrue = 'Y'
         Color = clWindow
-        FieldName = 'Namec'
+        FieldName = 'Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Header = #21378#23478#31616#31216
+        Header = #21333#20301#21517#31216
         HeaderFont.Charset = DEFAULT_CHARSET
         HeaderFont.Color = clWindowText
         HeaderFont.Height = -13
@@ -292,7 +291,7 @@ object BottleWorkFrame: TBottleWorkFrame
         PrintFont.Name = 'Tahoma'
         PrintFont.Style = []
         ReadOnly = True
-        Width = 145
+        Width = 152
       end
       item
         Borders = []
@@ -300,13 +299,13 @@ object BottleWorkFrame: TBottleWorkFrame
         CheckFalse = 'N'
         CheckTrue = 'Y'
         Color = clWindow
-        FieldName = 'LNameC'
+        FieldName = 'tel'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Header = #21378#23478#20840#31216
+        Header = #21333#20301#30005#35805
         HeaderFont.Charset = DEFAULT_CHARSET
         HeaderFont.Color = clWindowText
         HeaderFont.Height = -13
@@ -318,7 +317,7 @@ object BottleWorkFrame: TBottleWorkFrame
         PrintFont.Height = -11
         PrintFont.Name = 'Segoe UI'
         PrintFont.Style = []
-        Width = 146
+        Width = 100
       end
       item
         Borders = []
@@ -326,13 +325,13 @@ object BottleWorkFrame: TBottleWorkFrame
         CheckFalse = 'N'
         CheckTrue = 'Y'
         Color = clWindow
-        FieldName = 'stype'
+        FieldName = 'addr'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Header = #26159#21542#22312#29992
+        Header = #21333#20301#22320#22336
         HeaderFont.Charset = DEFAULT_CHARSET
         HeaderFont.Color = clWindowText
         HeaderFont.Height = -13
@@ -344,7 +343,7 @@ object BottleWorkFrame: TBottleWorkFrame
         PrintFont.Height = -11
         PrintFont.Name = 'Segoe UI'
         PrintFont.Style = []
-        Width = 93
+        Width = 220
       end
       item
         Borders = []
@@ -371,7 +370,7 @@ object BottleWorkFrame: TBottleWorkFrame
         PrintFont.Name = 'Tahoma'
         PrintFont.Style = []
         ReadOnly = True
-        Width = 131
+        Width = 115
       end
       item
         Borders = []
@@ -398,7 +397,7 @@ object BottleWorkFrame: TBottleWorkFrame
         PrintFont.Name = 'Tahoma'
         PrintFont.Style = []
         ReadOnly = True
-        Width = 192
+        Width = 141
       end
       item
         Borders = []
@@ -565,21 +564,19 @@ object BottleWorkFrame: TBottleWorkFrame
       80000001C0000003C0000003E0000007F000000FF800001FFC00003FFF0000FF
       FFC003FF}
     ShowUnicode = False
-    ExplicitWidth = 320
-    ExplicitHeight = 175
     ColWidths = (
       20
       42
       114
-      145
-      146
-      93
-      131
-      192
+      152
+      100
+      220
+      115
+      141
       147)
   end
   object Panel2: TPanel
-    Left = 252
+    Left = 246
     Top = 162
     Width = 450
     Height = 287
@@ -595,7 +592,7 @@ object BottleWorkFrame: TBottleWorkFrame
       Top = 8
       Width = 64
       Height = 17
-      Caption = #21378#23478#20449#24687
+      Caption = #26816#39564#21333#20301
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -608,18 +605,18 @@ object BottleWorkFrame: TBottleWorkFrame
       Top = 60
       Width = 60
       Height = 17
-      Caption = #21378#23478#32534#21495
+      Caption = #21333#20301#32534#21495
     end
     object Label5: TLabel
       Left = 92
-      Top = 126
+      Top = 93
       Width = 60
       Height = 17
-      Caption = #21378#23478#20840#31216
+      Caption = #21333#20301#21517#31216
     end
     object Label7: TLabel
       Left = 359
-      Top = 94
+      Top = 93
       Width = 5
       Height = 17
       Caption = '*'
@@ -632,14 +629,14 @@ object BottleWorkFrame: TBottleWorkFrame
     end
     object Label3: TLabel
       Left = 92
-      Top = 93
+      Top = 126
       Width = 60
       Height = 17
-      Caption = #21378#23478#31616#31216
+      Caption = #21333#20301#30005#35805
     end
     object Label8: TLabel
       Left = 122
-      Top = 160
+      Top = 188
       Width = 30
       Height = 17
       Caption = #22791#27880
@@ -658,17 +655,11 @@ object BottleWorkFrame: TBottleWorkFrame
       ParentFont = False
     end
     object Label6: TLabel
-      Left = 359
-      Top = 126
-      Width = 5
+      Left = 92
+      Top = 157
+      Width = 60
       Height = 17
-      Caption = '*'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clRed
-      Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
+      Caption = #21333#20301#22320#22336
     end
     object Button5: TButton
       Left = 416
@@ -695,8 +686,8 @@ object BottleWorkFrame: TBottleWorkFrame
       TabOrder = 2
     end
     object Button6: TButton
-      Left = 92
-      Top = 232
+      Left = 106
+      Top = 234
       Width = 75
       Height = 25
       Caption = #20445#23384
@@ -704,8 +695,8 @@ object BottleWorkFrame: TBottleWorkFrame
       OnClick = Button6Click
     end
     object Button7: TButton
-      Left = 281
-      Top = 232
+      Left = 289
+      Top = 234
       Width = 75
       Height = 25
       Caption = #21462#28040
@@ -730,17 +721,16 @@ object BottleWorkFrame: TBottleWorkFrame
     end
     object Edit5: TEdit
       Left = 172
-      Top = 157
+      Top = 185
       Width = 181
       Height = 25
       TabOrder = 7
     end
-    object CheckBox1: TCheckBox
-      Left = 173
-      Top = 197
-      Width = 97
-      Height = 17
-      Caption = #26159#21542#22312#29992
+    object Edit6: TEdit
+      Left = 172
+      Top = 154
+      Width = 181
+      Height = 25
       TabOrder = 8
     end
   end
@@ -761,7 +751,7 @@ object BottleWorkFrame: TBottleWorkFrame
     Left = 304
     Top = 464
     Bitmap = {
-      494C01010F0013000C0120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300000120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

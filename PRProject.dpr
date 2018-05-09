@@ -62,7 +62,9 @@ uses
   EditCustMoneyUnit in 'EditCustMoneyUnit.pas' {EditCustMoneyForm},
   LetterUnit in 'LetterUnit.pas' {LetterForm},
   EditLetterUnit in 'EditLetterUnit.pas' {EditLetterForm},
-  GiveUnitpas in 'GiveUnitpas.pas' {GiveForm};
+  GiveUnitpas in 'GiveUnitpas.pas' {GiveForm},
+  BottleInsUnit in 'BottleInsUnit.pas' {BottleInsFrame: TUniFrame},
+  Unit9 in 'Unit9.pas' {Form9};
 
 {$R *.res}
 
@@ -109,5 +111,6 @@ begin
   Application.CreateForm(TLetterForm, LetterForm);
   Application.CreateForm(TEditLetterForm, EditLetterForm);
   Application.CreateForm(TGiveForm, GiveForm);
+  Application.CreateForm(TForm9, Form9);
   Application.Run;
 end.
