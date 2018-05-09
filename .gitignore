@@ -2,3 +2,5 @@ Debug
 __history
 *.local
 *.local
+*.identcache
+*.local

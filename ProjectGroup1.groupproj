@@ -9,6 +9,9 @@
 			<Projects Include="F:\ZM\燃气呼叫中心2.0射频卡 - 两层结构\client.dproj">
 				<Dependencies/>
 			</Projects>
+			<Projects Include="..\煤气管理系统 - 射频卡 - new\shang.dproj">
+				<Dependencies/>
+			</Projects>
 		</ItemGroup>
 		<ProjectExtensions>
 			<Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
 		<Target Name="client:Make">
 			<MSBuild Projects="F:\ZM\燃气呼叫中心2.0射频卡 - 两层结构\client.dproj" Targets="Make"/>
 		</Target>
+		<Target Name="shang">
+			<MSBuild Projects="..\煤气管理系统 - 射频卡 - new\shang.dproj"/>
+		</Target>
+		<Target Name="shang:Clean">
+			<MSBuild Projects="..\煤气管理系统 - 射频卡 - new\shang.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="shang:Make">
+			<MSBuild Projects="..\煤气管理系统 - 射频卡 - new\shang.dproj" Targets="Make"/>
+		</Target>
 		<Target Name="Build">
-			<CallTarget Targets="PRProject;client"/>
+			<CallTarget Targets="PRProject;client;shang"/>
 		</Target>
 		<Target Name="Clean">
-			<CallTarget Targets="PRProject:Clean;client:Clean"/>
+			<CallTarget Targets="PRProject:Clean;client:Clean;shang:Clean"/>
 		</Target>
 		<Target Name="Make">
-			<CallTarget Targets="PRProject:Make;client:Make"/>
+			<CallTarget Targets="PRProject:Make;client:Make;shang:Make"/>
 		</Target>
 		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
 	</Project>
