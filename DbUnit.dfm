@@ -2863,4 +2863,26 @@ object Data1: TData1
     Left = 72
     Top = 657
   end
+  object IdHTTP1: TIdHTTP
+    AllowCookies = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html, */*'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 627
+    Top = 19
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = #22270#29255#25991#20214'(*.jpg)|*.jpg'
+    Left = 569
+    Top = 15
+  end
 end

@@ -4,7 +4,8 @@ interface
 
 uses
   SysUtils, Classes, ImgList, Controls, Uni, DB, MemDS, DBAccess, UniProvider,
-  SQLServerUniProvider,Dialogs, tmsAdvGridExcel, ADODB;
+  SQLServerUniProvider,Dialogs, tmsAdvGridExcel, ADODB, IdMultiPartFormData,
+  IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP;
 
 type
   TData1 = class(TDataModule)
@@ -223,16 +224,20 @@ type
     ADOConnection1: TADOConnection;
     banner: TUniQuery;
     bannerDataSource: TDataSource;
+    IdHTTP1: TIdHTTP;
+    OpenDialog1: TOpenDialog;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    function UpImage:string;
     procedure WriteLog(stype,memo,cuser:string);  //写操作日志 操作类型，操作内容，操作人
   end;
 
 var
   Data1: TData1;
+  wxurl :string='';
 
 implementation
 
@@ -268,6 +273,32 @@ begin
       DatasetForm.ShowModal;
     end;
   end;
+end;
+
+function TData1.UpImage: string;
+var
+  res : String;
+  ms : TIdMultiPartFormDataStream;
+f:string;
+begin
+  res :='100';
+  if Opendialog1.Execute then f:=Opendialog1.FileName;
+  if f<>'' then
+  begin
+    if wxurl<>'' then
+    begin
+      try
+        ms := TIdMultiPartFormDataStream.Create;
+        ms.AddFile('file1',f,'');
+        IdHTTP1.Request.ContentType := 'multipart/form-data' ;
+        res:=IdHTTP1.Post('http://'+trim(wxurl)+'/lib/uplode.php',ms);
+      finally
+        ms.Free;
+      end;
+    end
+    else res :='400';
+  end;
+  Result :=res;
 end;
 
 procedure TData1.WriteLog(stype, memo, cuser: string);

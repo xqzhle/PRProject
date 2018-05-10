@@ -224,7 +224,7 @@ begin
       ' firstmoney='''+Edit8.Text+''',monthmoney='''+Edit9.Text+''',tmoney='''+Edit10.Text+''',gzmoney='''+Edit11.Text+''',oldmoney='''+Edit12.Text+''' where id=1 ';
       Data1.ClientDataSet1.ExecSQL;
       Data1.ClientDataSet1.Close;
-//      wxurl := Edit6.Text;
+      wxurl := Edit6.Text;
       ShowMessage('微信设置保存成功！');
     except
       ShowMessage('微信设置保存失败！');
@@ -339,7 +339,7 @@ var
   res :string;
   jo: ISuperObject;
 begin
-//  res :=Data1.UpImage;
+  res :=Data1.UpImage;
   if res='100' then  exit;
   if res<>'' then
   begin
