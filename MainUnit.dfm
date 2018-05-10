@@ -1590,6 +1590,7 @@ object MainForm: TMainForm
       end
       object N29: TMenuItem
         Caption = #19994#21153#21592
+        OnClick = N29Click
       end
     end
     object N4: TMenuItem
@@ -1604,6 +1605,7 @@ object MainForm: TMainForm
       end
       object N37: TMenuItem
         Caption = #23548#20837#23458#25143
+        OnClick = N37Click
       end
       object N38: TMenuItem
         Caption = #23458#25143#36164#26009
@@ -1716,6 +1718,10 @@ object MainForm: TMainForm
     end
     object N10: TMenuItem
       Caption = #25253#34920#20013#24515
+      object N66: TMenuItem
+        Caption = #38144#21806#25253#34920
+        OnClick = N66Click
+      end
     end
     object N11: TMenuItem
       Caption = #31995#32479#31649#29702

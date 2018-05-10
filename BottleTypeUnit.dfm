@@ -1,8 +1,8 @@
 object BottleTypeFrame: TBottleTypeFrame
   Left = 0
   Top = 0
-  Width = 1114
-  Height = 709
+  Width = 320
+  Height = 240
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Align = alNone
@@ -17,11 +17,12 @@ object BottleTypeFrame: TBottleTypeFrame
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1114
+    Width = 320
     Height = 65
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 1098
     object Label1: TLabel
       Left = 24
       Top = 23
@@ -76,8 +77,8 @@ object BottleTypeFrame: TBottleTypeFrame
   object DBAdvGrid2: TDBAdvGrid
     Left = 0
     Top = 65
-    Width = 1114
-    Height = 644
+    Width = 320
+    Height = 175
     Cursor = crDefault
     Align = alClient
     ColCount = 8
@@ -184,7 +185,7 @@ object BottleTypeFrame: TBottleTypeFrame
     SearchFooter.HintHighlight = 'Highlight occurrences'
     SearchFooter.MatchCaseCaption = 'Match case'
     SortSettings.DefaultFormat = ssAutomatic
-    Version = '2.3.8.6'
+    Version = '2.4.0.2'
     AutoCreateColumns = False
     AutoRemoveColumns = False
     Columns = <
@@ -538,6 +539,8 @@ object BottleTypeFrame: TBottleTypeFrame
       80000001C0000003C0000003E0000007F000000FF800001FFC00003FFF0000FF
       FFC003FF}
     ShowUnicode = False
+    ExplicitWidth = 1098
+    ExplicitHeight = 606
     ColWidths = (
       20
       42
@@ -694,6 +697,7 @@ object BottleTypeFrame: TBottleTypeFrame
     end
   end
   object UniQuery1: TUniQuery
+    DataTypeMap = <>
     Connection = Data1.UniConnection1
     Left = 144
     Top = 232
@@ -710,7 +714,7 @@ object BottleTypeFrame: TBottleTypeFrame
     Left = 304
     Top = 464
     Bitmap = {
-      494C01010F001300F80020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300000120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

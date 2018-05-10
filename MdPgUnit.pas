@@ -7,7 +7,7 @@ uses
   Controls, Forms, Dialogs, uniGUITypes, uniGUIAbstractClasses,Mydialogs,
   uniGUIClasses, uniGUIFrame, Grids, AdvObj, BaseGrid, AdvGrid, DBAdvGrid,
   StdCtrls, ExtCtrls, DB, MemDS, DBAccess, Uni, ComCtrls, AdvDateTimePicker,
-  OleServer, AcReport_TLB_Int;
+  OleServer, AcReport_TLB_Int, AdvUtil, AcReport_TLB;
 
 type
   TMdPgFrame = class(TUniFrame)
@@ -208,7 +208,7 @@ begin
    with Data1.ss6 do
    begin
      Close;
-     sqlstr:='select case when a.status=''0'' then ''派工'' when a.status=''2'' then ''回单'' end as 状态,a.bisentid as 单号,a.optid as 下单方,'+
+     sqlstr:='select case when a.status=''0'' then ''派工'' when a.status=''2'' then ''回单'' end as 状态,a.optdate as 订气时间,a.bisentid as 单号,a.optid as 下单方,'+
        ' case when a.Fsktype=0 then ''现金'' when a.Fsktype=1 then ''微信已支付'' end as 收款方式,a.shopname as 门店名称,'+
        'c.hynumber as 会员卡号,c.bayday as 身份证,a.empname as 送气工,a.corpname as 客户,a.tel as 联系电话,a.yydate as 预约时间,b.dj as 单价, '+
        'a.pddate as 派单时间,b.pricename as 商品名称,b.sl as 数量,b.yfmoney as 优惠, b.smoney as 运费,b.glmoney as 租瓶费,b.money as 实收金额,a.address as 送气地址,c.ywy as 业务员,a.zpbar as 重瓶编号,case when a.type=''1'' then ''预约'' when a.type=''2'' then ''加急'' else ''正常'' end as 订单级别, '+

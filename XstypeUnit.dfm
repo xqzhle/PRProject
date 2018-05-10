@@ -1,759 +1,1595 @@
-object BottleInsFrame: TBottleInsFrame
+object XstypeForm: TXstypeForm
   Left = 0
   Top = 0
-  Width = 320
-  Height = 240
-  OnCreate = UniFrameCreate
-  OnDestroy = UniFrameDestroy
-  Align = alNone
-  Anchors = [akLeft, akTop]
-  ShowHint = False
-  Visible = True
-  Font.Height = -13
-  Font.Name = 'Segoe UI'
-  TabOrder = 0
-  ParentRTL = False
-  RTL = False
-  object Panel1: TPanel
+  BorderStyle = bsSingle
+  Caption = #23458#25143#38144#21806#25253#34920
+  ClientHeight = 738
+  ClientWidth = 929
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object W7Panel1: TW7Panel
     Left = 0
     Top = 0
-    Width = 320
-    Height = 65
+    Width = 929
+    Height = 106
+    Version = '1.0.2.0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    SolidColor = clBlack
+    InnerBorders = [wpbLeft, wpbTop, wpbRight, wpbBottom]
+    OuterBorders = [wpbLeft, wpbTop, wpbRight, wpbBottom]
+    Style = wpsCustom
+    FillStyle = pfsGradient
+    ColorC = clBlack
+    ColorD = clBlack
     Align = alTop
-    BevelOuter = bvNone
+    ParentFont = False
     TabOrder = 0
-    ExplicitTop = -6
+    DesignSize = (
+      929
+      106)
     object Label1: TLabel
-      Left = 24
-      Top = 23
-      Width = 60
-      Height = 17
-      Caption = #21333#20301#21517#31216
+      Left = 11
+      Top = 24
+      Width = 24
+      Height = 15
+      Caption = #24320#22987
     end
-    object Edit1: TEdit
-      Left = 90
-      Top = 20
-      Width = 103
-      Height = 25
-      TabOrder = 0
-    end
-    object Button1: TButton
-      Left = 252
-      Top = 20
-      Width = 75
-      Height = 25
-      Caption = #26597#35810
-      TabOrder = 1
-      OnClick = Button1Click
-    end
-    object Button2: TButton
-      Left = 352
-      Top = 20
-      Width = 75
-      Height = 25
-      Caption = #28155#21152
-      TabOrder = 2
-      OnClick = Button2Click
-    end
-    object Button3: TButton
-      Left = 440
-      Top = 20
-      Width = 75
-      Height = 25
-      Caption = #20462#25913
-      TabOrder = 3
-      OnClick = DBAdvGrid2DblClick
-    end
-    object Button4: TButton
-      Left = 529
-      Top = 20
-      Width = 75
-      Height = 25
-      Caption = #21024#38500
-      TabOrder = 4
-      OnClick = Button4Click
-    end
-  end
-  object DBAdvGrid2: TDBAdvGrid
-    Left = 0
-    Top = 65
-    Width = 320
-    Height = 175
-    Cursor = crDefault
-    Align = alClient
-    ColCount = 9
-    DrawingStyle = gdsClassic
-    RowCount = 2
-    FixedRows = 1
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goColMoving]
-    ParentFont = False
-    ScrollBars = ssBoth
-    TabOrder = 1
-    OnDblClick = DBAdvGrid2DblClick
-    HoverRowCells = [hcNormal, hcSelected]
-    ActiveCellFont.Charset = DEFAULT_CHARSET
-    ActiveCellFont.Color = clWindowText
-    ActiveCellFont.Height = -13
-    ActiveCellFont.Name = 'Segoe UI'
-    ActiveCellFont.Style = [fsBold]
-    AutoFilterUpdate = False
-    ControlLook.FixedGradientHoverFrom = clGray
-    ControlLook.FixedGradientHoverTo = clWhite
-    ControlLook.FixedGradientDownFrom = clGray
-    ControlLook.FixedGradientDownTo = clSilver
-    ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
-    ControlLook.DropDownHeader.Font.Color = clWindowText
-    ControlLook.DropDownHeader.Font.Height = -11
-    ControlLook.DropDownHeader.Font.Name = 'Tahoma'
-    ControlLook.DropDownHeader.Font.Style = []
-    ControlLook.DropDownHeader.Visible = True
-    ControlLook.DropDownHeader.Buttons = <>
-    ControlLook.DropDownFooter.Font.Charset = DEFAULT_CHARSET
-    ControlLook.DropDownFooter.Font.Color = clWindowText
-    ControlLook.DropDownFooter.Font.Height = -11
-    ControlLook.DropDownFooter.Font.Name = 'Tahoma'
-    ControlLook.DropDownFooter.Font.Style = []
-    ControlLook.DropDownFooter.Visible = True
-    ControlLook.DropDownFooter.Buttons = <>
-    Filter = <>
-    FilterDropDown.Font.Charset = DEFAULT_CHARSET
-    FilterDropDown.Font.Color = clWindowText
-    FilterDropDown.Font.Height = -11
-    FilterDropDown.Font.Name = 'Tahoma'
-    FilterDropDown.Font.Style = []
-    FilterDropDown.TextChecked = 'Checked'
-    FilterDropDown.TextUnChecked = 'Unchecked'
-    FilterDropDownClear = '(All)'
-    FilterEdit.TypeNames.Strings = (
-      'Starts with'
-      'Ends with'
-      'Contains'
-      'Not contains'
-      'Equal'
-      'Not equal'
-      'Clear')
-    FixedColWidth = 20
-    FixedRowHeight = 22
-    FixedFont.Charset = DEFAULT_CHARSET
-    FixedFont.Color = clWindowText
-    FixedFont.Height = -11
-    FixedFont.Name = 'Tahoma'
-    FixedFont.Style = [fsBold]
-    FloatFormat = '%.2f'
-    HoverButtons.Buttons = <>
-    HoverButtons.Position = hbLeftFromColumnLeft
-    HTMLSettings.ImageFolder = 'images'
-    HTMLSettings.ImageBaseName = 'img'
-    PrintSettings.DateFormat = 'dd/mm/yyyy'
-    PrintSettings.Font.Charset = DEFAULT_CHARSET
-    PrintSettings.Font.Color = clWindowText
-    PrintSettings.Font.Height = -11
-    PrintSettings.Font.Name = 'Tahoma'
-    PrintSettings.Font.Style = []
-    PrintSettings.FixedFont.Charset = DEFAULT_CHARSET
-    PrintSettings.FixedFont.Color = clWindowText
-    PrintSettings.FixedFont.Height = -11
-    PrintSettings.FixedFont.Name = 'Tahoma'
-    PrintSettings.FixedFont.Style = []
-    PrintSettings.HeaderFont.Charset = DEFAULT_CHARSET
-    PrintSettings.HeaderFont.Color = clWindowText
-    PrintSettings.HeaderFont.Height = -11
-    PrintSettings.HeaderFont.Name = 'Tahoma'
-    PrintSettings.HeaderFont.Style = []
-    PrintSettings.FooterFont.Charset = DEFAULT_CHARSET
-    PrintSettings.FooterFont.Color = clWindowText
-    PrintSettings.FooterFont.Height = -11
-    PrintSettings.FooterFont.Name = 'Tahoma'
-    PrintSettings.FooterFont.Style = []
-    PrintSettings.PageNumSep = '/'
-    SearchFooter.FindNextCaption = 'Find &next'
-    SearchFooter.FindPrevCaption = 'Find &previous'
-    SearchFooter.Font.Charset = DEFAULT_CHARSET
-    SearchFooter.Font.Color = clWindowText
-    SearchFooter.Font.Height = -11
-    SearchFooter.Font.Name = 'Tahoma'
-    SearchFooter.Font.Style = []
-    SearchFooter.HighLightCaption = 'Highlight'
-    SearchFooter.HintClose = 'Close'
-    SearchFooter.HintFindNext = 'Find next occurrence'
-    SearchFooter.HintFindPrev = 'Find previous occurrence'
-    SearchFooter.HintHighlight = 'Highlight occurrences'
-    SearchFooter.MatchCaseCaption = 'Match case'
-    SortSettings.DefaultFormat = ssAutomatic
-    Version = '2.4.0.2'
-    AutoCreateColumns = False
-    AutoRemoveColumns = False
-    Columns = <
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -11
-        HeaderFont.Name = 'Tahoma'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Tahoma'
-        PrintFont.Style = []
-        Width = 20
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckBoxField = True
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        Editor = edDataCheckBox
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #36873#25321
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Tahoma'
-        PrintFont.Style = []
-        Width = 42
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'name_ID'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #21333#20301#32534#21495
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Tahoma'
-        PrintFont.Style = []
-        ReadOnly = True
-        Width = 114
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'Name'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #21333#20301#21517#31216
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Tahoma'
-        PrintFont.Style = []
-        ReadOnly = True
-        Width = 152
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'tel'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #21333#20301#30005#35805
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Segoe UI'
-        PrintFont.Style = []
-        Width = 100
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'addr'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #21333#20301#22320#22336
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Segoe UI'
-        PrintFont.Style = []
-        Width = 220
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'CreateUser'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #25805#20316#20154
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Tahoma'
-        PrintFont.Style = []
-        ReadOnly = True
-        Width = 115
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'CreateDate'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #25805#20316#26102#38388
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Tahoma'
-        PrintFont.Style = []
-        ReadOnly = True
-        Width = 141
-      end
-      item
-        Borders = []
-        BorderPen.Color = clSilver
-        CheckFalse = 'N'
-        CheckTrue = 'Y'
-        Color = clWindow
-        FieldName = 'Remark'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Header = #22791#27880
-        HeaderFont.Charset = DEFAULT_CHARSET
-        HeaderFont.Color = clWindowText
-        HeaderFont.Height = -13
-        HeaderFont.Name = 'Segoe UI'
-        HeaderFont.Style = []
-        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
-        PrintFont.Charset = DEFAULT_CHARSET
-        PrintFont.Color = clWindowText
-        PrintFont.Height = -11
-        PrintFont.Name = 'Tahoma'
-        PrintFont.Style = []
-        ReadOnly = True
-        Width = 147
-      end>
-    DataSource = DataSource1
-    InvalidPicture.Data = {
-      055449636F6E0000010001002020200000000000A81000001600000028000000
-      2000000040000000010020000000000000100000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000006A6A6B256A6A6B606A6A6B946A6A6BC06A6A6BE1
-      6A6A6BF86A6A6BF86A6A6BE16A6A6BC06A6A6B946A6A6B606A6A6B2500000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000006A6A6B407575769E787879F19F9F9FF6C0C0C0FDDADADAFFEDEDEEFF
-      FBFBFBFFFBFBFBFFEDEDEEFFDADADAFFC0C0C0FD9F9F9FF6787879F17575769E
-      6A6A6B4000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000006A6A6B22
-      7C7C7C98888889F0BDBDBDFCE9E9EBFED9D9E9FEB5B5DDFE8B8BCDFE595AB7FF
-      3739A8FF2B2CA4FF4A49B1FF7171C1FFA1A2D7FFD3D3E8FFEAEAEBFEBEBEBFFC
-      888889F07C7C7C986A6A6B220000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000006A6A6B43838383D8
-      B7B7B8FAECECEFFEC0C0DFFF7977C4FF2221A0FF12129BFF1010A4FF0C0CA8FF
-      0A0AACFF0A0AB4FF0A0AB9FF0D0DBEFF0F0FB1FF1111A6FF5656B8FFAEADDCFF
-      ECECEFFEB7B7B8FA838383D86A6A6B4300000000000000000000000000000000
-      00000000000000000000000000000000000000006A6A6B4E878788EAD3D3D3FE
-      CACAE8FF4443B0FF171799FF11119CFF0C0C98FF0B0B9BFF0B0BA0FF0A0AA6FF
-      0909ACFF0909B2FF0808BAFF0707BFFF0B09C8FF0D0DCEFF1111CCFF1010AFFF
-      4A49B2FFCFCFEBFFD3D3D3FE878788EA6A6A6B4E000000000000000000000000
-      000000000000000000000000000000006A6A6B43878788EAE1E1E1FFA8A8DAFF
-      2323A0FF15159CFF0D0D92FF0C0C95FF0C0C99FF0B0B9EFF0B0BA0FF0A0AA6FF
-      0909ACFF0909B2FF0808B8FF0808BCFF0808C3FF0C0CC9FF0C0CD0FF0D0DD6FF
-      1313CFFF2222A9FFAFAFDEFFE1E1E1FF878788EA6A6A6B430000000000000000
-      0000000000000000000000006A6A6B22838383D8D3D3D3FEA8A8D9FF2020A4FF
-      13139BFF0C0C92FF0C0C95FF0C0C97FF0C0C99FF0B0B9EFF0B0BA0FF0A0AA4FF
-      0A0AA9FF0909B0FF0808B4FF0808BBFF0707C0FF0A0AC6FF0909CCFF0C0CD3FF
-      0D0DD8FF1313D3FF1A1AA8FFAEADDEFFD4D4D4FE838383D86A6A6B2200000000
-      0000000000000000000000007C7C7C98B7B7B8FACACAE8FF2524A3FF13139FFF
-      0C0C97FF0C0C95FF0C0C95FF0C0C91FF0C0C95FF0B0B9EFF0B0BA0FF0A0AA4FF
-      0A0AA8FF0909ADFF0909B2FF0808B8FF0808BCFF0707C0FF0808BCFF0707C5FF
-      0C0CD3FF0D0DD7FF1212D1FF2020A7FFCDCDEBFFB8B8B9FA7C7C7C9800000000
-      00000000000000006A6A6B40888889F0ECECEFFE4545B1FF1616A4FF0B0B9BFF
-      0C0C99FF0C0C96FF3333A2FFB9B9D0FF393A9BFF0C0C95FF0B0BA1FF0A0AA4FF
-      0A0AA7FF0A0AABFF0909B0FF0808B4FF0808B7FF2F2FC2FFAEAEE2FF4B4BBFFF
-      0707BEFF0B0BD1FF0C0CD3FF1413CCFF4848B1FFECECEFFE888889F06A6A6B40
-      00000000000000007575769EBFBFBFFD9B9BD5FF1C1CA6FF0C0CA1FF0B0B9FFF
-      0B0B9AFF3535A7FFB5B5BEFFE6E6DFFFEDEDEFFF3C3C9CFF0C0C97FF0A0AA4FF
-      0A0AA6FF0A0AA9FF0909ADFF0909B0FF2626B5FFCECEDEFFFFFFFBFFEEEEF1FF
-      4848BAFF0808BCFF0A0ACDFF0B0BCEFF1111ABFFBEC0E0FFBFC0BFFD7575769E
-      000000006A6A6B25787879F1E3E3E5FE4646B2FF1414A8FF0A0AA4FF0B0BA0FF
-      2121A9FFBDBDCAFFD0D0C8FFC5C5C5FFE3E3E1FFEDEDEFFF3E3E9EFF0C0C98FF
-      0A0AA6FF0A0AA8FF0A0AA9FF2B2BB0FFC0C0CDFFEAEAE2FFEBEBEBFFFEFEF8FF
-      EDEDEEFF2828BDFF0707C4FF0809C7FF0F0FC4FF8788CBFFEBEBECFE79797AF1
-      6A6A6B256A6A6B609D9E9DF6D6D7E4FF3A3AB3FF1212ADFF0A0AA8FF0A0AA4FF
-      1313AAFFABABCFFFD6D6CBFFCACACAFFC6C6C6FFE4E4E0FFEEEEEFFF3F3FA0FF
-      0C0C99FF0A0AA6FF2828ABFFB2B2BFFFD8D8CEFFD6D6D8FFE0E0E0FFF6F5EDFF
-      D1D1EDFF1E1CC0FF0707BEFF0707BFFF0707C0FF2120AAFFD3D5E9FE9FA0A0F6
-      6A6A6B606A6A6B94BDBDBDFBBABBDCFF3A39B7FF2F2FB8FF0909ADFF0A0AA9FF
-      0A0AA6FF1515ACFFADADCFFFD6D6CBFFCBCBCAFFC6C6C6FFE4E4E1FFEEEEEFFF
-      3838A1FF2222A2FFACABB8FFC8C8C0FFC7C7C8FFCDCDCDFFE1E1D9FFC8CAE1FF
-      2424BCFF0808B4FF0808B9FF0808BAFF0808BBFF0F0EABFFA1A2D5FEC0C0C0FC
-      6A6A6B946A6A6BC0D9D8D7FE9999D1FF3838BBFF3636BCFF2C2CB7FF0909ADFF
-      0A0AA9FF0A0AA4FF1C1CAFFFB1B1CFFFD6D6CBFFCCCCCBFFC7C7C7FFE4E4E1FF
-      ECECEEFFACACB7FFC2C2BCFFBEBEBFFFC0C0C0FFCFCFC6FFC1C1D5FF2727B8FF
-      0909ACFF0909B2FF0909B2FF0909B4FF0808B4FF0E0EB5FF6E6EBFFFD9D9D9FE
-      6A6A6BC06A6A6BE1EBEAEBFF7D7CC7FF3838BFFF3434BEFF3536BEFF2A2AB8FF
-      0909B0FF0909ACFF0A0AA8FF1C1CB1FFB2B2D0FFD7D7CCFFCBCBCBFFC7C7C8FF
-      C8C8C3FFC6C6C3FFBFBFC1FFBDBDBDFFC5C5BCFFB8B8CEFF2929B5FF0A0AA8FF
-      0909ACFF0909ADFF0909AFFF0909AFFF0909AFFF0C0CB0FF4747AFFFECECEDFF
-      6A6A6BE16A6A6BF8F9F9F9FF6666C1FF3838C4FF3535C2FF3434C0FF3535BEFF
-      3030BCFF1313B4FF0909ADFF0A0AA8FF1E1EB3FFAAAAD0FFD3D3CDFFCCCCCCFF
-      C8C8C8FFC3C3C3FFC2C2C1FFC4C4BFFFB2B2CBFF2B2BB4FF0A0AA4FF0A0AA8FF
-      0A0AA8FF0A0AA9FF0A0AA9FF0A0AA9FF0A0AA9FF0B0BA9FF3131A6FFFAFAFAFF
-      6A6A6BF86A6A6BF8FBFBFBFF5959BEFF3B3BCAFF3A3AC8FF3737C4FF3535C2FF
-      3636C0FF3636BEFF2323B8FF0909B1FF0A0AA7FF4949BEFFD6D6D4FFD3D3D1FF
-      CDCDCDFFC8C8C8FFC4C4C3FFEDEDEDFF5F5FB3FF0C0C98FF0A0AA7FF0A0AA6FF
-      0A0AA6FF0A0AA6FF0A0AA4FF0A0AA6FF0A0AA4FF0B0BA4FF2D2DA6FFFBFBFBFF
-      6A6A6BF86A6A6BE1EDEDEEFF7F80CBFF4041CCFF3C3CCAFF3A3AC8FF383AC8FF
-      3838C4FF3636C2FF3939C0FF2123B7FF4A4AC2FFCBCBDEFFE0E0DCFFD6D6D6FF
-      D2D2D3FFCDCDCEFFC9C9C9FFE2E2E1FFF1F1F2FF4242A3FF0C0C99FF0A0AA4FF
-      0A0AA4FF0A0AA4FF0B0BA3FF0B0BA3FF0B0BA1FF0E0EA1FF4443B0FFEDEDEEFF
-      6A6A6BE16A6A6BC0DADADAFF9C9BD5FE4949CDFF3E3DD0FF3C3DCEFF3C3CCAFF
-      3A3AC8FF3B39C7FF2828BDFF5C5CCCFFE5E5EDFFF4F4EDFFE5E5E6FFDEDEDEFF
-      DCDCD9FFD9D9D3FFCDCDCDFFC8C8C8FFE5E5E1FFF1F1F3FF3F3FA0FF0C0C99FF
-      0A0AA4FF0B0BA1FF0B0BA0FF0B0BA0FF0B0B9FFF1313A2FF6B6BC0FFDADADAFF
-      6A6A6BC06A6A6B94C0C0C0FDBDBAE1FE5655CFFF4141D4FF3F3FD2FF3F3FCEFF
-      3D3DCCFF2C2AC3FF5E5ED3FFEBEBF6FFFFFFFAFFF1F1F1FFEDEDEEFFF0F0E9FF
-      D2D2E6FFBDBDD6FFDADAD3FFCFCFCFFFC9C9CAFFE5E5E2FFF1F1F3FF3A3AA0FF
-      0C0C98FF0B0BA3FF0B0B9FFF0B0B9EFF0B0B9EFF1C1CA4FF9C9CD3FFC1C1C1FD
-      6A6A6B946A6A6B609F9F9FF6DAD9EAFF6B6BCFFF4444D7FF4143D6FF4242D3FF
-      3434CDFF6464DBFFEFEFFFFFFFFFFFFFFCFCFCFFF6F6F6FFFCFCF4FFE2E1F0FF
-      5050CCFF4040C1FFC3C3DBFFE1E1D8FFD4D4D5FFCFCFCFFFE8E8E5FFF2F2F4FF
-      4040A2FF0C0C99FF0F0FA2FF0F0FA0FF0F0F9DFF302FA9FFD1D1E8FEA0A0A0F6
-      6A6A6B606A6A6B25787879F1E9E9EBFEA7A7DAFF6060DBFF4547DBFF3C3CD6FF
-      5857DEFFF2F2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE8E8F8FF5B5BD4FF
-      2828BDFF2A2BBDFF4949C5FFC3C3DBFFE4E4DAFFD5D5D5FFCECED0FFE8E8E5FF
-      F4F4F4FF4949AFFF2121A6FF2A2AA6FF2C2BA9FF5557B8FFEAEAECFE787879F1
-      6A6A6B25000000007575769EBEBEBEFDC9CAE6FF7A79DBFF4C4CDFFF4141DBFF
-      5757E0FFEAEAFFFFFFFFFFFFFFFFFFFFFFFFFFFFE8E7FFFF5B5BD7FF2E2EC6FF
-      3E3EC9FF3A3AC5FF2C2EC1FF4A49C8FFC2C2DDFFE3E3DAFFD5D5D4FFDADAD3FF
-      CACBD9FF4747BBFF2525ADFF2C2BACFF3332AEFFA5A4D8FFBFBFBFFD7575769E
-      00000000000000006A6A6B40888889F0ECECEFFE9696D6FF7B7BE3FF4D4BE0FF
-      4141DBFF5F5FE6FFE7E7FFFFFFFFFFFFE9E9FFFF5A5ADCFF3333CAFF4242CFFF
-      4040CBFF3D3DC9FF3D3EC8FF3030C2FF4848C9FFC0C0DDFFECEEDEFFD0D0E0FF
-      5554C7FF2828B3FF3232B4FF3434B1FF5453B7FFECECEFFE888889F06A6A6B40
-      0000000000000000000000007C7C7C98B7B7B8FAD0D0ECFF8F8FDBFF6868E3FF
-      4E4EE2FF3E40DBFF6565E9FFB2B2F7FF6565E4FF393BD2FF4646D7FF4343D4FF
-      4343D1FF4242CFFF4040CBFF3F3FCAFF3333C4FF4E4ECBFF9E9EE2FF5C5BCFFF
-      292ABAFF3636BCFF3938B8FF3F3EB1FFCBCBE9FFB7B7B8FA7C7C7C9800000000
-      0000000000000000000000006A6A6B22838383D8D3D3D3FEB5B5E2FF9E9EE4FF
-      6766E2FF4E50E6FF4646E0FF3D3DDAFF4444DCFF4B4BDCFF4848DBFF4847D9FF
-      4646D5FF4443D3FF4343D1FF4242CFFF4143CDFF3A3AC8FF312FC5FF3535C3FF
-      3C3CC3FF3D3DBEFF403FB5FFACACDCFFD3D3D3FE838383D86A6A6B2200000000
-      000000000000000000000000000000006A6A6B43878788EAE1E1E1FFB5B5E2FF
-      A7A6E4FF7877E5FF5151E5FF4F4FE4FF4E4EE2FF4D4DE0FF4C4CDEFF4B4BDCFF
-      4949DBFF4848D7FF4747D5FF4545D3FF4545D1FF4343CFFF4242CCFF3F3FCBFF
-      4343C2FF4645B6FFADADDCFFE1E1E1FF878788EA6A6A6B430000000000000000
-      00000000000000000000000000000000000000006A6A6B4E878788EAD3D3D3FE
-      D0D0ECFFAAA9DFFFA2A2ECFF6565E3FF5151E6FF4F4FE4FF4F4DE4FF4D4DE0FF
-      4D4DDFFF4D4DDCFF4C49DBFF4A4AD8FF4749D6FF4747D4FF4949CBFF4B4BC3FF
-      8E8ED0FFCDCCE8FFD3D3D3FE878788EA6A6A6B4E000000000000000000000000
-      0000000000000000000000000000000000000000000000006A6A6B43838383D8
-      B7B7B8FAECECEFFEC3C2E5FFADAEE1FF9E9DE8FF6F6FE0FF5C5CE1FF5452E2FF
-      5051E1FF4F4FDFFF4F4FDBFF5150D6FF5151CFFF5F5FC8FFA1A1D3FEC7C8E0FE
-      E4E4E7FEB7B7B8FA838383D86A6A6B4300000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000006A6A6B22
-      7C7C7C98888889F0BFBFBFFDEBEBECFED8D9EBFEBDBDE4FEA8A7DCFF9695D7FF
-      8886D4FF7F7DCEFF8C8BD2FFA1A2D9FFC0BEE1FED9D9EAFEEAEAECFEBFBFBFFD
-      888889F07C7C7C986A6A6B220000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000006A6A6B407575769E787879F19F9F9FF6C0C0C0FDDADADAFFEDEDEEFF
-      FBFBFBFFFBFBFBFFEDEDEEFFDADADAFFC0C0C0FD9F9F9FF6787879F17575769E
-      6A6A6B4000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000006A6A6B256A6A6B606A6A6B946A6A6BC06A6A6BE1
-      6A6A6BF86A6A6BF86A6A6BE16A6A6BC06A6A6B946A6A6B606A6A6B2500000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000FFC003FFFF0000FFFC00003FF800001FF000000FE0000007C0000003
-      C000000380000001800000010000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000080000001
-      80000001C0000003C0000003E0000007F000000FF800001FFC00003FFF0000FF
-      FFC003FF}
-    ShowUnicode = False
-    ColWidths = (
-      20
-      42
-      114
-      152
-      100
-      220
-      115
-      141
-      147)
-  end
-  object Panel2: TPanel
-    Left = 246
-    Top = 162
-    Width = 450
-    Height = 287
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 2
     object Label2: TLabel
-      Left = 193
-      Top = 8
-      Width = 64
-      Height = 17
-      Caption = #26816#39564#21333#20301
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label4: TLabel
-      Left = 92
-      Top = 60
-      Width = 60
-      Height = 17
-      Caption = #21333#20301#32534#21495
-    end
-    object Label5: TLabel
-      Left = 92
-      Top = 93
-      Width = 60
-      Height = 17
-      Caption = #21333#20301#21517#31216
+      Left = 162
+      Top = 24
+      Width = 24
+      Height = 15
+      Caption = #32467#26463
     end
     object Label7: TLabel
-      Left = 359
-      Top = 93
-      Width = 5
-      Height = 17
-      Caption = '*'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clRed
-      Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
+      Left = 317
+      Top = 24
+      Width = 24
+      Height = 15
+      Caption = #38376#24215
     end
-    object Label3: TLabel
-      Left = 92
-      Top = 126
-      Width = 60
-      Height = 17
-      Caption = #21333#20301#30005#35805
+    object Label4: TLabel
+      Left = 481
+      Top = 24
+      Width = 36
+      Height = 15
+      Caption = #36865#27668#24037
     end
-    object Label8: TLabel
-      Left = 122
-      Top = 188
-      Width = 30
-      Height = 17
-      Caption = #22791#27880
-    end
-    object Label11: TLabel
-      Left = 359
-      Top = 60
-      Width = 5
-      Height = 17
-      Caption = '*'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clRed
-      Font.Height = -13
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Label6: TLabel
-      Left = 92
-      Top = 157
-      Width = 60
-      Height = 17
-      Caption = #21333#20301#22320#22336
-    end
-    object Button5: TButton
-      Left = 416
-      Top = 0
-      Width = 33
-      Height = 25
-      Caption = 'X'
+    object DateTimePicker1: TDateTimePicker
+      Left = 45
+      Top = 21
+      Width = 95
+      Height = 21
+      Date = 40603.000000000000000000
+      Time = 40603.000000000000000000
       TabOrder = 0
-      OnClick = Button7Click
     end
-    object Edit2: TEdit
-      Left = 172
-      Top = 57
-      Width = 181
-      Height = 25
-      Enabled = False
+    object DateTimePicker2: TDateTimePicker
+      Left = 198
+      Top = 21
+      Width = 95
+      Height = 21
+      Date = 40622.999988425930000000
+      Time = 40622.999988425930000000
       TabOrder = 1
     end
-    object Edit3: TEdit
-      Left = 172
-      Top = 90
-      Width = 181
-      Height = 25
+    object AdvGlowButton4: TAdvGlowButton
+      Left = 657
+      Top = 14
+      Width = 85
+      Height = 33
+      Caption = #26597#25214
+      ImageIndex = 11
+      Images = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
       TabOrder = 2
+      OnClick = AdvGlowButton4Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
     end
-    object Button6: TButton
-      Left = 106
-      Top = 234
-      Width = 75
-      Height = 25
-      Caption = #20445#23384
+    object AdvGlowButton2: TAdvGlowButton
+      Left = 753
+      Top = 14
+      Width = 70
+      Height = 33
+      Caption = #26085#34920
+      ImageIndex = 9
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
       TabOrder = 3
-      OnClick = Button6Click
+      OnClick = AdvGlowButton2Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
     end
-    object Button7: TButton
-      Left = 289
-      Top = 234
-      Width = 75
-      Height = 25
-      Caption = #21462#28040
+    object AdvGlowButton3: TAdvGlowButton
+      Left = 848
+      Top = 14
+      Width = 70
+      Height = 33
+      Caption = #26376#34920
+      ImageIndex = 9
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
       TabOrder = 4
-      OnClick = Button7Click
+      OnClick = AdvGlowButton3Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
     end
-    object Edit7: TEdit
-      Left = 23
-      Top = 18
-      Width = 82
-      Height = 25
+    object RadioButton1: TRadioButton
+      Left = 133
+      Top = 70
+      Width = 102
+      Height = 17
+      Caption = #23458#25143#31867#22411#32479#35745
       TabOrder = 5
-      Text = '1'
-      Visible = False
     end
-    object Edit4: TEdit
-      Left = 172
-      Top = 123
-      Width = 181
-      Height = 25
+    object RadioButton2: TRadioButton
+      Left = 11
+      Top = 70
+      Width = 100
+      Height = 17
+      Caption = #38144#21806#38376#24215#32479#35745
+      Checked = True
       TabOrder = 6
+      TabStop = True
     end
-    object Edit5: TEdit
-      Left = 172
-      Top = 185
-      Width = 181
-      Height = 25
+    object RadioButton3: TRadioButton
+      Left = 253
+      Top = 70
+      Width = 106
+      Height = 17
+      Caption = #21830#21697#31867#22411#32479#35745
       TabOrder = 7
     end
-    object Edit6: TEdit
-      Left = 172
-      Top = 154
-      Width = 181
-      Height = 25
+    object CheckBox1: TCheckBox
+      Left = 489
+      Top = 70
+      Width = 166
+      Height = 17
+      Caption = #25353#19979#21333#26085#26399#32479#35745
       TabOrder = 8
     end
+    object ComboBox1: TComboBox
+      Left = 347
+      Top = 21
+      Width = 110
+      Height = 23
+      TabOrder = 9
+      Text = 'ComboBox1'
+      OnClick = ComboBox1Click
+    end
+    object AdvGlowButton1: TAdvGlowButton
+      Left = 846
+      Top = 65
+      Width = 73
+      Height = 31
+      Anchors = [akTop, akRight]
+      Caption = #25171#21360
+      ImageIndex = 10
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
+      TabOrder = 10
+      OnClick = AdvGlowButton1Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
+    end
+    object AdvGlowButton6: TAdvGlowButton
+      Left = 761
+      Top = 65
+      Width = 72
+      Height = 31
+      Anchors = [akTop, akRight]
+      Caption = #23548#20986
+      ImageIndex = 12
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
+      TabOrder = 11
+      OnClick = AdvGlowButton6Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
+    end
+    object CheckBox2: TCheckBox
+      Left = 629
+      Top = 70
+      Width = 126
+      Height = 17
+      Caption = #25353#38144#21806#37329#39069#25490#24207
+      TabOrder = 12
+    end
+    object RadioButton4: TRadioButton
+      Left = 379
+      Top = 70
+      Width = 106
+      Height = 17
+      Caption = #36865#27668#24037#32479#35745
+      TabOrder = 13
+    end
+    object ComboBox2: TComboBox
+      Left = 525
+      Top = 21
+      Width = 110
+      Height = 23
+      TabOrder = 14
+      Text = 'ComboBox1'
+    end
+    object Edit1: TEdit
+      Left = 353
+      Top = 50
+      Width = 121
+      Height = 23
+      TabOrder = 15
+      Text = 'Edit1'
+      Visible = False
+    end
   end
-  object UniQuery1: TUniQuery
-    DataTypeMap = <>
-    Connection = Data1.UniConnection1
-    Left = 144
-    Top = 232
+  object W7Panel2: TW7Panel
+    Left = 0
+    Top = 356
+    Width = 929
+    Height = 37
+    Version = '1.0.2.0'
+    Caption = #38144#21806#26126#32454
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    SolidColor = clBlack
+    InnerBorders = [wpbLeft, wpbTop, wpbRight, wpbBottom]
+    OuterBorders = [wpbLeft, wpbTop, wpbRight, wpbBottom]
+    Style = wpsCustom
+    FillStyle = pfsGradient
+    ColorC = clBlack
+    ColorD = clBlack
+    Align = alTop
+    ParentFont = False
+    TabOrder = 1
+    DesignSize = (
+      929
+      37)
+    object Label3: TLabel
+      Left = 220
+      Top = 13
+      Width = 34
+      Height = 15
+      Caption = 'Label3'
+    end
+    object AdvGlowButton11: TAdvGlowButton
+      Left = 737
+      Top = 3
+      Width = 96
+      Height = 31
+      Anchors = [akTop, akRight]
+      Caption = #23548#20986#26126#32454
+      ImageIndex = 12
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
+      TabOrder = 0
+      OnClick = AdvGlowButton11Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
+    end
+    object AdvGlowButton5: TAdvGlowButton
+      Left = 846
+      Top = 3
+      Width = 73
+      Height = 31
+      Anchors = [akTop, akRight]
+      Caption = #25171#21360
+      ImageIndex = 10
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
+      TabOrder = 1
+      OnClick = AdvGlowButton5Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
+    end
+    object AdvGlowButton7: TAdvGlowButton
+      Left = 17
+      Top = 3
+      Width = 96
+      Height = 31
+      Caption = #23548#20986#32479#35745
+      ImageIndex = 12
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
+      TabOrder = 2
+      OnClick = AdvGlowButton7Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
+    end
+    object AdvGlowButton8: TAdvGlowButton
+      Left = 126
+      Top = 3
+      Width = 73
+      Height = 31
+      Caption = #25171#21360
+      ImageIndex = 10
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
+      TabOrder = 3
+      OnClick = AdvGlowButton8Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
+    end
   end
-  object DataSource1: TDataSource
-    DataSet = UniQuery1
-    Left = 208
-    Top = 232
+  object cxGrid1: TcxGrid
+    Left = 0
+    Top = 393
+    Width = 929
+    Height = 345
+    Align = alClient
+    TabOrder = 2
+    object cxGrid1DBTableView1: TcxGridDBTableView
+      NavigatorButtons.ConfirmDelete = False
+      DataController.DataSource = Data1.DataSource3
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <
+        item
+          Kind = skSum
+          FieldName = #25968#37327
+          Column = cxGrid1DBTableView1Column10
+        end
+        item
+          Kind = skSum
+          FieldName = #20248#24800
+          Column = cxGrid1DBTableView1Column12
+        end
+        item
+          Kind = skSum
+          FieldName = #31199#29942#36153
+          Column = cxGrid1DBTableView1Column13
+        end
+        item
+          Kind = skSum
+          FieldName = #36865#27668#36153
+          Column = cxGrid1DBTableView1Column15
+        end
+        item
+          Kind = skSum
+          FieldName = #24635#37329#39069
+          Column = cxGrid1DBTableView1Column14
+        end
+        item
+          Kind = skSum
+          FieldName = #38376#24215#25552#25104
+          Column = cxGrid1DBTableView1Column19
+        end>
+      DataController.Summary.SummaryGroups = <>
+      OptionsView.Footer = True
+      object cxGrid1DBTableView1Column1: TcxGridDBColumn
+        DataBinding.FieldName = #35746#21333#21495
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 120
+      end
+      object cxGrid1DBTableView1Column2: TcxGridDBColumn
+        DataBinding.FieldName = #38376#24215#21517#31216
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 100
+      end
+      object cxGrid1DBTableView1Column3: TcxGridDBColumn
+        DataBinding.FieldName = #35746#27668#26102#38388
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 120
+      end
+      object cxGrid1DBTableView1Column18: TcxGridDBColumn
+        DataBinding.FieldName = #23436#25104#26102#38388
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 120
+      end
+      object cxGrid1DBTableView1Column4: TcxGridDBColumn
+        DataBinding.FieldName = #21830#21697
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        Options.Editing = False
+        Width = 100
+      end
+      object cxGrid1DBTableView1Column5: TcxGridDBColumn
+        DataBinding.FieldName = #23458#25143#32534#21495
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        Options.Editing = False
+        Width = 60
+      end
+      object cxGrid1DBTableView1Column6: TcxGridDBColumn
+        DataBinding.FieldName = #23458#25143
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        Options.Editing = False
+        Width = 70
+      end
+      object cxGrid1DBTableView1Column20: TcxGridDBColumn
+        DataBinding.FieldName = #36865#27668#24037
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 70
+      end
+      object cxGrid1DBTableView1Column10: TcxGridDBColumn
+        DataBinding.FieldName = #25968#37327
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        Options.Editing = False
+        Width = 50
+      end
+      object cxGrid1DBTableView1Column11: TcxGridDBColumn
+        DataBinding.FieldName = #21333#20215
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 50
+      end
+      object cxGrid1DBTableView1Column12: TcxGridDBColumn
+        DataBinding.FieldName = #20248#24800
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 50
+      end
+      object cxGrid1DBTableView1Column13: TcxGridDBColumn
+        DataBinding.FieldName = #31199#29942#36153
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 50
+      end
+      object cxGrid1DBTableView1Column15: TcxGridDBColumn
+        DataBinding.FieldName = #36865#27668#36153
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 50
+      end
+      object cxGrid1DBTableView1Column14: TcxGridDBColumn
+        DataBinding.FieldName = #24635#37329#39069
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 60
+      end
+      object cxGrid1DBTableView1Column19: TcxGridDBColumn
+        DataBinding.FieldName = #38376#24215#25552#25104
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 60
+      end
+      object cxGrid1DBTableView1Column16: TcxGridDBColumn
+        DataBinding.FieldName = #25910#27454#26041#24335
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 65
+      end
+      object cxGrid1DBTableView1Column7: TcxGridDBColumn
+        DataBinding.FieldName = #23458#25143#31867#22411
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        Options.Editing = False
+        Width = 80
+      end
+      object cxGrid1DBTableView1Column8: TcxGridDBColumn
+        DataBinding.FieldName = #20250#21592#21345#21495
+        HeaderAlignmentHorz = taCenter
+        HeaderAlignmentVert = vaCenter
+        Options.Editing = False
+        Width = 80
+      end
+      object cxGrid1DBTableView1Column9: TcxGridDBColumn
+        DataBinding.FieldName = #22320#22336
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 170
+      end
+      object cxGrid1DBTableView1Column17: TcxGridDBColumn
+        DataBinding.FieldName = #22791#27880
+        HeaderAlignmentHorz = taCenter
+        HeaderGlyphAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 120
+      end
+    end
+    object cxGrid1Level1: TcxGridLevel
+      GridView = cxGrid1DBTableView1
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 106
+    Width = 929
+    Height = 250
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 3
+    object DBAdvGrid1: TDBAdvGrid
+      Left = 489
+      Top = 0
+      Width = 440
+      Height = 250
+      Cursor = crDefault
+      Align = alClient
+      ColCount = 2
+      DrawingStyle = gdsClassic
+      RowCount = 2
+      FixedRows = 1
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      ScrollBars = ssBoth
+      TabOrder = 0
+      HoverRowCells = [hcNormal, hcSelected]
+      OnResize = DBAdvGrid1Resize
+      ActiveCellFont.Charset = DEFAULT_CHARSET
+      ActiveCellFont.Color = clWindowText
+      ActiveCellFont.Height = -11
+      ActiveCellFont.Name = 'Tahoma'
+      ActiveCellFont.Style = [fsBold]
+      ControlLook.FixedGradientHoverFrom = clGray
+      ControlLook.FixedGradientHoverTo = clWhite
+      ControlLook.FixedGradientDownFrom = clGray
+      ControlLook.FixedGradientDownTo = clSilver
+      ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
+      ControlLook.DropDownHeader.Font.Color = clWindowText
+      ControlLook.DropDownHeader.Font.Height = -11
+      ControlLook.DropDownHeader.Font.Name = 'Tahoma'
+      ControlLook.DropDownHeader.Font.Style = []
+      ControlLook.DropDownHeader.Visible = True
+      ControlLook.DropDownHeader.Buttons = <>
+      ControlLook.DropDownFooter.Font.Charset = DEFAULT_CHARSET
+      ControlLook.DropDownFooter.Font.Color = clWindowText
+      ControlLook.DropDownFooter.Font.Height = -11
+      ControlLook.DropDownFooter.Font.Name = 'Tahoma'
+      ControlLook.DropDownFooter.Font.Style = []
+      ControlLook.DropDownFooter.Visible = True
+      ControlLook.DropDownFooter.Buttons = <>
+      Filter = <>
+      FilterDropDown.Font.Charset = DEFAULT_CHARSET
+      FilterDropDown.Font.Color = clWindowText
+      FilterDropDown.Font.Height = -11
+      FilterDropDown.Font.Name = 'Tahoma'
+      FilterDropDown.Font.Style = []
+      FilterDropDown.TextChecked = 'Checked'
+      FilterDropDown.TextUnChecked = 'Unchecked'
+      FilterDropDownClear = '(All)'
+      FilterEdit.TypeNames.Strings = (
+        'Starts with'
+        'Ends with'
+        'Contains'
+        'Not contains'
+        'Equal'
+        'Not equal'
+        'Clear')
+      FixedColWidth = 20
+      FixedRowHeight = 22
+      FixedFont.Charset = DEFAULT_CHARSET
+      FixedFont.Color = clWindowText
+      FixedFont.Height = -11
+      FixedFont.Name = 'Tahoma'
+      FixedFont.Style = [fsBold]
+      FloatFormat = '%.2f'
+      HoverButtons.Buttons = <>
+      HoverButtons.Position = hbLeftFromColumnLeft
+      HTMLSettings.ImageFolder = 'images'
+      HTMLSettings.ImageBaseName = 'img'
+      PrintSettings.DateFormat = 'dd/mm/yyyy'
+      PrintSettings.Font.Charset = DEFAULT_CHARSET
+      PrintSettings.Font.Color = clWindowText
+      PrintSettings.Font.Height = -11
+      PrintSettings.Font.Name = 'Tahoma'
+      PrintSettings.Font.Style = []
+      PrintSettings.FixedFont.Charset = DEFAULT_CHARSET
+      PrintSettings.FixedFont.Color = clWindowText
+      PrintSettings.FixedFont.Height = -11
+      PrintSettings.FixedFont.Name = 'Tahoma'
+      PrintSettings.FixedFont.Style = []
+      PrintSettings.HeaderFont.Charset = DEFAULT_CHARSET
+      PrintSettings.HeaderFont.Color = clWindowText
+      PrintSettings.HeaderFont.Height = -11
+      PrintSettings.HeaderFont.Name = 'Tahoma'
+      PrintSettings.HeaderFont.Style = []
+      PrintSettings.FooterFont.Charset = DEFAULT_CHARSET
+      PrintSettings.FooterFont.Color = clWindowText
+      PrintSettings.FooterFont.Height = -11
+      PrintSettings.FooterFont.Name = 'Tahoma'
+      PrintSettings.FooterFont.Style = []
+      PrintSettings.PageNumSep = '/'
+      SearchFooter.FindNextCaption = 'Find &next'
+      SearchFooter.FindPrevCaption = 'Find &previous'
+      SearchFooter.Font.Charset = DEFAULT_CHARSET
+      SearchFooter.Font.Color = clWindowText
+      SearchFooter.Font.Height = -11
+      SearchFooter.Font.Name = 'Tahoma'
+      SearchFooter.Font.Style = []
+      SearchFooter.HighLightCaption = 'Highlight'
+      SearchFooter.HintClose = 'Close'
+      SearchFooter.HintFindNext = 'Find next occurrence'
+      SearchFooter.HintFindPrev = 'Find previous occurrence'
+      SearchFooter.HintHighlight = 'Highlight occurrences'
+      SearchFooter.MatchCaseCaption = 'Match case'
+      SortSettings.DefaultFormat = ssAutomatic
+      Version = '2.4.0.2'
+      AutoCreateColumns = True
+      AutoRemoveColumns = True
+      Columns = <
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 20
+        end
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 120
+        end>
+      DataSource = Data1.DataSource72
+      InvalidPicture.Data = {
+        055449636F6E0000010001002020200000000000A81000001600000028000000
+        2000000040000000010020000000000000100000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000006A6A6B256A6A6B606A6A6B946A6A6BC06A6A6BE1
+        6A6A6BF86A6A6BF86A6A6BE16A6A6BC06A6A6B946A6A6B606A6A6B2500000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000006A6A6B407575769E787879F19F9F9FF6C0C0C0FDDADADAFFEDEDEEFF
+        FBFBFBFFFBFBFBFFEDEDEEFFDADADAFFC0C0C0FD9F9F9FF6787879F17575769E
+        6A6A6B4000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000006A6A6B22
+        7C7C7C98888889F0BDBDBDFCE9E9EBFED9D9E9FEB5B5DDFE8B8BCDFE595AB7FF
+        3739A8FF2B2CA4FF4A49B1FF7171C1FFA1A2D7FFD3D3E8FFEAEAEBFEBEBEBFFC
+        888889F07C7C7C986A6A6B220000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000006A6A6B43838383D8
+        B7B7B8FAECECEFFEC0C0DFFF7977C4FF2221A0FF12129BFF1010A4FF0C0CA8FF
+        0A0AACFF0A0AB4FF0A0AB9FF0D0DBEFF0F0FB1FF1111A6FF5656B8FFAEADDCFF
+        ECECEFFEB7B7B8FA838383D86A6A6B4300000000000000000000000000000000
+        00000000000000000000000000000000000000006A6A6B4E878788EAD3D3D3FE
+        CACAE8FF4443B0FF171799FF11119CFF0C0C98FF0B0B9BFF0B0BA0FF0A0AA6FF
+        0909ACFF0909B2FF0808BAFF0707BFFF0B09C8FF0D0DCEFF1111CCFF1010AFFF
+        4A49B2FFCFCFEBFFD3D3D3FE878788EA6A6A6B4E000000000000000000000000
+        000000000000000000000000000000006A6A6B43878788EAE1E1E1FFA8A8DAFF
+        2323A0FF15159CFF0D0D92FF0C0C95FF0C0C99FF0B0B9EFF0B0BA0FF0A0AA6FF
+        0909ACFF0909B2FF0808B8FF0808BCFF0808C3FF0C0CC9FF0C0CD0FF0D0DD6FF
+        1313CFFF2222A9FFAFAFDEFFE1E1E1FF878788EA6A6A6B430000000000000000
+        0000000000000000000000006A6A6B22838383D8D3D3D3FEA8A8D9FF2020A4FF
+        13139BFF0C0C92FF0C0C95FF0C0C97FF0C0C99FF0B0B9EFF0B0BA0FF0A0AA4FF
+        0A0AA9FF0909B0FF0808B4FF0808BBFF0707C0FF0A0AC6FF0909CCFF0C0CD3FF
+        0D0DD8FF1313D3FF1A1AA8FFAEADDEFFD4D4D4FE838383D86A6A6B2200000000
+        0000000000000000000000007C7C7C98B7B7B8FACACAE8FF2524A3FF13139FFF
+        0C0C97FF0C0C95FF0C0C95FF0C0C91FF0C0C95FF0B0B9EFF0B0BA0FF0A0AA4FF
+        0A0AA8FF0909ADFF0909B2FF0808B8FF0808BCFF0707C0FF0808BCFF0707C5FF
+        0C0CD3FF0D0DD7FF1212D1FF2020A7FFCDCDEBFFB8B8B9FA7C7C7C9800000000
+        00000000000000006A6A6B40888889F0ECECEFFE4545B1FF1616A4FF0B0B9BFF
+        0C0C99FF0C0C96FF3333A2FFB9B9D0FF393A9BFF0C0C95FF0B0BA1FF0A0AA4FF
+        0A0AA7FF0A0AABFF0909B0FF0808B4FF0808B7FF2F2FC2FFAEAEE2FF4B4BBFFF
+        0707BEFF0B0BD1FF0C0CD3FF1413CCFF4848B1FFECECEFFE888889F06A6A6B40
+        00000000000000007575769EBFBFBFFD9B9BD5FF1C1CA6FF0C0CA1FF0B0B9FFF
+        0B0B9AFF3535A7FFB5B5BEFFE6E6DFFFEDEDEFFF3C3C9CFF0C0C97FF0A0AA4FF
+        0A0AA6FF0A0AA9FF0909ADFF0909B0FF2626B5FFCECEDEFFFFFFFBFFEEEEF1FF
+        4848BAFF0808BCFF0A0ACDFF0B0BCEFF1111ABFFBEC0E0FFBFC0BFFD7575769E
+        000000006A6A6B25787879F1E3E3E5FE4646B2FF1414A8FF0A0AA4FF0B0BA0FF
+        2121A9FFBDBDCAFFD0D0C8FFC5C5C5FFE3E3E1FFEDEDEFFF3E3E9EFF0C0C98FF
+        0A0AA6FF0A0AA8FF0A0AA9FF2B2BB0FFC0C0CDFFEAEAE2FFEBEBEBFFFEFEF8FF
+        EDEDEEFF2828BDFF0707C4FF0809C7FF0F0FC4FF8788CBFFEBEBECFE79797AF1
+        6A6A6B256A6A6B609D9E9DF6D6D7E4FF3A3AB3FF1212ADFF0A0AA8FF0A0AA4FF
+        1313AAFFABABCFFFD6D6CBFFCACACAFFC6C6C6FFE4E4E0FFEEEEEFFF3F3FA0FF
+        0C0C99FF0A0AA6FF2828ABFFB2B2BFFFD8D8CEFFD6D6D8FFE0E0E0FFF6F5EDFF
+        D1D1EDFF1E1CC0FF0707BEFF0707BFFF0707C0FF2120AAFFD3D5E9FE9FA0A0F6
+        6A6A6B606A6A6B94BDBDBDFBBABBDCFF3A39B7FF2F2FB8FF0909ADFF0A0AA9FF
+        0A0AA6FF1515ACFFADADCFFFD6D6CBFFCBCBCAFFC6C6C6FFE4E4E1FFEEEEEFFF
+        3838A1FF2222A2FFACABB8FFC8C8C0FFC7C7C8FFCDCDCDFFE1E1D9FFC8CAE1FF
+        2424BCFF0808B4FF0808B9FF0808BAFF0808BBFF0F0EABFFA1A2D5FEC0C0C0FC
+        6A6A6B946A6A6BC0D9D8D7FE9999D1FF3838BBFF3636BCFF2C2CB7FF0909ADFF
+        0A0AA9FF0A0AA4FF1C1CAFFFB1B1CFFFD6D6CBFFCCCCCBFFC7C7C7FFE4E4E1FF
+        ECECEEFFACACB7FFC2C2BCFFBEBEBFFFC0C0C0FFCFCFC6FFC1C1D5FF2727B8FF
+        0909ACFF0909B2FF0909B2FF0909B4FF0808B4FF0E0EB5FF6E6EBFFFD9D9D9FE
+        6A6A6BC06A6A6BE1EBEAEBFF7D7CC7FF3838BFFF3434BEFF3536BEFF2A2AB8FF
+        0909B0FF0909ACFF0A0AA8FF1C1CB1FFB2B2D0FFD7D7CCFFCBCBCBFFC7C7C8FF
+        C8C8C3FFC6C6C3FFBFBFC1FFBDBDBDFFC5C5BCFFB8B8CEFF2929B5FF0A0AA8FF
+        0909ACFF0909ADFF0909AFFF0909AFFF0909AFFF0C0CB0FF4747AFFFECECEDFF
+        6A6A6BE16A6A6BF8F9F9F9FF6666C1FF3838C4FF3535C2FF3434C0FF3535BEFF
+        3030BCFF1313B4FF0909ADFF0A0AA8FF1E1EB3FFAAAAD0FFD3D3CDFFCCCCCCFF
+        C8C8C8FFC3C3C3FFC2C2C1FFC4C4BFFFB2B2CBFF2B2BB4FF0A0AA4FF0A0AA8FF
+        0A0AA8FF0A0AA9FF0A0AA9FF0A0AA9FF0A0AA9FF0B0BA9FF3131A6FFFAFAFAFF
+        6A6A6BF86A6A6BF8FBFBFBFF5959BEFF3B3BCAFF3A3AC8FF3737C4FF3535C2FF
+        3636C0FF3636BEFF2323B8FF0909B1FF0A0AA7FF4949BEFFD6D6D4FFD3D3D1FF
+        CDCDCDFFC8C8C8FFC4C4C3FFEDEDEDFF5F5FB3FF0C0C98FF0A0AA7FF0A0AA6FF
+        0A0AA6FF0A0AA6FF0A0AA4FF0A0AA6FF0A0AA4FF0B0BA4FF2D2DA6FFFBFBFBFF
+        6A6A6BF86A6A6BE1EDEDEEFF7F80CBFF4041CCFF3C3CCAFF3A3AC8FF383AC8FF
+        3838C4FF3636C2FF3939C0FF2123B7FF4A4AC2FFCBCBDEFFE0E0DCFFD6D6D6FF
+        D2D2D3FFCDCDCEFFC9C9C9FFE2E2E1FFF1F1F2FF4242A3FF0C0C99FF0A0AA4FF
+        0A0AA4FF0A0AA4FF0B0BA3FF0B0BA3FF0B0BA1FF0E0EA1FF4443B0FFEDEDEEFF
+        6A6A6BE16A6A6BC0DADADAFF9C9BD5FE4949CDFF3E3DD0FF3C3DCEFF3C3CCAFF
+        3A3AC8FF3B39C7FF2828BDFF5C5CCCFFE5E5EDFFF4F4EDFFE5E5E6FFDEDEDEFF
+        DCDCD9FFD9D9D3FFCDCDCDFFC8C8C8FFE5E5E1FFF1F1F3FF3F3FA0FF0C0C99FF
+        0A0AA4FF0B0BA1FF0B0BA0FF0B0BA0FF0B0B9FFF1313A2FF6B6BC0FFDADADAFF
+        6A6A6BC06A6A6B94C0C0C0FDBDBAE1FE5655CFFF4141D4FF3F3FD2FF3F3FCEFF
+        3D3DCCFF2C2AC3FF5E5ED3FFEBEBF6FFFFFFFAFFF1F1F1FFEDEDEEFFF0F0E9FF
+        D2D2E6FFBDBDD6FFDADAD3FFCFCFCFFFC9C9CAFFE5E5E2FFF1F1F3FF3A3AA0FF
+        0C0C98FF0B0BA3FF0B0B9FFF0B0B9EFF0B0B9EFF1C1CA4FF9C9CD3FFC1C1C1FD
+        6A6A6B946A6A6B609F9F9FF6DAD9EAFF6B6BCFFF4444D7FF4143D6FF4242D3FF
+        3434CDFF6464DBFFEFEFFFFFFFFFFFFFFCFCFCFFF6F6F6FFFCFCF4FFE2E1F0FF
+        5050CCFF4040C1FFC3C3DBFFE1E1D8FFD4D4D5FFCFCFCFFFE8E8E5FFF2F2F4FF
+        4040A2FF0C0C99FF0F0FA2FF0F0FA0FF0F0F9DFF302FA9FFD1D1E8FEA0A0A0F6
+        6A6A6B606A6A6B25787879F1E9E9EBFEA7A7DAFF6060DBFF4547DBFF3C3CD6FF
+        5857DEFFF2F2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE8E8F8FF5B5BD4FF
+        2828BDFF2A2BBDFF4949C5FFC3C3DBFFE4E4DAFFD5D5D5FFCECED0FFE8E8E5FF
+        F4F4F4FF4949AFFF2121A6FF2A2AA6FF2C2BA9FF5557B8FFEAEAECFE787879F1
+        6A6A6B25000000007575769EBEBEBEFDC9CAE6FF7A79DBFF4C4CDFFF4141DBFF
+        5757E0FFEAEAFFFFFFFFFFFFFFFFFFFFFFFFFFFFE8E7FFFF5B5BD7FF2E2EC6FF
+        3E3EC9FF3A3AC5FF2C2EC1FF4A49C8FFC2C2DDFFE3E3DAFFD5D5D4FFDADAD3FF
+        CACBD9FF4747BBFF2525ADFF2C2BACFF3332AEFFA5A4D8FFBFBFBFFD7575769E
+        00000000000000006A6A6B40888889F0ECECEFFE9696D6FF7B7BE3FF4D4BE0FF
+        4141DBFF5F5FE6FFE7E7FFFFFFFFFFFFE9E9FFFF5A5ADCFF3333CAFF4242CFFF
+        4040CBFF3D3DC9FF3D3EC8FF3030C2FF4848C9FFC0C0DDFFECEEDEFFD0D0E0FF
+        5554C7FF2828B3FF3232B4FF3434B1FF5453B7FFECECEFFE888889F06A6A6B40
+        0000000000000000000000007C7C7C98B7B7B8FAD0D0ECFF8F8FDBFF6868E3FF
+        4E4EE2FF3E40DBFF6565E9FFB2B2F7FF6565E4FF393BD2FF4646D7FF4343D4FF
+        4343D1FF4242CFFF4040CBFF3F3FCAFF3333C4FF4E4ECBFF9E9EE2FF5C5BCFFF
+        292ABAFF3636BCFF3938B8FF3F3EB1FFCBCBE9FFB7B7B8FA7C7C7C9800000000
+        0000000000000000000000006A6A6B22838383D8D3D3D3FEB5B5E2FF9E9EE4FF
+        6766E2FF4E50E6FF4646E0FF3D3DDAFF4444DCFF4B4BDCFF4848DBFF4847D9FF
+        4646D5FF4443D3FF4343D1FF4242CFFF4143CDFF3A3AC8FF312FC5FF3535C3FF
+        3C3CC3FF3D3DBEFF403FB5FFACACDCFFD3D3D3FE838383D86A6A6B2200000000
+        000000000000000000000000000000006A6A6B43878788EAE1E1E1FFB5B5E2FF
+        A7A6E4FF7877E5FF5151E5FF4F4FE4FF4E4EE2FF4D4DE0FF4C4CDEFF4B4BDCFF
+        4949DBFF4848D7FF4747D5FF4545D3FF4545D1FF4343CFFF4242CCFF3F3FCBFF
+        4343C2FF4645B6FFADADDCFFE1E1E1FF878788EA6A6A6B430000000000000000
+        00000000000000000000000000000000000000006A6A6B4E878788EAD3D3D3FE
+        D0D0ECFFAAA9DFFFA2A2ECFF6565E3FF5151E6FF4F4FE4FF4F4DE4FF4D4DE0FF
+        4D4DDFFF4D4DDCFF4C49DBFF4A4AD8FF4749D6FF4747D4FF4949CBFF4B4BC3FF
+        8E8ED0FFCDCCE8FFD3D3D3FE878788EA6A6A6B4E000000000000000000000000
+        0000000000000000000000000000000000000000000000006A6A6B43838383D8
+        B7B7B8FAECECEFFEC3C2E5FFADAEE1FF9E9DE8FF6F6FE0FF5C5CE1FF5452E2FF
+        5051E1FF4F4FDFFF4F4FDBFF5150D6FF5151CFFF5F5FC8FFA1A1D3FEC7C8E0FE
+        E4E4E7FEB7B7B8FA838383D86A6A6B4300000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000006A6A6B22
+        7C7C7C98888889F0BFBFBFFDEBEBECFED8D9EBFEBDBDE4FEA8A7DCFF9695D7FF
+        8886D4FF7F7DCEFF8C8BD2FFA1A2D9FFC0BEE1FED9D9EAFEEAEAECFEBFBFBFFD
+        888889F07C7C7C986A6A6B220000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000006A6A6B407575769E787879F19F9F9FF6C0C0C0FDDADADAFFEDEDEEFF
+        FBFBFBFFFBFBFBFFEDEDEEFFDADADAFFC0C0C0FD9F9F9FF6787879F17575769E
+        6A6A6B4000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000006A6A6B256A6A6B606A6A6B946A6A6BC06A6A6BE1
+        6A6A6BF86A6A6BF86A6A6BE16A6A6BC06A6A6B946A6A6B606A6A6B2500000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000FFC003FFFF0000FFFC00003FF800001FF000000FE0000007C0000003
+        C000000380000001800000010000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000080000001
+        80000001C0000003C0000003E0000007F000000FF800001FFC00003FFF0000FF
+        FFC003FF}
+      ShowUnicode = False
+      ColWidths = (
+        20
+        120)
+    end
+    object DBAdvGrid2: TDBAdvGrid
+      Left = 0
+      Top = 0
+      Width = 489
+      Height = 250
+      Cursor = crDefault
+      Hint = #40736#26631#21452#20987#21487#26597#30475#26126#32454#65292#28857#20987#29616#37329#25903#20184#65292#24494#20449#25903#20184#65292#21047#21345#25903#20184#21487#26597#35810#30456#24212#26126#32454
+      Align = alLeft
+      ColCount = 8
+      DrawingStyle = gdsClassic
+      RowCount = 2
+      FixedRows = 1
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ScrollBars = ssBoth
+      ShowHint = True
+      TabOrder = 1
+      OnDblClick = DBAdvGrid2DblClick
+      HoverRowCells = [hcNormal, hcSelected]
+      ActiveCellFont.Charset = DEFAULT_CHARSET
+      ActiveCellFont.Color = clWindowText
+      ActiveCellFont.Height = -11
+      ActiveCellFont.Name = 'Tahoma'
+      ActiveCellFont.Style = [fsBold]
+      ControlLook.FixedGradientHoverFrom = clGray
+      ControlLook.FixedGradientHoverTo = clWhite
+      ControlLook.FixedGradientDownFrom = clGray
+      ControlLook.FixedGradientDownTo = clSilver
+      ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
+      ControlLook.DropDownHeader.Font.Color = clWindowText
+      ControlLook.DropDownHeader.Font.Height = -11
+      ControlLook.DropDownHeader.Font.Name = 'Tahoma'
+      ControlLook.DropDownHeader.Font.Style = []
+      ControlLook.DropDownHeader.Visible = True
+      ControlLook.DropDownHeader.Buttons = <>
+      ControlLook.DropDownFooter.Font.Charset = DEFAULT_CHARSET
+      ControlLook.DropDownFooter.Font.Color = clWindowText
+      ControlLook.DropDownFooter.Font.Height = -11
+      ControlLook.DropDownFooter.Font.Name = 'Tahoma'
+      ControlLook.DropDownFooter.Font.Style = []
+      ControlLook.DropDownFooter.Visible = True
+      ControlLook.DropDownFooter.Buttons = <>
+      Filter = <>
+      FilterDropDown.Font.Charset = DEFAULT_CHARSET
+      FilterDropDown.Font.Color = clWindowText
+      FilterDropDown.Font.Height = -11
+      FilterDropDown.Font.Name = 'Tahoma'
+      FilterDropDown.Font.Style = []
+      FilterDropDown.TextChecked = 'Checked'
+      FilterDropDown.TextUnChecked = 'Unchecked'
+      FilterDropDownClear = '(All)'
+      FilterEdit.TypeNames.Strings = (
+        'Starts with'
+        'Ends with'
+        'Contains'
+        'Not contains'
+        'Equal'
+        'Not equal'
+        'Clear')
+      FixedColWidth = 20
+      FixedRowHeight = 22
+      FixedFont.Charset = DEFAULT_CHARSET
+      FixedFont.Color = clWindowText
+      FixedFont.Height = -11
+      FixedFont.Name = 'Tahoma'
+      FixedFont.Style = [fsBold]
+      FloatFormat = '%.2f'
+      HoverButtons.Buttons = <>
+      HoverButtons.Position = hbLeftFromColumnLeft
+      HTMLSettings.ImageFolder = 'images'
+      HTMLSettings.ImageBaseName = 'img'
+      PrintSettings.DateFormat = 'dd/mm/yyyy'
+      PrintSettings.Font.Charset = DEFAULT_CHARSET
+      PrintSettings.Font.Color = clWindowText
+      PrintSettings.Font.Height = -11
+      PrintSettings.Font.Name = 'Tahoma'
+      PrintSettings.Font.Style = []
+      PrintSettings.FixedFont.Charset = DEFAULT_CHARSET
+      PrintSettings.FixedFont.Color = clWindowText
+      PrintSettings.FixedFont.Height = -11
+      PrintSettings.FixedFont.Name = 'Tahoma'
+      PrintSettings.FixedFont.Style = []
+      PrintSettings.HeaderFont.Charset = DEFAULT_CHARSET
+      PrintSettings.HeaderFont.Color = clWindowText
+      PrintSettings.HeaderFont.Height = -11
+      PrintSettings.HeaderFont.Name = 'Tahoma'
+      PrintSettings.HeaderFont.Style = []
+      PrintSettings.FooterFont.Charset = DEFAULT_CHARSET
+      PrintSettings.FooterFont.Color = clWindowText
+      PrintSettings.FooterFont.Height = -11
+      PrintSettings.FooterFont.Name = 'Tahoma'
+      PrintSettings.FooterFont.Style = []
+      PrintSettings.PageNumSep = '/'
+      SearchFooter.FindNextCaption = 'Find &next'
+      SearchFooter.FindPrevCaption = 'Find &previous'
+      SearchFooter.Font.Charset = DEFAULT_CHARSET
+      SearchFooter.Font.Color = clWindowText
+      SearchFooter.Font.Height = -11
+      SearchFooter.Font.Name = 'Tahoma'
+      SearchFooter.Font.Style = []
+      SearchFooter.HighLightCaption = 'Highlight'
+      SearchFooter.HintClose = 'Close'
+      SearchFooter.HintFindNext = 'Find next occurrence'
+      SearchFooter.HintFindPrev = 'Find previous occurrence'
+      SearchFooter.HintHighlight = 'Highlight occurrences'
+      SearchFooter.MatchCaseCaption = 'Match case'
+      SortSettings.DefaultFormat = ssAutomatic
+      Version = '2.4.0.2'
+      AutoCreateColumns = True
+      AutoRemoveColumns = True
+      Columns = <
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 20
+        end
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          FieldName = 'dd'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Header = #31867#21035#21517#31216
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          HeaderAlignment = taCenter
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 95
+        end
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          FieldName = 'ee'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Header = #35746#21333#25968#37327
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          HeaderAlignment = taCenter
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 55
+        end
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          UseComboObjectValue = True
+          FieldName = 'ff'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Header = #38144#21806#25968#37327
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          HeaderAlignment = taCenter
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 55
+        end
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          FieldName = 'cc'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Header = #38144#21806#37329#39069
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          HeaderAlignment = taCenter
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 60
+        end
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          FieldName = 'gg'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Header = #29616#37329#25903#20184
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 60
+        end
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          FieldName = 'bb'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Header = #24494#20449#25903#20184
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 60
+        end
+        item
+          Borders = []
+          BorderPen.Color = clSilver
+          CheckFalse = 'N'
+          CheckTrue = 'Y'
+          Color = clWindow
+          FieldName = 'sk'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Header = #21047#21345#25903#20184
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -11
+          HeaderFont.Name = 'Tahoma'
+          HeaderFont.Style = []
+          PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+          PrintFont.Charset = DEFAULT_CHARSET
+          PrintFont.Color = clWindowText
+          PrintFont.Height = -11
+          PrintFont.Name = 'Tahoma'
+          PrintFont.Style = []
+          Width = 60
+        end>
+      DataSource = Data1.DataSource73
+      InvalidPicture.Data = {
+        055449636F6E0000010001002020200000000000A81000001600000028000000
+        2000000040000000010020000000000000100000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000006A6A6B256A6A6B606A6A6B946A6A6BC06A6A6BE1
+        6A6A6BF86A6A6BF86A6A6BE16A6A6BC06A6A6B946A6A6B606A6A6B2500000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000006A6A6B407575769E787879F19F9F9FF6C0C0C0FDDADADAFFEDEDEEFF
+        FBFBFBFFFBFBFBFFEDEDEEFFDADADAFFC0C0C0FD9F9F9FF6787879F17575769E
+        6A6A6B4000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000006A6A6B22
+        7C7C7C98888889F0BDBDBDFCE9E9EBFED9D9E9FEB5B5DDFE8B8BCDFE595AB7FF
+        3739A8FF2B2CA4FF4A49B1FF7171C1FFA1A2D7FFD3D3E8FFEAEAEBFEBEBEBFFC
+        888889F07C7C7C986A6A6B220000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000006A6A6B43838383D8
+        B7B7B8FAECECEFFEC0C0DFFF7977C4FF2221A0FF12129BFF1010A4FF0C0CA8FF
+        0A0AACFF0A0AB4FF0A0AB9FF0D0DBEFF0F0FB1FF1111A6FF5656B8FFAEADDCFF
+        ECECEFFEB7B7B8FA838383D86A6A6B4300000000000000000000000000000000
+        00000000000000000000000000000000000000006A6A6B4E878788EAD3D3D3FE
+        CACAE8FF4443B0FF171799FF11119CFF0C0C98FF0B0B9BFF0B0BA0FF0A0AA6FF
+        0909ACFF0909B2FF0808BAFF0707BFFF0B09C8FF0D0DCEFF1111CCFF1010AFFF
+        4A49B2FFCFCFEBFFD3D3D3FE878788EA6A6A6B4E000000000000000000000000
+        000000000000000000000000000000006A6A6B43878788EAE1E1E1FFA8A8DAFF
+        2323A0FF15159CFF0D0D92FF0C0C95FF0C0C99FF0B0B9EFF0B0BA0FF0A0AA6FF
+        0909ACFF0909B2FF0808B8FF0808BCFF0808C3FF0C0CC9FF0C0CD0FF0D0DD6FF
+        1313CFFF2222A9FFAFAFDEFFE1E1E1FF878788EA6A6A6B430000000000000000
+        0000000000000000000000006A6A6B22838383D8D3D3D3FEA8A8D9FF2020A4FF
+        13139BFF0C0C92FF0C0C95FF0C0C97FF0C0C99FF0B0B9EFF0B0BA0FF0A0AA4FF
+        0A0AA9FF0909B0FF0808B4FF0808BBFF0707C0FF0A0AC6FF0909CCFF0C0CD3FF
+        0D0DD8FF1313D3FF1A1AA8FFAEADDEFFD4D4D4FE838383D86A6A6B2200000000
+        0000000000000000000000007C7C7C98B7B7B8FACACAE8FF2524A3FF13139FFF
+        0C0C97FF0C0C95FF0C0C95FF0C0C91FF0C0C95FF0B0B9EFF0B0BA0FF0A0AA4FF
+        0A0AA8FF0909ADFF0909B2FF0808B8FF0808BCFF0707C0FF0808BCFF0707C5FF
+        0C0CD3FF0D0DD7FF1212D1FF2020A7FFCDCDEBFFB8B8B9FA7C7C7C9800000000
+        00000000000000006A6A6B40888889F0ECECEFFE4545B1FF1616A4FF0B0B9BFF
+        0C0C99FF0C0C96FF3333A2FFB9B9D0FF393A9BFF0C0C95FF0B0BA1FF0A0AA4FF
+        0A0AA7FF0A0AABFF0909B0FF0808B4FF0808B7FF2F2FC2FFAEAEE2FF4B4BBFFF
+        0707BEFF0B0BD1FF0C0CD3FF1413CCFF4848B1FFECECEFFE888889F06A6A6B40
+        00000000000000007575769EBFBFBFFD9B9BD5FF1C1CA6FF0C0CA1FF0B0B9FFF
+        0B0B9AFF3535A7FFB5B5BEFFE6E6DFFFEDEDEFFF3C3C9CFF0C0C97FF0A0AA4FF
+        0A0AA6FF0A0AA9FF0909ADFF0909B0FF2626B5FFCECEDEFFFFFFFBFFEEEEF1FF
+        4848BAFF0808BCFF0A0ACDFF0B0BCEFF1111ABFFBEC0E0FFBFC0BFFD7575769E
+        000000006A6A6B25787879F1E3E3E5FE4646B2FF1414A8FF0A0AA4FF0B0BA0FF
+        2121A9FFBDBDCAFFD0D0C8FFC5C5C5FFE3E3E1FFEDEDEFFF3E3E9EFF0C0C98FF
+        0A0AA6FF0A0AA8FF0A0AA9FF2B2BB0FFC0C0CDFFEAEAE2FFEBEBEBFFFEFEF8FF
+        EDEDEEFF2828BDFF0707C4FF0809C7FF0F0FC4FF8788CBFFEBEBECFE79797AF1
+        6A6A6B256A6A6B609D9E9DF6D6D7E4FF3A3AB3FF1212ADFF0A0AA8FF0A0AA4FF
+        1313AAFFABABCFFFD6D6CBFFCACACAFFC6C6C6FFE4E4E0FFEEEEEFFF3F3FA0FF
+        0C0C99FF0A0AA6FF2828ABFFB2B2BFFFD8D8CEFFD6D6D8FFE0E0E0FFF6F5EDFF
+        D1D1EDFF1E1CC0FF0707BEFF0707BFFF0707C0FF2120AAFFD3D5E9FE9FA0A0F6
+        6A6A6B606A6A6B94BDBDBDFBBABBDCFF3A39B7FF2F2FB8FF0909ADFF0A0AA9FF
+        0A0AA6FF1515ACFFADADCFFFD6D6CBFFCBCBCAFFC6C6C6FFE4E4E1FFEEEEEFFF
+        3838A1FF2222A2FFACABB8FFC8C8C0FFC7C7C8FFCDCDCDFFE1E1D9FFC8CAE1FF
+        2424BCFF0808B4FF0808B9FF0808BAFF0808BBFF0F0EABFFA1A2D5FEC0C0C0FC
+        6A6A6B946A6A6BC0D9D8D7FE9999D1FF3838BBFF3636BCFF2C2CB7FF0909ADFF
+        0A0AA9FF0A0AA4FF1C1CAFFFB1B1CFFFD6D6CBFFCCCCCBFFC7C7C7FFE4E4E1FF
+        ECECEEFFACACB7FFC2C2BCFFBEBEBFFFC0C0C0FFCFCFC6FFC1C1D5FF2727B8FF
+        0909ACFF0909B2FF0909B2FF0909B4FF0808B4FF0E0EB5FF6E6EBFFFD9D9D9FE
+        6A6A6BC06A6A6BE1EBEAEBFF7D7CC7FF3838BFFF3434BEFF3536BEFF2A2AB8FF
+        0909B0FF0909ACFF0A0AA8FF1C1CB1FFB2B2D0FFD7D7CCFFCBCBCBFFC7C7C8FF
+        C8C8C3FFC6C6C3FFBFBFC1FFBDBDBDFFC5C5BCFFB8B8CEFF2929B5FF0A0AA8FF
+        0909ACFF0909ADFF0909AFFF0909AFFF0909AFFF0C0CB0FF4747AFFFECECEDFF
+        6A6A6BE16A6A6BF8F9F9F9FF6666C1FF3838C4FF3535C2FF3434C0FF3535BEFF
+        3030BCFF1313B4FF0909ADFF0A0AA8FF1E1EB3FFAAAAD0FFD3D3CDFFCCCCCCFF
+        C8C8C8FFC3C3C3FFC2C2C1FFC4C4BFFFB2B2CBFF2B2BB4FF0A0AA4FF0A0AA8FF
+        0A0AA8FF0A0AA9FF0A0AA9FF0A0AA9FF0A0AA9FF0B0BA9FF3131A6FFFAFAFAFF
+        6A6A6BF86A6A6BF8FBFBFBFF5959BEFF3B3BCAFF3A3AC8FF3737C4FF3535C2FF
+        3636C0FF3636BEFF2323B8FF0909B1FF0A0AA7FF4949BEFFD6D6D4FFD3D3D1FF
+        CDCDCDFFC8C8C8FFC4C4C3FFEDEDEDFF5F5FB3FF0C0C98FF0A0AA7FF0A0AA6FF
+        0A0AA6FF0A0AA6FF0A0AA4FF0A0AA6FF0A0AA4FF0B0BA4FF2D2DA6FFFBFBFBFF
+        6A6A6BF86A6A6BE1EDEDEEFF7F80CBFF4041CCFF3C3CCAFF3A3AC8FF383AC8FF
+        3838C4FF3636C2FF3939C0FF2123B7FF4A4AC2FFCBCBDEFFE0E0DCFFD6D6D6FF
+        D2D2D3FFCDCDCEFFC9C9C9FFE2E2E1FFF1F1F2FF4242A3FF0C0C99FF0A0AA4FF
+        0A0AA4FF0A0AA4FF0B0BA3FF0B0BA3FF0B0BA1FF0E0EA1FF4443B0FFEDEDEEFF
+        6A6A6BE16A6A6BC0DADADAFF9C9BD5FE4949CDFF3E3DD0FF3C3DCEFF3C3CCAFF
+        3A3AC8FF3B39C7FF2828BDFF5C5CCCFFE5E5EDFFF4F4EDFFE5E5E6FFDEDEDEFF
+        DCDCD9FFD9D9D3FFCDCDCDFFC8C8C8FFE5E5E1FFF1F1F3FF3F3FA0FF0C0C99FF
+        0A0AA4FF0B0BA1FF0B0BA0FF0B0BA0FF0B0B9FFF1313A2FF6B6BC0FFDADADAFF
+        6A6A6BC06A6A6B94C0C0C0FDBDBAE1FE5655CFFF4141D4FF3F3FD2FF3F3FCEFF
+        3D3DCCFF2C2AC3FF5E5ED3FFEBEBF6FFFFFFFAFFF1F1F1FFEDEDEEFFF0F0E9FF
+        D2D2E6FFBDBDD6FFDADAD3FFCFCFCFFFC9C9CAFFE5E5E2FFF1F1F3FF3A3AA0FF
+        0C0C98FF0B0BA3FF0B0B9FFF0B0B9EFF0B0B9EFF1C1CA4FF9C9CD3FFC1C1C1FD
+        6A6A6B946A6A6B609F9F9FF6DAD9EAFF6B6BCFFF4444D7FF4143D6FF4242D3FF
+        3434CDFF6464DBFFEFEFFFFFFFFFFFFFFCFCFCFFF6F6F6FFFCFCF4FFE2E1F0FF
+        5050CCFF4040C1FFC3C3DBFFE1E1D8FFD4D4D5FFCFCFCFFFE8E8E5FFF2F2F4FF
+        4040A2FF0C0C99FF0F0FA2FF0F0FA0FF0F0F9DFF302FA9FFD1D1E8FEA0A0A0F6
+        6A6A6B606A6A6B25787879F1E9E9EBFEA7A7DAFF6060DBFF4547DBFF3C3CD6FF
+        5857DEFFF2F2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE8E8F8FF5B5BD4FF
+        2828BDFF2A2BBDFF4949C5FFC3C3DBFFE4E4DAFFD5D5D5FFCECED0FFE8E8E5FF
+        F4F4F4FF4949AFFF2121A6FF2A2AA6FF2C2BA9FF5557B8FFEAEAECFE787879F1
+        6A6A6B25000000007575769EBEBEBEFDC9CAE6FF7A79DBFF4C4CDFFF4141DBFF
+        5757E0FFEAEAFFFFFFFFFFFFFFFFFFFFFFFFFFFFE8E7FFFF5B5BD7FF2E2EC6FF
+        3E3EC9FF3A3AC5FF2C2EC1FF4A49C8FFC2C2DDFFE3E3DAFFD5D5D4FFDADAD3FF
+        CACBD9FF4747BBFF2525ADFF2C2BACFF3332AEFFA5A4D8FFBFBFBFFD7575769E
+        00000000000000006A6A6B40888889F0ECECEFFE9696D6FF7B7BE3FF4D4BE0FF
+        4141DBFF5F5FE6FFE7E7FFFFFFFFFFFFE9E9FFFF5A5ADCFF3333CAFF4242CFFF
+        4040CBFF3D3DC9FF3D3EC8FF3030C2FF4848C9FFC0C0DDFFECEEDEFFD0D0E0FF
+        5554C7FF2828B3FF3232B4FF3434B1FF5453B7FFECECEFFE888889F06A6A6B40
+        0000000000000000000000007C7C7C98B7B7B8FAD0D0ECFF8F8FDBFF6868E3FF
+        4E4EE2FF3E40DBFF6565E9FFB2B2F7FF6565E4FF393BD2FF4646D7FF4343D4FF
+        4343D1FF4242CFFF4040CBFF3F3FCAFF3333C4FF4E4ECBFF9E9EE2FF5C5BCFFF
+        292ABAFF3636BCFF3938B8FF3F3EB1FFCBCBE9FFB7B7B8FA7C7C7C9800000000
+        0000000000000000000000006A6A6B22838383D8D3D3D3FEB5B5E2FF9E9EE4FF
+        6766E2FF4E50E6FF4646E0FF3D3DDAFF4444DCFF4B4BDCFF4848DBFF4847D9FF
+        4646D5FF4443D3FF4343D1FF4242CFFF4143CDFF3A3AC8FF312FC5FF3535C3FF
+        3C3CC3FF3D3DBEFF403FB5FFACACDCFFD3D3D3FE838383D86A6A6B2200000000
+        000000000000000000000000000000006A6A6B43878788EAE1E1E1FFB5B5E2FF
+        A7A6E4FF7877E5FF5151E5FF4F4FE4FF4E4EE2FF4D4DE0FF4C4CDEFF4B4BDCFF
+        4949DBFF4848D7FF4747D5FF4545D3FF4545D1FF4343CFFF4242CCFF3F3FCBFF
+        4343C2FF4645B6FFADADDCFFE1E1E1FF878788EA6A6A6B430000000000000000
+        00000000000000000000000000000000000000006A6A6B4E878788EAD3D3D3FE
+        D0D0ECFFAAA9DFFFA2A2ECFF6565E3FF5151E6FF4F4FE4FF4F4DE4FF4D4DE0FF
+        4D4DDFFF4D4DDCFF4C49DBFF4A4AD8FF4749D6FF4747D4FF4949CBFF4B4BC3FF
+        8E8ED0FFCDCCE8FFD3D3D3FE878788EA6A6A6B4E000000000000000000000000
+        0000000000000000000000000000000000000000000000006A6A6B43838383D8
+        B7B7B8FAECECEFFEC3C2E5FFADAEE1FF9E9DE8FF6F6FE0FF5C5CE1FF5452E2FF
+        5051E1FF4F4FDFFF4F4FDBFF5150D6FF5151CFFF5F5FC8FFA1A1D3FEC7C8E0FE
+        E4E4E7FEB7B7B8FA838383D86A6A6B4300000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000006A6A6B22
+        7C7C7C98888889F0BFBFBFFDEBEBECFED8D9EBFEBDBDE4FEA8A7DCFF9695D7FF
+        8886D4FF7F7DCEFF8C8BD2FFA1A2D9FFC0BEE1FED9D9EAFEEAEAECFEBFBFBFFD
+        888889F07C7C7C986A6A6B220000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000006A6A6B407575769E787879F19F9F9FF6C0C0C0FDDADADAFFEDEDEEFF
+        FBFBFBFFFBFBFBFFEDEDEEFFDADADAFFC0C0C0FD9F9F9FF6787879F17575769E
+        6A6A6B4000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000006A6A6B256A6A6B606A6A6B946A6A6BC06A6A6BE1
+        6A6A6BF86A6A6BF86A6A6BE16A6A6BC06A6A6B946A6A6B606A6A6B2500000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000FFC003FFFF0000FFFC00003FF800001FF000000FE0000007C0000003
+        C000000380000001800000010000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000080000001
+        80000001C0000003C0000003E0000007F000000FF800001FFC00003FFF0000FF
+        FFC003FF}
+      ShowUnicode = False
+      ColWidths = (
+        20
+        95
+        55
+        55
+        60
+        60
+        60
+        60)
+    end
   end
   object ImageList3: TImageList
     Height = 32
     ShareImages = True
     Width = 32
-    Left = 304
-    Top = 464
+    Left = 420
+    Top = 199
     Bitmap = {
-      494C01010F001300080120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300A00020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -2871,5 +3707,514 @@ object BottleInsFrame: TBottleInsFrame
       FC003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000
       000000000000}
+  end
+  object frxReport1: TfrxReport
+    Version = '5.4.6'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 42721.594806979200000000
+    ReportOptions.LastChange = 43190.910486284700000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      ''
+      'begin'
+      ''
+      'end.')
+    Left = 271
+    Top = 286
+    Datasets = <
+      item
+        DataSet = frxDBDataset3
+        DataSetName = 'frxDBDataset3'
+      end>
+    Variables = <>
+    Style = <
+      item
+        Name = 'Title'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Header'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Group header'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftBottom]
+      end
+      item
+        Name = 'Data'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+      end
+      item
+        Name = 'Group footer'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftTop]
+      end
+      item
+        Name = 'Header line'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftBottom]
+        Frame.Width = 2.000000000000000000
+      end>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 215.900000000000000000
+      PaperHeight = 279.400000000000000000
+      PaperSize = 1
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        Height = 64.252010000000000000
+        Top = 18.897650000000000000
+        Width = 740.409927000000000000
+        object Memo1: TfrxMemoView
+          Align = baWidth
+          Top = 20.677180000000000000
+          Width = 740.409927000000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #38144#21806#32479#35745#34920)
+          ParentFont = False
+          Style = 'Title'
+          VAlign = vaCenter
+        end
+      end
+      object PageHeader1: TfrxPageHeader
+        FillType = ftBrush
+        Height = 22.677180000000000000
+        Top = 105.826840000000000000
+        Width = 740.409927000000000000
+        object Memo2: TfrxMemoView
+          Width = 740.787401570000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 2.000000000000000000
+          HAlign = haCenter
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo3: TfrxMemoView
+          Width = 133.039379840000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #31867#21035#21517#31216)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo4: TfrxMemoView
+          Left = 133.161921620000000000
+          Width = 99.401552830000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #35746#21333#25968#37327)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo5: TfrxMemoView
+          Left = 232.644908010000000000
+          Width = 91.842517240000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #38144#21806#25968#37327)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo6: TfrxMemoView
+          Left = 324.254736450000000000
+          Width = 110.846068450000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #38144#21806#37329#39069)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo7: TfrxMemoView
+          Left = 435.218924900000000000
+          Width = 105.826783860000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #29616#37329#25903#20184)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo8: TfrxMemoView
+          Left = 541.483196520000000000
+          Width = 100.393927440000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #24494#20449#25903#20184)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo9: TfrxMemoView
+          Left = 642.299630000000000000
+          Width = 96.755905511811000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            #21047#21345#25903#20184)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Height = 18.897650000000000000
+        Top = 188.976500000000000000
+        Width = 740.409927000000000000
+        DataSet = frxDBDataset3
+        DataSetName = 'frxDBDataset3'
+        RowCount = 0
+        object Memo13: TfrxMemoView
+          Width = 133.039379840000000000
+          Height = 18.897650000000000000
+          DataField = 'dd'
+          DataSet = frxDBDataset3
+          DataSetName = 'frxDBDataset3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBDataset3."dd"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo14: TfrxMemoView
+          Left = 133.161921620000000000
+          Width = 99.401552830000000000
+          Height = 18.897650000000000000
+          DataField = 'ee'
+          DataSet = frxDBDataset3
+          DataSetName = 'frxDBDataset3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBDataset3."ee"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo15: TfrxMemoView
+          Left = 232.644908010000000000
+          Width = 91.842517240000000000
+          Height = 18.897650000000000000
+          DataField = 'ff'
+          DataSet = frxDBDataset3
+          DataSetName = 'frxDBDataset3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBDataset3."ff"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo16: TfrxMemoView
+          Left = 324.254736450000000000
+          Width = 110.846068450000000000
+          Height = 18.897650000000000000
+          DataField = 'cc'
+          DataSet = frxDBDataset3
+          DataSetName = 'frxDBDataset3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBDataset3."cc"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo17: TfrxMemoView
+          Left = 434.998454900000000000
+          Width = 105.826783860000000000
+          Height = 18.897650000000000000
+          DataField = 'gg'
+          DataSet = frxDBDataset3
+          DataSetName = 'frxDBDataset3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBDataset3."gg"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo18: TfrxMemoView
+          Left = 541.483196520000000000
+          Width = 100.393927440000000000
+          Height = 18.897650000000000000
+          DataField = 'bb'
+          DataSet = frxDBDataset3
+          DataSetName = 'frxDBDataset3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBDataset3."bb"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo10: TfrxMemoView
+          Left = 642.299630000000000000
+          Width = 96.755905510000000000
+          Height = 18.897650000000000000
+          DataField = 'bb'
+          DataSet = frxDBDataset3
+          DataSetName = 'frxDBDataset3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8W = (
+            '[frxDBDataset3."bb"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object PageFooter1: TfrxPageFooter
+        FillType = ftBrush
+        Height = 26.456710000000000000
+        Top = 268.346630000000000000
+        Width = 740.409927000000000000
+        object Memo23: TfrxMemoView
+          Align = baWidth
+          Width = 740.409927000000000000
+          Frame.Typ = [ftTop]
+          Frame.Width = 2.000000000000000000
+        end
+        object Memo24: TfrxMemoView
+          Top = 1.000000000000000000
+          Height = 22.677180000000000000
+          AutoWidth = True
+          Memo.UTF8W = (
+            '[Date] [Time]')
+        end
+        object Memo25: TfrxMemoView
+          Align = baRight
+          Left = 664.819327000000000000
+          Top = 1.000000000000000000
+          Width = 75.590600000000000000
+          Height = 22.677180000000000000
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Page [Page#]')
+        end
+      end
+      object Memo21: TfrxMemoView
+        Left = 681.197280000000000000
+        Top = 2.000000000000000000
+        Width = 94.488250000000000000
+        Height = 18.897650000000000000
+        Memo.UTF8W = (
+          #21333#20301#65306#20803)
+      end
+    end
+  end
+  object frxDBDataset1: TfrxDBDataset
+    UserName = 'frxDBDataset1'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      #35746#21333#21495'='#35746#21333#21495
+      #38376#24215#21517#31216'='#38376#24215#21517#31216
+      '-'#35746#27668#26102#38388'='#35746#27668#26102#38388
+      #23436#25104#26102#38388'='#23436#25104#26102#38388
+      #21830#21697'='#21830#21697
+      #23458#25143#32534#21495'='#23458#25143#32534#21495
+      #23458#25143'='#23458#25143
+      '-'#23458#25143#31867#22411'='#23458#25143#31867#22411
+      #20250#21592#21345#21495'='#20250#21592#21345#21495
+      '-'#22320#22336'='#22320#22336
+      #25968#37327'='#25968#37327
+      #21333#20215'='#21333#20215
+      #20248#24800'='#20248#24800
+      #31199#29942#36153'='#31199#29942#36153
+      #36865#27668#36153'='#36865#27668#36153
+      #24635#37329#39069'='#24635#37329#39069
+      #25910#27454#26041#24335'='#25910#27454#26041#24335
+      '-'#22791#27880'='#22791#27880)
+    DataSet = Data1.UniQuery4
+    BCDToCurrency = False
+    Left = 391
+    Top = 460
+  end
+  object frxDBDataset2: TfrxDBDataset
+    UserName = 'frxDBDataset2'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      #21830#21697#21517#31216'='#21830#21697#21517#31216
+      #21830#21697#20215#26684'='#21830#21697#20215#26684
+      #35746#21333#25968#37327'='#35746#21333#25968#37327
+      #38144#21806#29942#25968'='#38144#21806#29942#25968
+      #31199#29942#36153'='#31199#29942#36153
+      #20248#24800#37329#39069'='#20248#24800#37329#39069
+      #36865#27668#36153'='#36865#27668#36153
+      #21512#35745#37329#39069'='#21512#35745#37329#39069)
+    DataSet = Data1.UniQuery5
+    BCDToCurrency = False
+    Left = 568
+    Top = 187
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Excel file |*.xls'
+    Left = 660
+    Top = 190
+  end
+  object AdvGridExcelIO1: TAdvGridExcelIO
+    AdvStringGrid = DBAdvGrid1
+    Options.ExportOverwriteMessage = 'File %s already exists'#13'Ok to overwrite ?'
+    Options.ExportRawRTF = False
+    UseUnicode = False
+    GridStartRow = 0
+    Version = '3.13'
+    Left = 632
+    Top = 109
+  end
+  object AdvGridExcelIO2: TAdvGridExcelIO
+    AdvStringGrid = DBAdvGrid2
+    Options.ExportOverwriteMessage = 'File %s already exists'#13'Ok to overwrite ?'
+    Options.ExportRawRTF = False
+    UseUnicode = False
+    GridStartRow = 0
+    Version = '3.13'
+    Left = 734
+    Top = 115
+  end
+  object frxDBDataset3: TfrxDBDataset
+    UserName = 'frxDBDataset3'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'dd=dd'
+      'shopid=shopid'
+      'ee=ee'
+      'ff=ff'
+      'cc=cc'
+      'gg=gg'
+      'bb=bb'
+      'sk=sk')
+    DataSource = Data1.DataSource73
+    BCDToCurrency = False
+    Left = 472
+    Top = 461
   end
 end

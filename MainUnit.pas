@@ -87,6 +87,7 @@ type
     N63: TMenuItem;
     N64: TMenuItem;
     N65: TMenuItem;
+    N66: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure N22Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
@@ -123,6 +124,9 @@ type
     procedure N28Click(Sender: TObject);
     procedure N43Click(Sender: TObject);
     procedure N40Click(Sender: TObject);
+    procedure N37Click(Sender: TObject);
+    procedure N66Click(Sender: TObject);
+    procedure N29Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -142,7 +146,7 @@ uses
   CallCentUnit, PowerUnit, UserInfoUnit, MdPgUnit, MdHdUnit, DdListUnit, Unit28,
   BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit,LPGUnit,
   CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,
-  GiveUnitpas, BottleInsUnit, PzUnit;
+  GiveUnitpas, BottleInsUnit, PzUnit, DtelUnit, XstypeUnit, YwyUnit;
 
 {$R *.dfm}
 
@@ -489,6 +493,11 @@ begin
   GiveForm.ShowModal;
 end;
 
+procedure TMainForm.N29Click(Sender: TObject);
+begin
+  YwyForm.ShowModal;
+end;
+
 procedure TMainForm.N30Click(Sender: TObject);
 var
  comap:TGpjFrame;
@@ -668,6 +677,11 @@ begin
    comap.Parent:=aop;
 end;
 
+procedure TMainForm.N37Click(Sender: TObject);
+begin
+  DtelForm.ShowModal;
+end;
+
 procedure TMainForm.N38Click(Sender: TObject);
 var
  comap:TKhXxForm;
@@ -830,6 +844,11 @@ end;
 procedure TMainForm.N65Click(Sender: TObject);
 begin
   LogForm.ShowModal;
+end;
+
+procedure TMainForm.N66Click(Sender: TObject);
+begin
+  XstypeForm.ShowModal;
 end;
 
 end.

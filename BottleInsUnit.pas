@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics,
   Controls, Forms, Dialogs, uniGUITypes, uniGUIAbstractClasses,
   uniGUIClasses, uniGUIFrame, StdCtrls, Grids, AdvObj, BaseGrid, AdvGrid,
-  DBAdvGrid, ExtCtrls, DB, MemDS, DBAccess, Uni, ImgList;
+  DBAdvGrid, ExtCtrls, DB, MemDS, DBAccess, Uni, ImgList, AdvUtil;
 
 type
   TBottleInsFrame = class(TUniFrame)

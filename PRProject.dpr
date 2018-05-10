@@ -64,8 +64,11 @@ uses
   EditLetterUnit in 'EditLetterUnit.pas' {EditLetterForm},
   GiveUnitpas in 'GiveUnitpas.pas' {GiveForm},
   BottleInsUnit in 'BottleInsUnit.pas' {BottleInsFrame: TUniFrame},
-//  Unit9 in 'Unit9.pas' {Form9},
-  PzUnit in 'PzUnit.pas' {PzForm};
+  PzUnit in 'PzUnit.pas' {PzForm},
+  DtelUnit in 'DtelUnit.pas' {DtelForm},
+  XstypeUnit in 'XstypeUnit.pas' {XstypeForm},
+  YwyUnit in 'YwyUnit.pas' {YwyForm},
+  Unit54 in 'Unit54.pas' {Form54};
 
 {$R *.res}
 
@@ -112,7 +115,11 @@ begin
   Application.CreateForm(TLetterForm, LetterForm);
   Application.CreateForm(TEditLetterForm, EditLetterForm);
   Application.CreateForm(TGiveForm, GiveForm);
-//  Application.CreateForm(TForm9, Form9);
+  Application.CreateForm(TDtelForm, DtelForm);
+  Application.CreateForm(TXstypeForm, XstypeForm);
+  Application.CreateForm(TYwyForm, YwyForm);
+  Application.CreateForm(TForm54, Form54);
+  //  Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TPzForm, PzForm);
   Application.Run;
 end.
