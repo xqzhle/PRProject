@@ -122,6 +122,7 @@ type
     procedure N60Click(Sender: TObject);
     procedure N28Click(Sender: TObject);
     procedure N43Click(Sender: TObject);
+    procedure N40Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -140,7 +141,8 @@ uses
   KhXxUnit,TsYhUnit,GsKhYhUnit, DbUnit,DeptInfoUnit,GwInfoUnit,YgInfoUnit,
   CallCentUnit, PowerUnit, UserInfoUnit, MdPgUnit, MdHdUnit, DdListUnit, Unit28,
   BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit,LPGUnit,
-  CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,GiveUnitpas, BottleInsUnit;
+  CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,
+  GiveUnitpas, BottleInsUnit, PzUnit;
 
 {$R *.dfm}
 
@@ -716,6 +718,11 @@ begin
    comap.Align:=alClient;
    comap.Parent:=aop;
 
+end;
+
+procedure TMainForm.N40Click(Sender: TObject);
+begin
+  PzForm.ShowModal;
 end;
 
 procedure TMainForm.N41Click(Sender: TObject);

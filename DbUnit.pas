@@ -221,6 +221,8 @@ type
     UniTransaction1: TUniTransaction;
     AdvGridExcelIO1: TAdvGridExcelIO;
     ADOConnection1: TADOConnection;
+    banner: TUniQuery;
+    bannerDataSource: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -247,8 +249,8 @@ begin
   UniConnection1.Server := zReadString('database', 'SERVER', '');
   UniConnection1.Username := Dec(zReadString('database', 'USERNAME', ''));
   UniConnection1.Password := Dec(zReadString('database', 'PASSWORD', ''));
-  connstr:='Provider=SQLOLEDB.1;Password='''+UniConnection1.Password+''';Persist Security Info=False;User ID='''+UniConnection1.Username+''';'+
-    'Initial Catalog='''+UniConnection1.Database+''';Data Source='''+UniConnection1.Server+'''';
+  connstr:='Provider=SQLOLEDB.1;Password='+UniConnection1.Password+';Persist Security Info=False;User ID='+UniConnection1.Username+';'+
+    'Initial Catalog='+UniConnection1.Database+';Data Source='+UniConnection1.Server;
   try
     UniConnection1.Open;
     ADOConnection1.Close;

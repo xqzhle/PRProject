@@ -398,7 +398,7 @@ object MainForm: TMainForm
         ParentFont = False
         TabOrder = 0
         UseDockManager = True
-        Version = '2.4.2.0'
+        Version = '2.5.4.1'
         BorderColor = clNone
         Caption.Color = 15658734
         Caption.ColorTo = clNone
@@ -745,7 +745,7 @@ object MainForm: TMainForm
             45D3FFE05E26D0BF4F2FAC3DC7D13EEC6B7AB226BCC212EDC21AA46F7F3BD63C
             9B679D01FE6F00A97581C8022A9A3A0000000049454E44AE426082}
           TabOrder = 0
-          Version = '2.1.1.1'
+          Version = '2.1.1.5'
           OnClick = AdvSmoothButton7Click
           TMSStyle = 0
         end
@@ -1050,7 +1050,7 @@ object MainForm: TMainForm
             B2C427354B14BFE9FF3EFFFF0700DDEC1558467E35270000000049454E44AE42
             6082}
           TabOrder = 1
-          Version = '2.1.1.1'
+          Version = '2.1.1.5'
           OnClick = N18Click
           TMSStyle = 0
         end
@@ -1331,7 +1331,7 @@ object MainForm: TMainForm
             CCB9773667B493EF8C7F72FCFF00B211A1D5BA7B50D80000000049454E44AE42
             6082}
           TabOrder = 2
-          Version = '2.1.1.1'
+          Version = '2.1.1.5'
           OnClick = N19Click
           TMSStyle = 0
         end
@@ -1480,7 +1480,7 @@ object MainForm: TMainForm
             3D9DFDB87679F5EC53C0025003282DD0B84B69007E2C1080EF6993E01DC27F70
             36FEF3C11FF3E7DFEFFC1E00E4CB0706E49374FE0000000049454E44AE426082}
           TabOrder = 3
-          Version = '2.1.1.1'
+          Version = '2.1.1.5'
           OnClick = N20Click
           TMSStyle = 0
         end
@@ -1721,6 +1721,7 @@ object MainForm: TMainForm
       Caption = #31995#32479#31649#29702
       object N40: TMenuItem
         Caption = #31995#32479#21442#25968#35774#32622
+        OnClick = N40Click
       end
       object N39: TMenuItem
         Caption = #25805#20316#21592#31649#29702
@@ -1833,6 +1834,7 @@ object MainForm: TMainForm
     Settings.BorderShadow = False
     Settings.BorderStyle = bsNone
     Settings.BorderWidth = 0
+    Settings.BottomIndent = 0
     Settings.CanMove = False
     Settings.CanSize = False
     Settings.Caption.Color = 15658734
@@ -1896,7 +1898,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C010107001000780020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101070010007C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
