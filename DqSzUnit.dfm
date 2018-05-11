@@ -149,7 +149,7 @@ object DqSzFrame: TDqSzFrame
     SortSettings.HeaderColorTo = 16579058
     SortSettings.HeaderMirrorColor = 16380385
     SortSettings.HeaderMirrorColorTo = 16182488
-    Version = '2.3.8.6'
+    Version = '2.4.0.2'
     AutoCreateColumns = True
     AutoRemoveColumns = True
     Columns = <
@@ -487,7 +487,7 @@ object DqSzFrame: TDqSzFrame
     SortSettings.HeaderColorTo = 16579058
     SortSettings.HeaderMirrorColor = 16380385
     SortSettings.HeaderMirrorColorTo = 16182488
-    Version = '2.3.8.6'
+    Version = '2.4.0.2'
     AutoCreateColumns = True
     AutoRemoveColumns = True
     Columns = <
@@ -687,7 +687,7 @@ object DqSzFrame: TDqSzFrame
     Left = 488
     Top = 70
     Width = 137
-    Height = 23
+    Height = 25
     TabOrder = 3
     Text = 'Edit1'
     Visible = False
@@ -696,7 +696,7 @@ object DqSzFrame: TDqSzFrame
     Left = 488
     Top = 148
     Width = 185
-    Height = 23
+    Height = 25
     TabOrder = 4
     Text = 'Edit1'
     OnEnter = Edit1Enter

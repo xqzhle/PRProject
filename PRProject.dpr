@@ -11,7 +11,6 @@ uses
   MdJgUnit in 'MdJgUnit.pas' {MdJgFrame: TUniFrame},
   DjYfUnit in 'DjYfUnit.pas' {DjYfFrame: TUniFrame},
   KhLxUnit in 'KhLxUnit.pas' {KhLxFrame: TUniFrame},
-  DqSzUnit in 'DqSzUnit.pas' {DqSzFrame: TUniFrame},
   KhXxUnit in 'KhXxUnit.pas' {KhXxForm},
   KhEditUnit in 'KhEditUnit.pas' {KhEditForm},
   TsYhUnit in 'TsYhUnit.pas' {TsYhFrame: TUniFrame},
@@ -73,7 +72,10 @@ uses
   CarUnit in 'CarUnit.pas' {CarForm},
   GMoneyUnit in 'GMoneyUnit.pas' {GMoneyForm},
   khgpUnit in 'khgpUnit.pas' {khgpForm},
-  MdgpUnit in 'MdgpUnit.pas' {MdgpForm};
+  MdgpUnit in 'MdgpUnit.pas' {MdgpForm},
+  DqSzUnit in 'DqSzUnit.pas' {DqSzFrame: TUniFrame},
+  DUnitpas in 'DUnitpas.pas' {DForm},
+  LzUnit in 'LzUnit.pas' {lzForm};
 
 {$R *.res}
 
@@ -128,6 +130,8 @@ begin
   Application.CreateForm(TGMoneyForm, GMoneyForm);
   Application.CreateForm(TkhgpForm, khgpForm);
   Application.CreateForm(TMdgpForm, MdgpForm);
+  Application.CreateForm(TDForm, DForm);
+  Application.CreateForm(TlzForm, lzForm);
   //  Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TPzForm, PzForm);
   Application.Run;

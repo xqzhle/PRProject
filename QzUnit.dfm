@@ -27,7 +27,6 @@ object QzFrame: TQzFrame
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitTop = -6
     object Button2: TButton
       Left = 38
       Top = 21
@@ -560,177 +559,177 @@ object QzFrame: TQzFrame
       150
       65
       120)
-    object Panel2: TPanel
-      Left = 197
-      Top = 37
-      Width = 450
-      Height = 337
+  end
+  object Panel2: TPanel
+    Left = 202
+    Top = 96
+    Width = 450
+    Height = 337
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    object Label2: TLabel
+      Left = 193
+      Top = 8
+      Width = 64
+      Height = 17
+      Caption = #27668#31449#20449#24687
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
       Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 92
+      Top = 60
+      Width = 60
+      Height = 17
+      Caption = #27668#31449#32534#21495
+    end
+    object Label5: TLabel
+      Left = 92
+      Top = 93
+      Width = 60
+      Height = 17
+      Caption = #27668#31449#21517#31216
+    end
+    object Label7: TLabel
+      Left = 359
+      Top = 93
+      Width = 5
+      Height = 17
+      Caption = '*'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 92
+      Top = 126
+      Width = 60
+      Height = 17
+      Caption = #27668#31449#30005#35805
+    end
+    object Label8: TLabel
+      Left = 107
+      Top = 188
+      Width = 45
+      Height = 17
+      Caption = #32852#31995#20154
+    end
+    object Label11: TLabel
+      Left = 359
+      Top = 60
+      Width = 5
+      Height = 17
+      Caption = '*'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 92
+      Top = 157
+      Width = 60
+      Height = 17
+      Caption = #27668#31449#22320#22336
+    end
+    object Label1: TLabel
+      Left = 122
+      Top = 219
+      Width = 30
+      Height = 17
+      Caption = #22791#27880
+    end
+    object Button5: TButton
+      Left = 416
+      Top = 0
+      Width = 33
+      Height = 25
+      Caption = 'X'
+      TabOrder = 0
+      OnClick = Button5Click
+    end
+    object Edit2: TEdit
+      Left = 172
+      Top = 57
+      Width = 181
+      Height = 25
+      TabOrder = 1
+    end
+    object Edit3: TEdit
+      Left = 172
+      Top = 90
+      Width = 181
+      Height = 25
+      TabOrder = 2
+    end
+    object Button6: TButton
+      Left = 104
+      Top = 278
+      Width = 75
+      Height = 25
+      Caption = #20445#23384
+      TabOrder = 3
+      OnClick = Button6Click
+    end
+    object Button7: TButton
+      Left = 287
+      Top = 278
+      Width = 75
+      Height = 25
+      Caption = #21462#28040
       TabOrder = 4
-      object Label2: TLabel
-        Left = 193
-        Top = 8
-        Width = 64
-        Height = 17
-        Caption = #27668#31449#20449#24687
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object Label4: TLabel
-        Left = 92
-        Top = 60
-        Width = 60
-        Height = 17
-        Caption = #27668#31449#32534#21495
-      end
-      object Label5: TLabel
-        Left = 92
-        Top = 93
-        Width = 60
-        Height = 17
-        Caption = #27668#31449#21517#31216
-      end
-      object Label7: TLabel
-        Left = 359
-        Top = 93
-        Width = 5
-        Height = 17
-        Caption = '*'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label3: TLabel
-        Left = 92
-        Top = 126
-        Width = 60
-        Height = 17
-        Caption = #27668#31449#30005#35805
-      end
-      object Label8: TLabel
-        Left = 107
-        Top = 188
-        Width = 45
-        Height = 17
-        Caption = #32852#31995#20154
-      end
-      object Label11: TLabel
-        Left = 359
-        Top = 60
-        Width = 5
-        Height = 17
-        Caption = '*'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label6: TLabel
-        Left = 92
-        Top = 157
-        Width = 60
-        Height = 17
-        Caption = #27668#31449#22320#22336
-      end
-      object Label1: TLabel
-        Left = 122
-        Top = 219
-        Width = 30
-        Height = 17
-        Caption = #22791#27880
-      end
-      object Button5: TButton
-        Left = 416
-        Top = 0
-        Width = 33
-        Height = 25
-        Caption = 'X'
-        TabOrder = 0
-        OnClick = Button5Click
-      end
-      object Edit2: TEdit
-        Left = 172
-        Top = 57
-        Width = 181
-        Height = 25
-        TabOrder = 1
-      end
-      object Edit3: TEdit
-        Left = 172
-        Top = 90
-        Width = 181
-        Height = 25
-        TabOrder = 2
-      end
-      object Button6: TButton
-        Left = 104
-        Top = 278
-        Width = 75
-        Height = 25
-        Caption = #20445#23384
-        TabOrder = 3
-        OnClick = Button6Click
-      end
-      object Button7: TButton
-        Left = 287
-        Top = 278
-        Width = 75
-        Height = 25
-        Caption = #21462#28040
-        TabOrder = 4
-        OnClick = Button5Click
-      end
-      object Edit1: TEdit
-        Left = 23
-        Top = 18
-        Width = 82
-        Height = 25
-        TabOrder = 5
-        Text = '1'
-        Visible = False
-      end
-      object Edit4: TEdit
-        Left = 172
-        Top = 123
-        Width = 181
-        Height = 25
-        TabOrder = 6
-      end
-      object Edit5: TEdit
-        Left = 172
-        Top = 185
-        Width = 181
-        Height = 25
-        TabOrder = 7
-      end
-      object Edit6: TEdit
-        Left = 172
-        Top = 154
-        Width = 181
-        Height = 25
-        TabOrder = 8
-      end
-      object Edit7: TEdit
-        Left = 172
-        Top = 216
-        Width = 181
-        Height = 25
-        TabOrder = 9
-      end
+      OnClick = Button5Click
+    end
+    object Edit1: TEdit
+      Left = 23
+      Top = 18
+      Width = 82
+      Height = 25
+      TabOrder = 5
+      Text = '1'
+      Visible = False
+    end
+    object Edit4: TEdit
+      Left = 172
+      Top = 123
+      Width = 181
+      Height = 25
+      TabOrder = 6
+    end
+    object Edit5: TEdit
+      Left = 172
+      Top = 185
+      Width = 181
+      Height = 25
+      TabOrder = 7
+    end
+    object Edit6: TEdit
+      Left = 172
+      Top = 154
+      Width = 181
+      Height = 25
+      TabOrder = 8
+    end
+    object Edit7: TEdit
+      Left = 172
+      Top = 216
+      Width = 181
+      Height = 25
+      TabOrder = 9
     end
   end
   object UniQuery1: TUniQuery

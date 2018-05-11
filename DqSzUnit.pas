@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics,
   Controls, Forms, Dialogs, uniGUITypes, uniGUIAbstractClasses,
   uniGUIClasses, uniGUIFrame, Menus, ExtCtrls, Grids, AdvObj, BaseGrid, AdvGrid,
-  DBAdvGrid, StdCtrls;
+  DBAdvGrid, StdCtrls, AdvUtil;
 
 type
   TDqSzFrame = class(TUniFrame)
