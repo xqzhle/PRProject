@@ -1,8 +1,8 @@
 object MdPgFrame: TMdPgFrame
   Left = 0
   Top = 0
-  Width = 635
-  Height = 531
+  Width = 470
+  Height = 397
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Align = alNone
@@ -17,7 +17,7 @@ object MdPgFrame: TMdPgFrame
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 635
+    Width = 470
     Height = 65
     Align = alTop
     BevelOuter = bvNone
@@ -150,8 +150,8 @@ object MdPgFrame: TMdPgFrame
   object DBAdvGrid4: TDBAdvGrid
     Left = 0
     Top = 65
-    Width = 635
-    Height = 466
+    Width = 470
+    Height = 332
     Cursor = crDefault
     Hint = #26410#22238#21333#21487#28857#21491#38190#37325#25171#27966#24037#21333
     Align = alClient

@@ -68,7 +68,10 @@ uses
   DtelUnit in 'DtelUnit.pas' {DtelForm},
   XstypeUnit in 'XstypeUnit.pas' {XstypeForm},
   YwyUnit in 'YwyUnit.pas' {YwyForm},
-  Unit54 in 'Unit54.pas' {Form54};
+  Unit54 in 'Unit54.pas' {Form54},
+  QzUnit in 'QzUnit.pas' {QzFrame: TUniFrame},
+  CarUnit in 'CarUnit.pas' {CarForm},
+  GMoneyUnit in 'GMoneyUnit.pas' {GMoneyForm};
 
 {$R *.res}
 
@@ -119,6 +122,8 @@ begin
   Application.CreateForm(TXstypeForm, XstypeForm);
   Application.CreateForm(TYwyForm, YwyForm);
   Application.CreateForm(TForm54, Form54);
+  Application.CreateForm(TCarForm, CarForm);
+  Application.CreateForm(TGMoneyForm, GMoneyForm);
   //  Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TPzForm, PzForm);
   Application.Run;

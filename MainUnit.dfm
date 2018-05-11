@@ -1485,6 +1485,22 @@ object MainForm: TMainForm
           TMSStyle = 0
         end
       end
+      object ShopnameBox: TComboBox
+        Left = 319
+        Top = 80
+        Width = 145
+        Height = 25
+        TabOrder = 1
+        Text = 'ShopnameBox'
+      end
+      object ShopidBox: TComboBox
+        Left = 500
+        Top = 80
+        Width = 145
+        Height = 25
+        TabOrder = 2
+        Text = 'ShopidBox'
+      end
     end
   end
   object Panel1: TPanel
@@ -1675,12 +1691,14 @@ object MainForm: TMainForm
       Caption = #27668#31449#31649#29702
       object N56: TMenuItem
         Caption = #27668#31449#20449#24687
+        OnClick = N56Click
       end
       object N57: TMenuItem
         Caption = #20805#35013#21488#31204
       end
       object N58: TMenuItem
         Caption = #36710#36742#20449#24687
+        OnClick = N58Click
       end
       object N63: TMenuItem
         Caption = #28082#21270#27668#37319#36141
@@ -1721,6 +1739,10 @@ object MainForm: TMainForm
       object N66: TMenuItem
         Caption = #38144#21806#25253#34920
         OnClick = N66Click
+      end
+      object N67: TMenuItem
+        Caption = #27668#29942#25910#36153
+        OnClick = N67Click
       end
     end
     object N11: TMenuItem
@@ -1904,7 +1926,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C0101070010007C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101070010008C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
