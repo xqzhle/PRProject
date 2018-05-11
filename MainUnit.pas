@@ -153,6 +153,7 @@ type
     procedure N45Click(Sender: TObject);
     procedure N50Click(Sender: TObject);
     procedure N51Click(Sender: TObject);
+    procedure N55Click(Sender: TObject);
   private
     { Private declarations }
     procedure initdata();
@@ -165,6 +166,7 @@ var
   MainForm: TMainForm;
   Loginname,UsName,ext:string;
   Shopid,shopname:string;
+  log_czid,qzname,log_czq,usercode:string;
 implementation
 
 uses
@@ -174,7 +176,8 @@ uses
   BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit,LPGUnit,
   CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,
   GiveUnitpas, BottleInsUnit, PzUnit, DtelUnit, XstypeUnit, YwyUnit, QzUnit,
-  CarUnit, GMoneyUnit, MdgpUnit, khgpUnit, CustwaingUnit, LzUnit, DUnitpas, BottleListUnit, BottleinfoUnit, YpDayUnit, YpTjUnit;
+  CarUnit, GMoneyUnit, MdgpUnit, khgpUnit, CustwaingUnit, LzUnit, DUnitpas, BottleListUnit,
+  BottleinfoUnit, YpDayUnit, YpTjUnit, BottleManUnit;
 
 {$R *.dfm}
 
@@ -1027,6 +1030,11 @@ begin
    comap.Align:=alClient;
    comap.Parent:=aop;
 
+end;
+
+procedure TMainForm.N55Click(Sender: TObject);
+begin
+   BottleManForm.show;
 end;
 
 procedure TMainForm.N56Click(Sender: TObject);

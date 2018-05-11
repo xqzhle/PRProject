@@ -307,6 +307,15 @@
 				<Form>YpTjFrame</Form>
 				<DesignClass>TUniFrame</DesignClass>
 			</DCCReference>
+			<DCCReference Include="BottleManUnit.pas">
+				<Form>BottleManForm</Form>
+			</DCCReference>
+			<DCCReference Include="Unit22.pas">
+				<Form>Form22</Form>
+			</DCCReference>
+			<DCCReference Include="bottlesmUnit.pas">
+				<Form>Form303</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>

@@ -79,7 +79,10 @@ uses
   BottleinfoUnit in 'BottleinfoUnit.pas' {BottleInfoForm},
   BottleListUnit in 'BottleListUnit.pas' {BottleListFrame: TUniFrame},
   YpDayUnit in 'YpDayUnit.pas' {YpDaycFrame: TUniFrame},
-  YpTjUnit in 'YpTjUnit.pas' {YpTjFrame: TUniFrame};
+  YpTjUnit in 'YpTjUnit.pas' {YpTjFrame: TUniFrame},
+  BottleManUnit in 'BottleManUnit.pas' {BottleManForm},
+  Unit22 in 'Unit22.pas' {Form22},
+  bottlesmUnit in 'bottlesmUnit.pas' {Form303};
 
 {$R *.res}
 
@@ -138,5 +141,8 @@ begin
   Application.CreateForm(TDForm, DForm);
   Application.CreateForm(TBottleInfoForm, BottleInfoForm);
   Application.CreateForm(TPzForm, PzForm);
+  Application.CreateForm(TBottleManForm, BottleManForm);
+  Application.CreateForm(TForm22, Form22);
+  Application.CreateForm(TForm303, Form303);
   Application.Run;
 end.
