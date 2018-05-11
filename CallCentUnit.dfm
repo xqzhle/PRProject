@@ -291,7 +291,7 @@ object CallCentForm: TCallCentForm
       Width = 881
       Height = 209
       AdvOfficePagerStyler = MainForm.AdvOfficePagerOfficeStyler1
-      ActivePage = AdvOfficePage3
+      ActivePage = AdvOfficePager11
       ButtonSettings.CloseButtonPicture.Data = {
         424DA20400000000000036040000280000000900000009000000010008000000
         00006C000000C30E0000C30E00000001000000010000427B8400DEEFEF00FFFF
@@ -1636,10 +1636,9 @@ object CallCentForm: TCallCentForm
           RowCount = 2
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = 'Segoe UI'
+          Font.Height = -11
+          Font.Name = 'Tahoma'
           Font.Style = []
-          Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing]
           ParentFont = False
           ScrollBars = ssBoth
           TabOrder = 24
@@ -1649,8 +1648,8 @@ object CallCentForm: TCallCentForm
           OnEditCellDone = AdvStringGrid1EditCellDone
           ActiveCellFont.Charset = DEFAULT_CHARSET
           ActiveCellFont.Color = clWindowText
-          ActiveCellFont.Height = -12
-          ActiveCellFont.Name = 'Segoe UI'
+          ActiveCellFont.Height = -11
+          ActiveCellFont.Name = 'Tahoma'
           ActiveCellFont.Style = []
           ColumnHeaders.Strings = (
             #21830#21697#21517#31216
@@ -1698,12 +1697,11 @@ object CallCentForm: TCallCentForm
             'Larger than'
             'Smaller than'
             'Clear')
-          FixedColWidth = 103
           FixedRowHeight = 22
           FixedFont.Charset = DEFAULT_CHARSET
           FixedFont.Color = clWindowText
-          FixedFont.Height = -12
-          FixedFont.Name = 'Segoe UI'
+          FixedFont.Height = -11
+          FixedFont.Name = 'Tahoma'
           FixedFont.Style = []
           FloatFormat = '%.2f'
           HoverButtons.Buttons = <>
@@ -1748,16 +1746,6 @@ object CallCentForm: TCallCentForm
           ShowDesignHelper = False
           SortSettings.DefaultFormat = ssAutomatic
           Version = '8.1.3.0'
-          ColWidths = (
-            103
-            64
-            42
-            42
-            56
-            58
-            53
-            73
-            55)
         end
         object CheckBox1: TCheckBox
           Left = 17
@@ -9050,7 +9038,7 @@ object CallCentForm: TCallCentForm
     Left = 960
     Top = 296
     Bitmap = {
-      494C01010C0018004C0120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C01010C001800540120002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -11551,7 +11539,7 @@ object CallCentForm: TCallCentForm
     Left = 955
     Top = 228
     Bitmap = {
-      494C010103000800C80118001800FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010103000800D00118001800FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000600000001800000001002000000000000024
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000000000C799
