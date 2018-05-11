@@ -153,8 +153,8 @@
 			<DCCReference Include="Unit29.pas">
 				<Form>Form29</Form>
 			</DCCReference>
-			<DCCReference Include="Unit49.pas">
-				<Form>Form49</Form>
+			<DCCReference Include="CustwaingUnit.pas">
+				<Form>CustwaingForm</Form>
 			</DCCReference>
 			<DCCReference Include="Unit89.pas">
 				<Form>Form89</Form>
@@ -269,6 +269,22 @@
 			</DCCReference>
 			<DCCReference Include="Unit54.pas">
 				<Form>Form54</Form>
+			</DCCReference>
+			<DCCReference Include="QzUnit.pas">
+				<Form>QzFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="CarUnit.pas">
+				<Form>CarForm</Form>
+			</DCCReference>
+			<DCCReference Include="GMoneyUnit.pas">
+				<Form>GMoneyForm</Form>
+			</DCCReference>
+			<DCCReference Include="khgpUnit.pas">
+				<Form>khgpForm</Form>
+			</DCCReference>
+			<DCCReference Include="MdgpUnit.pas">
+				<Form>MdgpForm</Form>
 			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>

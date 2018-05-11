@@ -33,7 +33,7 @@ uses
   Unit28 in 'Unit28.pas' {Form28},
   SqgUnit in 'SqgUnit.pas' {SqgForm},
   Unit29 in 'Unit29.pas' {Form29},
-  Unit49 in 'Unit49.pas' {Form49},
+  CustwaingUnit in 'CustwaingUnit.pas' {CustwaingForm},
   Unit89 in 'Unit89.pas' {Form89},
   Unit88 in 'Unit88.pas' {Form88},
   ajjpegUnit in 'ajjpegUnit.pas' {ajjpegForm},
@@ -68,7 +68,12 @@ uses
   DtelUnit in 'DtelUnit.pas' {DtelForm},
   XstypeUnit in 'XstypeUnit.pas' {XstypeForm},
   YwyUnit in 'YwyUnit.pas' {YwyForm},
-  Unit54 in 'Unit54.pas' {Form54};
+  Unit54 in 'Unit54.pas' {Form54},
+  QzUnit in 'QzUnit.pas' {QzFrame: TUniFrame},
+  CarUnit in 'CarUnit.pas' {CarForm},
+  GMoneyUnit in 'GMoneyUnit.pas' {GMoneyForm},
+  khgpUnit in 'khgpUnit.pas' {khgpForm},
+  MdgpUnit in 'MdgpUnit.pas' {MdgpForm};
 
 {$R *.res}
 
@@ -93,7 +98,7 @@ begin
   Application.CreateForm(TForm28, Form28);
   Application.CreateForm(TSqgForm, SqgForm);
   Application.CreateForm(TForm29, Form29);
-  Application.CreateForm(TForm49, Form49);
+  Application.CreateForm(TCustwaingForm, CustwaingForm);
   Application.CreateForm(TForm89, Form89);
   Application.CreateForm(TForm88, Form88);
   Application.CreateForm(TajjpegForm, ajjpegForm);
@@ -119,6 +124,10 @@ begin
   Application.CreateForm(TXstypeForm, XstypeForm);
   Application.CreateForm(TYwyForm, YwyForm);
   Application.CreateForm(TForm54, Form54);
+  Application.CreateForm(TCarForm, CarForm);
+  Application.CreateForm(TGMoneyForm, GMoneyForm);
+  Application.CreateForm(TkhgpForm, khgpForm);
+  Application.CreateForm(TMdgpForm, MdgpForm);
   //  Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TPzForm, PzForm);
   Application.Run;

@@ -1485,6 +1485,30 @@ object MainForm: TMainForm
           TMSStyle = 0
         end
       end
+      object ShopnameBox: TComboBox
+        Left = 319
+        Top = 80
+        Width = 145
+        Height = 25
+        TabOrder = 1
+        Text = 'ShopnameBox'
+      end
+      object ShopidBox: TComboBox
+        Left = 500
+        Top = 80
+        Width = 145
+        Height = 25
+        TabOrder = 2
+        Text = 'ShopidBox'
+      end
+      object KhlxBox: TComboBox
+        Left = 676
+        Top = 80
+        Width = 145
+        Height = 25
+        TabOrder = 3
+        Text = 'KhlxBox'
+      end
     end
   end
   object Panel1: TPanel
@@ -1675,12 +1699,14 @@ object MainForm: TMainForm
       Caption = #27668#31449#31649#29702
       object N56: TMenuItem
         Caption = #27668#31449#20449#24687
+        OnClick = N56Click
       end
       object N57: TMenuItem
         Caption = #20805#35013#21488#31204
       end
       object N58: TMenuItem
         Caption = #36710#36742#20449#24687
+        OnClick = N58Click
       end
       object N63: TMenuItem
         Caption = #28082#21270#27668#37319#36141
@@ -1715,12 +1741,28 @@ object MainForm: TMainForm
     end
     object N9: TMenuItem
       Caption = #24211#23384#31649#29702
+      object m1: TMenuItem
+        Caption = #38376#24215#38050#29942#32479#35745
+        OnClick = m1Click
+      end
+      object N68: TMenuItem
+        Caption = #23458#25143#38050#29942#32479#35745
+        OnClick = N68Click
+      end
     end
     object N10: TMenuItem
       Caption = #25253#34920#20013#24515
       object N66: TMenuItem
         Caption = #38144#21806#25253#34920
         OnClick = N66Click
+      end
+      object N67: TMenuItem
+        Caption = #27668#29942#25910#36153
+        OnClick = N67Click
+      end
+      object N69: TMenuItem
+        Caption = #23458#25143#39044#35686
+        OnClick = N69Click
       end
     end
     object N11: TMenuItem
@@ -1903,7 +1945,11 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
+<<<<<<< HEAD
       494C010107001000800020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+=======
+      494C0101070010008C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+>>>>>>> 755a49c3f04a45bf85e047c32d5c23f8b4ca904c
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
