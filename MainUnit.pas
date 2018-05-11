@@ -70,10 +70,6 @@ type
     N47: TMenuItem;
     N48: TMenuItem;
     N49: TMenuItem;
-    N50: TMenuItem;
-    N51: TMenuItem;
-    N52: TMenuItem;
-    N53: TMenuItem;
     N54: TMenuItem;
     N55: TMenuItem;
     N56: TMenuItem;
@@ -95,6 +91,12 @@ type
     N68: TMenuItem;
     N69: TMenuItem;
     KhlxBox: TComboBox;
+    Label5: TLabel;
+    ComboBox4: TComboBox;
+    Label4: TLabel;
+    ComboBox3: TComboBox;
+    ComboBox2: TComboBox;
+    Label3: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure N22Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
@@ -140,6 +142,8 @@ type
     procedure m1Click(Sender: TObject);
     procedure N68Click(Sender: TObject);
     procedure N69Click(Sender: TObject);
+    procedure N47Click(Sender: TObject);
+    procedure N48Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -160,7 +164,7 @@ uses
   BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit,LPGUnit,
   CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,
   GiveUnitpas, BottleInsUnit, PzUnit, DtelUnit, XstypeUnit, YwyUnit, QzUnit,
-  CarUnit, GMoneyUnit, MdgpUnit, khgpUnit,CustwaingUnit;
+  CarUnit, GMoneyUnit, MdgpUnit, khgpUnit, CustwaingUnit, LzUnit, DUnitpas;
 
 {$R *.dfm}
 
@@ -186,6 +190,9 @@ begin
     ShopnameBox.Clear;
     ShopidBox.Clear;
     KhlxBox.Clear;
+    combobox2.Clear;
+    combobox3.Clear;
+    combobox4.Clear;
     with Data1.work do
     begin
       Close;
@@ -211,6 +218,45 @@ begin
           Next;
         end;
       end;
+      Close;
+      SQL.Clear;
+      SQL.Add('Select Factory_ID,NameC From tbWorks_Info Order By Factory_ID');
+      Open;
+      if RecordCount>0 then
+      begin
+        for i:=1 to  RecordCount do
+        begin
+          combobox2.Items.Append(Fields.Fields[1].AsString);
+          Next;
+        end;
+      end;
+          //查钢瓶规格
+      Close;
+      SQL.Clear;
+      SQL.Add('Select Spec_ID,Spec_Name From tbBottle_Spec Order By Spec_ID');
+      Open;
+      if RecordCount>0 then
+      begin
+        for i:=1 to RecordCount do
+        begin
+          combobox3.Items.Append(Fields.Fields[1].AsString);
+          Next;
+        end;
+      end;
+           //查充气介质
+      Close;
+      SQL.Clear;
+      SQL.Add('Select Type_ID,Type_Name From tbBottle_Class Order By Type_ID');
+      Open;
+      if RecordCount>0 then
+      begin
+        for i:=1 to RecordCount do
+        begin
+          combobox4.Items.Append(Fields.Fields[1].AsString);
+          Next;
+        end;
+      end;
+      Close;
     end;
 end;
 
@@ -864,6 +910,16 @@ begin
    comap.Align:=alClient;
    comap.Parent:=aop;
 
+end;
+
+procedure TMainForm.N47Click(Sender: TObject);
+begin
+  lzForm.ShowModal;
+end;
+
+procedure TMainForm.N48Click(Sender: TObject);
+begin
+  DForm.ShowModal;
 end;
 
 procedure TMainForm.N56Click(Sender: TObject);

@@ -1,13 +1,8 @@
 object MdPgFrame: TMdPgFrame
   Left = 0
   Top = 0
-<<<<<<< HEAD
-  Width = 1129
-  Height = 743
-=======
   Width = 470
   Height = 397
->>>>>>> 755a49c3f04a45bf85e047c32d5c23f8b4ca904c
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Align = alNone
@@ -22,16 +17,12 @@ object MdPgFrame: TMdPgFrame
   object Panel1: TPanel
     Left = 0
     Top = 0
-<<<<<<< HEAD
-    Width = 1129
-=======
     Width = 470
->>>>>>> 755a49c3f04a45bf85e047c32d5c23f8b4ca904c
     Height = 65
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 635
+    ExplicitWidth = 320
     object Label1: TLabel
       Left = 24
       Top = 23
@@ -84,7 +75,7 @@ object MdPgFrame: TMdPgFrame
       Width = 186
       Height = 25
       Date = 43223.000000000000000000
-      Time = 43223.000000000000000000
+      Time = 43230.000000000000000000
       DoubleBuffered = True
       Kind = dkDateTime
       ParentDoubleBuffered = False
@@ -93,7 +84,7 @@ object MdPgFrame: TMdPgFrame
       BorderStyle = bsSingle
       Ctl3D = True
       DateTime = 43223.000000000000000000
-      Version = '1.2.2.2'
+      Version = '1.2.5.0'
       LabelFont.Charset = DEFAULT_CHARSET
       LabelFont.Color = clWindowText
       LabelFont.Height = -11
@@ -106,7 +97,7 @@ object MdPgFrame: TMdPgFrame
       Width = 186
       Height = 25
       Date = 43222.999988425930000000
-      Time = 43222.999988425930000000
+      Time = 43230.999988425930000000
       DoubleBuffered = True
       Kind = dkDateTime
       ParentDoubleBuffered = False
@@ -115,7 +106,7 @@ object MdPgFrame: TMdPgFrame
       BorderStyle = bsSingle
       Ctl3D = True
       DateTime = 43222.999988425930000000
-      Version = '1.2.2.2'
+      Version = '1.2.5.0'
       LabelFont.Charset = DEFAULT_CHARSET
       LabelFont.Color = clWindowText
       LabelFont.Height = -11
@@ -159,13 +150,8 @@ object MdPgFrame: TMdPgFrame
   object DBAdvGrid4: TDBAdvGrid
     Left = 0
     Top = 65
-<<<<<<< HEAD
-    Width = 1129
-    Height = 678
-=======
     Width = 470
     Height = 332
->>>>>>> 755a49c3f04a45bf85e047c32d5c23f8b4ca904c
     Cursor = crDefault
     Hint = #26410#22238#21333#21487#28857#21491#38190#37325#25171#27966#24037#21333
     Align = alClient
@@ -269,7 +255,7 @@ object MdPgFrame: TMdPgFrame
     SearchFooter.HintHighlight = 'Highlight occurences'
     SearchFooter.MatchCaseCaption = 'Match case'
     SortSettings.DefaultFormat = ssAutomatic
-    Version = '2.3.8.6'
+    Version = '2.4.0.2'
     AutoCreateColumns = True
     AutoRemoveColumns = True
     Columns = <
@@ -459,13 +445,14 @@ object MdPgFrame: TMdPgFrame
       80000003C0000003C0000007E000000FF000001FF800003FFC0000FFFF0001FF
       FFC007FF}
     ShowUnicode = False
-    ExplicitWidth = 635
-    ExplicitHeight = 466
+    ExplicitWidth = 320
+    ExplicitHeight = 175
     ColWidths = (
       20
       64)
   end
   object UniQuery1: TUniQuery
+    DataTypeMap = <>
     Connection = Data1.UniConnection1
     Left = 648
     Top = 272
@@ -478,7 +465,7 @@ object MdPgFrame: TMdPgFrame
   object AcRptEngine1: TAcRptEngine
     AutoConnect = False
     ConnectKind = ckRunningOrNew
-    Left = 424
-    Top = 96
+    Left = 843
+    Top = 93
   end
 end
