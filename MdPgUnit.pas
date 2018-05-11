@@ -27,6 +27,7 @@ type
     Button4: TButton;
     Button5: TButton;
     AcRptEngine1: TAcRptEngine;
+
     procedure UniFrameCreate(Sender: TObject);
     procedure UniFrameDestroy(Sender: TObject);
     procedure DBAdvGrid4Resize(Sender: TObject);
