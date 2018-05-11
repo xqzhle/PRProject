@@ -317,7 +317,6 @@ object MainForm: TMainForm
     ShowShortCutHints = False
     OnClosedPage = AdvOfficePager1ClosedPage
     TabOrder = 0
-    ExplicitHeight = 732
     NextPictureChanged = False
     PrevPictureChanged = False
     object AdvOfficePager11: TAdvOfficePage
@@ -405,8 +404,8 @@ object MainForm: TMainForm
         Caption.ColorTo = clNone
         Caption.Font.Charset = DEFAULT_CHARSET
         Caption.Font.Color = clBlack
-        Caption.Font.Height = -11
-        Caption.Font.Name = 'Tahoma'
+        Caption.Font.Height = -13
+        Caption.Font.Name = 'Segoe UI'
         Caption.Font.Style = []
         Caption.GradientDirection = gdVertical
         Caption.Indent = 2
@@ -427,7 +426,6 @@ object MainForm: TMainForm
         StatusBar.Color = 15658734
         StatusBar.GradientDirection = gdVertical
         Styler = AdvPanelStyler1
-        ExplicitHeight = 700
         FullHeight = 200
         object AdvSmoothButton7: TAdvSmoothButton
           Left = 63
@@ -1488,8 +1486,8 @@ object MainForm: TMainForm
         end
       end
       object Panel2: TPanel
-        Left = 256
-        Top = 194
+        Left = 301
+        Top = 126
         Width = 417
         Height = 417
         Caption = 'Panel2'
@@ -1524,7 +1522,7 @@ object MainForm: TMainForm
           ParentFont = False
         end
         object Label5: TLabel
-          Left = 152
+          Left = 177
           Top = 223
           Width = 73
           Height = 17
@@ -1628,8 +1626,8 @@ object MainForm: TMainForm
     Caption.ColorTo = clNone
     Caption.Font.Charset = DEFAULT_CHARSET
     Caption.Font.Color = clBlack
-    Caption.Font.Height = -11
-    Caption.Font.Name = 'Tahoma'
+    Caption.Font.Height = -13
+    Caption.Font.Name = 'Segoe UI'
     Caption.Font.Style = []
     Caption.GradientDirection = gdVertical
     Caption.Indent = 2
@@ -1655,7 +1653,7 @@ object MainForm: TMainForm
     AutoHotkeys = maManual
     AutoLineReduction = maManual
     Left = 136
-    Top = 48
+    Top = 47
     object N1: TMenuItem
       Caption = #23458#26381#20013#24515
       object N13: TMenuItem
@@ -1899,6 +1897,10 @@ object MainForm: TMainForm
         Caption = #23458#25143#39044#35686
         OnClick = N69Click
       end
+      object s1: TMenuItem
+        Caption = #25968#25454#20998#26512
+        OnClick = s1Click
+      end
     end
     object N11: TMenuItem
       Caption = #31995#32479#31649#29702
@@ -2081,7 +2083,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C010107001000900020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010107001000940020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

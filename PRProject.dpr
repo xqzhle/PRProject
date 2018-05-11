@@ -82,7 +82,8 @@ uses
   YpTjUnit in 'YpTjUnit.pas' {YpTjFrame: TUniFrame},
   BottleManUnit in 'BottleManUnit.pas' {BottleManForm},
   Unit22 in 'Unit22.pas' {Form22},
-  bottlesmUnit in 'bottlesmUnit.pas' {Form303};
+  bottlesmUnit in 'bottlesmUnit.pas' {Form303},
+  CharUnit in 'CharUnit.pas' {CharForm};
 
 {$R *.res}
 
@@ -144,5 +145,6 @@ begin
   Application.CreateForm(TBottleManForm, BottleManForm);
   Application.CreateForm(TForm22, Form22);
   Application.CreateForm(TForm303, Form303);
+  Application.CreateForm(TCharForm, CharForm);
   Application.Run;
 end.

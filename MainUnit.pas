@@ -102,6 +102,7 @@ type
     N51: TMenuItem;
     AdvPanel2: TAdvPanel;
     AdvPanelStyler2: TAdvPanelStyler;
+    s1: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure N22Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
@@ -154,6 +155,7 @@ type
     procedure N50Click(Sender: TObject);
     procedure N51Click(Sender: TObject);
     procedure N55Click(Sender: TObject);
+    procedure s1Click(Sender: TObject);
   private
     { Private declarations }
     procedure initdata();
@@ -177,7 +179,7 @@ uses
   CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,
   GiveUnitpas, BottleInsUnit, PzUnit, DtelUnit, XstypeUnit, YwyUnit, QzUnit,
   CarUnit, GMoneyUnit, MdgpUnit, khgpUnit, CustwaingUnit, LzUnit, DUnitpas, BottleListUnit,
-  BottleinfoUnit, YpDayUnit, YpTjUnit, BottleManUnit;
+  BottleinfoUnit, YpDayUnit, YpTjUnit, BottleManUnit,CharUnit;
 
 {$R *.dfm}
 
@@ -1123,6 +1125,11 @@ begin
   CustwaingForm.ComboBox3.Items := ShopidBox.Items;
   CustwaingForm.DBComboBox1.Items := KhlxBox.Items;
   CustwaingForm.ShowModal;
+end;
+
+procedure TMainForm.s1Click(Sender: TObject);
+begin
+  CharForm.ShowModal;
 end;
 
 end.
