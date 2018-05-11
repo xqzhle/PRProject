@@ -155,7 +155,7 @@ procedure TQzFrame.UniFrameCreate(Sender: TObject);
 var
   sqlstr :string;
 begin  //case  when instate=''1'' then ''ÔÚÓÃ'' else ''Í£ÓÃ'' end as ×´Ì¬,
-//  Panel2.Visible:=False;
+  Panel2.Visible:=False;
   sqlstr := 'select * from tbQizhan_Info ';
   UniQuery1.Close;
   UniQuery1.SQL.Text := sqlstr;

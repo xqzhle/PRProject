@@ -17,31 +17,23 @@ object lzForm: TlzForm
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object W7Panel1: TW7Panel
+  object W7Panel1: TPanel
     Left = 0
     Top = 0
     Width = 635
     Height = 482
-    Version = '1.0.2.0'
+    Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
-    SolidColor = clBlack
-    InnerBorders = [wpbLeft, wpbTop, wpbRight, wpbBottom]
-    OuterBorders = [wpbLeft, wpbTop, wpbRight, wpbBottom]
-    Style = wpsCustom
-    FillStyle = pfsGradient
-    ColorC = clBlack
-    ColorD = clBlack
-    Align = alClient
     ParentFont = False
     TabOrder = 0
     object W7ToolBar1: TW7ToolBar
-      Left = 0
-      Top = 0
-      Width = 635
+      Left = 1
+      Top = 1
+      Width = 633
       Height = 54
       Version = '1.0.2.0'
       ShowTopBorder = False
@@ -112,10 +104,10 @@ object lzForm: TlzForm
       end
     end
     object DBAdvGrid1: TDBAdvGrid
-      Left = 0
-      Top = 54
-      Width = 635
-      Height = 428
+      Left = 1
+      Top = 55
+      Width = 633
+      Height = 426
       Cursor = crDefault
       Align = alClient
       ColCount = 7
@@ -130,8 +122,6 @@ object lzForm: TlzForm
       ParentFont = False
       ScrollBars = ssBoth
       TabOrder = 1
-      GridLineColor = 15527152
-      GridFixedLineColor = 13947601
       HoverRowCells = [hcNormal, hcSelected]
       OnResize = DBAdvGrid1Resize
       ActiveCellFont.Charset = DEFAULT_CHARSET
@@ -139,18 +129,17 @@ object lzForm: TlzForm
       ActiveCellFont.Height = -11
       ActiveCellFont.Name = 'Tahoma'
       ActiveCellFont.Style = [fsBold]
-      ActiveCellColor = 16575452
-      ActiveCellColorTo = 16571329
-      ControlLook.FixedGradientMirrorFrom = 16049884
-      ControlLook.FixedGradientMirrorTo = 16247261
-      ControlLook.FixedGradientHoverFrom = 16710648
-      ControlLook.FixedGradientHoverTo = 16446189
-      ControlLook.FixedGradientHoverMirrorFrom = 16049367
-      ControlLook.FixedGradientHoverMirrorTo = 15258305
-      ControlLook.FixedGradientDownFrom = 15853789
-      ControlLook.FixedGradientDownTo = 15852760
-      ControlLook.FixedGradientDownMirrorFrom = 15522767
-      ControlLook.FixedGradientDownMirrorTo = 15588559
+      ActiveCellColor = 15387318
+      ControlLook.FixedGradientFrom = clWhite
+      ControlLook.FixedGradientTo = clBtnFace
+      ControlLook.FixedGradientHoverFrom = 13619409
+      ControlLook.FixedGradientHoverTo = 12502728
+      ControlLook.FixedGradientHoverMirrorFrom = 12502728
+      ControlLook.FixedGradientHoverMirrorTo = 11254975
+      ControlLook.FixedGradientDownFrom = 8816520
+      ControlLook.FixedGradientDownTo = 7568510
+      ControlLook.FixedGradientDownMirrorFrom = 7568510
+      ControlLook.FixedGradientDownMirrorTo = 6452086
       ControlLook.FixedGradientDownBorder = 14007466
       ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
       ControlLook.DropDownHeader.Font.Color = clWindowText
@@ -195,7 +184,6 @@ object lzForm: TlzForm
       HoverButtons.Position = hbLeftFromColumnLeft
       HTMLSettings.ImageFolder = 'images'
       HTMLSettings.ImageBaseName = 'img'
-      Look = glWin7
       PrintSettings.DateFormat = 'dd/mm/yyyy'
       PrintSettings.Font.Charset = DEFAULT_CHARSET
       PrintSettings.Font.Color = clWindowText
@@ -218,8 +206,7 @@ object lzForm: TlzForm
       PrintSettings.FooterFont.Name = 'Tahoma'
       PrintSettings.FooterFont.Style = []
       PrintSettings.PageNumSep = '/'
-      SearchFooter.Color = 16645370
-      SearchFooter.ColorTo = 16247261
+      SearchFooter.ColorTo = 15790320
       SearchFooter.FindNextCaption = 'Find &next'
       SearchFooter.FindPrevCaption = 'Find &previous'
       SearchFooter.Font.Charset = DEFAULT_CHARSET
@@ -234,7 +221,6 @@ object lzForm: TlzForm
       SearchFooter.HintHighlight = 'Highlight occurrences'
       SearchFooter.MatchCaseCaption = 'Match case'
       SortSettings.DefaultFormat = ssAutomatic
-      SortSettings.HeaderColor = 16579058
       SortSettings.HeaderColorTo = 16579058
       SortSettings.HeaderMirrorColor = 16380385
       SortSettings.HeaderMirrorColorTo = 16182488
@@ -573,25 +559,17 @@ object lzForm: TlzForm
         22)
     end
   end
-  object W7Panel2: TW7Panel
+  object W7Panel2: TPanel
     Left = 0
     Top = 482
     Width = 635
     Height = 41
-    Version = '1.0.2.0'
+    Align = alBottom
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
-    SolidColor = clBlack
-    InnerBorders = [wpbLeft, wpbTop, wpbRight, wpbBottom]
-    OuterBorders = [wpbLeft, wpbTop, wpbRight, wpbBottom]
-    Style = wpsCustom
-    FillStyle = pfsGradient
-    ColorC = clBlack
-    ColorD = clBlack
-    Align = alBottom
     ParentFont = False
     TabOrder = 1
     object W7ActiveLabel1: TW7ActiveLabel
@@ -619,7 +597,7 @@ object lzForm: TlzForm
     Left = 295
     Top = 146
     Bitmap = {
-      494C010102001000400030003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010102001000480030003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000C00000003000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

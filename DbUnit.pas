@@ -220,12 +220,14 @@ type
     SaveDialog1: TSaveDialog;
     ImageList1: TImageList;
     UniTransaction1: TUniTransaction;
-    AdvGridExcelIO1: TAdvGridExcelIO;
     ADOConnection1: TADOConnection;
     banner: TUniQuery;
     bannerDataSource: TDataSource;
     IdHTTP1: TIdHTTP;
     OpenDialog1: TOpenDialog;
+    AdvGridExcelIO1: TAdvGridExcelIO;
+    SP: TADOStoredProc;
+    BottlelistDataSource: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

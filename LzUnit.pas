@@ -12,10 +12,10 @@ type
   TlzForm = class(TForm)
     Label1: TLabel;
     Edit1: TEdit;
-    W7Panel1: TW7Panel;
+    W7Panel1: TPanel;
     W7ToolBar1: TW7ToolBar;
     W7ActiveLabel1: TW7ActiveLabel;
-    W7Panel2: TW7Panel;
+    W7Panel2: TPanel;
     DBAdvGrid1: TDBAdvGrid;
     ImageList1: TImageList;
     RzToolButton1: TRzToolButton;

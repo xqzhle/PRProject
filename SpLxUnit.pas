@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics,
   Controls, Forms, Dialogs, uniGUITypes, uniGUIAbstractClasses,
   uniGUIClasses, uniGUIFrame,  StdCtrls, ExtCtrls, Grids, AdvObj, BaseGrid,
-  AdvGrid, DBAdvGrid;
+  AdvGrid, DBAdvGrid, AdvUtil;
 
 type
   TSpLxiFrame = class(TUniFrame)

@@ -52,7 +52,6 @@ type
     N32: TMenuItem;
     N33: TMenuItem;
     N34: TMenuItem;
-    Panel1: TPanel;
     N35: TMenuItem;
     N36: TMenuItem;
     N37: TMenuItem;
@@ -84,19 +83,25 @@ type
     N64: TMenuItem;
     N65: TMenuItem;
     N66: TMenuItem;
-    ShopnameBox: TComboBox;
-    ShopidBox: TComboBox;
     N67: TMenuItem;
     m1: TMenuItem;
     N68: TMenuItem;
     N69: TMenuItem;
+    Panel2: TPanel;
     KhlxBox: TComboBox;
-    Label5: TLabel;
-    ComboBox4: TComboBox;
-    Label4: TLabel;
-    ComboBox3: TComboBox;
-    ComboBox2: TComboBox;
+    ShopidBox: TComboBox;
+    ShopnameBox: TComboBox;
     Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    ComboBox2: TComboBox;
+    ComboBox3: TComboBox;
+    ComboBox4: TComboBox;
+    g1: TMenuItem;
+    N50: TMenuItem;
+    N51: TMenuItem;
+    AdvPanel2: TAdvPanel;
+    AdvPanelStyler2: TAdvPanelStyler;
     procedure FormCreate(Sender: TObject);
     procedure N22Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
@@ -144,8 +149,13 @@ type
     procedure N69Click(Sender: TObject);
     procedure N47Click(Sender: TObject);
     procedure N48Click(Sender: TObject);
+    procedure N49Click(Sender: TObject);
+    procedure N45Click(Sender: TObject);
+    procedure N50Click(Sender: TObject);
+    procedure N51Click(Sender: TObject);
   private
     { Private declarations }
+    procedure initdata();
   public
     { Public declarations }
     TreeUtil:TTreeUtils;
@@ -159,12 +169,12 @@ implementation
 
 uses
   ComapUnit,SpLxUnit,SpXxUnit,GpjUnit,MdJgUnit,DjYfUnit, KhLxUnit,DqSzUnit,
-  KhXxUnit,TsYhUnit,GsKhYhUnit, DbUnit,DeptInfoUnit,GwInfoUnit,YgInfoUnit,
+  KhXxUnit,TsYhUnit,GsKhYhUnit, DbUnit,DeptInfoUnit,GwInfoUnit,YgInfoUnit, zcomm,
   CallCentUnit, PowerUnit, UserInfoUnit, MdPgUnit, MdHdUnit, DdListUnit, Unit28,
   BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit,LPGUnit,
   CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,
   GiveUnitpas, BottleInsUnit, PzUnit, DtelUnit, XstypeUnit, YwyUnit, QzUnit,
-  CarUnit, GMoneyUnit, MdgpUnit, khgpUnit, CustwaingUnit, LzUnit, DUnitpas;
+  CarUnit, GMoneyUnit, MdgpUnit, khgpUnit, CustwaingUnit, LzUnit, DUnitpas, BottleListUnit, BottleinfoUnit, YpDayUnit, YpTjUnit;
 
 {$R *.dfm}
 
@@ -183,11 +193,16 @@ begin
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
-var
-  i:Integer;
 begin
     Caption:=Application.Title;
-    ShopnameBox.Clear;
+    initdata;
+end;
+
+procedure TMainForm.initdata;
+var
+ i:Integer;
+begin
+  ShopnameBox.Clear;
     ShopidBox.Clear;
     KhlxBox.Clear;
     combobox2.Clear;
@@ -912,6 +927,23 @@ begin
 
 end;
 
+procedure TMainForm.N45Click(Sender: TObject);
+begin
+   initdata;
+   with BottleInfoForm do
+   begin
+      Caption:='钢瓶信息-新增';
+      ComboBox1.Items:=Self.combobox3.Items; //钢瓶规格
+      ComboBox2.Items:=Self.combobox2.Items; //厂家名称
+      ComboBox3.Items:=Self.combobox4.Items; //充气介质
+      Edit13.Text:=Loginname;
+      Edit15.Text:=gettime;
+      Edit14.Text:='';
+      Edit16.Text:='';
+      ShowModal;
+   end;
+end;
+
 procedure TMainForm.N47Click(Sender: TObject);
 begin
   lzForm.ShowModal;
@@ -920,6 +952,81 @@ end;
 procedure TMainForm.N48Click(Sender: TObject);
 begin
   DForm.ShowModal;
+end;
+
+procedure TMainForm.N49Click(Sender: TObject);
+var
+ comap:TBottleListFrame;
+ aop: TAdvOfficePage;
+ i:Integer;
+begin
+  for i := 0 to AdvOfficePager1.AdvPageCount-1 do
+  begin
+    aop:=AdvOfficePager1.AdvPages[i];
+    if aop.Caption=N49.Caption then
+    begin
+      AdvOfficePager1.ActivePage:=aop;
+      exit;
+    end;
+  end;
+   aop:=TAdvOfficePage.Create(AdvOfficePager1);
+   aop.AdvOfficePager := AdvOfficePager1;
+   aop.Caption := N49.Caption;
+   AdvOfficePager1.ActivePage := aop;
+   comap:=TBottleListFrame.Create(aop);
+   comap.Align:=alClient;
+   comap.Parent:=aop;
+
+end;
+
+procedure TMainForm.N50Click(Sender: TObject);
+var
+ comap:TYpDaycFrame;
+ aop: TAdvOfficePage;
+ i:Integer;
+begin
+  for i := 0 to AdvOfficePager1.AdvPageCount-1 do
+  begin
+    aop:=AdvOfficePager1.AdvPages[i];
+    if aop.Caption=N50.Caption then
+    begin
+      AdvOfficePager1.ActivePage:=aop;
+      exit;
+    end;
+  end;
+   aop:=TAdvOfficePage.Create(AdvOfficePager1);
+   aop.AdvOfficePager := AdvOfficePager1;
+   aop.Caption := N50.Caption;
+   AdvOfficePager1.ActivePage := aop;
+   comap:=TYpDaycFrame.Create(aop);
+   comap.Align:=alClient;
+   comap.Parent:=aop;
+
+end;
+
+procedure TMainForm.N51Click(Sender: TObject);
+ var
+ comap:TYpTjFrame;
+ aop: TAdvOfficePage;
+ i:Integer;
+begin
+  for i := 0 to AdvOfficePager1.AdvPageCount-1 do
+  begin
+    aop:=AdvOfficePager1.AdvPages[i];
+    if aop.Caption=N51.Caption then
+    begin
+      AdvOfficePager1.ActivePage:=aop;
+      exit;
+    end;
+  end;
+   aop:=TAdvOfficePage.Create(AdvOfficePager1);
+   aop.AdvOfficePager := AdvOfficePager1;
+   aop.Caption := N51.Caption;
+   AdvOfficePager1.ActivePage := aop;
+   comap:=TYpTjFrame.Create(aop);
+   comap.Align:=alClient;
+   comap.Parent:=aop;
+
 end;
 
 procedure TMainForm.N56Click(Sender: TObject);
@@ -1003,6 +1110,7 @@ end;
 
 procedure TMainForm.N69Click(Sender: TObject);
 begin
+  initdata;
   CustwaingForm.ComboBox1.Items := ShopnameBox.Items;
   CustwaingForm.ComboBox3.Items := ShopidBox.Items;
   CustwaingForm.DBComboBox1.Items := KhlxBox.Items;

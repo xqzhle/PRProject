@@ -19,7 +19,7 @@ object MainForm: TMainForm
     Left = 0
     Top = 0
     Width = 1114
-    Height = 732
+    Height = 720
     AdvOfficePagerStyler = AdvOfficePagerOfficeStyler1
     Align = alClient
     ActivePage = AdvOfficePager11
@@ -317,13 +317,14 @@ object MainForm: TMainForm
     ShowShortCutHints = False
     OnClosedPage = AdvOfficePager1ClosedPage
     TabOrder = 0
+    ExplicitHeight = 732
     NextPictureChanged = False
     PrevPictureChanged = False
     object AdvOfficePager11: TAdvOfficePage
       Left = 1
       Top = 26
       Width = 1112
-      Height = 704
+      Height = 692
       Caption = #31995#32479#39318#39029
       DoubleBuffered = True
       PageAppearance.BorderColor = 14474202
@@ -382,53 +383,11 @@ object MainForm: TMainForm
       TabAppearance.BackGround.Color = clWhite
       TabAppearance.BackGround.ColorTo = clNone
       TabAppearance.BackGround.Direction = gdHorizontal
-      object Label5: TLabel
-        Left = 300
-        Top = 240
-        Width = 73
-        Height = 17
-        AutoSize = False
-        Caption = #20805#35013#20171#36136#65306
-        Font.Charset = GB2312_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = #23435#20307
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label4: TLabel
-        Left = 300
-        Top = 214
-        Width = 80
-        Height = 17
-        AutoSize = False
-        Caption = #38050#29942#35268#26684#65306
-        Font.Charset = GB2312_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = #23435#20307
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label3: TLabel
-        Left = 300
-        Top = 188
-        Width = 72
-        Height = 20
-        AutoSize = False
-        Caption = #21378#23478#21517#31216#65306
-        Font.Charset = GB2312_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = #23435#20307
-        Font.Style = []
-        ParentFont = False
-      end
       object AdvPanel1: TAdvPanel
         Left = 2
         Top = 2
         Width = 223
-        Height = 700
+        Height = 688
         Align = alLeft
         BevelOuter = bvNone
         Color = clWhite
@@ -468,6 +427,7 @@ object MainForm: TMainForm
         StatusBar.Color = 15658734
         StatusBar.GradientDirection = gdVertical
         Styler = AdvPanelStyler1
+        ExplicitHeight = 700
         FullHeight = 200
         object AdvSmoothButton7: TAdvSmoothButton
           Left = 63
@@ -1527,82 +1487,169 @@ object MainForm: TMainForm
           TMSStyle = 0
         end
       end
-      object ShopnameBox: TComboBox
-        Left = 319
-        Top = 80
-        Width = 145
-        Height = 25
+      object Panel2: TPanel
+        Left = 256
+        Top = 194
+        Width = 417
+        Height = 417
+        Caption = 'Panel2'
         TabOrder = 1
-        Text = 'ShopnameBox'
-      end
-      object ShopidBox: TComboBox
-        Left = 500
-        Top = 80
-        Width = 145
-        Height = 25
-        TabOrder = 2
-        Text = 'ShopidBox'
-      end
-      object KhlxBox: TComboBox
-        Left = 676
-        Top = 80
-        Width = 145
-        Height = 25
-        TabOrder = 3
-        Text = 'KhlxBox'
-      end
-      object ComboBox4: TComboBox
-        Left = 370
-        Top = 238
-        Width = 145
-        Height = 20
-        Font.Charset = GB2312_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = #23435#20307
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 4
-        Text = 'ComboBox4'
-      end
-      object ComboBox3: TComboBox
-        Left = 370
-        Top = 211
-        Width = 145
-        Height = 20
-        Font.Charset = GB2312_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = #23435#20307
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 5
-        Text = 'ComboBox3'
-      end
-      object ComboBox2: TComboBox
-        Left = 370
-        Top = 185
-        Width = 145
-        Height = 20
-        Font.Charset = GB2312_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = #23435#20307
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 6
-        Text = 'ComboBox2'
+        Visible = False
+        object Label3: TLabel
+          Left = 193
+          Top = 156
+          Width = 72
+          Height = 20
+          AutoSize = False
+          Caption = #21378#23478#21517#31216#65306
+          Font.Charset = GB2312_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = #23435#20307
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label4: TLabel
+          Left = 185
+          Top = 182
+          Width = 80
+          Height = 17
+          AutoSize = False
+          Caption = #38050#29942#35268#26684#65306
+          Font.Charset = GB2312_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = #23435#20307
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 152
+          Top = 223
+          Width = 73
+          Height = 17
+          AutoSize = False
+          Caption = #20805#35013#20171#36136#65306
+          Font.Charset = GB2312_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = #23435#20307
+          Font.Style = []
+          ParentFont = False
+        end
+        object KhlxBox: TComboBox
+          Left = 120
+          Top = 52
+          Width = 145
+          Height = 25
+          TabOrder = 0
+          Text = 'KhlxBox'
+        end
+        object ShopidBox: TComboBox
+          Left = 120
+          Top = 83
+          Width = 145
+          Height = 25
+          TabOrder = 1
+          Text = 'ShopidBox'
+        end
+        object ShopnameBox: TComboBox
+          Left = 120
+          Top = 114
+          Width = 145
+          Height = 25
+          TabOrder = 2
+          Text = 'ShopnameBox'
+        end
+        object ComboBox2: TComboBox
+          Left = 248
+          Top = 145
+          Width = 145
+          Height = 20
+          Font.Charset = GB2312_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = #23435#20307
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 3
+          Text = 'ComboBox2'
+        end
+        object ComboBox3: TComboBox
+          Left = 256
+          Top = 182
+          Width = 145
+          Height = 20
+          Font.Charset = GB2312_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = #23435#20307
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 4
+          Text = 'ComboBox3'
+        end
+        object ComboBox4: TComboBox
+          Left = 256
+          Top = 220
+          Width = 145
+          Height = 20
+          Font.Charset = GB2312_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = #23435#20307
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 5
+          Text = 'ComboBox4'
+        end
       end
     end
   end
-  object Panel1: TPanel
+  object AdvPanel2: TAdvPanel
     Left = 0
-    Top = 732
+    Top = 720
     Width = 1114
-    Height = 41
+    Height = 53
     Align = alBottom
     BevelOuter = bvNone
+    Color = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
+    UseDockManager = True
+    Version = '2.5.4.1'
+    BorderColor = clNone
+    Caption.Color = 15658734
+    Caption.ColorTo = clNone
+    Caption.Font.Charset = DEFAULT_CHARSET
+    Caption.Font.Color = clBlack
+    Caption.Font.Height = -11
+    Caption.Font.Name = 'Tahoma'
+    Caption.Font.Style = []
+    Caption.GradientDirection = gdVertical
+    Caption.Indent = 2
+    Caption.ShadeLight = 255
+    CollapsColor = clNone
+    CollapsDelay = 0
+    DoubleBuffered = True
+    ShadowColor = clBlack
+    ShadowOffset = 0
+    StatusBar.BorderColor = clNone
+    StatusBar.BorderStyle = bsSingle
+    StatusBar.Font.Charset = DEFAULT_CHARSET
+    StatusBar.Font.Color = clBlack
+    StatusBar.Font.Height = -11
+    StatusBar.Font.Name = 'Tahoma'
+    StatusBar.Font.Style = []
+    StatusBar.Color = 15658734
+    StatusBar.GradientDirection = gdVertical
+    Styler = AdvPanelStyler1
+    FullHeight = 200
   end
   object MainMenu1: TMainMenu
     AutoHotkeys = maManual
@@ -1747,23 +1794,36 @@ object MainForm: TMainForm
       end
       object N45: TMenuItem
         Caption = #26032#22686#38050#29942
+        OnClick = N45Click
       end
       object N46: TMenuItem
         Caption = '-'
       end
-      object N47: TMenuItem
-        Caption = #38050#29942#36712#36857#26597#35810
-        OnClick = N47Click
+      object N49: TMenuItem
+        Caption = #38050#29942#20449#24687
+        OnClick = N49Click
       end
       object N48: TMenuItem
         Caption = #23548#20837#38050#29942#20449#24687
         OnClick = N48Click
       end
-      object N49: TMenuItem
-        Caption = #38050#29942#26597#35810
-      end
       object N54: TMenuItem
         Caption = '-'
+      end
+      object g1: TMenuItem
+        Caption = #38050#29942#26597#35810
+        object N47: TMenuItem
+          Caption = #38050#29942#27969#36716#36712#36857
+          OnClick = N47Click
+        end
+        object N50: TMenuItem
+          Caption = #25276#29942#22825#25968#26597#35810
+          OnClick = N50Click
+        end
+        object N51: TMenuItem
+          Caption = #23458#25143#25276#29942#32479#35745
+          OnClick = N51Click
+        end
       end
       object N55: TMenuItem
         Caption = #38050#29942#32508#21512#31649#29702
@@ -1963,8 +2023,8 @@ object MainForm: TMainForm
     Settings.Caption.ColorTo = clNone
     Settings.Caption.Font.Charset = DEFAULT_CHARSET
     Settings.Caption.Font.Color = clBlack
-    Settings.Caption.Font.Height = -11
-    Settings.Caption.Font.Name = 'Tahoma'
+    Settings.Caption.Font.Height = -13
+    Settings.Caption.Font.Name = 'Segoe UI'
     Settings.Caption.Font.Style = []
     Settings.Caption.GradientDirection = gdVertical
     Settings.Caption.Indent = 2
@@ -2020,7 +2080,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C0101070010008C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010107001000900020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -3082,5 +3142,73 @@ object MainForm: TMainForm
       FFE007FFFFFFFFFF00000000FFE00FFFFFF00FFFFFFFFFFF00000000FFFFFFFF
       FFFFFFFFFFFFFFFF00000000FFFFFFFF00000000000000000000000000000000
       000000000000}
+  end
+  object AdvPanelStyler2: TAdvPanelStyler
+    Tag = 0
+    Settings.AnchorHint = False
+    Settings.BevelInner = bvNone
+    Settings.BevelOuter = bvNone
+    Settings.BevelWidth = 1
+    Settings.BorderColor = 13815240
+    Settings.BorderShadow = False
+    Settings.BorderStyle = bsNone
+    Settings.BorderWidth = 0
+    Settings.BottomIndent = 0
+    Settings.CanMove = False
+    Settings.CanSize = False
+    Settings.Caption.Color = clWhite
+    Settings.Caption.ColorTo = 15590880
+    Settings.Caption.Font.Charset = DEFAULT_CHARSET
+    Settings.Caption.Font.Color = 5978398
+    Settings.Caption.Font.Height = -11
+    Settings.Caption.Font.Name = 'Tahoma'
+    Settings.Caption.Font.Style = []
+    Settings.Caption.GradientDirection = gdVertical
+    Settings.Caption.Indent = 2
+    Settings.Caption.ShadeLight = 255
+    Settings.Collaps = False
+    Settings.CollapsColor = clNone
+    Settings.CollapsDelay = 0
+    Settings.CollapsSteps = 0
+    Settings.Color = clWhite
+    Settings.ColorTo = 15590880
+    Settings.ColorMirror = clNone
+    Settings.ColorMirrorTo = clNone
+    Settings.Cursor = crDefault
+    Settings.Font.Charset = DEFAULT_CHARSET
+    Settings.Font.Color = clBlack
+    Settings.Font.Height = -11
+    Settings.Font.Name = 'Tahoma'
+    Settings.Font.Style = []
+    Settings.FixedTop = False
+    Settings.FixedLeft = False
+    Settings.FixedHeight = False
+    Settings.FixedWidth = False
+    Settings.Height = 120
+    Settings.Hover = False
+    Settings.HoverColor = clNone
+    Settings.HoverFontColor = clNone
+    Settings.Indent = 0
+    Settings.ShadowColor = clBlack
+    Settings.ShadowOffset = 0
+    Settings.ShowHint = False
+    Settings.ShowMoveCursor = False
+    Settings.StatusBar.BorderColor = 16249840
+    Settings.StatusBar.BorderStyle = bsSingle
+    Settings.StatusBar.Font.Charset = DEFAULT_CHARSET
+    Settings.StatusBar.Font.Color = 5978398
+    Settings.StatusBar.Font.Height = -11
+    Settings.StatusBar.Font.Name = 'Tahoma'
+    Settings.StatusBar.Font.Style = []
+    Settings.StatusBar.Color = clWhite
+    Settings.StatusBar.ColorTo = 15590880
+    Settings.StatusBar.GradientDirection = gdVertical
+    Settings.TextVAlign = tvaTop
+    Settings.TopIndent = 0
+    Settings.URLColor = clBlue
+    Settings.Width = 0
+    Style = psOffice2010Silver
+    Left = 40
+    Top = 632
   end
 end

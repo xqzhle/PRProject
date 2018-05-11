@@ -435,17 +435,17 @@ object DForm: TDForm
     Left = 763
     Top = 87
   end
-  object ADOQuery1: TUniQuery
-    DataTypeMap = <>
-    Connection = Data1.UniConnection1
-    Left = 297
-    Top = 92
+  object ADOQuery1: TADOQuery
+    Connection = Data1.ADOConnection1
+    Parameters = <>
+    Left = 347
+    Top = 244
   end
   object ImageList1: TImageList
     Height = 32
     Width = 32
-    Left = 712
-    Top = 8
+    Left = 488
+    Top = 272
     Bitmap = {
       494C01010C001D00800120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000

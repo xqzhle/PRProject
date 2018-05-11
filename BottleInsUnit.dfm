@@ -1,8 +1,8 @@
 object BottleInsFrame: TBottleInsFrame
   Left = 0
   Top = 0
-  Width = 562
-  Height = 400
+  Width = 918
+  Height = 654
   OnCreate = UniFrameCreate
   OnDestroy = UniFrameDestroy
   Align = alNone
@@ -17,12 +17,12 @@ object BottleInsFrame: TBottleInsFrame
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 562
+    Width = 918
     Height = 65
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = -6
+    ExplicitWidth = 562
     object Label1: TLabel
       Left = 24
       Top = 23
@@ -77,8 +77,8 @@ object BottleInsFrame: TBottleInsFrame
   object DBAdvGrid2: TDBAdvGrid
     Left = 0
     Top = 65
-    Width = 562
-    Height = 335
+    Width = 918
+    Height = 589
     Cursor = crDefault
     Align = alClient
     ColCount = 9
@@ -565,8 +565,8 @@ object BottleInsFrame: TBottleInsFrame
       80000001C0000003C0000003E0000007F000000FF800001FFC00003FFF0000FF
       FFC003FF}
     ShowUnicode = False
-    ExplicitWidth = 320
-    ExplicitHeight = 175
+    ExplicitWidth = 562
+    ExplicitHeight = 335
     ColWidths = (
       20
       42
@@ -738,7 +738,6 @@ object BottleInsFrame: TBottleInsFrame
     end
   end
   object UniQuery1: TUniQuery
-    DataTypeMap = <>
     Connection = Data1.UniConnection1
     Left = 144
     Top = 232
@@ -755,7 +754,7 @@ object BottleInsFrame: TBottleInsFrame
     Left = 304
     Top = 464
     Bitmap = {
-      494C01010F001300080120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F0013000C0120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

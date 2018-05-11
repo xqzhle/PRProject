@@ -5,8 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, Grids, AdvObj, BaseGrid, AdvGrid, StdCtrls, RzButton,
-  tmsAdvGridExcel, DB, ADODB,ShellAPI, AdvPanel, AdvUtil, MemDS, DBAccess, Uni,
-  ImgList;
+  tmsAdvGridExcel, DB, ADODB,ShellAPI, AdvPanel, AdvUtil, ImgList;
 
 type
   TDForm = class(TForm)
@@ -34,11 +33,11 @@ type
     RzToolButton10: TRzToolButton;
     AdvGridExcelIO2: TAdvGridExcelIO;
     OpenDialog1: TOpenDialog;
+    ADOQuery1: TADOQuery;
     AdvPanel7: TAdvPanel;
     Label2: TLabel;
     Label3: TLabel;
     Label1: TLabel;
-    ADOQuery1: TUniQuery;
     ImageList1: TImageList;
     procedure FormShow(Sender: TObject);
     procedure RzToolButton9Click(Sender: TObject);
@@ -57,7 +56,7 @@ var
 
 implementation
 
-uses DbUnit,MainUnit;
+uses MainUnit,DbUnit,zcomm;
 
 {$R *.dfm}
 var
@@ -73,6 +72,8 @@ begin
 end;
 
 procedure TDForm.FormShow(Sender: TObject);
+var
+ i:Integer;
 begin
   ComboBox5.ItemIndex:=0;
   ComboBox6.Clear;
@@ -80,9 +81,49 @@ begin
   ComboBox13.Clear;
   ComboBox14.Clear;
   ComboBox10.Clear;
-  ComboBox6.Items:=MainForm.ComboBox3.Items;
-  ComboBox7.Items:=MainForm.ComboBox4.Items;
-  ComboBox13.Items:=MainForm.ComboBox2.Items;
+
+   with Data1.work do
+    begin
+      Close;
+      SQL.Clear;
+      SQL.Add('Select Factory_ID,NameC From tbWorks_Info Order By Factory_ID');
+      Open;
+      if RecordCount>0 then
+      begin
+        for i:=1 to  RecordCount do
+        begin
+          combobox13.Items.Append(Fields.Fields[1].AsString);
+          Next;
+        end;
+      end;
+          //查钢瓶规格
+      Close;
+      SQL.Clear;
+      SQL.Add('Select Spec_ID,Spec_Name From tbBottle_Spec Order By Spec_ID');
+      Open;
+      if RecordCount>0 then
+      begin
+        for i:=1 to RecordCount do
+        begin
+          combobox6.Items.Append(Fields.Fields[1].AsString);
+          Next;
+        end;
+      end;
+           //查充气介质
+      Close;
+      SQL.Clear;
+      SQL.Add('Select Type_ID,Type_Name From tbBottle_Class Order By Type_ID');
+      Open;
+      if RecordCount>0 then
+      begin
+        for i:=1 to RecordCount do
+        begin
+          combobox7.Items.Append(Fields.Fields[1].AsString);
+          Next;
+        end;
+      end;
+      Close;
+    end;
   ComboBox12.Clear;
   ComboBox9.Clear;
   ComboBox8.Clear;
@@ -213,7 +254,7 @@ begin
                 sqlstr:='Insert Into tbBottle_Dossier (BottleBar,FactoryId,Bottleid,BottleRight,TypeId,SpecId,CreateUser,CreateDate,MakeTime,BuysDate,Lastdate,NextProbe,ScrapDate,chickname,'+
                  'Instate,BottleAction,classid,Remark,gptm,InitialHeft)'+ //状态 注销标记 钢瓶类型id ,chickcs第几次检验  备注
                  ' Values ('''+gpbq+''','''+combobox13.Text+''','''+trim(StringGrid1.Cells[1,i])+''','''+inttostr(ComboBox5.ItemIndex)+''','''+combobox10.Text+''','''+combobox14.Text+''','+
-                 ' '''+usname+''','''+datetostr(Date)+''','''+trim(StringGrid1.Cells[2,i])+''','''+trim(StringGrid1.Cells[2,i])+''','''+trim(StringGrid1.Cells[4,i])+''','+
+                 ' '''+loginname+''','''+datetostr(Date)+''','''+trim(StringGrid1.Cells[2,i])+''','''+trim(StringGrid1.Cells[2,i])+''','''+trim(StringGrid1.Cells[4,i])+''','+
                  ' '''+date1+''','''+trim(StringGrid1.Cells[3,i])+''','''+combobox9.Text+''',''0'',''0'','''+combobox11.Text+''','''+trim(StringGrid1.Cells[5,i])+''','''+trim(StringGrid1.Cells[6,i])+''','''+trim(StringGrid1.Cells[7,i])+''')';
                 try
                   ADOQuery1.Close;
@@ -235,7 +276,7 @@ begin
               sqlstr:='Insert Into tbBottle_Dossier (BottleBar,FactoryId,Bottleid,BottleRight,TypeId,SpecId,CreateUser,CreateDate,MakeTime,BuysDate,Lastdate,NextProbe,ScrapDate,chickname,'+
                'Instate,BottleAction,classid,Remark,gptm,InitialHeft)'+ //状态 注销标记 钢瓶类型id ,chickcs第几次检验  备注
                ' Values ('''+gpbq+''','''+combobox13.Text+''','''+trim(StringGrid1.Cells[1,i])+''','''+inttostr(ComboBox5.ItemIndex)+''','''+combobox10.Text+''','''+combobox14.Text+''','+
-               ' '''+usname+''','''+datetostr(Date)+''','''+trim(StringGrid1.Cells[2,i])+''','''+trim(StringGrid1.Cells[2,i])+''','''+trim(StringGrid1.Cells[4,i])+''','+
+               ' '''+loginname+''','''+datetostr(Date)+''','''+trim(StringGrid1.Cells[2,i])+''','''+trim(StringGrid1.Cells[2,i])+''','''+trim(StringGrid1.Cells[4,i])+''','+
                ' '''+date1+''','''+trim(StringGrid1.Cells[3,i])+''','''+combobox9.Text+''',''0'',''0'','''+combobox11.Text+''','''+trim(StringGrid1.Cells[5,i])+''','''','''+trim(StringGrid1.Cells[7,i])+''')';
               try
                 ADOQuery1.Close;
@@ -268,7 +309,7 @@ begin
 //                 ' NextProbe='''+date1+''',ScrapDate='''+trim(StringGrid1.Cells[3,i])+''',chickname='''+combobox9.Text+''',classid='''+combobox11.Text+''',Remark='''+trim(StringGrid1.Cells[5,i])+''',gptm='''+trim(StringGrid1.Cells[6,i])+''',InitialHeft='''+trim(StringGrid1.Cells[7,i])+''')';
 
                  sqlstr:='update tbBottle_Dossier set BottleBar='''+gpbq+''',FactoryId='''+combobox13.Text+''',BottleRight='''+inttostr(ComboBox5.ItemIndex)+''',TypeId='''+combobox10.Text+''',SpecId='''+combobox14.Text+''','+
-                 ' UpdateUser='''+usname+''',UpdateDate='''+datetostr(Date)+''',MakeTime='''+trim(StringGrid1.Cells[2,i])+''',BuysDate='''+trim(StringGrid1.Cells[2,i])+''',Lastdate='''+trim(StringGrid1.Cells[4,i])+''','+
+                 ' UpdateUser='''+loginname+''',UpdateDate='''+datetostr(Date)+''',MakeTime='''+trim(StringGrid1.Cells[2,i])+''',BuysDate='''+trim(StringGrid1.Cells[2,i])+''',Lastdate='''+trim(StringGrid1.Cells[4,i])+''','+
                  ' NextProbe='''+date1+''',ScrapDate='''+trim(StringGrid1.Cells[3,i])+''',chickname='''+combobox9.Text+''',classid='''+combobox11.Text+''',Remark='''+trim(StringGrid1.Cells[5,i])+''',gptm='''+trim(StringGrid1.Cells[6,i])+''', '+
                  ' InitialHeft='''+trim(StringGrid1.Cells[7,i])+''' where BottleID=''' +trim(StringGrid1.Cells[1,i])+''' ';
                 try
@@ -288,7 +329,7 @@ begin
               date1:=IntToStr(StrToInt(Copy(date1,1,4))+4)+copy(date1,5);
                                           //   条码 厂家 编号  产权  充装介质 规格id   创建人  创建时间  生成日期 购买日期 检验日期 下检日期，报废日期  检验单位id
               sqlstr:='update tbBottle_Dossier set BottleBar='''+gpbq+''',FactoryId='''+combobox13.Text+''',BottleRight='''+inttostr(ComboBox5.ItemIndex)+''',TypeId='''+combobox10.Text+''',SpecId='''+combobox14.Text+''','+
-                 ' UpdateUser='''+usname+''',UpdateDate='''+datetostr(Date)+''',MakeTime='''+trim(StringGrid1.Cells[2,i])+''',BuysDate='''+trim(StringGrid1.Cells[2,i])+''',Lastdate='''+trim(StringGrid1.Cells[4,i])+''','+
+                 ' UpdateUser='''+loginname+''',UpdateDate='''+datetostr(Date)+''',MakeTime='''+trim(StringGrid1.Cells[2,i])+''',BuysDate='''+trim(StringGrid1.Cells[2,i])+''',Lastdate='''+trim(StringGrid1.Cells[4,i])+''','+
                  ' NextProbe='''+date1+''',ScrapDate='''+trim(StringGrid1.Cells[3,i])+''',chickname='''+combobox9.Text+''',classid='''+combobox11.Text+''',Remark='''+trim(StringGrid1.Cells[5,i])+''',gptm='''+trim(StringGrid1.Cells[6,i])+''', '+
                  ' InitialHeft='''+trim(StringGrid1.Cells[7,i])+''' where BottleID=''' +trim(StringGrid1.Cells[1,i])+''' ';
               try

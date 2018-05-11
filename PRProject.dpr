@@ -75,7 +75,11 @@ uses
   khgpUnit in 'khgpUnit.pas' {khgpForm},
   MdgpUnit in 'MdgpUnit.pas' {MdgpForm},
   LzUnit in 'LzUnit.pas' {lzForm},
-  DUnitpas in 'DUnitpas.pas' {DForm};
+  DUnitpas in 'DUnitpas.pas' {DForm},
+  BottleinfoUnit in 'BottleinfoUnit.pas' {BottleInfoForm},
+  BottleListUnit in 'BottleListUnit.pas' {BottleListFrame: TUniFrame},
+  YpDayUnit in 'YpDayUnit.pas' {YpDaycFrame: TUniFrame},
+  YpTjUnit in 'YpTjUnit.pas' {YpTjFrame: TUniFrame};
 
 {$R *.res}
 
@@ -132,7 +136,7 @@ begin
   Application.CreateForm(TMdgpForm, MdgpForm);
   Application.CreateForm(TlzForm, lzForm);
   Application.CreateForm(TDForm, DForm);
-  //  Application.CreateForm(TForm9, Form9);
+  Application.CreateForm(TBottleInfoForm, BottleInfoForm);
   Application.CreateForm(TPzForm, PzForm);
   Application.Run;
 end.

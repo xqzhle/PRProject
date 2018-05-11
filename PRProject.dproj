@@ -286,6 +286,27 @@
 			<DCCReference Include="MdgpUnit.pas">
 				<Form>MdgpForm</Form>
 			</DCCReference>
+			<DCCReference Include="LzUnit.pas">
+				<Form>lzForm</Form>
+			</DCCReference>
+			<DCCReference Include="DUnitpas.pas">
+				<Form>DForm</Form>
+			</DCCReference>
+			<DCCReference Include="BottleinfoUnit.pas">
+				<Form>BottleInfoForm</Form>
+			</DCCReference>
+			<DCCReference Include="BottleListUnit.pas">
+				<Form>BottleListFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="YpDayUnit.pas">
+				<Form>YpDaycFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="YpTjUnit.pas">
+				<Form>YpTjFrame</Form>
+				<DesignClass>TUniFrame</DesignClass>
+			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
