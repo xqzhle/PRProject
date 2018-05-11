@@ -1501,6 +1501,14 @@ object MainForm: TMainForm
         TabOrder = 2
         Text = 'ShopidBox'
       end
+      object KhlxBox: TComboBox
+        Left = 676
+        Top = 80
+        Width = 145
+        Height = 25
+        TabOrder = 3
+        Text = 'KhlxBox'
+      end
     end
   end
   object Panel1: TPanel
@@ -1733,6 +1741,14 @@ object MainForm: TMainForm
     end
     object N9: TMenuItem
       Caption = #24211#23384#31649#29702
+      object m1: TMenuItem
+        Caption = #38376#24215#38050#29942#32479#35745
+        OnClick = m1Click
+      end
+      object N68: TMenuItem
+        Caption = #23458#25143#38050#29942#32479#35745
+        OnClick = N68Click
+      end
     end
     object N10: TMenuItem
       Caption = #25253#34920#20013#24515
@@ -1743,6 +1759,10 @@ object MainForm: TMainForm
       object N67: TMenuItem
         Caption = #27668#29942#25910#36153
         OnClick = N67Click
+      end
+      object N69: TMenuItem
+        Caption = #23458#25143#39044#35686
+        OnClick = N69Click
       end
     end
     object N11: TMenuItem

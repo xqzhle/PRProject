@@ -1,11 +1,10 @@
-object Form49: TForm49
+object CustwaingForm: TCustwaingForm
   Left = 0
   Top = 0
-  BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = #26410#35746#27668#23458#25143#26597#35810
   ClientHeight = 585
-  ClientWidth = 879
+  ClientWidth = 808
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,65 +13,44 @@ object Form49: TForm49
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 339
-    Top = 43
-    Width = 84
-    Height = 13
-    Caption = #22825#26410#35746#27668#30340#23458#25143
-  end
-  object Label2: TLabel
-    Left = 681
-    Top = 43
-    Width = 69
-    Height = 13
-    Caption = #35760#24405#25968#65306'0 '#26465
-    Color = clRed
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clRed
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label3: TLabel
-    Left = 254
-    Top = 43
-    Width = 24
-    Height = 13
-    Caption = #36229#36807
-  end
-  object Label8: TLabel
-    Left = 13
-    Top = 42
-    Width = 60
-    Height = 14
-    Caption = #23458#25143#31867#22411#65306
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
+  object dxRibbon1: TdxRibbon
+    Left = 0
+    Top = 0
+    Width = 808
+    Height = 24
+    ColorSchemeName = 'Blue'
+    ShowTabGroups = False
+    ShowTabHeaders = False
+    SupportNonClientDrawing = True
+    Contexts = <>
+    TabOrder = 0
+    TabStop = False
+    object dxRibbon1Tab1: TdxRibbonTab
+      Active = True
+      Caption = 'dxRibbon1Tab1'
+      Groups = <>
+      Index = 0
+    end
   end
   object DBAdvGrid1: TDBAdvGrid
-    Left = 8
-    Top = 88
-    Width = 861
-    Height = 473
+    Left = 0
+    Top = 89
+    Width = 808
+    Height = 466
     Cursor = crDefault
+    Align = alClient
     ColCount = 2
     DrawingStyle = gdsClassic
     RowCount = 2
     FixedRows = 1
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowMoving, goColMoving]
     ScrollBars = ssBoth
-    TabOrder = 3
+    TabOrder = 1
     HoverRowCells = [hcNormal, hcSelected]
     OnResize = DBAdvGrid1Resize
     ActiveCellFont.Charset = DEFAULT_CHARSET
@@ -161,7 +139,7 @@ object Form49: TForm49
     SearchFooter.HintHighlight = 'Highlight occurences'
     SearchFooter.MatchCaseCaption = 'Match case'
     SortSettings.DefaultFormat = ssAutomatic
-    Version = '2.3.8.6'
+    Version = '2.4.0.2'
     AutoCreateColumns = True
     AutoRemoveColumns = True
     Columns = <
@@ -355,126 +333,228 @@ object Form49: TForm49
       20
       64)
   end
-  object Edit1: TEdit
-    Left = 284
-    Top = 38
-    Width = 49
-    Height = 24
+  object Panel1: TPanel
+    Left = 0
+    Top = 24
+    Width = 808
+    Height = 65
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 556
+      Top = 26
+      Width = 84
+      Height = 13
+      Caption = #22825#26410#35746#27668#30340#23458#25143
+    end
+    object Label3: TLabel
+      Left = 471
+      Top = 26
+      Width = 24
+      Height = 13
+      Caption = #36229#36807
+    end
+    object Label4: TLabel
+      Left = 8
+      Top = 25
+      Width = 60
+      Height = 14
+      Caption = #25152#23646#38376#24215#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 305
+      Top = 25
+      Width = 60
+      Height = 14
+      Caption = #23458#25143#31867#22411#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 168
+      Top = 25
+      Width = 48
+      Height = 14
+      Caption = #36865#27668#24037#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object AdvGlowButton1: TAdvGlowButton
+      Left = 729
+      Top = 17
+      Width = 68
+      Height = 31
+      Caption = #23548#20986
+      ImageIndex = 12
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
+      TabOrder = 0
+      OnClick = AdvGlowButton1Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
+    end
+    object AdvGlowButton2: TAdvGlowButton
+      Left = 650
+      Top = 17
+      Width = 68
+      Height = 31
+      Caption = #26597#35810
+      ImageIndex = 11
+      Images = ImageList3
+      HotImages = ImageList3
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
+      TabOrder = 1
+      OnClick = AdvGlowButton2Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
+    end
+    object ComboBox1: TComboBox
+      Left = 67
+      Top = 23
+      Width = 90
+      Height = 21
+      TabOrder = 2
+      OnClick = ComboBox1Click
+    end
+    object DBComboBox1: TComboBox
+      Left = 371
+      Top = 23
+      Width = 90
+      Height = 21
+      TabOrder = 3
+    end
+    object Edit1: TEdit
+      Left = 501
+      Top = 21
+      Width = 49
+      Height = 24
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+      Text = '30'
+      OnKeyPress = Edit1KeyPress
+    end
+    object ComboBox2: TComboBox
+      Left = 216
+      Top = 22
+      Width = 80
+      Height = 21
+      TabOrder = 5
+    end
+    object ComboBox3: TComboBox
+      Left = 67
+      Top = -4
+      Width = 90
+      Height = 21
+      TabOrder = 6
+      Visible = False
+      OnClick = ComboBox1Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 555
+    Width = 808
+    Height = 30
+    Align = alBottom
+    BevelOuter = bvNone
+    Caption = #35760#24405#25968#65306'0 '#26465
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
+    Font.Color = clRed
+    Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-    TabOrder = 2
-    Text = '30'
-    OnKeyPress = Edit1KeyPress
-  end
-  object AdvGlowButton2: TAdvGlowButton
-    Left = 477
-    Top = 32
-    Width = 82
-    Height = 31
-    Caption = #26597#35810
-    ImageIndex = 11
-    Images = ImageList3
-    HotImages = ImageList3
-    NotesFont.Charset = DEFAULT_CHARSET
-    NotesFont.Color = clWindowText
-    NotesFont.Height = -11
-    NotesFont.Name = 'Tahoma'
-    NotesFont.Style = []
-    TabOrder = 0
-    OnClick = AdvGlowButton2Click
-    Appearance.BorderColor = 14727579
-    Appearance.BorderColorHot = 10079963
-    Appearance.BorderColorDown = 4548219
-    Appearance.Color = 15653832
-    Appearance.ColorTo = 16178633
-    Appearance.ColorChecked = 7915518
-    Appearance.ColorCheckedTo = 11918331
-    Appearance.ColorDisabled = 15921906
-    Appearance.ColorDisabledTo = 15921906
-    Appearance.ColorDown = 7778289
-    Appearance.ColorDownTo = 4296947
-    Appearance.ColorHot = 15465983
-    Appearance.ColorHotTo = 11332863
-    Appearance.ColorMirror = 15586496
-    Appearance.ColorMirrorTo = 16245200
-    Appearance.ColorMirrorHot = 5888767
-    Appearance.ColorMirrorHotTo = 10807807
-    Appearance.ColorMirrorDown = 946929
-    Appearance.ColorMirrorDownTo = 5021693
-    Appearance.ColorMirrorChecked = 10480637
-    Appearance.ColorMirrorCheckedTo = 5682430
-    Appearance.ColorMirrorDisabled = 11974326
-    Appearance.ColorMirrorDisabledTo = 15921906
-    Appearance.GradientHot = ggVertical
-    Appearance.GradientMirrorHot = ggVertical
-    Appearance.GradientDown = ggVertical
-    Appearance.GradientMirrorDown = ggVertical
-    Appearance.GradientChecked = ggVertical
-  end
-  object AdvGlowButton1: TAdvGlowButton
-    Left = 565
-    Top = 32
-    Width = 82
-    Height = 31
-    Caption = #23548#20986
-    ImageIndex = 12
-    Images = ImageList3
-    HotImages = ImageList3
-    NotesFont.Charset = DEFAULT_CHARSET
-    NotesFont.Color = clWindowText
-    NotesFont.Height = -11
-    NotesFont.Name = 'Tahoma'
-    NotesFont.Style = []
-    TabOrder = 1
-    OnClick = AdvGlowButton1Click
-    Appearance.BorderColor = 14727579
-    Appearance.BorderColorHot = 10079963
-    Appearance.BorderColorDown = 4548219
-    Appearance.Color = 15653832
-    Appearance.ColorTo = 16178633
-    Appearance.ColorChecked = 7915518
-    Appearance.ColorCheckedTo = 11918331
-    Appearance.ColorDisabled = 15921906
-    Appearance.ColorDisabledTo = 15921906
-    Appearance.ColorDown = 7778289
-    Appearance.ColorDownTo = 4296947
-    Appearance.ColorHot = 15465983
-    Appearance.ColorHotTo = 11332863
-    Appearance.ColorMirror = 15586496
-    Appearance.ColorMirrorTo = 16245200
-    Appearance.ColorMirrorHot = 5888767
-    Appearance.ColorMirrorHotTo = 10807807
-    Appearance.ColorMirrorDown = 946929
-    Appearance.ColorMirrorDownTo = 5021693
-    Appearance.ColorMirrorChecked = 10480637
-    Appearance.ColorMirrorCheckedTo = 5682430
-    Appearance.ColorMirrorDisabled = 11974326
-    Appearance.ColorMirrorDisabledTo = 15921906
-    Appearance.GradientHot = ggVertical
-    Appearance.GradientMirrorHot = ggVertical
-    Appearance.GradientDown = ggVertical
-    Appearance.GradientMirrorDown = ggVertical
-    Appearance.GradientChecked = ggVertical
-  end
-  object DBComboBox1: TComboBox
-    Left = 79
-    Top = 40
-    Width = 150
-    Height = 21
-    TabOrder = 4
+    TabOrder = 3
   end
   object ImageList3: TImageList
     Height = 32
     ShareImages = True
     Width = 32
-    Left = 704
-    Top = 32
+    Left = 746
+    Top = 66
     Bitmap = {
-      494C01010F001300240020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F0013002C0020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

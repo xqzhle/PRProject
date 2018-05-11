@@ -91,6 +91,10 @@ type
     ShopnameBox: TComboBox;
     ShopidBox: TComboBox;
     N67: TMenuItem;
+    m1: TMenuItem;
+    N68: TMenuItem;
+    N69: TMenuItem;
+    KhlxBox: TComboBox;
     procedure FormCreate(Sender: TObject);
     procedure N22Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
@@ -133,6 +137,9 @@ type
     procedure N56Click(Sender: TObject);
     procedure N58Click(Sender: TObject);
     procedure N67Click(Sender: TObject);
+    procedure m1Click(Sender: TObject);
+    procedure N68Click(Sender: TObject);
+    procedure N69Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -153,7 +160,7 @@ uses
   BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit,LPGUnit,
   CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,
   GiveUnitpas, BottleInsUnit, PzUnit, DtelUnit, XstypeUnit, YwyUnit, QzUnit,
-  CarUnit, GMoneyUnit;
+  CarUnit, GMoneyUnit, MdgpUnit, khgpUnit,CustwaingUnit;
 
 {$R *.dfm}
 
@@ -178,6 +185,7 @@ begin
     Caption:=Application.Title;
     ShopnameBox.Clear;
     ShopidBox.Clear;
+    KhlxBox.Clear;
     with Data1.work do
     begin
       Close;
@@ -192,12 +200,28 @@ begin
           Next;
         end;
       end;
+      Close;
+      SQL.Text := 'select type_name from tbCustomer_Type';;
+      Open;
+      if not Data1.work.IsEmpty then
+      begin
+        for I := 0 to Data1.work.RecordCount-1 do
+        begin
+          KhlxBox.Items.Add(FieldByName('type_name').AsString);
+          Next;
+        end;
+      end;
     end;
 end;
 
 procedure TMainForm.k1Click(Sender: TObject);
 begin
   LetterForm.ShowModal;
+end;
+
+procedure TMainForm.m1Click(Sender: TObject);
+begin
+  MdgpForm.ShowModal;
 end;
 
 procedure TMainForm.N12Click(Sender: TObject);
@@ -914,6 +938,19 @@ begin
   GMoneyForm.ComboBox1.Clear;
   GMoneyForm.ComboBox1.Items := ShopnameBox.Items;
   GMoneyForm.ShowModal;
+end;
+
+procedure TMainForm.N68Click(Sender: TObject);
+begin
+  khgpForm.ShowModal;
+end;
+
+procedure TMainForm.N69Click(Sender: TObject);
+begin
+  CustwaingForm.ComboBox1.Items := ShopnameBox.Items;
+  CustwaingForm.ComboBox3.Items := ShopidBox.Items;
+  CustwaingForm.DBComboBox1.Items := KhlxBox.Items;
+  CustwaingForm.ShowModal;
 end;
 
 end.

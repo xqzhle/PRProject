@@ -13,7 +13,15 @@ uses
   AdvSmoothPanel,advstyleif,IdException,ComObj,
   cxClasses,Forms, dxRibbon, dxRibbonForm,Classes, dxSkinsForm, dxSkinsCore,
   CnClasses, CnTrayIcon, AcReport_TLB,jpeg, OleServer, dxStatusBar,
-  dxSkinsDefaultPainters, AcReport_TLB_Int;
+  dxSkinsDefaultPainters, AcReport_TLB_Int, AdvUtil, dxSkinBlack, dxSkinBlue,
+  dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky,
+  dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinPumpkin, dxSkinSeven, dxSkinSharp, dxSkinSilver,
+  dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008, dxSkinValentine,
+  dxSkinXmas2008Blue;
          // uROClient, uROBaseHTTPClient, uROWinInetHttpChannel
      // uROEventRepository,    HTTPChatLibrary_Intf  dxSkinsDefaultPainters
 
@@ -219,7 +227,6 @@ type
     DBEdit5: TDBEdit;
     AdvGlowButton17: TAdvGlowButton;
     Label28: TLabel;
-    AdvSmoothButton13: TAdvSmoothButton;
     AdvGlowButton25: TAdvGlowButton;
     ComboBox10: TComboBox;
     CTISrv2: TCTISrv;
@@ -344,7 +351,6 @@ type
     procedure DBAdvGrid3GetCellColor(Sender: TObject; ARow, ACol: Integer;
       AState: TGridDrawState; ABrush: TBrush; AFont: TFont);
     procedure DBAdvGrid3DblClick(Sender: TObject);
-    procedure AdvSmoothButton13Click(Sender: TObject);
     procedure AdvStringGrid1GetEditorType(Sender: TObject; ACol, ARow: Integer;
       var AEditor: TEditorType);
     procedure ComboBox11Change(Sender: TObject);
@@ -376,7 +382,7 @@ implementation
 
 uses DbUnit,PRRead_TLBUnit,
   ShellAPI, MainUnit,
-  EncdDecd,WxUnit,CVRDLL,zcomm, Unit30, Unit31, Unit32, Unit33, Unit41, Unit28, Unit29, Unit49, Unit89, Unit88, SelajUnit, Unit96, SqgUnitpas, Unit71, Unit72;
+  EncdDecd,WxUnit,CVRDLL,zcomm, Unit30, Unit31, Unit32, Unit33, Unit41, Unit28, Unit29, Unit89, Unit88, SelajUnit, Unit96, SqgUnitpas, Unit71, Unit72;
 
 {$R *.dfm}
 var
@@ -1682,13 +1688,6 @@ begin
 
   WxForm.TabSheet2.Show;
   WxForm.ShowModal;
-end;
-
-procedure TCallCentForm.AdvSmoothButton13Click(Sender: TObject);
-begin
-  Form49.DBComboBox1.Clear;
-  Form49.DBComboBox1.Items := DBComboBox1.Items;
-  Form49.ShowModal;
 end;
 
 procedure TCallCentForm.AdvSmoothButton16Click(Sender: TObject);
