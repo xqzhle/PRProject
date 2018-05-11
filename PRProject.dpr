@@ -73,7 +73,9 @@ uses
   CarUnit in 'CarUnit.pas' {CarForm},
   GMoneyUnit in 'GMoneyUnit.pas' {GMoneyForm},
   khgpUnit in 'khgpUnit.pas' {khgpForm},
-  MdgpUnit in 'MdgpUnit.pas' {MdgpForm};
+  MdgpUnit in 'MdgpUnit.pas' {MdgpForm},
+  LzUnit in 'LzUnit.pas' {lzForm},
+  DUnitpas in 'DUnitpas.pas' {DForm};
 
 {$R *.res}
 
@@ -128,6 +130,8 @@ begin
   Application.CreateForm(TGMoneyForm, GMoneyForm);
   Application.CreateForm(TkhgpForm, khgpForm);
   Application.CreateForm(TMdgpForm, MdgpForm);
+  Application.CreateForm(TlzForm, lzForm);
+  Application.CreateForm(TDForm, DForm);
   //  Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TPzForm, PzForm);
   Application.Run;

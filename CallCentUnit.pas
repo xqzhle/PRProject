@@ -1448,34 +1448,35 @@ end;
 
 procedure TCallCentForm.AdvGlowButton5Click(Sender: TObject);
 begin
-   if addyes then
-   begin
-     try
-                                     //取消订单
-        if not Data1.ds11.IsEmpty then
-        begin
-          Data1.ds11.First;
-          while not Data1.ds11.Eof do
-          begin
-//            ShowMessage(Data1.ds11.FieldByName('单号').AsString);
-            Data1.sds1.Close;
-            Data1.sds1.SQL.Text:='delete from  tbisentprice where bisentid='''+Data1.ds11.FieldByName('单号').AsString+'''';
-            Data1.sds1.ExecSQL;
-            Data1.sds1.Close;
-            Data1.sds1.SQL.Text:='delete from  tbisent where bisentid='''+Data1.ds11.FieldByName('单号').AsString+'''';
-            Data1.sds1.ExecSQL;
-            Data1.ds11.Next;
-          end;
-        end;
-        ShowMessage('订单取消成功！');
-        AdvGlowButton3.Enabled:=True;
-        addyes:=False;
-        Data1.ds11.Close;
-        Data1.ds11.Open;
-      except
-
-      end;
-   end;
+  initgrid;
+//   if addyes then
+//   begin
+//     try
+//                                     //取消订单
+//        if not Data1.ds11.IsEmpty then
+//        begin
+//          Data1.ds11.First;
+//          while not Data1.ds11.Eof do
+//          begin
+////            ShowMessage(Data1.ds11.FieldByName('单号').AsString);
+//            Data1.sds1.Close;
+//            Data1.sds1.SQL.Text:='delete from  tbisentprice where bisentid='''+Data1.ds11.FieldByName('单号').AsString+'''';
+//            Data1.sds1.ExecSQL;
+//            Data1.sds1.Close;
+//            Data1.sds1.SQL.Text:='delete from  tbisent where bisentid='''+Data1.ds11.FieldByName('单号').AsString+'''';
+//            Data1.sds1.ExecSQL;
+//            Data1.ds11.Next;
+//          end;
+//        end;
+//        ShowMessage('订单取消成功！');
+//        AdvGlowButton3.Enabled:=True;
+//        addyes:=False;
+//        Data1.ds11.Close;
+//        Data1.ds11.Open;
+//      except
+//
+//      end;
+//   end;
 end;
 
 procedure TCallCentForm.AdvGlowButton6Click(Sender: TObject);
