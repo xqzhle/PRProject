@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="5.4.6" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="42893.8646728241" ReportOptions.Description.Text="" ReportOptions.LastChange="42893.8648949653" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
+  <TfrxReportPage Name="" PaperWidth="100" PaperHeight="20" PaperSize="256" LeftMargin="0" RightMargin="0" TopMargin="0" BottomMargin="0" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxBarCodeView Name="BarCode1" Left="47.23624" Top="10.55906" Width="101" Height="68.03149606" BarType="bcCode128" Rotation="0" Text="082106123456" WideBarRatio="2" Zoom="1" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0"/>
+    <TfrxBarCodeView Name="BarCode2" Left="238.21274" Top="10.55906" Width="101" Height="68.03149606" BarType="bcCode128" Rotation="0" Text="082106123456" WideBarRatio="2" Zoom="1" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0"/>
+  </TfrxReportPage>
+</TfrxReport>

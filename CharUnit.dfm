@@ -20,17 +20,13 @@ object CharForm: TCharForm
     Top = 0
     Width = 787
     Height = 682
-    ActivePage = TabSheet1
+    ActivePage = TabSheet4
     Align = alClient
-    TabIndex = 0
+    TabIndex = 5
     TabOrder = 0
     FixedDimension = 19
     object TabSheet1: TRzTabSheet
       Caption = #29992#25143#21306#22495#20998#24067#22270
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Chart1: TChart
         Left = 0
         Top = 69
@@ -189,10 +185,6 @@ object CharForm: TCharForm
     end
     object TabSheet6: TRzTabSheet
       Caption = #29992#25143#26032#22686#36235#21183#22270
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object W7Panel6: TW7Panel
         Left = 0
         Top = 0
@@ -230,7 +222,7 @@ object CharForm: TCharForm
         end
         object RzToolButton10: TRzToolButton
           Left = 520
-          Top = 12
+          Top = 15
           Width = 106
           Height = 48
           Hint = #25353#26465#20214#26597#35810
@@ -318,10 +310,6 @@ object CharForm: TCharForm
     end
     object TabSheet5: TRzTabSheet
       Caption = #38144#21806#25968#25454#26354#32447#20998#26512
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object W7Panel5: TW7Panel
         Left = 0
         Top = 0
@@ -444,10 +432,6 @@ object CharForm: TCharForm
     end
     object TabSheet3: TRzTabSheet
       Caption = #38376#24215#38144#21806#27604#20363#20998#26512
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object W7Panel3: TW7Panel
         Left = 0
         Top = 0
@@ -604,10 +588,6 @@ object CharForm: TCharForm
     end
     object TabSheet2: TRzTabSheet
       Caption = #35746#21333#26469#28304#20998#24067#22270
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object W7Panel2: TW7Panel
         Left = 0
         Top = 0
@@ -752,10 +732,6 @@ object CharForm: TCharForm
     end
     object TabSheet4: TRzTabSheet
       Caption = #35805#21153#21592#26469#30005#20998#26512
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object W7Panel4: TW7Panel
         Left = 0
         Top = 0
@@ -910,7 +886,7 @@ object CharForm: TCharForm
     Left = 263
     Top = 158
     Bitmap = {
-      494C010102001800740030003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010102001800780030003000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000C00000003000000001002000000000000090
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

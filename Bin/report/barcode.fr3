@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="5.4.6" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="42718.7105801736" ReportOptions.Description.Text="" ReportOptions.LastChange="42728.9573680787" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="63" PaperHeight="30" PaperSize="256" LeftMargin="1" RightMargin="1" TopMargin="1" BottomMargin="1" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxPictureView Name="Picture1" Left="11.33858268" Top="5.66929133858268" Width="102.04724409" Height="102.04724409" HightQuality="False" Transparent="False" TransparentColor="16777215"/>
+    <TfrxPictureView Name="Picture2" Left="132.28346457" Top="5.66929133858268" Width="102.04724409" Height="102.04724409" HightQuality="False" Transparent="False" TransparentColor="16777215"/>
+    <TfrxMemoView Name="Memo1" Left="29.11812" Top="88.44094488" Width="94.48825" Height="18.89765" Text="112233"/>
+    <TfrxMemoView Name="Memo2" Left="151.181102362205" Top="88.44094488" Width="94.48825" Height="18.89765" Text=""/>
+  </TfrxReportPage>
+</TfrxReport>

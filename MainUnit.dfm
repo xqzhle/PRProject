@@ -13,6 +13,7 @@ object MainForm: TMainForm
   OldCreateOrder = False
   WindowState = wsMaximized
   OnCreate = FormCreate
+  OnResize = FormResize
   PixelsPerInch = 96
   TextHeight = 17
   object AdvOfficePager1: TAdvOfficePager
@@ -385,13 +386,13 @@ object MainForm: TMainForm
       object AdvPanel1: TAdvPanel
         Left = 2
         Top = 2
-        Width = 223
+        Width = 217
         Height = 688
         Align = alLeft
         BevelOuter = bvNone
-        Color = clWhite
+        Color = 16645114
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
+        Font.Color = 7485192
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
@@ -399,9 +400,9 @@ object MainForm: TMainForm
         TabOrder = 0
         UseDockManager = True
         Version = '2.5.4.1'
-        BorderColor = clNone
-        Caption.Color = 15658734
-        Caption.ColorTo = clNone
+        BorderColor = 16765615
+        Caption.Color = 16575452
+        Caption.ColorTo = 16571329
         Caption.Font.Charset = DEFAULT_CHARSET
         Caption.Font.Color = clBlack
         Caption.Font.Height = -13
@@ -413,17 +414,19 @@ object MainForm: TMainForm
         Caption.ShadeLight = 255
         CollapsColor = clNone
         CollapsDelay = 0
+        ColorTo = 16643051
         DoubleBuffered = True
         ShadowColor = clBlack
         ShadowOffset = 0
-        StatusBar.BorderColor = clNone
+        StatusBar.BorderColor = 13542013
         StatusBar.BorderStyle = bsSingle
         StatusBar.Font.Charset = DEFAULT_CHARSET
-        StatusBar.Font.Color = clBlack
+        StatusBar.Font.Color = 7485192
         StatusBar.Font.Height = -11
         StatusBar.Font.Name = 'Tahoma'
         StatusBar.Font.Style = []
-        StatusBar.Color = 15658734
+        StatusBar.Color = 16575452
+        StatusBar.ColorTo = 16571329
         StatusBar.GradientDirection = gdVertical
         Styler = AdvPanelStyler1
         FullHeight = 200
@@ -1485,121 +1488,910 @@ object MainForm: TMainForm
           TMSStyle = 0
         end
       end
-      object Panel2: TPanel
-        Left = 301
-        Top = 126
-        Width = 417
-        Height = 417
-        Caption = 'Panel2'
+      object AdvPanel3: TAdvPanel
+        Left = 219
+        Top = 2
+        Width = 891
+        Height = 688
+        Align = alClient
+        BevelOuter = bvNone
+        Color = 16645114
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 7485192
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 1
-        Visible = False
-        object Label3: TLabel
-          Left = 193
-          Top = 156
-          Width = 72
-          Height = 20
-          AutoSize = False
-          Caption = #21378#23478#21517#31216#65306
-          Font.Charset = GB2312_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = #23435#20307
-          Font.Style = []
-          ParentFont = False
-        end
-        object Label4: TLabel
-          Left = 185
-          Top = 182
-          Width = 80
-          Height = 17
-          AutoSize = False
-          Caption = #38050#29942#35268#26684#65306
-          Font.Charset = GB2312_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = #23435#20307
-          Font.Style = []
-          ParentFont = False
-        end
-        object Label5: TLabel
-          Left = 177
-          Top = 223
-          Width = 73
-          Height = 17
-          AutoSize = False
-          Caption = #20805#35013#20171#36136#65306
-          Font.Charset = GB2312_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = #23435#20307
-          Font.Style = []
-          ParentFont = False
-        end
-        object KhlxBox: TComboBox
-          Left = 120
-          Top = 52
-          Width = 145
-          Height = 25
+        UseDockManager = True
+        Version = '2.5.4.1'
+        BorderColor = 16765615
+        Caption.Color = 16575452
+        Caption.ColorTo = 16571329
+        Caption.Font.Charset = DEFAULT_CHARSET
+        Caption.Font.Color = clBlack
+        Caption.Font.Height = -13
+        Caption.Font.Name = 'Segoe UI'
+        Caption.Font.Style = []
+        Caption.GradientDirection = gdVertical
+        Caption.Indent = 2
+        Caption.ShadeLight = 255
+        CollapsColor = clNone
+        CollapsDelay = 0
+        ColorTo = 16643051
+        DoubleBuffered = True
+        ShadowColor = clBlack
+        ShadowOffset = 0
+        StatusBar.BorderColor = 13542013
+        StatusBar.BorderStyle = bsSingle
+        StatusBar.Font.Charset = DEFAULT_CHARSET
+        StatusBar.Font.Color = 7485192
+        StatusBar.Font.Height = -11
+        StatusBar.Font.Name = 'Tahoma'
+        StatusBar.Font.Style = []
+        StatusBar.Color = 16575452
+        StatusBar.ColorTo = 16571329
+        StatusBar.GradientDirection = gdVertical
+        Styler = AdvPanelStyler1
+        FullHeight = 200
+        object Panel2: TPanel
+          Left = 336
+          Top = 271
+          Width = 417
+          Height = 417
+          Caption = 'Panel2'
           TabOrder = 0
-          Text = 'KhlxBox'
+          Visible = False
+          object Label3: TLabel
+            Left = 193
+            Top = 156
+            Width = 72
+            Height = 20
+            AutoSize = False
+            Caption = #21378#23478#21517#31216#65306
+            Font.Charset = GB2312_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = #23435#20307
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label4: TLabel
+            Left = 185
+            Top = 182
+            Width = 80
+            Height = 17
+            AutoSize = False
+            Caption = #38050#29942#35268#26684#65306
+            Font.Charset = GB2312_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = #23435#20307
+            Font.Style = []
+            ParentFont = False
+          end
+          object Label5: TLabel
+            Left = 152
+            Top = 223
+            Width = 73
+            Height = 17
+            AutoSize = False
+            Caption = #20805#35013#20171#36136#65306
+            Font.Charset = GB2312_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = #23435#20307
+            Font.Style = []
+            ParentFont = False
+          end
+          object KhlxBox: TComboBox
+            Left = 120
+            Top = 52
+            Width = 145
+            Height = 21
+            TabOrder = 0
+            Text = 'KhlxBox'
+          end
+          object ShopidBox: TComboBox
+            Left = 120
+            Top = 83
+            Width = 145
+            Height = 21
+            TabOrder = 1
+            Text = 'ShopidBox'
+          end
+          object ShopnameBox: TComboBox
+            Left = 120
+            Top = 114
+            Width = 145
+            Height = 21
+            TabOrder = 2
+            Text = 'ShopnameBox'
+          end
+          object ComboBox2: TComboBox
+            Left = 248
+            Top = 145
+            Width = 145
+            Height = 20
+            Font.Charset = GB2312_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = #23435#20307
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 3
+            Text = 'ComboBox2'
+          end
+          object ComboBox3: TComboBox
+            Left = 256
+            Top = 182
+            Width = 145
+            Height = 20
+            Font.Charset = GB2312_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = #23435#20307
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 4
+            Text = 'ComboBox3'
+          end
+          object ComboBox4: TComboBox
+            Left = 256
+            Top = 220
+            Width = 145
+            Height = 20
+            Font.Charset = GB2312_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -12
+            Font.Name = #23435#20307
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 5
+            Text = 'ComboBox4'
+          end
         end
-        object ShopidBox: TComboBox
-          Left = 120
-          Top = 83
-          Width = 145
-          Height = 25
+        object AdvPanel4: TAdvPanel
+          Left = 0
+          Top = 0
+          Width = 891
+          Height = 348
+          Align = alTop
+          BevelOuter = bvNone
           TabOrder = 1
-          Text = 'ShopidBox'
+          UseDockManager = True
+          Version = '2.5.4.1'
+          Caption.Color = clHighlight
+          Caption.ColorTo = clNone
+          Caption.Font.Charset = DEFAULT_CHARSET
+          Caption.Font.Color = 7485192
+          Caption.Font.Height = -11
+          Caption.Font.Name = 'Tahoma'
+          Caption.Font.Style = []
+          Caption.Indent = 0
+          DoubleBuffered = True
+          StatusBar.Font.Charset = DEFAULT_CHARSET
+          StatusBar.Font.Color = clWindowText
+          StatusBar.Font.Height = -11
+          StatusBar.Font.Name = 'Tahoma'
+          StatusBar.Font.Style = []
+          FullHeight = 200
+          object AdvPanel8: TAdvPanel
+            Left = 595
+            Top = 0
+            Width = 296
+            Height = 348
+            Align = alRight
+            BevelOuter = bvNone
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+            UseDockManager = True
+            Version = '2.5.4.1'
+            BorderColor = clNone
+            Caption.Color = 15658734
+            Caption.ColorTo = clNone
+            Caption.Font.Charset = DEFAULT_CHARSET
+            Caption.Font.Color = clBlack
+            Caption.Font.Height = -11
+            Caption.Font.Name = 'Segoe UI'
+            Caption.Font.Style = []
+            Caption.GradientDirection = gdVertical
+            Caption.Indent = 2
+            Caption.ShadeLight = 255
+            CollapsColor = clNone
+            CollapsDelay = 0
+            DoubleBuffered = True
+            ShadowColor = clBlack
+            ShadowOffset = 0
+            StatusBar.BorderColor = clNone
+            StatusBar.BorderStyle = bsSingle
+            StatusBar.Font.Charset = DEFAULT_CHARSET
+            StatusBar.Font.Color = clBlack
+            StatusBar.Font.Height = -11
+            StatusBar.Font.Name = 'Tahoma'
+            StatusBar.Font.Style = []
+            StatusBar.Color = 15658734
+            StatusBar.GradientDirection = gdVertical
+            Styler = AdvPanelStyler2
+            FullHeight = 200
+            object AdvPanel14: TAdvPanel
+              Left = 0
+              Top = 0
+              Width = 296
+              Height = 35
+              Align = alTop
+              BevelOuter = bvNone
+              Color = clWhite
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+              UseDockManager = True
+              Version = '2.5.4.1'
+              BorderColor = clNone
+              Caption.Color = 15658734
+              Caption.ColorTo = clNone
+              Caption.Font.Charset = DEFAULT_CHARSET
+              Caption.Font.Color = clBlack
+              Caption.Font.Height = -11
+              Caption.Font.Name = 'Segoe UI'
+              Caption.Font.Style = []
+              Caption.GradientDirection = gdVertical
+              Caption.Indent = 2
+              Caption.ShadeLight = 255
+              CollapsColor = clNone
+              CollapsDelay = 0
+              DoubleBuffered = True
+              ShadowColor = clBlack
+              ShadowOffset = 0
+              StatusBar.BorderColor = clNone
+              StatusBar.BorderStyle = bsSingle
+              StatusBar.Font.Charset = DEFAULT_CHARSET
+              StatusBar.Font.Color = clBlack
+              StatusBar.Font.Height = -11
+              StatusBar.Font.Name = 'Tahoma'
+              StatusBar.Font.Style = []
+              StatusBar.Color = 15658734
+              StatusBar.GradientDirection = gdVertical
+              Styler = AdvPanelStyler2
+              FullHeight = 200
+            end
+            object WebBrowser3: TWebBrowser
+              Tag = 2
+              Left = 0
+              Top = 35
+              Width = 296
+              Height = 313
+              Align = alClient
+              TabOrder = 1
+              OnDocumentComplete = WebBrowser1DocumentComplete
+              ExplicitLeft = -4
+              ExplicitTop = 72
+              ExplicitWidth = 300
+              ExplicitHeight = 150
+              ControlData = {
+                4C000000021F0000810F00000000000000000000000000000000000000000000
+                000000004C000000000000000000000001000000E0D057007335CF11AE690800
+                2B2E126208000000000000004C0000000114020000000000C000000000000046
+                8000000000000000000000000000000000000000000000000000000000000000
+                00000000000000000100000000000000000000000000000000000000}
+            end
+          end
+          object AdvPanel7: TAdvPanel
+            Left = 296
+            Top = 0
+            Width = 299
+            Height = 348
+            Align = alClient
+            BevelOuter = bvNone
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 1
+            UseDockManager = True
+            Version = '2.5.4.1'
+            BorderColor = clNone
+            Caption.Color = 15658734
+            Caption.ColorTo = clNone
+            Caption.Font.Charset = DEFAULT_CHARSET
+            Caption.Font.Color = clBlack
+            Caption.Font.Height = -11
+            Caption.Font.Name = 'Segoe UI'
+            Caption.Font.Style = []
+            Caption.GradientDirection = gdVertical
+            Caption.Indent = 2
+            Caption.ShadeLight = 255
+            CollapsColor = clNone
+            CollapsDelay = 0
+            DoubleBuffered = True
+            ShadowColor = clBlack
+            ShadowOffset = 0
+            StatusBar.BorderColor = clNone
+            StatusBar.BorderStyle = bsSingle
+            StatusBar.Font.Charset = DEFAULT_CHARSET
+            StatusBar.Font.Color = clBlack
+            StatusBar.Font.Height = -11
+            StatusBar.Font.Name = 'Tahoma'
+            StatusBar.Font.Style = []
+            StatusBar.Color = 15658734
+            StatusBar.GradientDirection = gdVertical
+            Styler = AdvPanelStyler2
+            FullHeight = 200
+            object AdvPanel13: TAdvPanel
+              Left = 0
+              Top = 0
+              Width = 299
+              Height = 35
+              Align = alTop
+              BevelOuter = bvNone
+              Color = clWhite
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+              UseDockManager = True
+              Version = '2.5.4.1'
+              BorderColor = clNone
+              Caption.Color = 15658734
+              Caption.ColorTo = clNone
+              Caption.Font.Charset = DEFAULT_CHARSET
+              Caption.Font.Color = clBlack
+              Caption.Font.Height = -11
+              Caption.Font.Name = 'Segoe UI'
+              Caption.Font.Style = []
+              Caption.GradientDirection = gdVertical
+              Caption.Indent = 2
+              Caption.ShadeLight = 255
+              CollapsColor = clNone
+              CollapsDelay = 0
+              DoubleBuffered = True
+              ShadowColor = clBlack
+              ShadowOffset = 0
+              StatusBar.BorderColor = clNone
+              StatusBar.BorderStyle = bsSingle
+              StatusBar.Font.Charset = DEFAULT_CHARSET
+              StatusBar.Font.Color = clBlack
+              StatusBar.Font.Height = -11
+              StatusBar.Font.Name = 'Tahoma'
+              StatusBar.Font.Style = []
+              StatusBar.Color = 15658734
+              StatusBar.GradientDirection = gdVertical
+              Styler = AdvPanelStyler2
+              ExplicitWidth = 296
+              FullHeight = 200
+            end
+            object WebBrowser2: TWebBrowser
+              Tag = 1
+              Left = 0
+              Top = 35
+              Width = 299
+              Height = 313
+              Align = alClient
+              TabOrder = 1
+              OnDocumentComplete = WebBrowser1DocumentComplete
+              ExplicitLeft = -4
+              ExplicitTop = 72
+              ExplicitWidth = 300
+              ExplicitHeight = 150
+              ControlData = {
+                4C000000021F0000810F00000000000000000000000000000000000000000000
+                000000004C000000000000000000000001000000E0D057007335CF11AE690800
+                2B2E126208000000000000004C0000000114020000000000C000000000000046
+                8000000000000000000000000000000000000000000000000000000000000000
+                00000000000000000100000000000000000000000000000000000000}
+            end
+          end
+          object AdvPanel6: TAdvPanel
+            Left = 0
+            Top = 0
+            Width = 296
+            Height = 348
+            Align = alLeft
+            BevelOuter = bvNone
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 2
+            UseDockManager = True
+            Version = '2.5.4.1'
+            BorderColor = clNone
+            Caption.Color = 15658734
+            Caption.ColorTo = clNone
+            Caption.Font.Charset = DEFAULT_CHARSET
+            Caption.Font.Color = clBlack
+            Caption.Font.Height = -11
+            Caption.Font.Name = 'Segoe UI'
+            Caption.Font.Style = []
+            Caption.GradientDirection = gdVertical
+            Caption.Indent = 2
+            Caption.ShadeLight = 255
+            CollapsColor = clNone
+            CollapsDelay = 0
+            DoubleBuffered = True
+            ShadowColor = clBlack
+            ShadowOffset = 0
+            StatusBar.BorderColor = clNone
+            StatusBar.BorderStyle = bsSingle
+            StatusBar.Font.Charset = DEFAULT_CHARSET
+            StatusBar.Font.Color = clBlack
+            StatusBar.Font.Height = -11
+            StatusBar.Font.Name = 'Tahoma'
+            StatusBar.Font.Style = []
+            StatusBar.Color = 15658734
+            StatusBar.GradientDirection = gdVertical
+            Styler = AdvPanelStyler2
+            FullHeight = 200
+            object AdvPanel12: TAdvPanel
+              Left = 0
+              Top = 0
+              Width = 296
+              Height = 35
+              Align = alTop
+              BevelOuter = bvNone
+              Color = clWhite
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+              UseDockManager = True
+              Version = '2.5.4.1'
+              BorderColor = clNone
+              Caption.Color = 15658734
+              Caption.ColorTo = clNone
+              Caption.Font.Charset = DEFAULT_CHARSET
+              Caption.Font.Color = clBlack
+              Caption.Font.Height = -11
+              Caption.Font.Name = 'Segoe UI'
+              Caption.Font.Style = []
+              Caption.GradientDirection = gdVertical
+              Caption.Indent = 2
+              Caption.ShadeLight = 255
+              CollapsColor = clNone
+              CollapsDelay = 0
+              DoubleBuffered = True
+              ShadowColor = clBlack
+              ShadowOffset = 0
+              StatusBar.BorderColor = clNone
+              StatusBar.BorderStyle = bsSingle
+              StatusBar.Font.Charset = DEFAULT_CHARSET
+              StatusBar.Font.Color = clBlack
+              StatusBar.Font.Height = -11
+              StatusBar.Font.Name = 'Tahoma'
+              StatusBar.Font.Style = []
+              StatusBar.Color = 15658734
+              StatusBar.GradientDirection = gdVertical
+              Styler = AdvPanelStyler2
+              FullHeight = 200
+              object RadioButton1: TRadioButton
+                Left = 19
+                Top = 20
+                Width = 61
+                Height = 17
+                Caption = #25353#21306#22495
+                Checked = True
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Segoe UI'
+                Font.Style = []
+                ParentFont = False
+                TabOrder = 0
+                TabStop = True
+                OnClick = RadioButton1Click
+              end
+              object RadioButton2: TRadioButton
+                Left = 86
+                Top = 20
+                Width = 61
+                Height = 17
+                Caption = #25353#34903#36947
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Segoe UI'
+                Font.Style = []
+                ParentFont = False
+                TabOrder = 1
+                OnClick = RadioButton2Click
+              end
+            end
+            object WebBrowser1: TWebBrowser
+              Left = 0
+              Top = 35
+              Width = 296
+              Height = 313
+              Align = alClient
+              TabOrder = 1
+              OnDocumentComplete = WebBrowser1DocumentComplete
+              ExplicitLeft = -4
+              ExplicitTop = 72
+              ExplicitWidth = 300
+              ExplicitHeight = 150
+              ControlData = {
+                4C000000021F0000810F00000000000000000000000000000000000000000000
+                000000004C000000000000000000000001000000E0D057007335CF11AE690800
+                2B2E126208000000000000004C0000000114020000000000C000000000000046
+                8000000000000000000000000000000000000000000000000000000000000000
+                00000000000000000100000000000000000000000000000000000000}
+            end
+          end
         end
-        object ShopnameBox: TComboBox
-          Left = 120
-          Top = 114
-          Width = 145
-          Height = 25
+        object AdvPanel5: TAdvPanel
+          Left = 0
+          Top = 348
+          Width = 891
+          Height = 340
+          Align = alClient
+          BevelOuter = bvNone
           TabOrder = 2
-          Text = 'ShopnameBox'
-        end
-        object ComboBox2: TComboBox
-          Left = 248
-          Top = 145
-          Width = 145
-          Height = 20
-          Font.Charset = GB2312_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = #23435#20307
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 3
-          Text = 'ComboBox2'
-        end
-        object ComboBox3: TComboBox
-          Left = 256
-          Top = 182
-          Width = 145
-          Height = 20
-          Font.Charset = GB2312_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = #23435#20307
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 4
-          Text = 'ComboBox3'
-        end
-        object ComboBox4: TComboBox
-          Left = 256
-          Top = 220
-          Width = 145
-          Height = 20
-          Font.Charset = GB2312_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -12
-          Font.Name = #23435#20307
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 5
-          Text = 'ComboBox4'
+          UseDockManager = True
+          Version = '2.5.4.1'
+          Caption.Color = clHighlight
+          Caption.ColorTo = clNone
+          Caption.Font.Charset = DEFAULT_CHARSET
+          Caption.Font.Color = 7485192
+          Caption.Font.Height = -11
+          Caption.Font.Name = 'Tahoma'
+          Caption.Font.Style = []
+          Caption.Indent = 0
+          DoubleBuffered = True
+          StatusBar.Font.Charset = DEFAULT_CHARSET
+          StatusBar.Font.Color = clWindowText
+          StatusBar.Font.Height = -11
+          StatusBar.Font.Name = 'Tahoma'
+          StatusBar.Font.Style = []
+          FullHeight = 200
+          object AdvPanel9: TAdvPanel
+            Left = 0
+            Top = 0
+            Width = 296
+            Height = 340
+            Align = alLeft
+            BevelOuter = bvNone
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+            UseDockManager = True
+            Version = '2.5.4.1'
+            BorderColor = clNone
+            Caption.Color = 15658734
+            Caption.ColorTo = clNone
+            Caption.Font.Charset = DEFAULT_CHARSET
+            Caption.Font.Color = clBlack
+            Caption.Font.Height = -11
+            Caption.Font.Name = 'Segoe UI'
+            Caption.Font.Style = []
+            Caption.GradientDirection = gdVertical
+            Caption.Indent = 2
+            Caption.ShadeLight = 255
+            CollapsColor = clNone
+            CollapsDelay = 0
+            DoubleBuffered = True
+            ShadowColor = clBlack
+            ShadowOffset = 0
+            StatusBar.BorderColor = clNone
+            StatusBar.BorderStyle = bsSingle
+            StatusBar.Font.Charset = DEFAULT_CHARSET
+            StatusBar.Font.Color = clBlack
+            StatusBar.Font.Height = -11
+            StatusBar.Font.Name = 'Tahoma'
+            StatusBar.Font.Style = []
+            StatusBar.Color = 15658734
+            StatusBar.GradientDirection = gdVertical
+            Styler = AdvPanelStyler2
+            FullHeight = 200
+            object AdvPanel15: TAdvPanel
+              Left = 0
+              Top = 0
+              Width = 296
+              Height = 35
+              Align = alTop
+              BevelOuter = bvNone
+              Color = clWhite
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+              UseDockManager = True
+              Version = '2.5.4.1'
+              BorderColor = clNone
+              Caption.Color = 15658734
+              Caption.ColorTo = clNone
+              Caption.Font.Charset = DEFAULT_CHARSET
+              Caption.Font.Color = clBlack
+              Caption.Font.Height = -11
+              Caption.Font.Name = 'Segoe UI'
+              Caption.Font.Style = []
+              Caption.GradientDirection = gdVertical
+              Caption.Indent = 2
+              Caption.ShadeLight = 255
+              CollapsColor = clNone
+              CollapsDelay = 0
+              DoubleBuffered = True
+              ShadowColor = clBlack
+              ShadowOffset = 0
+              StatusBar.BorderColor = clNone
+              StatusBar.BorderStyle = bsSingle
+              StatusBar.Font.Charset = DEFAULT_CHARSET
+              StatusBar.Font.Color = clBlack
+              StatusBar.Font.Height = -11
+              StatusBar.Font.Name = 'Tahoma'
+              StatusBar.Font.Style = []
+              StatusBar.Color = 15658734
+              StatusBar.GradientDirection = gdVertical
+              Styler = AdvPanelStyler2
+              FullHeight = 200
+            end
+            object WebBrowser4: TWebBrowser
+              Tag = 3
+              Left = 0
+              Top = 35
+              Width = 296
+              Height = 305
+              Align = alClient
+              TabOrder = 1
+              OnDocumentComplete = WebBrowser1DocumentComplete
+              ExplicitLeft = -6
+              ExplicitTop = 33
+              ControlData = {
+                4C000000021F0000810F00000000000000000000000000000000000000000000
+                000000004C000000000000000000000001000000E0D057007335CF11AE690800
+                2B2E126208000000000000004C0000000114020000000000C000000000000046
+                8000000000000000000000000000000000000000000000000000000000000000
+                00000000000000000100000000000000000000000000000000000000}
+            end
+          end
+          object AdvPanel10: TAdvPanel
+            Left = 296
+            Top = 0
+            Width = 299
+            Height = 340
+            Align = alClient
+            BevelOuter = bvNone
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 1
+            UseDockManager = True
+            Version = '2.5.4.1'
+            BorderColor = clNone
+            Caption.Color = 15658734
+            Caption.ColorTo = clNone
+            Caption.Font.Charset = DEFAULT_CHARSET
+            Caption.Font.Color = clBlack
+            Caption.Font.Height = -11
+            Caption.Font.Name = 'Segoe UI'
+            Caption.Font.Style = []
+            Caption.GradientDirection = gdVertical
+            Caption.Indent = 2
+            Caption.ShadeLight = 255
+            CollapsColor = clNone
+            CollapsDelay = 0
+            DoubleBuffered = True
+            ShadowColor = clBlack
+            ShadowOffset = 0
+            StatusBar.BorderColor = clNone
+            StatusBar.BorderStyle = bsSingle
+            StatusBar.Font.Charset = DEFAULT_CHARSET
+            StatusBar.Font.Color = clBlack
+            StatusBar.Font.Height = -11
+            StatusBar.Font.Name = 'Tahoma'
+            StatusBar.Font.Style = []
+            StatusBar.Color = 15658734
+            StatusBar.GradientDirection = gdVertical
+            Styler = AdvPanelStyler2
+            ExplicitLeft = 290
+            ExplicitTop = -2
+            FullHeight = 200
+            object AdvPanel16: TAdvPanel
+              Left = 0
+              Top = 0
+              Width = 299
+              Height = 35
+              Align = alTop
+              BevelOuter = bvNone
+              Color = clWhite
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+              UseDockManager = True
+              Version = '2.5.4.1'
+              BorderColor = clNone
+              Caption.Color = 15658734
+              Caption.ColorTo = clNone
+              Caption.Font.Charset = DEFAULT_CHARSET
+              Caption.Font.Color = clBlack
+              Caption.Font.Height = -11
+              Caption.Font.Name = 'Segoe UI'
+              Caption.Font.Style = []
+              Caption.GradientDirection = gdVertical
+              Caption.Indent = 2
+              Caption.ShadeLight = 255
+              CollapsColor = clNone
+              CollapsDelay = 0
+              DoubleBuffered = True
+              ShadowColor = clBlack
+              ShadowOffset = 0
+              StatusBar.BorderColor = clNone
+              StatusBar.BorderStyle = bsSingle
+              StatusBar.Font.Charset = DEFAULT_CHARSET
+              StatusBar.Font.Color = clBlack
+              StatusBar.Font.Height = -11
+              StatusBar.Font.Name = 'Tahoma'
+              StatusBar.Font.Style = []
+              StatusBar.Color = 15658734
+              StatusBar.GradientDirection = gdVertical
+              Styler = AdvPanelStyler2
+              ExplicitWidth = 296
+              FullHeight = 200
+            end
+            object WebBrowser5: TWebBrowser
+              Tag = 4
+              Left = 0
+              Top = 35
+              Width = 299
+              Height = 305
+              Align = alClient
+              TabOrder = 1
+              OnDocumentComplete = WebBrowser1DocumentComplete
+              ExplicitLeft = -6
+              ExplicitTop = 33
+              ExplicitWidth = 296
+              ControlData = {
+                4C000000021F0000810F00000000000000000000000000000000000000000000
+                000000004C000000000000000000000001000000E0D057007335CF11AE690800
+                2B2E126208000000000000004C0000000114020000000000C000000000000046
+                8000000000000000000000000000000000000000000000000000000000000000
+                00000000000000000100000000000000000000000000000000000000}
+            end
+          end
+          object AdvPanel11: TAdvPanel
+            Left = 595
+            Top = 0
+            Width = 296
+            Height = 340
+            Align = alRight
+            BevelOuter = bvNone
+            Color = clWhite
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 2
+            UseDockManager = True
+            Version = '2.5.4.1'
+            BorderColor = clNone
+            Caption.Color = 15658734
+            Caption.ColorTo = clNone
+            Caption.Font.Charset = DEFAULT_CHARSET
+            Caption.Font.Color = clBlack
+            Caption.Font.Height = -11
+            Caption.Font.Name = 'Segoe UI'
+            Caption.Font.Style = []
+            Caption.GradientDirection = gdVertical
+            Caption.Indent = 2
+            Caption.ShadeLight = 255
+            CollapsColor = clNone
+            CollapsDelay = 0
+            DoubleBuffered = True
+            ShadowColor = clBlack
+            ShadowOffset = 0
+            StatusBar.BorderColor = clNone
+            StatusBar.BorderStyle = bsSingle
+            StatusBar.Font.Charset = DEFAULT_CHARSET
+            StatusBar.Font.Color = clBlack
+            StatusBar.Font.Height = -11
+            StatusBar.Font.Name = 'Tahoma'
+            StatusBar.Font.Style = []
+            StatusBar.Color = 15658734
+            StatusBar.GradientDirection = gdVertical
+            Styler = AdvPanelStyler2
+            FullHeight = 200
+            object AdvPanel17: TAdvPanel
+              Left = 0
+              Top = 0
+              Width = 296
+              Height = 35
+              Align = alTop
+              BevelOuter = bvNone
+              Color = clWhite
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+              UseDockManager = True
+              Version = '2.5.4.1'
+              BorderColor = clNone
+              Caption.Color = 15658734
+              Caption.ColorTo = clNone
+              Caption.Font.Charset = DEFAULT_CHARSET
+              Caption.Font.Color = clBlack
+              Caption.Font.Height = -11
+              Caption.Font.Name = 'Segoe UI'
+              Caption.Font.Style = []
+              Caption.GradientDirection = gdVertical
+              Caption.Indent = 2
+              Caption.ShadeLight = 255
+              CollapsColor = clNone
+              CollapsDelay = 0
+              DoubleBuffered = True
+              ShadowColor = clBlack
+              ShadowOffset = 0
+              StatusBar.BorderColor = clNone
+              StatusBar.BorderStyle = bsSingle
+              StatusBar.Font.Charset = DEFAULT_CHARSET
+              StatusBar.Font.Color = clBlack
+              StatusBar.Font.Height = -11
+              StatusBar.Font.Name = 'Tahoma'
+              StatusBar.Font.Style = []
+              StatusBar.Color = 15658734
+              StatusBar.GradientDirection = gdVertical
+              Styler = AdvPanelStyler2
+              FullHeight = 200
+            end
+            object WebBrowser6: TWebBrowser
+              Tag = 5
+              Left = 0
+              Top = 35
+              Width = 296
+              Height = 305
+              Align = alClient
+              TabOrder = 1
+              OnDocumentComplete = WebBrowser1DocumentComplete
+              ExplicitLeft = -6
+              ExplicitTop = 33
+              ControlData = {
+                4C000000021F0000810F00000000000000000000000000000000000000000000
+                000000004C000000000000000000000001000000E0D057007335CF11AE690800
+                2B2E126208000000000000004C0000000114020000000000C000000000000046
+                8000000000000000000000000000000000000000000000000000000000000000
+                00000000000000000100000000000000000000000000000000000000}
+            end
+          end
         end
       end
     end
@@ -1611,9 +2403,9 @@ object MainForm: TMainForm
     Height = 53
     Align = alBottom
     BevelOuter = bvNone
-    Color = clWhite
+    Color = 16645114
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clBlack
+    Font.Color = 7485192
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
@@ -1621,9 +2413,9 @@ object MainForm: TMainForm
     TabOrder = 3
     UseDockManager = True
     Version = '2.5.4.1'
-    BorderColor = clNone
-    Caption.Color = 15658734
-    Caption.ColorTo = clNone
+    BorderColor = 16765615
+    Caption.Color = 16575452
+    Caption.ColorTo = 16571329
     Caption.Font.Charset = DEFAULT_CHARSET
     Caption.Font.Color = clBlack
     Caption.Font.Height = -13
@@ -1634,17 +2426,19 @@ object MainForm: TMainForm
     Caption.ShadeLight = 255
     CollapsColor = clNone
     CollapsDelay = 0
+    ColorTo = 16643051
     DoubleBuffered = True
     ShadowColor = clBlack
     ShadowOffset = 0
-    StatusBar.BorderColor = clNone
+    StatusBar.BorderColor = 13542013
     StatusBar.BorderStyle = bsSingle
     StatusBar.Font.Charset = DEFAULT_CHARSET
-    StatusBar.Font.Color = clBlack
+    StatusBar.Font.Color = 7485192
     StatusBar.Font.Height = -11
     StatusBar.Font.Name = 'Tahoma'
     StatusBar.Font.Style = []
-    StatusBar.Color = 15658734
+    StatusBar.Color = 16575452
+    StatusBar.ColorTo = 16571329
     StatusBar.GradientDirection = gdVertical
     Styler = AdvPanelStyler1
     FullHeight = 200
@@ -1653,7 +2447,7 @@ object MainForm: TMainForm
     AutoHotkeys = maManual
     AutoLineReduction = maManual
     Left = 136
-    Top = 47
+    Top = 48
     object N1: TMenuItem
       Caption = #23458#26381#20013#24515
       object N13: TMenuItem
@@ -2015,15 +2809,15 @@ object MainForm: TMainForm
     Settings.BevelInner = bvNone
     Settings.BevelOuter = bvNone
     Settings.BevelWidth = 1
-    Settings.BorderColor = clNone
+    Settings.BorderColor = 16765615
     Settings.BorderShadow = False
     Settings.BorderStyle = bsNone
     Settings.BorderWidth = 0
     Settings.BottomIndent = 0
     Settings.CanMove = False
     Settings.CanSize = False
-    Settings.Caption.Color = 15658734
-    Settings.Caption.ColorTo = clNone
+    Settings.Caption.Color = 16575452
+    Settings.Caption.ColorTo = 16571329
     Settings.Caption.Font.Charset = DEFAULT_CHARSET
     Settings.Caption.Font.Color = clBlack
     Settings.Caption.Font.Height = -13
@@ -2036,13 +2830,13 @@ object MainForm: TMainForm
     Settings.CollapsColor = clNone
     Settings.CollapsDelay = 0
     Settings.CollapsSteps = 0
-    Settings.Color = clWhite
-    Settings.ColorTo = clNone
+    Settings.Color = 16645114
+    Settings.ColorTo = 16643051
     Settings.ColorMirror = clNone
     Settings.ColorMirrorTo = clNone
     Settings.Cursor = crDefault
     Settings.Font.Charset = DEFAULT_CHARSET
-    Settings.Font.Color = clBlack
+    Settings.Font.Color = 7485192
     Settings.Font.Height = -11
     Settings.Font.Name = 'Tahoma'
     Settings.Font.Style = []
@@ -2059,20 +2853,21 @@ object MainForm: TMainForm
     Settings.ShadowOffset = 0
     Settings.ShowHint = False
     Settings.ShowMoveCursor = False
-    Settings.StatusBar.BorderColor = clNone
+    Settings.StatusBar.BorderColor = 13542013
     Settings.StatusBar.BorderStyle = bsSingle
     Settings.StatusBar.Font.Charset = DEFAULT_CHARSET
-    Settings.StatusBar.Font.Color = clBlack
+    Settings.StatusBar.Font.Color = 7485192
     Settings.StatusBar.Font.Height = -11
     Settings.StatusBar.Font.Name = 'Tahoma'
     Settings.StatusBar.Font.Style = []
-    Settings.StatusBar.Color = 15658734
+    Settings.StatusBar.Color = 16575452
+    Settings.StatusBar.ColorTo = 16571329
     Settings.StatusBar.GradientDirection = gdVertical
     Settings.TextVAlign = tvaTop
     Settings.TopIndent = 0
     Settings.URLColor = clBlue
     Settings.Width = 0
-    Style = psWindows10
+    Style = psWindows7
     Left = 176
     Top = 320
   end
@@ -2083,7 +2878,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C010107001000940020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010107001000980020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -3152,19 +3947,19 @@ object MainForm: TMainForm
     Settings.BevelInner = bvNone
     Settings.BevelOuter = bvNone
     Settings.BevelWidth = 1
-    Settings.BorderColor = 13815240
+    Settings.BorderColor = clNone
     Settings.BorderShadow = False
     Settings.BorderStyle = bsNone
     Settings.BorderWidth = 0
     Settings.BottomIndent = 0
     Settings.CanMove = False
     Settings.CanSize = False
-    Settings.Caption.Color = clWhite
-    Settings.Caption.ColorTo = 15590880
+    Settings.Caption.Color = 15658734
+    Settings.Caption.ColorTo = clNone
     Settings.Caption.Font.Charset = DEFAULT_CHARSET
-    Settings.Caption.Font.Color = 5978398
+    Settings.Caption.Font.Color = clBlack
     Settings.Caption.Font.Height = -11
-    Settings.Caption.Font.Name = 'Tahoma'
+    Settings.Caption.Font.Name = 'Segoe UI'
     Settings.Caption.Font.Style = []
     Settings.Caption.GradientDirection = gdVertical
     Settings.Caption.Indent = 2
@@ -3174,7 +3969,7 @@ object MainForm: TMainForm
     Settings.CollapsDelay = 0
     Settings.CollapsSteps = 0
     Settings.Color = clWhite
-    Settings.ColorTo = 15590880
+    Settings.ColorTo = clNone
     Settings.ColorMirror = clNone
     Settings.ColorMirrorTo = clNone
     Settings.Cursor = crDefault
@@ -3196,22 +3991,26 @@ object MainForm: TMainForm
     Settings.ShadowOffset = 0
     Settings.ShowHint = False
     Settings.ShowMoveCursor = False
-    Settings.StatusBar.BorderColor = 16249840
+    Settings.StatusBar.BorderColor = clNone
     Settings.StatusBar.BorderStyle = bsSingle
     Settings.StatusBar.Font.Charset = DEFAULT_CHARSET
-    Settings.StatusBar.Font.Color = 5978398
+    Settings.StatusBar.Font.Color = clBlack
     Settings.StatusBar.Font.Height = -11
     Settings.StatusBar.Font.Name = 'Tahoma'
     Settings.StatusBar.Font.Style = []
-    Settings.StatusBar.Color = clWhite
-    Settings.StatusBar.ColorTo = 15590880
+    Settings.StatusBar.Color = 15658734
     Settings.StatusBar.GradientDirection = gdVertical
     Settings.TextVAlign = tvaTop
     Settings.TopIndent = 0
     Settings.URLColor = clBlue
     Settings.Width = 0
-    Style = psOffice2010Silver
-    Left = 40
-    Top = 632
+    Style = psWindows10
+    Left = 32
+    Top = 496
+  end
+  object ApplicationEvents1: TApplicationEvents
+    OnMessage = ApplicationEvents1Message
+    Left = 56
+    Top = 48
   end
 end
