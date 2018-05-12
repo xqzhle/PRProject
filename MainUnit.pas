@@ -400,13 +400,14 @@ var
   ssum,i:Integer;
   sqlstr,wherestr:string;
   sj,aj:ISuperObject;
+  hwy,yj,wj,zs:string;
 begin
 
   with Data1.sqlcmd1 do
   begin
    // Series4.Clear;
     sqlstr := 'select count(id) as sl from ttbill ';
-    wherestr := '';//'where billdate>='''+DateTimeToStr(DateTimePicker7.DateTime)+''' and billdate<='''+DateTimeToStr(DateTimePicker8.DateTime)+''' ';
+    wherestr := 'where ext<>''''';//'where billdate>='''+DateTimeToStr(DateTimePicker7.DateTime)+''' and billdate<='''+DateTimeToStr(DateTimePicker8.DateTime)+''' ';
    // if RadioButton3.Checked then wherestr := wherestr+' and type=''未接'' ';
    // if RadioButton4.Checked then wherestr := wherestr+' and type=''已接'' ';
     Close;
@@ -422,20 +423,33 @@ begin
        if not IsEmpty then
        begin
         aj := SA([]);
+         hwy:='';yj:='';wj:=''; zs:='';
          for I := 0 to RecordCount-1 do
          begin
           // if RadioButton5.Checked then
            //  Series4.AddPie(strtofloat(formatfloat('0.00',FieldByName('sl').AsInteger/ssum*100)),' 话务: '+FieldByName('ext').AsString+' 数量: '+FieldByName('sl').AsString+' 未接: '+FieldByName('wj').AsString+' 已接: '+FieldByName('yj').AsString)
           // else
             // Series4.AddPie(strtofloat(formatfloat('0.00',FieldByName('sl').AsInteger/ssum*100)),' 话务: '+FieldByName('ext').AsString+' 数量: '+FieldByName('sl').AsString);
-          sj := SO();//创建列
+           sj := SO();//创建列
            sj.O['value']:=SO(FieldByName('sl').AsString) ;
-           sj.O['name']:=SO(' 话务: '+FieldByName('ext').AsString+' 数量: '+FieldByName('sl').AsString);
+           sj.O['name']:=SO('话务: '+FieldByName('ext').AsString+' 数量: '+FieldByName('sl').AsString);
            aj.AsArray.Add(sj);
+           hwy:=hwy+'"话务: '+FieldByName('ext').AsString+'",';
+           wj:=wj+FieldByName('wj').AsString+',';
+           yj:=yj+FieldByName('yj').AsString+',';
+           zs:=zs+FieldByName('sl').AsString+',';
            Next;
          end;
+         System.Delete(hwy,Length(hwy),1);
+         System.Delete(wj,Length(wj),1);
+         System.Delete(yj,Length(yj),1);
+         System.Delete(zs,Length(zs),1);
+         hwy:='['+hwy+']';
+         wj:='['+wj+']';
+         yj:='['+yj+']';
+         zs:='['+zs+']';
          WebBrowser6.OleObject.document.parentWindow.
-         execScript('resfdate('''+Trim(aj.AsString)+''','''')','JavaScript');
+         execScript('resfdate('''+hwy+''','''+wj+''','''+yj+''','''+zs+''')','JavaScript');
        end;
     end;
     Close;
