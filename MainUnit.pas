@@ -104,30 +104,10 @@ type
     AdvPanel2: TAdvPanel;
     AdvPanelStyler2: TAdvPanelStyler;
     AdvPanel3: TAdvPanel;
-    AdvPanel4: TAdvPanel;
-    AdvPanel5: TAdvPanel;
-    AdvPanel8: TAdvPanel;
-    AdvPanel7: TAdvPanel;
     AdvPanel6: TAdvPanel;
-    AdvPanel9: TAdvPanel;
-    AdvPanel10: TAdvPanel;
-    AdvPanel11: TAdvPanel;
-    AdvPanel12: TAdvPanel;
     s1: TMenuItem;
     WebBrowser1: TWebBrowser;
-    RadioButton1: TRadioButton;
-    RadioButton2: TRadioButton;
-    AdvPanel13: TAdvPanel;
-    WebBrowser2: TWebBrowser;
     ApplicationEvents1: TApplicationEvents;
-    AdvPanel14: TAdvPanel;
-    WebBrowser3: TWebBrowser;
-    AdvPanel15: TAdvPanel;
-    WebBrowser4: TWebBrowser;
-    AdvPanel16: TAdvPanel;
-    WebBrowser5: TWebBrowser;
-    AdvPanel17: TAdvPanel;
-    WebBrowser6: TWebBrowser;
     procedure FormCreate(Sender: TObject);
     procedure N22Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
@@ -180,16 +160,15 @@ type
     procedure N50Click(Sender: TObject);
     procedure N51Click(Sender: TObject);
     procedure N55Click(Sender: TObject);
-    procedure FormResize(Sender: TObject);
     procedure s1Click(Sender: TObject);
     procedure WebBrowser1DocumentComplete(ASender: TObject;
       const pDisp: IDispatch; var URL: OleVariant);
-    procedure RadioButton2Click(Sender: TObject);
-    procedure RadioButton1Click(Sender: TObject);
     procedure ApplicationEvents1Message(var Msg: tagMSG; var Handled: Boolean);
     procedure WebBrowser1BeforeNavigate2(ASender: TObject;
       const pDisp: IDispatch; var URL, Flags, TargetFrameName, PostData,
       Headers: OleVariant; var Cancel: WordBool);
+    procedure FormPaint(Sender: TObject);
+    procedure FormResize(Sender: TObject);
   private
     { Private declarations }
     procedure initdata();
@@ -224,7 +203,7 @@ uses
 {$R *.dfm}
 var
  htmlstr:string;
-
+ first:Boolean=True;
 procedure TMainForm.AdvOfficePager1ClosedPage(Sender: TObject;
   PageIndex: Integer);
 begin
@@ -259,21 +238,21 @@ procedure TMainForm.FormCreate(Sender: TObject);
 begin
     Caption:=Application.Title;
     initdata;
-    WebBrowser1.Navigate(extractfilepath(paramstr(0))+'Html\Main_chart1.html');
-    WebBrowser2.Navigate(extractfilepath(paramstr(0))+'Html\Main_chart2.html');
-    WebBrowser3.Navigate(extractfilepath(paramstr(0))+'Html\Main_chart3.html');
-    WebBrowser4.Navigate(extractfilepath(paramstr(0))+'Html\Main_chart4.html');
-    WebBrowser5.Navigate(extractfilepath(paramstr(0))+'Html\Main_chart5.html');
-    WebBrowser6.Navigate(extractfilepath(paramstr(0))+'Html\Main_chart6.html');
+    WebBrowser1.Navigate(extractfilepath(paramstr(0))+'Html\Main_chart.html');
+end;
+
+procedure TMainForm.FormPaint(Sender: TObject);
+begin
+//  ShowMessage('1');
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);
 begin
-   AdvPanel4.Height:=AdvPanel3.Height div 2;
-   AdvPanel6.Width:=AdvPanel4.Width div 3;
-   AdvPanel8.Width:= AdvPanel6.Width;
-   AdvPanel9.Width:=AdvPanel5.Width div 3;
-   AdvPanel11.Width:= AdvPanel9.Width;
+  if not first then
+  begin
+//    WebBrowser1.OleObject.document.parentWindow.execScript('getnow()','JavaScript');
+  end;
+  first := False;
 end;
 
 procedure TMainForm.getadduser(ismonth: Boolean);
@@ -330,8 +309,8 @@ begin
       System.Delete(ydate,Length(ydate),1);
       xdate:='['+xdate+']';
       ydate:='['+ydate+']';
-      WebBrowser2.OleObject.document.parentWindow.
-      execScript('resfdate('''+xdate+''','''+ydate+''')','JavaScript');
+      WebBrowser1.OleObject.document.parentWindow.
+      execScript('resfdate2('''+xdate+''','''+ydate+''')','JavaScript');
     end;
     Close;
   end;
@@ -389,8 +368,8 @@ begin
            aj.AsArray.Add(sj);
            Next;
          end;
-         WebBrowser5.OleObject.document.parentWindow.
-         execScript('resfdate('''+Trim(aj.AsString)+''','''')','JavaScript');
+         WebBrowser1.OleObject.document.parentWindow.
+         execScript('resfdate5('''+Trim(aj.AsString)+''','''')','JavaScript');
        end;
     end;
     Close;
@@ -451,8 +430,8 @@ begin
          wj:='['+wj+']';
          yj:='['+yj+']';
          zs:='['+zs+']';
-         WebBrowser6.OleObject.document.parentWindow.
-         execScript('resfdate('''+hwy+''','''+wj+''','''+yj+''','''+zs+''')','JavaScript');
+         WebBrowser1.OleObject.document.parentWindow.
+         execScript('resfdate6('''+hwy+''','''+wj+''','''+yj+''','''+zs+''')','JavaScript');
        end;
     end;
     Close;
@@ -506,8 +485,8 @@ begin
            aj.AsArray.Add(sj);
            Next;
          end;
-         WebBrowser4.OleObject.document.parentWindow.
-         execScript('resfdate('''+Trim(aj.AsString)+''','''')','JavaScript');
+         WebBrowser1.OleObject.document.parentWindow.
+         execScript('resfdate4('''+Trim(aj.AsString)+''','''')','JavaScript');
        end;
     end;
     Close;
@@ -569,7 +548,7 @@ begin
         // System.Delete(sstr,Length(sstr),1);
          sstr:='['+sstr+']';
          WebBrowser1.OleObject.document.parentWindow.
-         execScript('resfdate('''+Trim(aj.AsString)+''','''+titlestr+''')','JavaScript');
+         execScript('resfdate1('''+Trim(aj.AsString)+''','''+titlestr+''')','JavaScript');
 
        end;
     end;
@@ -631,8 +610,8 @@ begin
       ydate:='['+ydate+']';
     //  memo1.Lines.Add(xdate);
     //  Memo1.Lines.Add(ydate) ;
-      WebBrowser3.OleObject.document.parentWindow.
-      execScript('resfdate('''+xdate+''','''+ydate+''')','JavaScript');
+      WebBrowser1.OleObject.document.parentWindow.
+      execScript('resfdate3('''+xdate+''','''+ydate+''')','JavaScript');
     end;
     Close;
   end;
@@ -1564,18 +1543,6 @@ begin
   CustwaingForm.ShowModal;
 end;
 
-procedure TMainForm.RadioButton1Click(Sender: TObject);
-begin
-   if RadioButton1.Checked then
-   getuserbb(1,True);
-end;
-
-procedure TMainForm.RadioButton2Click(Sender: TObject);
-begin
-   if RadioButton2.Checked then
-   getuserbb(1,False);
-end;
-
 procedure TMainForm.s1Click(Sender: TObject);
 begin
    CharForm.Show;
@@ -1601,21 +1568,38 @@ end;
 
 procedure TMainForm.WebBrowser1DocumentComplete(ASender: TObject;
   const pDisp: IDispatch; var URL: OleVariant);
-  var
-   web:TWebBrowser;
+//  var
+//   web:TWebBrowser;
 begin
-    web:=(asender as TWebBrowser);
-    Web.OleObject.Document.Body.Scroll := 'no';
-    Web.OleObject.Document.Body.style.border := 'none';
-    web.OleObject.Document.Body.Style.margin := '0px';
-    case web.Tag of
-       0: getuserbb(1,True);
-       1: getadduser(False);
-       2: getxsbb(False);
-       3: getmdxsbb(1,False);
-       4: getbisentbb(1,False);
-       5: gethwbb;
-    end;
+   if WebBrowser1.Application = pDisp then
+   begin
+     getuserbb(1,True);
+         getadduser(False);
+         getxsbb(False);
+         getmdxsbb(1,False);
+         getbisentbb(1,False);
+         gethwbb;
+   end;
+//    web:=(asender as TWebBrowser);
+//    Web.OleObject.Document.Body.Scroll := 'no';
+//    Web.OleObject.Document.Body.style.border := 'none';
+//    web.OleObject.Document.Body.Style.margin := '0px';
+//    case web.Tag of
+////       0: getuserbb(1,True);
+////       1: getadduser(False);
+////       2: getxsbb(False);
+////       3: getmdxsbb(1,False);
+////       4: getbisentbb(1,False);
+////       5: gethwbb;
+//       0: begin
+//         getuserbb(1,True);
+//         getadduser(False);
+//         getxsbb(False);
+//         getmdxsbb(1,False);
+//         getbisentbb(1,False);
+//         gethwbb;
+//       end;
+//    end;
 
 end;
 
