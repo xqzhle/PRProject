@@ -162,14 +162,8 @@
 			<DCCReference Include="Unit88.pas">
 				<Form>Form88</Form>
 			</DCCReference>
-			<DCCReference Include="ajjpegUnit.pas">
-				<Form>ajjpegForm</Form>
-			</DCCReference>
 			<DCCReference Include="SqgUnitpas.pas">
 				<Form>Form94</Form>
-			</DCCReference>
-			<DCCReference Include="SelajUnit.pas">
-				<Form>SelajForm</Form>
 			</DCCReference>
 			<DCCReference Include="Unit96.pas">
 				<Form>Form96</Form>
@@ -318,6 +312,30 @@
 			</DCCReference>
 			<DCCReference Include="CharUnit.pas">
 				<Form>CharForm</Form>
+			</DCCReference>
+			<DCCReference Include="ajjpegUnit.pas">
+				<Form>ajjpegForm</Form>
+			</DCCReference>
+			<DCCReference Include="SelajUnit.pas">
+				<Form>SelajForm</Form>
+			</DCCReference>
+			<DCCReference Include="Sqgbb.pas">
+				<Form>SqgbbForm</Form>
+			</DCCReference>
+			<DCCReference Include="YwybbUnit.pas">
+				<Form>YwybbForm</Form>
+			</DCCReference>
+			<DCCReference Include="SqgInfo.pas">
+				<Form>SqgInfoForm</Form>
+			</DCCReference>
+			<DCCReference Include="BaseInfo.pas">
+				<Form>BaseInfoForm</Form>
+			</DCCReference>
+			<DCCReference Include="CustInfo.pas">
+				<Form>CustInfoForm</Form>
+			</DCCReference>
+			<DCCReference Include="Gpinfo.pas">
+				<Form>GpinfoForm</Form>
 			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>

@@ -36,9 +36,7 @@ uses
   CustwaingUnit in 'CustwaingUnit.pas' {CustwaingForm},
   Unit89 in 'Unit89.pas' {Form89},
   Unit88 in 'Unit88.pas' {Form88},
-  ajjpegUnit in 'ajjpegUnit.pas' {ajjpegForm},
   SqgUnitpas in 'SqgUnitpas.pas' {Form94},
-  SelajUnit in 'SelajUnit.pas' {SelajForm},
   Unit96 in 'Unit96.pas' {Form96},
   Unit71 in 'Unit71.pas' {Form71},
   Unit72 in 'Unit72.pas' {Form72},
@@ -83,7 +81,15 @@ uses
   BottleManUnit in 'BottleManUnit.pas' {BottleManForm},
   Unit22 in 'Unit22.pas' {Form22},
   bottlesmUnit in 'bottlesmUnit.pas' {Form303},
-  CharUnit in 'CharUnit.pas' {CharForm};
+  CharUnit in 'CharUnit.pas' {CharForm},
+  ajjpegUnit in 'ajjpegUnit.pas' {ajjpegForm},
+  SelajUnit in 'SelajUnit.pas' {SelajForm},
+  Sqgbb in 'Sqgbb.pas' {SqgbbForm},
+  YwybbUnit in 'YwybbUnit.pas' {YwybbForm},
+  SqgInfo in 'SqgInfo.pas' {SqgInfoForm},
+  BaseInfo in 'BaseInfo.pas' {BaseInfoForm},
+  CustInfo in 'CustInfo.pas' {CustInfoForm},
+  Gpinfo in 'Gpinfo.pas' {GpinfoForm};
 
 {$R *.res}
 
@@ -113,7 +119,6 @@ begin
   Application.CreateForm(TForm88, Form88);
   Application.CreateForm(TajjpegForm, ajjpegForm);
   Application.CreateForm(TForm94, Form94);
-  Application.CreateForm(TSelajForm, SelajForm);
   Application.CreateForm(TForm96, Form96);
   Application.CreateForm(TForm71, Form71);
   Application.CreateForm(TForm72, Form72);
@@ -146,5 +151,15 @@ begin
   Application.CreateForm(TForm22, Form22);
   Application.CreateForm(TForm303, Form303);
   Application.CreateForm(TCharForm, CharForm);
+  Application.CreateForm(TajjpegForm, ajjpegForm);
+  Application.CreateForm(TSelajForm, SelajForm);
+  Application.CreateForm(TSelajForm, SelajForm);
+  Application.CreateForm(TSelajForm, SelajForm);
+  Application.CreateForm(TSqgbbForm, SqgbbForm);
+  Application.CreateForm(TYwybbForm, YwybbForm);
+  Application.CreateForm(TSqgInfoForm, SqgInfoForm);
+  Application.CreateForm(TBaseInfoForm, BaseInfoForm);
+  Application.CreateForm(TCustInfoForm, CustInfoForm);
+  Application.CreateForm(TGpinfoForm, GpinfoForm);
   Application.Run;
 end.

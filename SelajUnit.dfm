@@ -2,7 +2,7 @@ object SelajForm: TSelajForm
   Left = 0
   Top = 0
   Caption = #23433#26816#35760#24405#26597#35810
-  ClientHeight = 547
+  ClientHeight = 609
   ClientWidth = 723
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,7 +19,7 @@ object SelajForm: TSelajForm
     Left = 0
     Top = 0
     Width = 723
-    Height = 73
+    Height = 101
     Align = alTop
     BevelOuter = bvNone
     Color = 16445929
@@ -31,7 +31,7 @@ object SelajForm: TSelajForm
     ParentFont = False
     TabOrder = 0
     UseDockManager = True
-    Version = '2.4.2.0'
+    Version = '2.5.4.1'
     BorderColor = 16765615
     Caption.Color = 16773091
     Caption.ColorTo = 16765615
@@ -61,14 +61,12 @@ object SelajForm: TSelajForm
     StatusBar.Color = 16245715
     StatusBar.ColorTo = 16109747
     StatusBar.GradientDirection = gdVertical
-    Styler = AdvPanelStyler1
-    ExplicitTop = 24
     FullHeight = 200
     object AdvGroupBox1: TAdvGroupBox
       Left = 0
       Top = 6
-      Width = 720
-      Height = 59
+      Width = 149
+      Height = 89
       Caption = #26085#26399#33539#22260
       TabOrder = 0
       object Label7: TLabel
@@ -79,39 +77,122 @@ object SelajForm: TSelajForm
         Caption = #20174
       end
       object Label8: TLabel
-        Left = 140
-        Top = 27
+        Left = 14
+        Top = 58
         Width = 12
         Height = 13
         Caption = #21040
       end
+      object DateTimePicker1: TDateTimePicker
+        Left = 32
+        Top = 23
+        Width = 102
+        Height = 21
+        Date = 40603.000000000000000000
+        Time = 40603.000000000000000000
+        TabOrder = 0
+      end
+      object DateTimePicker2: TDateTimePicker
+        Left = 32
+        Top = 54
+        Width = 102
+        Height = 21
+        Date = 40622.999988425930000000
+        Time = 40622.999988425930000000
+        TabOrder = 1
+      end
+    end
+    object AdvGlowButton1: TAdvGlowButton
+      Left = 671
+      Top = 29
+      Width = 50
+      Height = 50
+      Caption = '| '#23548#20986' |'
+      ImageIndex = 11
+      NotesFont.Charset = DEFAULT_CHARSET
+      NotesFont.Color = clWindowText
+      NotesFont.Height = -11
+      NotesFont.Name = 'Tahoma'
+      NotesFont.Style = []
+      TabOrder = 1
+      OnClick = AdvGlowButton1Click
+      Appearance.BorderColor = 14727579
+      Appearance.BorderColorHot = 10079963
+      Appearance.BorderColorDown = 4548219
+      Appearance.Color = 15653832
+      Appearance.ColorTo = 16178633
+      Appearance.ColorChecked = 7915518
+      Appearance.ColorCheckedTo = 11918331
+      Appearance.ColorDisabled = 15921906
+      Appearance.ColorDisabledTo = 15921906
+      Appearance.ColorDown = 7778289
+      Appearance.ColorDownTo = 4296947
+      Appearance.ColorHot = 15465983
+      Appearance.ColorHotTo = 11332863
+      Appearance.ColorMirror = 15586496
+      Appearance.ColorMirrorTo = 16245200
+      Appearance.ColorMirrorHot = 5888767
+      Appearance.ColorMirrorHotTo = 10807807
+      Appearance.ColorMirrorDown = 946929
+      Appearance.ColorMirrorDownTo = 5021693
+      Appearance.ColorMirrorChecked = 10480637
+      Appearance.ColorMirrorCheckedTo = 5682430
+      Appearance.ColorMirrorDisabled = 11974326
+      Appearance.ColorMirrorDisabledTo = 15921906
+      Appearance.GradientHot = ggVertical
+      Appearance.GradientMirrorHot = ggVertical
+      Appearance.GradientDown = ggVertical
+      Appearance.GradientMirrorDown = ggVertical
+      Appearance.GradientChecked = ggVertical
+    end
+    object AdvGroupBox2: TAdvGroupBox
+      Left = 427
+      Top = 6
+      Width = 240
+      Height = 89
+      Caption = #31934#30830#26597#25214
+      TabOrder = 2
       object Label1: TLabel
-        Left = 412
-        Top = 27
+        Left = 14
+        Top = 58
         Width = 40
         Height = 13
-        Caption = #36865#27668#24037':'
+        Caption = #23433#26816#20154':'
       end
       object Label2: TLabel
-        Left = 269
+        Left = 22
         Top = 27
         Width = 36
         Height = 13
         Caption = #23458#25143#65306
       end
+      object Edit1: TEdit
+        Left = 63
+        Top = 56
+        Width = 100
+        Height = 19
+        TabOrder = 0
+      end
+      object Edit2: TEdit
+        Left = 63
+        Top = 25
+        Width = 100
+        Height = 19
+        TabOrder = 1
+      end
       object AdvGlowButton4: TAdvGlowButton
-        Left = 581
-        Top = 17
-        Width = 60
-        Height = 33
-        Caption = #26597#25214
+        Left = 176
+        Top = 24
+        Width = 50
+        Height = 50
+        Caption = '| '#26597#25214' |'
         ImageIndex = 11
         NotesFont.Charset = DEFAULT_CHARSET
         NotesFont.Color = clWindowText
         NotesFont.Height = -11
         NotesFont.Name = 'Tahoma'
         NotesFont.Style = []
-        TabOrder = 0
+        TabOrder = 2
         OnClick = AdvGlowButton4Click
         Appearance.BorderColor = 14727579
         Appearance.BorderColorHot = 10079963
@@ -142,52 +223,69 @@ object SelajForm: TSelajForm
         Appearance.GradientMirrorDown = ggVertical
         Appearance.GradientChecked = ggVertical
       end
-      object DateTimePicker1: TDateTimePicker
-        Left = 32
+    end
+    object AdvGroupBox3: TAdvGroupBox
+      Left = 155
+      Top = 6
+      Width = 265
+      Height = 89
+      Caption = #20998#31867#26597#25214
+      TabOrder = 3
+      object Label4: TLabel
+        Left = 15
+        Top = 27
+        Width = 60
+        Height = 14
+        Caption = #25152#23646#38376#24215#65306
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 15
+        Top = 57
+        Width = 60
+        Height = 14
+        Caption = #23458#25143#31867#22411#65306
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+      end
+      object ComboBox1: TComboBox
+        Left = 79
         Top = 23
-        Width = 102
+        Width = 110
         Height = 21
-        Date = 40603.000000000000000000
-        Time = 40603.000000000000000000
+        TabOrder = 0
+        OnClick = ComboBox1Click
+      end
+      object DBComboBox1: TComboBox
+        Left = 79
+        Top = 54
+        Width = 110
+        Height = 21
         TabOrder = 1
       end
-      object DateTimePicker2: TDateTimePicker
-        Left = 158
-        Top = 23
-        Width = 102
-        Height = 21
-        Date = 40622.999988425930000000
-        Time = 40622.999988425930000000
-        TabOrder = 2
-      end
-      object Edit1: TEdit
-        Left = 458
+      object AdvGlowButton2: TAdvGlowButton
+        Left = 202
         Top = 25
-        Width = 100
-        Height = 19
-        TabOrder = 3
-      end
-      object Edit2: TEdit
-        Left = 303
-        Top = 25
-        Width = 100
-        Height = 19
-        TabOrder = 4
-      end
-      object AdvGlowButton1: TAdvGlowButton
-        Left = 647
-        Top = 17
-        Width = 60
-        Height = 33
-        Caption = #23548#20986
+        Width = 50
+        Height = 50
+        Caption = '| '#26597#25214' |'
         ImageIndex = 11
         NotesFont.Charset = DEFAULT_CHARSET
         NotesFont.Color = clWindowText
         NotesFont.Height = -11
         NotesFont.Name = 'Tahoma'
         NotesFont.Style = []
-        TabOrder = 5
-        OnClick = AdvGlowButton1Click
+        TabOrder = 2
+        OnClick = AdvGlowButton2Click
         Appearance.BorderColor = 14727579
         Appearance.BorderColorHot = 10079963
         Appearance.BorderColorDown = 4548219
@@ -217,16 +315,24 @@ object SelajForm: TSelajForm
         Appearance.GradientMirrorDown = ggVertical
         Appearance.GradientChecked = ggVertical
       end
+      object ComboBox2: TComboBox
+        Left = 79
+        Top = 35
+        Width = 110
+        Height = 21
+        TabOrder = 3
+        Visible = False
+      end
     end
   end
   object DBAdvGrid1: TDBAdvGrid
     Left = 0
-    Top = 73
+    Top = 101
     Width = 723
-    Height = 439
+    Height = 473
     Cursor = crDefault
     Align = alClient
-    ColCount = 18
+    ColCount = 20
     DrawingStyle = gdsClassic
     RowCount = 2
     FixedRows = 1
@@ -328,7 +434,7 @@ object SelajForm: TSelajForm
     SearchFooter.HintHighlight = 'Highlight occurrences'
     SearchFooter.MatchCaseCaption = 'Match case'
     SortSettings.DefaultFormat = ssAutomatic
-    Version = '2.3.8.6'
+    Version = '2.4.0.2'
     AutoCreateColumns = True
     AutoRemoveColumns = True
     Columns = <
@@ -362,6 +468,32 @@ object SelajForm: TSelajForm
         CheckFalse = 'N'
         CheckTrue = 'Y'
         Color = clWindow
+        FieldName = 'shopname'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        Header = #25152#23646#38376#24215
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -11
+        HeaderFont.Name = 'Tahoma'
+        HeaderFont.Style = []
+        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+        PrintFont.Charset = DEFAULT_CHARSET
+        PrintFont.Color = clWindowText
+        PrintFont.Height = -11
+        PrintFont.Name = 'Tahoma'
+        PrintFont.Style = []
+        Width = 110
+      end
+      item
+        Borders = []
+        BorderPen.Color = clSilver
+        CheckFalse = 'N'
+        CheckTrue = 'Y'
+        Color = clWindow
         FieldName = 'coustname'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -380,7 +512,7 @@ object SelajForm: TSelajForm
         PrintFont.Height = -11
         PrintFont.Name = 'Tahoma'
         PrintFont.Style = []
-        Width = 60
+        Width = 70
       end
       item
         Borders = []
@@ -407,6 +539,32 @@ object SelajForm: TSelajForm
         PrintFont.Name = 'Tahoma'
         PrintFont.Style = []
         Width = 60
+      end
+      item
+        Borders = []
+        BorderPen.Color = clSilver
+        CheckFalse = 'N'
+        CheckTrue = 'Y'
+        Color = clWindow
+        FieldName = 'lx'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        Header = #23458#25143#31867#22411
+        HeaderFont.Charset = DEFAULT_CHARSET
+        HeaderFont.Color = clWindowText
+        HeaderFont.Height = -11
+        HeaderFont.Name = 'Tahoma'
+        HeaderFont.Style = []
+        PrintBorders = [cbTop, cbLeft, cbRight, cbBottom]
+        PrintFont.Charset = DEFAULT_CHARSET
+        PrintFont.Color = clWindowText
+        PrintFont.Height = -11
+        PrintFont.Name = 'Tahoma'
+        PrintFont.Style = []
+        Width = 70
       end
       item
         Borders = []
@@ -932,12 +1090,12 @@ object SelajForm: TSelajForm
       80000001C0000003C0000003E0000007F000000FF800001FFC00003FFF0000FF
       FFC003FF}
     ShowUnicode = False
-    ExplicitTop = 97
-    ExplicitHeight = 415
     ColWidths = (
       20
+      110
+      70
       60
-      60
+      70
       100
       50
       50
@@ -956,7 +1114,7 @@ object SelajForm: TSelajForm
   end
   object AdvPanel2: TAdvPanel
     Left = 0
-    Top = 512
+    Top = 574
     Width = 723
     Height = 35
     Align = alBottom
@@ -970,7 +1128,7 @@ object SelajForm: TSelajForm
     ParentFont = False
     TabOrder = 2
     UseDockManager = True
-    Version = '2.4.2.0'
+    Version = '2.5.4.1'
     BorderColor = 16765615
     Caption.Color = 16773091
     Caption.ColorTo = 16765615
@@ -1000,7 +1158,6 @@ object SelajForm: TSelajForm
     StatusBar.Color = 16245715
     StatusBar.ColorTo = 16109747
     StatusBar.GradientDirection = gdVertical
-    Styler = AdvPanelStyler1
     FullHeight = 200
     object Label3: TLabel
       Left = 56
@@ -1011,89 +1168,13 @@ object SelajForm: TSelajForm
     end
   end
   object Edit3: TEdit
-    Left = 268
-    Top = 28
+    Left = 646
+    Top = 21
     Width = 121
     Height = 21
     TabOrder = 3
     Text = 'Edit3'
     Visible = False
-  end
-  object Edit4: TEdit
-    Left = 395
-    Top = 30
-    Width = 121
-    Height = 21
-    TabOrder = 5
-    Text = 'Edit3'
-    Visible = False
-  end
-  object AdvPanelStyler1: TAdvPanelStyler
-    Tag = 0
-    Settings.AnchorHint = False
-    Settings.BevelInner = bvNone
-    Settings.BevelOuter = bvNone
-    Settings.BevelWidth = 1
-    Settings.BorderColor = 16765615
-    Settings.BorderShadow = False
-    Settings.BorderStyle = bsNone
-    Settings.BorderWidth = 0
-    Settings.CanMove = False
-    Settings.CanSize = False
-    Settings.Caption.Color = 16773091
-    Settings.Caption.ColorTo = 16765615
-    Settings.Caption.Font.Charset = DEFAULT_CHARSET
-    Settings.Caption.Font.Color = clBlack
-    Settings.Caption.Font.Height = -11
-    Settings.Caption.Font.Name = 'Tahoma'
-    Settings.Caption.Font.Style = []
-    Settings.Caption.GradientDirection = gdVertical
-    Settings.Caption.Indent = 2
-    Settings.Caption.ShadeLight = 255
-    Settings.Collaps = False
-    Settings.CollapsColor = clNone
-    Settings.CollapsDelay = 0
-    Settings.CollapsSteps = 0
-    Settings.Color = 16445929
-    Settings.ColorTo = 15587527
-    Settings.ColorMirror = 15587527
-    Settings.ColorMirrorTo = 16773863
-    Settings.Cursor = crDefault
-    Settings.Font.Charset = DEFAULT_CHARSET
-    Settings.Font.Color = 7485192
-    Settings.Font.Height = -11
-    Settings.Font.Name = 'Tahoma'
-    Settings.Font.Style = []
-    Settings.FixedTop = False
-    Settings.FixedLeft = False
-    Settings.FixedHeight = False
-    Settings.FixedWidth = False
-    Settings.Height = 120
-    Settings.Hover = False
-    Settings.HoverColor = clNone
-    Settings.HoverFontColor = clNone
-    Settings.Indent = 0
-    Settings.ShadowColor = clBlack
-    Settings.ShadowOffset = 0
-    Settings.ShowHint = False
-    Settings.ShowMoveCursor = False
-    Settings.StatusBar.BorderColor = 16765615
-    Settings.StatusBar.BorderStyle = bsSingle
-    Settings.StatusBar.Font.Charset = DEFAULT_CHARSET
-    Settings.StatusBar.Font.Color = 7485192
-    Settings.StatusBar.Font.Height = -11
-    Settings.StatusBar.Font.Name = 'Tahoma'
-    Settings.StatusBar.Font.Style = []
-    Settings.StatusBar.Color = 16245715
-    Settings.StatusBar.ColorTo = 16109747
-    Settings.StatusBar.GradientDirection = gdVertical
-    Settings.TextVAlign = tvaTop
-    Settings.TopIndent = 0
-    Settings.URLColor = clBlue
-    Settings.Width = 0
-    Style = psOffice2007Luna
-    Left = 440
-    Top = 65528
   end
   object PopupMenu1: TPopupMenu
     Left = 283
@@ -1113,7 +1194,7 @@ object SelajForm: TSelajForm
   end
   object sSaveDialog1: TSaveDialog
     Filter = 'Excel file |*.xls'
-    Left = 264
-    Top = 65528
+    Left = 557
+    Top = 65519
   end
 end

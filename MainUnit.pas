@@ -108,6 +108,15 @@ type
     s1: TMenuItem;
     WebBrowser1: TWebBrowser;
     ApplicationEvents1: TApplicationEvents;
+    j1: TMenuItem;
+    N70: TMenuItem;
+    N71: TMenuItem;
+    N72: TMenuItem;
+    N73: TMenuItem;
+    N74: TMenuItem;
+    N75: TMenuItem;
+    N76: TMenuItem;
+    N77: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure N22Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
@@ -169,6 +178,14 @@ type
       Headers: OleVariant; var Cancel: WordBool);
     procedure FormPaint(Sender: TObject);
     procedure FormResize(Sender: TObject);
+    procedure N75Click(Sender: TObject);
+    procedure N73Click(Sender: TObject);
+    procedure N74Click(Sender: TObject);
+    procedure N70Click(Sender: TObject);
+    procedure N71Click(Sender: TObject);
+    procedure N72Click(Sender: TObject);
+    procedure N76Click(Sender: TObject);
+    procedure N77Click(Sender: TObject);
   private
     { Private declarations }
     procedure initdata();
@@ -198,7 +215,8 @@ uses
   CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,
   GiveUnitpas, BottleInsUnit, PzUnit, DtelUnit, XstypeUnit, YwyUnit, QzUnit,
   CarUnit, GMoneyUnit, MdgpUnit, khgpUnit, CustwaingUnit, LzUnit, DUnitpas, BottleListUnit,
-  BottleinfoUnit, YpDayUnit, YpTjUnit, BottleManUnit, CharUnit;
+  BottleinfoUnit, YpDayUnit, YpTjUnit, BottleManUnit, CharUnit, SelajUnit,Sqgbb,
+  YwybbUnit, SqgUnitpas, SqgInfo, BaseInfo, CustInfo, Gpinfo;
 
 {$R *.dfm}
 var
@@ -1543,6 +1561,68 @@ begin
   CustwaingForm.ShowModal;
 end;
 
+procedure TMainForm.N70Click(Sender: TObject);
+begin
+  Form94.ComboBox2.Items := ShopnameBox.Items;
+  Form94.ComboBox3.Items := ShopidBox.Items;
+  Form94.Panel1.Visible := True;
+  Form94.Caption :='送气工位置信息';
+  Form94.Show;
+  Form94.getsqgadress;
+end;
+
+procedure TMainForm.N71Click(Sender: TObject);
+begin
+//  SqgInfoForm.ComboBox1.Items := Form1.ComboBox3.Items;
+  SqgInfoForm.ShowModal;
+end;
+
+procedure TMainForm.N72Click(Sender: TObject);
+begin
+//  BaseInfoForm.ComboBox3.Items := Form1.ComboBox3.Items;
+  BaseInfoForm.ComboBox1.Items := ShopnameBox.Items;
+  BaseInfoForm.ComboBox2.Items := ShopidBox.Items;
+  BaseInfoForm.ShowModal;
+end;
+
+procedure TMainForm.N73Click(Sender: TObject);
+begin
+  SqgbbForm.ComboBox1.Clear;
+  SqgbbForm.ComboBox1.Items:=ShopnameBox.Items;
+  SqgbbForm.ShowModal;
+end;
+
+procedure TMainForm.N74Click(Sender: TObject);
+begin
+  YwybbForm.ComboBox1.Items.Clear;
+  YwybbForm.ComboBox1.Items:=ShopnameBox.Items;
+  YwybbForm.ShowModal;
+end;
+
+procedure TMainForm.N75Click(Sender: TObject);
+begin
+  SelajForm.DBComboBox1.Clear;
+  SelajForm.DBComboBox1.Items := KhlxBox.Items;
+  SelajForm.ComboBox1.Clear;
+  SelajForm.ComboBox1.Items := ShopnameBox.Items;
+  SelajForm.ComboBox2.Clear;
+  SelajForm.ComboBox2.Items := ShopidBox.Items;
+  SelajForm.Edit3.Text := '1';
+  SelajForm.ShowModal;
+end;
+
+procedure TMainForm.N76Click(Sender: TObject);
+begin
+  CustInfoForm.ComboBox1.Items := ShopnameBox.Items;
+  CustInfoForm.ComboBox2.Items := ShopidBox.Items;
+  CustInfoForm.ShowModal;
+end;
+
+procedure TMainForm.N77Click(Sender: TObject);
+begin
+  GpinfoForm.ShowModal;
+end;
+
 procedure TMainForm.s1Click(Sender: TObject);
 begin
    CharForm.Show;
@@ -1568,22 +1648,22 @@ end;
 
 procedure TMainForm.WebBrowser1DocumentComplete(ASender: TObject;
   const pDisp: IDispatch; var URL: OleVariant);
-//  var
-//   web:TWebBrowser;
+  var
+   web:TWebBrowser;
 begin
    if WebBrowser1.Application = pDisp then
    begin
      getuserbb(1,True);
-         getadduser(False);
-         getxsbb(False);
-         getmdxsbb(1,False);
-         getbisentbb(1,False);
-         gethwbb;
+     getadduser(False);
+     getxsbb(False);
+     getmdxsbb(1,False);
+     getbisentbb(1,False);
+     gethwbb;
    end;
-//    web:=(asender as TWebBrowser);
-//    Web.OleObject.Document.Body.Scroll := 'no';
-//    Web.OleObject.Document.Body.style.border := 'none';
-//    web.OleObject.Document.Body.Style.margin := '0px';
+    web:=(asender as TWebBrowser);
+    Web.OleObject.Document.Body.Scroll := 'no';
+    Web.OleObject.Document.Body.style.border := 'none';
+    web.OleObject.Document.Body.Style.margin := '0px';
 //    case web.Tag of
 ////       0: getuserbb(1,True);
 ////       1: getadduser(False);

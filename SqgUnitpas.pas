@@ -14,11 +14,15 @@ type
     ComboBox1: TComboBox;
     RzToolButton1: TRzToolButton;
     RzToolButton2: TRzToolButton;
+    Label2: TLabel;
+    ComboBox2: TComboBox;
+    ComboBox3: TComboBox;
     procedure RzToolButton1Click(Sender: TObject);
     procedure RzToolButton2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ComboBox1KeyPress(Sender: TObject; var Key: Char);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure ComboBox2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +35,6 @@ var
   Form94: TForm94;
 
 implementation
-
 uses DbUnit,uDBJson;
 {$R *.dfm}
 var
@@ -42,17 +45,14 @@ begin
   if Key = #13 then   RzToolButton1.Click;
 end;
 
-procedure TForm94.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TForm94.ComboBox2Click(Sender: TObject);
 begin
-  WebBrowser1.OleObject.document.parentWindow.execScript('clearAll()','JavaScript'); //清空所有覆盖物
-end;
-
-procedure TForm94.FormCreate(Sender: TObject);
-begin
+  if ComboBox2.Text='' then  Exit;
+  ComboBox3.ItemIndex := ComboBox2.ItemIndex;
   ComboBox1.Clear;
-  ComboBox1.Items.Add('');
+//  ComboBox1.Items.Add('');
   Data1.sqlcmd1.Close;
-  Data1.sqlcmd1.SQL.Text:='select  empname from tAchEmployee order by empname';
+  Data1.sqlcmd1.SQL.Text:='select  a.empname from tAchEmployee a where a.shopid='''+combobox3.Text+''' order by EmpID+0';
   Data1.sqlcmd1.Open;
   if not Data1.sqlcmd1.IsEmpty then
   begin
@@ -63,7 +63,33 @@ begin
     end;
   end;
   data1.sqlcmd1.Close;
-  ComboBox1.ItemIndex:=-1;
+end;
+
+procedure TForm94.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  WebBrowser1.OleObject.document.parentWindow.execScript('clearAll()','JavaScript'); //清空所有覆盖物
+end;
+
+procedure TForm94.FormCreate(Sender: TObject);
+begin
+  ComboBox1.Clear;
+  ComboBox2.Clear;
+  ComboBox3.Clear;
+  
+//  ComboBox1.Items.Add('');
+//  Data1.sqlcmd1.Close;
+//  Data1.sqlcmd1.SQL.Text:='select  empname from tAchEmployee order by empname';
+//  Data1.sqlcmd1.Open;
+//  if not Data1.sqlcmd1.IsEmpty then
+//  begin
+//    while not Data1.sqlcmd1.Eof do
+//    begin
+//      ComboBox1.Items.Add(Data1.sqlcmd1.FieldByName('empname').AsString);
+//      Data1.sqlcmd1.Next;
+//    end;
+//  end;
+//  data1.sqlcmd1.Close;
+//  ComboBox1.ItemIndex:=-1;
   webbrowser1.Navigate(ExtractFilePath(application.ExeName)+'Html/sqgadd.html');
 end;
 
@@ -122,26 +148,23 @@ procedure TForm94.RzToolButton1Click(Sender: TObject);
 var
   dstr:string;
 begin
-  if ComboBox1.Text ='' then Exit;
+  if (ComboBox1.Text ='') and ((ComboBox2.Text='') or (ComboBox3.Text='')) then Exit;
   WebBrowser1.SetFocus ;
   WebBrowser1.OleObject.document.parentWindow.execScript('clearAll()','JavaScript'); //清空所有覆盖物
-  dstr :=' where namec='''+ComboBox1.Text+''' ' ;
+  dstr :=' where a.jd<>'''' and a.wd<>'''' ';
+  if (ComboBox2.Text<>'') and (ComboBox3.Text<>'') then   dstr := dstr+' and b.shopid='''+combobox3.Text+''' ';
+  if ComboBox1.Text<>'' then
+  begin
+    dstr := dstr+' and a.namec='''+ComboBox1.Text+''' ';
+  end;
   with Data1.sds1 do
   begin
     close;
-    if dstr='' then sql.Text :='select cdate,jd,wd,namec from tbsqg_add where id in (select max(id) as id from tbsqg_add group by namec)'
-    else
-    sql.Text :='select max(cdate) as cdate,jd,wd,namec from tbsqg_add '+dstr+' group by namec,jd,wd';
+    sql.Text :='select jd,wd,namec+'' ''+CONVERT(VARCHAR(24), cdate,120) as namec from tbsqg_add where id in (select max(a.id) as id from tbsqg_add a left join tAchEmployee b on a.namec=b.EmpName '+dstr+' group by a.namec)';
     open;
     if not IsEmpty then
     begin
-      if (FieldByName('jd').AsString<>'') and (FieldByName('jd').AsString<>'') then
-      begin
-        dstr := FieldByName('namec').AsString+' '+FieldByName('cdate').AsString;
-        dstr := '[{"jd":"'+FieldByName('jd').AsString+'","wd":"'+FieldByName('wd').AsString+'","namec":"'+dstr+'"}]';
-        WebBrowser1.OleObject.document.parentWindow.execScript('doLocate('''+dstr+''')','JavaScript'); //返回覆盖物个数
-      end
-      else  ShowMessage('位置信息为空');
+      WebBrowser1.OleObject.document.parentWindow.execScript('doLocate('''+JSonFromDataSet(data1.sds1)+''')','JavaScript'); //返回覆盖物个数
     end
     else ShowMessage('没找到该送气工位置信息');
   end;

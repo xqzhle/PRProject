@@ -1769,8 +1769,8 @@ object MainForm: TMainForm
   object MainMenu1: TMainMenu
     AutoHotkeys = maManual
     AutoLineReduction = maManual
-    Left = 136
-    Top = 48
+    Left = 135
+    Top = 47
     object N1: TMenuItem
       Caption = #23458#26381#20013#24515
       object N13: TMenuItem
@@ -2018,6 +2018,41 @@ object MainForm: TMainForm
         Caption = #25968#25454#20998#26512
         OnClick = s1Click
       end
+      object N75: TMenuItem
+        Caption = #23458#25143#23433#26816
+        OnClick = N75Click
+      end
+      object N73: TMenuItem
+        Caption = #36865#27668#24037#25253#34920
+        OnClick = N73Click
+      end
+      object N74: TMenuItem
+        Caption = #19994#21153#21592#25253#34920
+        OnClick = N74Click
+      end
+    end
+    object j1: TMenuItem
+      Caption = #30417#31649#20013#24515
+      object N70: TMenuItem
+        Caption = #36865#27668#24037#20301#32622
+        OnClick = N70Click
+      end
+      object N71: TMenuItem
+        Caption = #36865#27668#24037#36712#36857
+        OnClick = N71Click
+      end
+      object N76: TMenuItem
+        Caption = #23458#25143#22312#21738#20799
+        OnClick = N76Click
+      end
+      object N77: TMenuItem
+        Caption = #38050#29942#22312#21738#20799
+        OnClick = N77Click
+      end
+      object N72: TMenuItem
+        Caption = #35746#21333#37197#36865#20301#32622
+        OnClick = N72Click
+      end
     end
     object N11: TMenuItem
       Caption = #31995#32479#31649#29702
@@ -2201,7 +2236,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C010107001000A00020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010107001000A80020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
