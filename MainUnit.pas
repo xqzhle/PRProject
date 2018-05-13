@@ -195,6 +195,7 @@ type
     procedure getmdxsbb(stype:Integer;iswc:Boolean);
     procedure getbisentbb(stype:Integer;iswc:Boolean);
     procedure gethwbb(ismonth: Boolean);
+    procedure getchart;
   public
     { Public declarations }
     TreeUtil:TTreeUtils;
@@ -377,6 +378,16 @@ begin
     Close;
   end;
 
+end;
+
+procedure TMainForm.getchart;
+begin
+  getuserbb(1,True);
+  getadduser(False);
+  getxsbb(False);
+  getmdxsbb(1,False);
+  getbisentbb(1,False);
+  gethwbb(False);
 end;
 
 procedure TMainForm.gethwbb(ismonth: Boolean);
@@ -1595,6 +1606,12 @@ begin
        Cancel:=True;
        Exit;
     end;
+    if Pos('#Submitsx',URL)>0 then
+    begin
+       getchart;
+       Cancel:=True;
+       Exit;
+    end;
 end;
 
 procedure TMainForm.WebBrowser1DocumentComplete(ASender: TObject;
@@ -1604,12 +1621,7 @@ procedure TMainForm.WebBrowser1DocumentComplete(ASender: TObject;
 begin
    if WebBrowser1.Application = pDisp then
    begin
-     getuserbb(1,True);
-     getadduser(False);
-     getxsbb(False);
-     getmdxsbb(1,False);
-     getbisentbb(1,False);
-     gethwbb(False);
+     getchart;
    end;
     web:=(asender as TWebBrowser);
     Web.OleObject.Document.Body.Scroll := 'no';

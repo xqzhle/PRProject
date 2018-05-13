@@ -15,7 +15,6 @@
         .layui-btn{display:block;height:30px;line-height:30px;padding:0 10px;background-color:#009688;color:#fff;white-space:nowrap;text-align:center;font-size:14px;border:none;cursor:pointer;float: left}
         .layui-btn:hover{opacity:.8;filter:alpha(opacity=80);color:#fff}
         .layui-btn:active{opacity:1;filter:alpha(opacity=100)}
-        .layui-btn:last-of-type{border-left: 1px solid #e2e2e1;}
     </style>
 </head>
 <body>
@@ -23,7 +22,9 @@
 <div class="layui-input-block">
     <button id="qy" class="layui-btn"  onClick="triggerExEvent('Submitqy');">区域</button>
     <button id="jd" class="layui-btn"  onClick="triggerExEvent('Submitjd');">街道</button>
+    <button id="sx" class="layui-btn"  onClick="triggerExEvent('Submitsx');">刷新</button>
 </div>
+<div class="clear"></div>
 <div id="main-wrap1" class="left"></div>
 <div id="main-wrap4" class="left"></div>
 <div id="main-wrap5" class="left"></div>
