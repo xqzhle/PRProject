@@ -194,7 +194,7 @@ type
     procedure getxsbb(ismonth:Boolean);
     procedure getmdxsbb(stype:Integer;iswc:Boolean);
     procedure getbisentbb(stype:Integer;iswc:Boolean);
-    procedure gethwbb;
+    procedure gethwbb(ismonth: Boolean);
   public
     { Public declarations }
     TreeUtil:TTreeUtils;
@@ -292,22 +292,8 @@ begin
      wherestr :=' where CreateDate>=''2010-01-01 00:00:00'' and CreateDate<='''+DateTimeToStr(Now)+''' ';
   end;
   sqlstr := 'SELECT COUNT(id) as sl,CONVERT(VARCHAR(10), CreateDate,120) as cdate FROM tbCustomer_Info ';
-//  if ComboBox2.Text<>'' then
-//  begin
-//    with Data1.sds1 do
-//    begin
-//      close;
-//      SQL.Text := 'select shopid from tshop where shopname='''+combobox2.Text+''' ';
-//      Open;
-//      if not IsEmpty then
-//      begin
-//        wherestr := wherestr+' and shopid='''+Data1.sds1.FieldByName('shopid').AsString+''' ';
-//      end;
-//    end;
-//  end;
   with Data1.sqlcmd1 do
   begin
-   // FastLineSeries1.Clear;
     Close;
     sql.Text:=sqlstr+wherestr+' group by CONVERT(VARCHAR(10), CreateDate,120) order by CONVERT(VARCHAR(10), CreateDate,120)';
     open;
@@ -317,8 +303,6 @@ begin
       ydate:='';
       for I := 0 to RecordCount-1 do
       begin
-        // FastLineSeries1.AddXY(I+1,FieldByName('sl').AsInteger,FieldByName('cdate').AsString);
-
          xdate:=xdate+formatdatetime('yyyymmdd',FieldByName('cdate').AsDateTime)+',';
          ydate:=ydate+FieldByName('sl').AsString+',';
          Next;
@@ -395,19 +379,26 @@ begin
 
 end;
 
-procedure TMainForm.gethwbb;
+procedure TMainForm.gethwbb(ismonth: Boolean);
 var
   ssum,i:Integer;
-  sqlstr,wherestr:string;
+  sqlstr,wherestr,date1,date2:string;
   sj,aj:ISuperObject;
   hwy,yj,wj,zs:string;
 begin
-
   with Data1.sqlcmd1 do
   begin
-   // Series4.Clear;
     sqlstr := 'select count(id) as sl from ttbill ';
-    wherestr := 'where ext<>''''';//'where billdate>='''+DateTimeToStr(DateTimePicker7.DateTime)+''' and billdate<='''+DateTimeToStr(DateTimePicker8.DateTime)+''' ';
+    wherestr := 'where ext<>''''';
+    if ismonth then
+    begin
+      date1:=datetostr(strtodate(IntToStr(YearOf(now))+'-'+inttostr(MonthOf(now))+'-01'));
+      date2:=datetostr(now);
+      date1:=date1+' 00:00:00';
+      date2:=date2+' 23:59:59';
+      wherestr := wherestr+' and billdate>='''+date1+''' and billdate<='''+date2+''' ';
+    end;
+    //'where billdate>='''+DateTimeToStr(DateTimePicker7.DateTime)+''' and billdate<='''+DateTimeToStr(DateTimePicker8.DateTime)+''' ';
    // if RadioButton3.Checked then wherestr := wherestr+' and type=''未接'' ';
    // if RadioButton4.Checked then wherestr := wherestr+' and type=''已接'' ';
     Close;
@@ -426,10 +417,6 @@ begin
          hwy:='';yj:='';wj:=''; zs:='';
          for I := 0 to RecordCount-1 do
          begin
-          // if RadioButton5.Checked then
-           //  Series4.AddPie(strtofloat(formatfloat('0.00',FieldByName('sl').AsInteger/ssum*100)),' 话务: '+FieldByName('ext').AsString+' 数量: '+FieldByName('sl').AsString+' 未接: '+FieldByName('wj').AsString+' 已接: '+FieldByName('yj').AsString)
-          // else
-            // Series4.AddPie(strtofloat(formatfloat('0.00',FieldByName('sl').AsInteger/ssum*100)),' 话务: '+FieldByName('ext').AsString+' 数量: '+FieldByName('sl').AsString);
            sj := SO();//创建列
            sj.O['value']:=SO(FieldByName('sl').AsString) ;
            sj.O['name']:=SO('话务: '+FieldByName('ext').AsString+' 数量: '+FieldByName('sl').AsString);
@@ -465,13 +452,7 @@ var
 begin
   with Data1.sqlcmd1 do
   begin
-    //Series3.Clear;
-    if stype=1 then sqlstr:='select count(id) as sl from tbisent where (status=1) and (type<>''3'')'
-    else
-    begin
-     // if iswc then sqlstr:='select count(id) as sl from tbisent where (status=1) and (type<>''3'') and optdate>='''+DateTimeToStr(DateTimePicker5.DateTime)+''' and optdate<='''+DateTimeToStr(DateTimePicker6.DateTime)+''' '
-     // else sqlstr:='select count(id) as sl from tbisent where (status=1) and (type<>''3'') and hddate>='''+DateTimeToStr(DateTimePicker5.DateTime)+''' and hddate<='''+DateTimeToStr(DateTimePicker6.DateTime)+''' ';
-    end;
+    if stype=1 then sqlstr:='select count(id) as sl from tbisent where (status=1) and (type<>''3'')';
     Close;
     sql.Text:=sqlstr;
     open;
@@ -495,9 +476,7 @@ begin
          aj := SA([]);
          for I := 0 to RecordCount-1 do
          begin
-           //Series3.AddPie(strtofloat(formatfloat('0.00',FieldByName('sl').AsInteger/ssum*100)),
-           //FieldByName('name').AsString+'  '+FieldByName('sl').AsString+'  '+FieldByName('money').AsString);
-            sj := SO();//创建列
+           sj := SO();//创建列
            sj.O['value']:=SO(FieldByName('money').AsString) ;
            sj.O['name']:=SO(FieldByName('name').AsString+' '+FieldByName('sl').AsString);
            aj.AsArray.Add(sj);
@@ -517,13 +496,11 @@ procedure TMainForm.getuserbb(stype: Integer; isqy: Boolean);
 var
   ssum,i:Integer;
   sqlstr:string;
-   sj,aj:ISuperObject;
-   sstr,titlestr:string;
+  sj,aj:ISuperObject;
+  sstr,titlestr:string;
 begin
   with Data1.sqlcmd1 do
   begin
-   // Series1.Clear;
-
     if stype=1 then sqlstr:='select count(id) as sl from tbCustomer_Info'
     else sqlstr:='select count(id) as sl from tbCustomer_Info';// where CreateDate>='''+DateTimeToStr(DateTimePicker1.DateTime)+''' and CreateDate<='''+DateTimeToStr(DateTimePicker2.DateTime)+''' ';
     Close;
@@ -534,17 +511,13 @@ begin
     begin
       if isqy then
       begin
-       // if stype=1 then sqlstr:='SELECT COUNT(a.id) as sl,case when b.namec IS NULL then ''未知区域'' else b.namec end as name FROM tbCustomer_Info a left join tbkh_qy b on (a.qyid=b.id) group by b.namec order by sl desc '
-       // else
-        titlestr:='用户区域分布';
-        sqlstr:='SELECT COUNT(a.id) as sl,case when b.namec IS NULL then ''未知区域'' else b.namec end as name FROM tbCustomer_Info a left join tbkh_qy b on (a.qyid=b.id)  group by b.namec order by sl desc ';   // where a.CreateDate>='''+DateTimeToStr(DateTimePicker1.DateTime)+''' and a.CreateDate<='''+DateTimeToStr(DateTimePicker2.DateTime)+''' group by b.namec
+        titlestr:='用户区域分布';                                                                                                               //where a.CreateDate>='''+DateTimeToStr(now)+'''
+        sqlstr:='SELECT COUNT(a.id) as sl,case when b.namec IS NULL then ''未知区域'' else b.namec end as name FROM tbCustomer_Info a left join tbkh_qy b on (a.qyid=b.id)  group by b.namec order by sl desc ';
       end
       else
       begin
         titlestr:='用户街道分布';
-       // if stype=1 then sqlstr:='SELECT COUNT(a.id) as sl,case when b.namec IS NULL then ''未知区域'' else b.namec end as name FROM tbCustomer_Info a left join tbkh_jd b on (a.jdid=b.id) group by b.namec order by sl desc '
-       // else
-         sqlstr:='SELECT COUNT(a.id) as sl,case when b.namec IS NULL then ''未知区域'' else b.namec end as name FROM tbCustomer_Info a left join tbkh_jd b on (a.jdid=b.id)  group by b.namec order by sl desc ';   // where a.CreateDate>='''+DateTimeToStr(DateTimePicker1.DateTime)+''' and a.CreateDate<='''+DateTimeToStr(DateTimePicker2.DateTime)+''' group by b.namec
+         sqlstr:='SELECT COUNT(a.id) as sl,case when b.namec IS NULL then ''未知区域'' else b.namec end as name FROM tbCustomer_Info a left join tbkh_jd b on (a.jdid=b.id)  group by b.namec order by sl desc ';
       end;
        Close;
        sql.Text:=sqlstr;
@@ -559,15 +532,10 @@ begin
            sj.O['value']:=SO(FieldByName('sl').AsString) ;
            sj.O['name']:=SO(FieldByName('name').AsString+' '+FieldByName('sl').AsString);
            aj.AsArray.Add(sj);
-         // sstr:=sstr+FieldByName('name').AsString+' '+FieldByName('sl').AsString+',';
-          // Series1.AddPie(strtofloat(formatfloat('0.00',FieldByName('sl').AsInteger/ssum*100)),FieldByName('name').AsString+'  '+FieldByName('sl').AsString);
            Next;
          end;
-        // System.Delete(sstr,Length(sstr),1);
          sstr:='['+sstr+']';
-         WebBrowser1.OleObject.document.parentWindow.
-         execScript('resfdate1('''+Trim(aj.AsString)+''','''+titlestr+''')','JavaScript');
-
+         WebBrowser1.OleObject.document.parentWindow.execScript('resfdate1('''+Trim(aj.AsString)+''','''+titlestr+''')','JavaScript');
        end;
     end;
     Close;
@@ -594,22 +562,8 @@ begin
      wherestr :=' and hddate>=''2010-01-01 00:00:00'' and hddate<='''+DateTimeToStr(Now)+''' ';
   end;
   sqlstr := 'select sum(money) as money,CONVERT(VARCHAR(10), hddate,120) as hddate from tbisent where (status=1) and (type<>''3'')';
-//  if ComboBox1.Text<>'' then
-//  begin
-//    with Data1.sds1 do
-//    begin
-//      close;
-//      SQL.Text := 'select shopid from tshop where shopname='''+combobox1.Text+''' ';
-//      Open;
-//      if not IsEmpty then
-//      begin
-//        wherestr := wherestr+' and shopid='''+Data1.sds1.FieldByName('shopid').AsString+''' ';
-//      end;
-//    end;
-//  end;
   with Data1.sqlcmd1 do
   begin
-    //Series5.Clear;
     Close;
     sql.Text:=sqlstr+wherestr+' group by CONVERT(VARCHAR(10), hddate,120) order by CONVERT(VARCHAR(10), hddate,120)';
     open;
@@ -617,7 +571,6 @@ begin
     begin
       for I := 0 to RecordCount-1 do
       begin
-        // Series5.AddXY(I+1,FieldByName('money').AsFloat,FieldByName('hddate').AsString);
          xdate:=xdate+formatdatetime('yyyymmdd',FieldByName('hddate').AsDateTime)+',';
          ydate:=ydate+FieldByName('money').AsString+',';
          Next;
@@ -626,8 +579,6 @@ begin
       System.Delete(ydate,Length(ydate),1);
       xdate:='['+xdate+']';
       ydate:='['+ydate+']';
-    //  memo1.Lines.Add(xdate);
-    //  Memo1.Lines.Add(ydate) ;
       WebBrowser1.OleObject.document.parentWindow.
       execScript('resfdate3('''+xdate+''','''+ydate+''')','JavaScript');
     end;
@@ -1638,7 +1589,7 @@ begin
        Cancel:=True;
        Exit;
     end;
-     if Pos('#Submitjd',URL)>0 then
+    if Pos('#Submitjd',URL)>0 then
     begin
        getuserbb(1,False);
        Cancel:=True;
@@ -1658,7 +1609,7 @@ begin
      getxsbb(False);
      getmdxsbb(1,False);
      getbisentbb(1,False);
-     gethwbb;
+     gethwbb(False);
    end;
     web:=(asender as TWebBrowser);
     Web.OleObject.Document.Body.Scroll := 'no';

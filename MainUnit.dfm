@@ -1706,8 +1706,7 @@ object MainForm: TMainForm
             OnBeforeNavigate2 = WebBrowser1BeforeNavigate2
             OnDocumentComplete = WebBrowser1DocumentComplete
             ExplicitLeft = 6
-            ExplicitTop = 23
-            ExplicitHeight = 668
+            ExplicitTop = -2
             ControlData = {
               4C000000165C00001B4700000000000000000000000000000000000000000000
               000000004C000000000000000000000001000000E0D057007335CF11AE690800
