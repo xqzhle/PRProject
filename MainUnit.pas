@@ -187,6 +187,9 @@ type
     procedure RadioButton2Click(Sender: TObject);
     procedure RadioButton1Click(Sender: TObject);
     procedure ApplicationEvents1Message(var Msg: tagMSG; var Handled: Boolean);
+    procedure WebBrowser1BeforeNavigate2(ASender: TObject;
+      const pDisp: IDispatch; var URL, Flags, TargetFrameName, PostData,
+      Headers: OleVariant; var Cancel: WordBool);
   private
     { Private declarations }
     procedure initdata();
@@ -1576,6 +1579,24 @@ end;
 procedure TMainForm.s1Click(Sender: TObject);
 begin
    CharForm.Show;
+end;
+
+procedure TMainForm.WebBrowser1BeforeNavigate2(ASender: TObject;
+  const pDisp: IDispatch; var URL, Flags, TargetFrameName, PostData,
+  Headers: OleVariant; var Cancel: WordBool);
+begin
+    if Pos('#Submitqy',URL)>0 then
+    begin
+       getuserbb(1,True);
+       Cancel:=True;
+       Exit;
+    end;
+     if Pos('#Submitjd',URL)>0 then
+    begin
+       getuserbb(1,False);
+       Cancel:=True;
+       Exit;
+    end;
 end;
 
 procedure TMainForm.WebBrowser1DocumentComplete(ASender: TObject;

@@ -1,17 +1,32 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<html style="height: 100%">
 <head>
     <meta charset="utf-8">
-    <title>ECharts</title>
     <!-- 引入 echarts.js -->
 
-        <script src="echarts.common.min.js"></script>
-
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="echarts.common.min.js"></script>
+    <script src="layui/layui.js"></script>
 </head>
-<body>
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main-wrap"  style="height:100%; position:absolute; width:100%;  left:0; top:0;"></div>
+<body style="height: 100%; margin: 0">
+
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom  -->
+
+
+
+     <div class="layui-input-block">
+        <button id="qy" class="layui-btn layui-btn-xs layui-btn-radius"  onClick="triggerExEvent('Submitqy');">区域</button>
+        <button id="jd" class="layui-btn layui-btn-xs layui-btn-radius"  onClick="triggerExEvent('Submitjd');">街道</button>
+     </div>
+    <div id="main-wrap"  style="height: 100%"> </div>
+
     <script type="text/javascript">
+        layui.use(['layer', 'form'], function(){
+            var layer = layui.layer;
+            var form = layui.form;
+
+            //  layer.msg('Hello World');
+        });
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main-wrap'));
         // 指定图表的配置项和数据
@@ -79,7 +94,15 @@
                 }
             }
         ]});
-	}
+	};
+        function triggerExEvent(cmpnt_id) {
+	       url='#'+cmpnt_id;
+          //  url=url+cmpnt_id+';eventnm='+event_nm;
+            //if(optionstr) url=url+';params=optionstr';
+            location=url;
+	    };
+
     </script>
-</body>
+
+  </body>
 </html>

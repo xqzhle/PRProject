@@ -1774,12 +1774,10 @@ object MainForm: TMainForm
               Align = alClient
               TabOrder = 1
               OnDocumentComplete = WebBrowser1DocumentComplete
-              ExplicitLeft = -4
-              ExplicitTop = 72
               ExplicitWidth = 300
               ExplicitHeight = 150
               ControlData = {
-                4C000000021F0000810F00000000000000000000000000000000000000000000
+                4C000000981E0000592000000000000000000000000000000000000000000000
                 000000004C000000000000000000000001000000E0D057007335CF11AE690800
                 2B2E126208000000000000004C0000000114020000000000C000000000000046
                 8000000000000000000000000000000000000000000000000000000000000000
@@ -1873,7 +1871,6 @@ object MainForm: TMainForm
               StatusBar.Color = 15658734
               StatusBar.GradientDirection = gdVertical
               Styler = AdvPanelStyler2
-              ExplicitWidth = 296
               FullHeight = 200
             end
             object WebBrowser2: TWebBrowser
@@ -1885,12 +1882,10 @@ object MainForm: TMainForm
               Align = alClient
               TabOrder = 1
               OnDocumentComplete = WebBrowser1DocumentComplete
-              ExplicitLeft = -4
-              ExplicitTop = 72
               ExplicitWidth = 300
               ExplicitHeight = 150
               ControlData = {
-                4C000000021F0000810F00000000000000000000000000000000000000000000
+                4C000000E71E0000592000000000000000000000000000000000000000000000
                 000000004C000000000000000000000001000000E0D057007335CF11AE690800
                 2B2E126208000000000000004C0000000114020000000000C000000000000046
                 8000000000000000000000000000000000000000000000000000000000000000
@@ -1945,7 +1940,7 @@ object MainForm: TMainForm
               Left = 0
               Top = 0
               Width = 296
-              Height = 35
+              Height = 20
               Align = alTop
               BevelOuter = bvNone
               Color = clWhite
@@ -1984,7 +1979,7 @@ object MainForm: TMainForm
               StatusBar.Color = 15658734
               StatusBar.GradientDirection = gdVertical
               Styler = AdvPanelStyler2
-              FullHeight = 200
+              FullHeight = 20
               object RadioButton1: TRadioButton
                 Left = 19
                 Top = 20
@@ -2000,6 +1995,7 @@ object MainForm: TMainForm
                 ParentFont = False
                 TabOrder = 0
                 TabStop = True
+                Visible = False
                 OnClick = RadioButton1Click
               end
               object RadioButton2: TRadioButton
@@ -2015,23 +2011,24 @@ object MainForm: TMainForm
                 Font.Style = []
                 ParentFont = False
                 TabOrder = 1
+                Visible = False
                 OnClick = RadioButton2Click
               end
             end
             object WebBrowser1: TWebBrowser
               Left = 0
-              Top = 35
+              Top = 20
               Width = 296
-              Height = 313
+              Height = 328
               Align = alClient
               TabOrder = 1
+              OnBeforeNavigate2 = WebBrowser1BeforeNavigate2
               OnDocumentComplete = WebBrowser1DocumentComplete
-              ExplicitLeft = -4
-              ExplicitTop = 72
+              ExplicitTop = 35
               ExplicitWidth = 300
               ExplicitHeight = 150
               ControlData = {
-                4C000000021F0000810F00000000000000000000000000000000000000000000
+                4C000000981E0000E62100000000000000000000000000000000000000000000
                 000000004C000000000000000000000001000000E0D057007335CF11AE690800
                 2B2E126208000000000000004C0000000114020000000000C000000000000046
                 8000000000000000000000000000000000000000000000000000000000000000
@@ -2162,10 +2159,10 @@ object MainForm: TMainForm
               Align = alClient
               TabOrder = 1
               OnDocumentComplete = WebBrowser1DocumentComplete
-              ExplicitLeft = -6
-              ExplicitTop = 33
+              ExplicitWidth = 300
+              ExplicitHeight = 150
               ControlData = {
-                4C000000021F0000810F00000000000000000000000000000000000000000000
+                4C000000981E0000861F00000000000000000000000000000000000000000000
                 000000004C000000000000000000000001000000E0D057007335CF11AE690800
                 2B2E126208000000000000004C0000000114020000000000C000000000000046
                 8000000000000000000000000000000000000000000000000000000000000000
@@ -2215,8 +2212,6 @@ object MainForm: TMainForm
             StatusBar.Color = 15658734
             StatusBar.GradientDirection = gdVertical
             Styler = AdvPanelStyler2
-            ExplicitLeft = 290
-            ExplicitTop = -2
             FullHeight = 200
             object AdvPanel16: TAdvPanel
               Left = 0
@@ -2261,7 +2256,6 @@ object MainForm: TMainForm
               StatusBar.Color = 15658734
               StatusBar.GradientDirection = gdVertical
               Styler = AdvPanelStyler2
-              ExplicitWidth = 296
               FullHeight = 200
             end
             object WebBrowser5: TWebBrowser
@@ -2273,11 +2267,10 @@ object MainForm: TMainForm
               Align = alClient
               TabOrder = 1
               OnDocumentComplete = WebBrowser1DocumentComplete
-              ExplicitLeft = -6
-              ExplicitTop = 33
-              ExplicitWidth = 296
+              ExplicitWidth = 300
+              ExplicitHeight = 150
               ControlData = {
-                4C000000021F0000810F00000000000000000000000000000000000000000000
+                4C000000E71E0000861F00000000000000000000000000000000000000000000
                 000000004C000000000000000000000001000000E0D057007335CF11AE690800
                 2B2E126208000000000000004C0000000114020000000000C000000000000046
                 8000000000000000000000000000000000000000000000000000000000000000
@@ -2382,10 +2375,10 @@ object MainForm: TMainForm
               Align = alClient
               TabOrder = 1
               OnDocumentComplete = WebBrowser1DocumentComplete
-              ExplicitLeft = -6
-              ExplicitTop = 33
+              ExplicitWidth = 300
+              ExplicitHeight = 150
               ControlData = {
-                4C000000021F0000810F00000000000000000000000000000000000000000000
+                4C000000981E0000861F00000000000000000000000000000000000000000000
                 000000004C000000000000000000000001000000E0D057007335CF11AE690800
                 2B2E126208000000000000004C0000000114020000000000C000000000000046
                 8000000000000000000000000000000000000000000000000000000000000000
@@ -2878,7 +2871,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C010107001000980020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C0101070010009C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
