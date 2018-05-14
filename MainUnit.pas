@@ -280,6 +280,8 @@ var
   sqlstr,wherestr,date2,date1:string;
   xdate,ydate:string;
 begin
+  xdate:='[]';
+  ydate:='[]';
   if ismonth then
   begin
     date1:=datetostr(strtodate(IntToStr(YearOf(now))+'-'+inttostr(MonthOf(now))+'-01'));
@@ -312,9 +314,9 @@ begin
       System.Delete(ydate,Length(ydate),1);
       xdate:='['+xdate+']';
       ydate:='['+ydate+']';
-      WebBrowser1.OleObject.document.parentWindow.
-      execScript('resfdate2('''+xdate+''','''+ydate+''')','JavaScript');
+
     end;
+    WebBrowser1.OleObject.document.parentWindow.execScript('resfdate2('''+xdate+''','''+ydate+''')','JavaScript');
     Close;
   end;
 
@@ -322,59 +324,51 @@ end;
 
 procedure TMainForm.getbisentbb(stype: Integer; iswc: Boolean);
 var
-  ssum,i:Integer;
-  sqlstr:string;
+  i:Integer;
+  sqlstr,date1,str,wherestr:string;
   sj,aj:ISuperObject;
 begin
   with Data1.sqlcmd1 do
   begin
-   // Series2.Clear;
-    if iswc then
-    begin
-      if stype=1 then sqlstr:='select count(id) as sl from tbisent where (status=1) and (type<>''3'') ' ;
-      //else sqlstr:='select count(id) as sl from tbisent where (status=1) and (type<>''3'') and optdate>='''+DateTimeToStr(DateTimePicker3.DateTime)+''' and optdate<='''+DateTimeToStr(DateTimePicker4.DateTime)+''' ';
-    end
-    else
-    begin
-      if stype=1 then sqlstr:='select count(id) as sl from tbisent' ;
-      //else sqlstr:='select count(id) as sl from tbisent where (type<>''3'') and optdate>='''+DateTimeToStr(DateTimePicker3.DateTime)+''' and optdate<='''+DateTimeToStr(DateTimePicker4.DateTime)+''' ';
-    end;
-
-    Close;
-    sql.Text:=sqlstr;
-    open;
-    ssum:=FieldByName('sl').AsInteger;
-    if ssum>1 then
-    begin
+      str := '订单来源分布';
+      if stype=1 then
+      begin
+        date1:=DateToStr(Now)+' 00:00:00';
+        wherestr := ' and optdate>='''+date1+''' ';
+        str := '本日'+str;
+      end
+      else if stype=2 then
+      begin
+        date1:=datetostr(strtodate(IntToStr(YearOf(now))+'-'+inttostr(MonthOf(now))+'-01'));
+        date1:=date1+' 00:00:00';
+        wherestr := ' and optdate>='''+date1+''' ';
+        str := '本月'+str;
+      end;
       if iswc then
       begin
-        if stype=1 then sqlstr:='SELECT COUNT(id) as sl,case when  ddstype=2 then ''门店员'' when ddstype=5 then ''送气工'' when ddstype=0 then ''接线员'' when ddstype=1 then ''微信订单'' end as name FROM tbisent where (status=1) and (type<>''3'') group by ddstype order by sl desc '
-        else sqlstr:='SELECT COUNT(id) as sl,case when  ddstype=2 then ''门店员'' when ddstype=5 then ''送气工'' when ddstype=0 then ''接线员'' when ddstype=1 then ''微信订单'' end as name FROM tbisent where (status=1) and (type<>''3'')  group by ddstype order by sl desc ';
+        sqlstr:='SELECT COUNT(id) as sl,case when  ddstype=2 then ''门店员'' when ddstype=5 then ''送气工'' when ddstype=0 then ''接线员'' when ddstype=1 then ''微信订单'' end as name FROM tbisent where (status=1) and (type<>''3'') '+wherestr+' group by ddstype order by sl desc ';
       end
       else
       begin
-        if stype=1 then sqlstr:='SELECT COUNT(id) as sl,case when  ddstype=2 then ''门店员'' when ddstype=5 then ''送气工'' when ddstype=0 then ''接线员'' when ddstype=1 then ''微信订单'' end as name FROM tbisent group by ddstype order by sl desc '
-        else sqlstr:='SELECT COUNT(id) as sl,case when  ddstype=2 then ''门店员'' when ddstype=5 then ''送气工'' when ddstype=0 then ''接线员'' when ddstype=1 then ''微信订单'' end as name FROM tbisent  group by ddstype order by sl desc ';
+        sqlstr:='SELECT COUNT(id) as sl,case when  ddstype=2 then ''门店员'' when ddstype=5 then ''送气工'' when ddstype=0 then ''接线员'' when ddstype=1 then ''微信订单'' end as name FROM tbisent where (type<>''3'') '+wherestr+' group by ddstype order by sl desc ';
       end;
-       Close;
-       sql.Text:=sqlstr;
-       open;
-       if not IsEmpty then
-       begin
+      Close;
+      sql.Text:=sqlstr;
+      open;
+      if not IsEmpty then
+      begin
          aj := SA([]);
          for I := 0 to RecordCount-1 do
          begin
-           //Series2.AddPie(strtofloat(formatfloat('0.00',FieldByName('sl').AsInteger/ssum*100)),FieldByName('name').AsString+'  '+FieldByName('sl').AsString);
            sj := SO();//创建列
            sj.O['value']:=SO(FieldByName('sl').AsString) ;
            sj.O['name']:=SO(FieldByName('name').AsString+' '+FieldByName('sl').AsString);
            aj.AsArray.Add(sj);
            Next;
          end;
-         WebBrowser1.OleObject.document.parentWindow.
-         execScript('resfdate5('''+Trim(aj.AsString)+''','''')','JavaScript');
-       end;
-    end;
+         WebBrowser1.OleObject.document.parentWindow.execScript('resfdate5('''+Trim(aj.AsString)+''','''+str+''')','JavaScript');
+      end
+      else WebBrowser1.OleObject.document.parentWindow.execScript('resfdate5(''[]'','''+str+''')','JavaScript');
     Close;
   end;
 
@@ -383,22 +377,26 @@ end;
 procedure TMainForm.getchart;
 begin
   getuserbb(1,True);
+  getmdxsbb(3,False); //1本日 2 本月 3 全部
+  getbisentbb(3,False); //1本日 2 本月 3 全部
   getadduser(False);
   getxsbb(False);
-  getmdxsbb(1,False);
-  getbisentbb(1,False);
   gethwbb(False);
 end;
 
 procedure TMainForm.gethwbb(ismonth: Boolean);
 var
-  ssum,i:Integer;
+  i:Integer;
   sqlstr,wherestr,date1,date2:string;
   sj,aj:ISuperObject;
   hwy,yj,wj,zs:string;
 begin
   with Data1.sqlcmd1 do
   begin
+    hwy:='[]';
+    wj:='[]';
+    yj:='[]';
+    zs:='[]';
     sqlstr := 'select count(id) as sl from ttbill ';
     wherestr := 'where ext<>''''';
     if ismonth then
@@ -409,15 +407,6 @@ begin
       date2:=date2+' 23:59:59';
       wherestr := wherestr+' and billdate>='''+date1+''' and billdate<='''+date2+''' ';
     end;
-    //'where billdate>='''+DateTimeToStr(DateTimePicker7.DateTime)+''' and billdate<='''+DateTimeToStr(DateTimePicker8.DateTime)+''' ';
-   // if RadioButton3.Checked then wherestr := wherestr+' and type=''未接'' ';
-   // if RadioButton4.Checked then wherestr := wherestr+' and type=''已接'' ';
-    Close;
-    sql.Text:=sqlstr+wherestr;
-    open;
-    ssum:=FieldByName('sl').AsInteger;
-    if ssum>1 then
-    begin
        sqlstr := 'select count(id) as sl,SUM(case when type=''未接'' then 1 end) as wj,SUM(case when type=''已接'' then 1 end) as yj,ext from ttbill '+wherestr+' group by ext ';
        Close;
        sql.Text:=sqlstr;
@@ -446,44 +435,41 @@ begin
          wj:='['+wj+']';
          yj:='['+yj+']';
          zs:='['+zs+']';
-         WebBrowser1.OleObject.document.parentWindow.
-         execScript('resfdate6('''+hwy+''','''+wj+''','''+yj+''','''+zs+''')','JavaScript');
        end;
-    end;
-    Close;
+       WebBrowser1.OleObject.document.parentWindow.execScript('resfdate6('''+hwy+''','''+wj+''','''+yj+''','''+zs+''')','JavaScript');
   end;
 
 end;
 
 procedure TMainForm.getmdxsbb(stype: Integer; iswc: Boolean);
 var
-  ssum,i:Integer;
-  sqlstr:string;
-   sj,aj:ISuperObject;
+  i:Integer;
+  sqlstr,str,date1,wherestr:string;
+  sj,aj:ISuperObject;
 begin
   with Data1.sqlcmd1 do
   begin
-    if stype=1 then sqlstr:='select count(id) as sl from tbisent where (status=1) and (type<>''3'')';
-    Close;
-    sql.Text:=sqlstr;
-    open;
-    ssum:=FieldByName('sl').AsInteger;
-    if ssum>1 then
-    begin
-      if stype=1 then sqlstr:='SELECT COUNT(a.id) as sl,sum(a.money) as money,case when b.shopname IS null then ''未知门店'' else b.shopname end as name '+
-      ' FROM tbisent a left join tshop b on (a.shopid=b.shopid) where a.shopid<>''anyType{}'' and (a.status=1) and (a.type<>''3'') group by b.shopname order by sl desc '
-      else
+      str := '门店销售比例分析';
+      if stype=1 then
       begin
-        if iswc then sqlstr:='SELECT COUNT(a.id) as sl,sum(a.money) as money,case when b.shopname IS null then ''未知门店'' else b.shopname end as name FROM tbisent a left join'+
-        ' tshop b on (a.shopid=b.shopid) where a.shopid<>''anyType{}'' and (a.status=1) and (a.type<>''3'')  group by b.shopname order by sl desc '
-        else sqlstr:='SELECT COUNT(a.id) as sl,sum(a.money) as money,case when b.shopname IS null then ''未知门店'' else b.shopname end as name FROM tbisent a '+
-        ' left join tshop b on (a.shopid=b.shopid) where a.shopid<>''anyType{}'' and (a.status=1) and (a.type<>''3'')  group by b.shopname order by sl desc ';
+        date1:=DateToStr(Now)+' 00:00:00';
+        wherestr := ' and a.hddate>='''+date1+''' ';
+        str := '本日'+str;
+      end
+      else if stype=2 then
+      begin
+        date1:=datetostr(strtodate(IntToStr(YearOf(now))+'-'+inttostr(MonthOf(now))+'-01'));
+        date1:=date1+' 00:00:00';
+        wherestr := ' and a.hddate>='''+date1+''' ';
+        str := '本月'+str;
       end;
-       Close;
-       sql.Text:=sqlstr;
-       open;
-       if not IsEmpty then
-       begin
+      sqlstr:='SELECT COUNT(a.id) as sl,sum(a.money) as money,case when b.shopname IS null then ''未知门店'' else b.shopname end as name '+
+        ' FROM tbisent a left join tshop b on (a.shopid=b.shopid) where a.shopid<>''anyType{}'' and (a.status=1) and (a.type<>''3'') '+wherestr+' group by b.shopname order by sl desc ';
+      Close;
+      sql.Text:=sqlstr;
+      open;
+      if not IsEmpty then
+      begin
          aj := SA([]);
          for I := 0 to RecordCount-1 do
          begin
@@ -494,13 +480,11 @@ begin
            Next;
          end;
          WebBrowser1.OleObject.document.parentWindow.
-         execScript('resfdate4('''+Trim(aj.AsString)+''','''')','JavaScript');
-       end;
-    end;
-    Close;
+         execScript('resfdate4('''+Trim(aj.AsString)+''','''+str+''')','JavaScript');
+      end
+      else WebBrowser1.OleObject.document.parentWindow.execScript('resfdate4(''[]'','''+str+''')','JavaScript');
+     Close;
   end;
-
-
 end;
 
 procedure TMainForm.getuserbb(stype: Integer; isqy: Boolean);
@@ -512,14 +496,6 @@ var
 begin
   with Data1.sqlcmd1 do
   begin
-    if stype=1 then sqlstr:='select count(id) as sl from tbCustomer_Info'
-    else sqlstr:='select count(id) as sl from tbCustomer_Info';// where CreateDate>='''+DateTimeToStr(DateTimePicker1.DateTime)+''' and CreateDate<='''+DateTimeToStr(DateTimePicker2.DateTime)+''' ';
-    Close;
-    sql.Text:=sqlstr;
-    open;
-    ssum:=FieldByName('sl').AsInteger;
-    if ssum>1 then
-    begin
       if isqy then
       begin
         titlestr:='用户区域分布';                                                                                                               //where a.CreateDate>='''+DateTimeToStr(now)+'''
@@ -547,8 +523,9 @@ begin
          end;
          sstr:='['+sstr+']';
          WebBrowser1.OleObject.document.parentWindow.execScript('resfdate1('''+Trim(aj.AsString)+''','''+titlestr+''')','JavaScript');
-       end;
-    end;
+       end
+       else  WebBrowser1.OleObject.document.parentWindow.execScript('resfdate1(''[]'',''用户分布'')','JavaScript');
+
     Close;
   end;
 
@@ -590,9 +567,13 @@ begin
       System.Delete(ydate,Length(ydate),1);
       xdate:='['+xdate+']';
       ydate:='['+ydate+']';
-      WebBrowser1.OleObject.document.parentWindow.
-      execScript('resfdate3('''+xdate+''','''+ydate+''')','JavaScript');
+    end
+    else
+    begin
+      xdate := '[]';
+      ydate := '[]';
     end;
+    WebBrowser1.OleObject.document.parentWindow.execScript('resfdate3('''+xdate+''','''+ydate+''')','JavaScript');
     Close;
   end;
 
@@ -1609,6 +1590,43 @@ begin
     if Pos('#Submitsx',URL)>0 then
     begin
        getchart;
+       Cancel:=True;
+       Exit;
+    end;
+    if Pos('#Xsday',URL)>0 then
+    begin
+       getmdxsbb(1,True);
+       Cancel:=True;
+       Exit;
+    end;
+    if Pos('#Xsmonth',URL)>0 then
+    begin
+       getmdxsbb(2,True);
+       Cancel:=True;
+       Exit;
+    end;
+    if Pos('#Xsall',URL)>0 then
+    begin
+       getmdxsbb(3,True);
+       Cancel:=True;
+       Exit;
+    end;
+
+    if Pos('#Ddday',URL)>0 then
+    begin
+       getbisentbb(1,False);
+       Cancel:=True;
+       Exit;
+    end;
+    if Pos('#Ddmonth',URL)>0 then
+    begin
+       getbisentbb(2,False);
+       Cancel:=True;
+       Exit;
+    end;
+    if Pos('#Ddall',URL)>0 then
+    begin
+       getbisentbb(3,False);
        Cancel:=True;
        Exit;
     end;
