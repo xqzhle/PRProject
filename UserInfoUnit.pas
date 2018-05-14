@@ -113,7 +113,6 @@ procedure TUserInfoFrame.Button2Click(Sender: TObject);
 begin
    clearedit;
    isadd:=True;
-   Button8.Enabled := False;
    initpanel;
 end;
 
@@ -242,8 +241,9 @@ end;
 
 procedure TUserInfoFrame.Button8Click(Sender: TObject);
 begin
-  PowerForm.Edit1.Text:=Edit8.Text;
-  PowerForm.ShowPower(Edit8.Text);
+  if UniQuery1.IsEmpty then Exit;
+  PowerForm.Edit1.Text:=UniQuery1.FieldByName('id').AsString;
+  PowerForm.ShowPower(UniQuery1.FieldByName('id').AsString);
   PowerForm.Show;
 end;
 
@@ -306,7 +306,6 @@ begin
      ComboBox1.Text:=FieldByName('comname').AsString;
      ComboBox2.ItemIndex:=FieldByName('type').AsInteger-1;
    end;
-   Button8.Enabled := True;
    initpanel;
 end;
 

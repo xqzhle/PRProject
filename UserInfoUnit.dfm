@@ -53,7 +53,7 @@ object UserInfoFrame: TUserInfoFrame
       OnClick = Button1Click
     end
     object Button2: TButton
-      Left = 584
+      Left = 579
       Top = 20
       Width = 75
       Height = 25
@@ -62,7 +62,7 @@ object UserInfoFrame: TUserInfoFrame
       OnClick = Button2Click
     end
     object Button3: TButton
-      Left = 672
+      Left = 674
       Top = 20
       Width = 75
       Height = 25
@@ -71,7 +71,7 @@ object UserInfoFrame: TUserInfoFrame
       OnClick = DBAdvGrid2DblClick
     end
     object Button4: TButton
-      Left = 761
+      Left = 864
       Top = 20
       Width = 75
       Height = 25
@@ -86,6 +86,15 @@ object UserInfoFrame: TUserInfoFrame
       Height = 25
       TabOrder = 5
       OnChange = ComboBox1Change
+    end
+    object Button8: TButton
+      Left = 769
+      Top = 20
+      Width = 75
+      Height = 25
+      Caption = #26435#38480#35774#32622
+      TabOrder = 6
+      OnClick = Button8Click
     end
   end
   object DBAdvGrid2: TDBAdvGrid
@@ -982,15 +991,6 @@ object UserInfoFrame: TUserInfoFrame
         #36130#21153
         #36865#27668#24037
         #23433#26816#21592)
-    end
-    object Button8: TButton
-      Left = 191
-      Top = 354
-      Width = 75
-      Height = 25
-      Caption = #26435#38480#35774#32622
-      TabOrder = 14
-      OnClick = Button8Click
     end
   end
   object UniQuery1: TUniQuery
