@@ -245,7 +245,7 @@ begin
 if (Msg.message = wm_rbuttondown) or (Msg.message = wm_rbuttonup) or
     (msg.message = WM_RBUTTONDBLCLK)   then
   begin
-    for i := 1 to 6 do
+    for i := 1 to 1 do
     begin
     if IsChild(TWebBrowser(Self.FindComponent('Webbrowser'+IntToStr(i))).Handle, Msg.hwnd) then
       Handled := true;//如果有其他需要处理的，在这里加上你要处理的代码
