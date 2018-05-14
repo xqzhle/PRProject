@@ -1482,7 +1482,7 @@ end;
 procedure TCallCentForm.AdvGlowButton6Click(Sender: TObject);
 begin
   //Form28.ShowModal;
-  MainForm.N13Click(Sender);
+  MainForm.A1Click(Sender);
 end;
 
 procedure TCallCentForm.AdvGlowButton7Click(Sender: TObject);

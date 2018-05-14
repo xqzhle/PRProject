@@ -7,7 +7,7 @@ uses
   Controls, Forms, Dialogs, uniGUITypes, uniGUIAbstractClasses,
   uniGUIClasses, uniGUIFrame, StdCtrls, Grids, AdvObj, BaseGrid, AdvGrid,
   DBAdvGrid, ExtCtrls, DB, MemDS, DBAccess, Uni, ImgList, uniGUIBaseClasses,
-  uniDateTimePicker, ComCtrls, AdvDateTimePicker;
+  uniDateTimePicker, ComCtrls, AdvDateTimePicker, AdvUtil;
 
 type
   TUserInfoFrame = class(TUniFrame)
@@ -55,6 +55,7 @@ type
     ComboBox2: TComboBox;
     Label8: TLabel;
     Label10: TLabel;
+    Button8: TButton;
     procedure UniFrameCreate(Sender: TObject);
     procedure UniFrameDestroy(Sender: TObject);
     procedure Button4Click(Sender: TObject);
@@ -64,6 +65,7 @@ type
     procedure Button6Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
   private
     { Private declarations }
     procedure initpanel;
@@ -78,7 +80,7 @@ var
 implementation
 
 uses
-  DbUnit, MainUnit,zcomm, SelKhUnit;
+  DbUnit, MainUnit,zcomm, PowerUnit;
 
 {$R *.dfm}
 var
@@ -111,6 +113,7 @@ procedure TUserInfoFrame.Button2Click(Sender: TObject);
 begin
    clearedit;
    isadd:=True;
+   Button8.Enabled := False;
    initpanel;
 end;
 
@@ -237,6 +240,13 @@ begin
     Panel2.Visible:=False;
 end;
 
+procedure TUserInfoFrame.Button8Click(Sender: TObject);
+begin
+  PowerForm.Edit1.Text:=Edit8.Text;
+  PowerForm.ShowPower(Edit8.Text);
+  PowerForm.Show;
+end;
+
 procedure TUserInfoFrame.clearedit;
  var
   i:Integer;
@@ -247,7 +257,6 @@ begin
    ComboBox2.ItemIndex:=-1;
    ComboBox2.Text:='';
    ComboBox1.Items.Clear;
-  
     with Data1.sqlcmd1 do
     begin
       Close;
@@ -297,6 +306,7 @@ begin
      ComboBox1.Text:=FieldByName('comname').AsString;
      ComboBox2.ItemIndex:=FieldByName('type').AsInteger-1;
    end;
+   Button8.Enabled := True;
    initpanel;
 end;
 

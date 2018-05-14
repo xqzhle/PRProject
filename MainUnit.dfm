@@ -1055,7 +1055,7 @@ object MainForm: TMainForm
             6082}
           TabOrder = 1
           Version = '2.1.1.5'
-          OnClick = N18Click
+          OnClick = B1Click
           TMSStyle = 0
         end
         object AdvSmoothButton38: TAdvSmoothButton
@@ -1336,7 +1336,7 @@ object MainForm: TMainForm
             6082}
           TabOrder = 2
           Version = '2.1.1.5'
-          OnClick = N19Click
+          OnClick = B2Click
           TMSStyle = 0
         end
         object AdvSmoothButton18: TAdvSmoothButton
@@ -1485,7 +1485,7 @@ object MainForm: TMainForm
             36FEF3C11FF3E7DFEFFC1E00E4CB0706E49374FE0000000049454E44AE426082}
           TabOrder = 3
           Version = '2.1.1.5'
-          OnClick = N20Click
+          OnClick = B3Click
           TMSStyle = 0
         end
       end
@@ -1769,167 +1769,168 @@ object MainForm: TMainForm
     AutoHotkeys = maManual
     AutoLineReduction = maManual
     Left = 135
-    Top = 47
-    object N1: TMenuItem
+    Top = 44
+    object A: TMenuItem
       Caption = #23458#26381#20013#24515
-      object N13: TMenuItem
+      object A1: TMenuItem
         Caption = #35746#21333#26597#35810
-        OnClick = N13Click
+        OnClick = A1Click
       end
-      object N14: TMenuItem
+      object A2: TMenuItem
         Caption = #25253#20462#22788#29702
       end
-      object N15: TMenuItem
+      object A3: TMenuItem
         Caption = #25237#35785#22788#29702
       end
-      object N16: TMenuItem
+      object A4: TMenuItem
         Caption = #21672#35810#26597#35810
       end
-      object N17: TMenuItem
+      object A5: TMenuItem
         Caption = #20449#24687#31649#29702
       end
     end
-    object N2: TMenuItem
+    object B: TMenuItem
       Caption = #38646#21806#31649#29702
-      object N18: TMenuItem
+      object B1: TMenuItem
         Caption = #27966#24037#22788#29702
-        OnClick = N18Click
+        OnClick = B1Click
       end
-      object N19: TMenuItem
+      object B2: TMenuItem
         Caption = #22238#21333#22788#29702
-        OnClick = N19Click
+        OnClick = B2Click
       end
-      object N20: TMenuItem
+      object B3: TMenuItem
         Caption = #24050#23436#25104#35746#21333
-        OnClick = N20Click
+        OnClick = B3Click
       end
     end
-    object N3: TMenuItem
+    object C: TMenuItem
       Caption = #20215#26684#31649#29702
-      object N30: TMenuItem
+      object C1: TMenuItem
         Caption = #20844#21496#25346#29260#20215#35774#32622
-        OnClick = N30Click
+        OnClick = C1Click
       end
-      object N31: TMenuItem
+      object C2: TMenuItem
         Caption = #38376#24215#20215#26684#35774#32622
-        OnClick = N31Click
+        OnClick = C2Click
       end
-      object N32: TMenuItem
+      object C3: TMenuItem
         Caption = #23458#25143#31561#32423#20248#24800
-        OnClick = N32Click
+        OnClick = C3Click
       end
-      object N33: TMenuItem
+      object C4: TMenuItem
         Caption = #29305#27530#20248#24800#31561#32423
-        OnClick = N33Click
+        OnClick = C4Click
       end
-      object N34: TMenuItem
+      object C5: TMenuItem
         Caption = #24037#21830#23458#25143#25253#20215
-        OnClick = N34Click
+        OnClick = C5Click
       end
     end
-    object N5: TMenuItem
+    object D: TMenuItem
       Caption = #22522#30784#36164#26009
-      object N22: TMenuItem
+      object D1: TMenuItem
         Caption = #20844#21496#32452#32455#26550#26500
-        OnClick = N22Click
+        OnClick = D1Click
       end
-      object N23: TMenuItem
+      object D2: TMenuItem
         Caption = #21830#21697#31867#22411
-        OnClick = N23Click
+        OnClick = D2Click
       end
-      object N24: TMenuItem
+      object D3: TMenuItem
         Caption = #21830#21697#20449#24687
-        OnClick = N24Click
+        OnClick = D3Click
       end
-      object N25: TMenuItem
+      object D4: TMenuItem
         Caption = #37096#38376#20449#24687
-        OnClick = N25Click
+        OnClick = D4Click
       end
-      object N26: TMenuItem
+      object D5: TMenuItem
         Caption = #23703#20301#20449#24687
-        OnClick = N26Click
+        OnClick = D5Click
       end
-      object N27: TMenuItem
+      object D6: TMenuItem
         Caption = #21592#24037#36164#26009
-        OnClick = N27Click
+        OnClick = D6Click
       end
-      object N28: TMenuItem
+      object D7: TMenuItem
         Caption = #36865#27668#36153#35774#32622
-        OnClick = N28Click
+        OnClick = D7Click
       end
-      object N29: TMenuItem
+      object D8: TMenuItem
         Caption = #19994#21153#21592
-        OnClick = N29Click
+        OnClick = D8Click
       end
     end
-    object N4: TMenuItem
+    object E: TMenuItem
       Caption = #23458#25143#31649#29702
-      object N35: TMenuItem
+      object E1: TMenuItem
         Caption = #23458#25143#31867#22411#35774#32622
-        OnClick = N35Click
+        OnClick = E1Click
       end
-      object N36: TMenuItem
+      object E2: TMenuItem
         Caption = #22320#21306#35774#32622
-        OnClick = N36Click
+        OnClick = E2Click
       end
-      object N37: TMenuItem
+      object E3: TMenuItem
         Caption = #23548#20837#23458#25143
-        OnClick = N37Click
+        OnClick = E3Click
       end
-      object N38: TMenuItem
+      object E4: TMenuItem
         Caption = #23458#25143#36164#26009
-        OnClick = N38Click
+        OnClick = E4Click
       end
     end
-    object N6: TMenuItem
+    object F: TMenuItem
       Caption = #38050#29942#31649#29702
-      object N12: TMenuItem
+      object F1: TMenuItem
         Caption = #38050#29942#31867#22411
-        OnClick = N12Click
+        OnClick = F1Click
       end
-      object N21: TMenuItem
+      object F2: TMenuItem
         Caption = #38050#29942#35268#26684
-        OnClick = N21Click
+        OnClick = F2Click
       end
-      object N41: TMenuItem
+      object F3: TMenuItem
         Caption = #20805#35013#20171#36136
-        OnClick = N41Click
+        OnClick = F3Click
       end
-      object N42: TMenuItem
+      object F4: TMenuItem
         Caption = #21378#23478#20449#24687
-        OnClick = N42Click
+        OnClick = F4Click
       end
-      object N43: TMenuItem
+      object F5: TMenuItem
         Caption = #26816#39564#21333#20301
-        OnClick = N43Click
+        OnClick = F5Click
       end
       object N44: TMenuItem
         Caption = '-'
       end
-      object N45: TMenuItem
+      object F6: TMenuItem
         Caption = #26032#22686#38050#29942
-        OnClick = N45Click
+        OnClick = F6Click
       end
       object N46: TMenuItem
         Caption = '-'
       end
-      object N49: TMenuItem
+      object F7: TMenuItem
         Caption = #38050#29942#20449#24687
-        OnClick = N49Click
+        OnClick = F7Click
       end
-      object N48: TMenuItem
+      object F8: TMenuItem
         Caption = #23548#20837#38050#29942#20449#24687
-        OnClick = N48Click
+        OnClick = F8Click
       end
       object N54: TMenuItem
         Caption = '-'
       end
-      object g1: TMenuItem
+      object F9: TMenuItem
+        Caption = #38050#29942#27969#36716#36712#36857
+        OnClick = F9Click
+      end
+      object N111: TMenuItem
         Caption = #38050#29942#26597#35810
-        object N47: TMenuItem
-          Caption = #38050#29942#27969#36716#36712#36857
-          OnClick = N47Click
-        end
+        Visible = False
         object N50: TMenuItem
           Caption = #25276#29942#22825#25968#26597#35810
           OnClick = N50Click
@@ -1939,133 +1940,136 @@ object MainForm: TMainForm
           OnClick = N51Click
         end
       end
-      object N55: TMenuItem
+      object F10: TMenuItem
         Caption = #38050#29942#32508#21512#31649#29702
-        OnClick = N55Click
+        OnClick = F10Click
       end
     end
-    object N7: TMenuItem
+    object G: TMenuItem
       Caption = #27668#31449#31649#29702
-      object N56: TMenuItem
+      object G1: TMenuItem
         Caption = #27668#31449#20449#24687
-        OnClick = N56Click
+        OnClick = G1Click
       end
-      object N57: TMenuItem
+      object G2: TMenuItem
         Caption = #20805#35013#21488#31204
       end
-      object N58: TMenuItem
+      object G3: TMenuItem
         Caption = #36710#36742#20449#24687
-        OnClick = N58Click
+        OnClick = G3Click
       end
-      object N63: TMenuItem
+      object G4: TMenuItem
         Caption = #28082#21270#27668#37319#36141
-        OnClick = N63Click
+        OnClick = G4Click
       end
-      object N64: TMenuItem
+      object G5: TMenuItem
         Caption = #20313#27668#31649#29702
       end
     end
-    object N8: TMenuItem
+    object H: TMenuItem
       Caption = #36130#21153#31649#29702
-      object k1: TMenuItem
+      object H1: TMenuItem
         Caption = #23458#25143#20449#29992#31649#29702
-        OnClick = k1Click
+        OnClick = H1Click
       end
-      object N59: TMenuItem
+      object H2: TMenuItem
         Caption = #23458#25143#25910#27454#20805#20540
-        OnClick = N59Click
+        OnClick = H2Click
       end
-      object N60: TMenuItem
+      object H3: TMenuItem
         Caption = #23458#25143#26376#32467#21246#20817
-        OnClick = N60Click
+        OnClick = H3Click
       end
-      object N61: TMenuItem
+      object H4: TMenuItem
         Caption = #20020#26102#25480#26435#30721
-        OnClick = N61Click
+        OnClick = H4Click
       end
-      object N62: TMenuItem
+      object H5: TMenuItem
         Caption = #23458#25143#21457#31080#31649#29702
-        OnClick = N62Click
+        OnClick = H5Click
       end
     end
-    object N9: TMenuItem
+    object I: TMenuItem
       Caption = #24211#23384#31649#29702
-      object m1: TMenuItem
+      object I1: TMenuItem
         Caption = #38376#24215#38050#29942#32479#35745
-        OnClick = m1Click
+        OnClick = I1Click
       end
-      object N68: TMenuItem
+      object I2: TMenuItem
         Caption = #23458#25143#38050#29942#32479#35745
-        OnClick = N68Click
+        OnClick = I2Click
       end
     end
-    object N10: TMenuItem
+    object J: TMenuItem
       Caption = #25253#34920#20013#24515
-      object N66: TMenuItem
-        Caption = #38144#21806#25253#34920
-        OnClick = N66Click
-      end
-      object N67: TMenuItem
+      object J1: TMenuItem
         Caption = #27668#29942#25910#36153
-        OnClick = N67Click
+        OnClick = J1Click
       end
-      object N69: TMenuItem
+      object J2: TMenuItem
+        Caption = #38144#21806#25253#34920
+        OnClick = J2Click
+      end
+      object J3: TMenuItem
         Caption = #23458#25143#39044#35686
-        OnClick = N69Click
+        OnClick = J3Click
       end
-      object s1: TMenuItem
+      object J4: TMenuItem
         Caption = #25968#25454#20998#26512
-        OnClick = s1Click
+        OnClick = J4Click
       end
-      object N75: TMenuItem
+      object J5: TMenuItem
         Caption = #23458#25143#23433#26816
-        OnClick = N75Click
+        OnClick = J5Click
       end
-      object N73: TMenuItem
+      object J6: TMenuItem
+        Caption = #20313#27668#31649#29702
+      end
+      object J7: TMenuItem
         Caption = #36865#27668#24037#25253#34920
-        OnClick = N73Click
+        OnClick = J7Click
       end
-      object N74: TMenuItem
+      object J8: TMenuItem
         Caption = #19994#21153#21592#25253#34920
-        OnClick = N74Click
+        OnClick = J8Click
       end
     end
-    object j1: TMenuItem
+    object K: TMenuItem
       Caption = #30417#31649#20013#24515
-      object N70: TMenuItem
+      object K1: TMenuItem
         Caption = #36865#27668#24037#20301#32622
-        OnClick = N70Click
+        OnClick = K1Click
       end
-      object N71: TMenuItem
+      object K2: TMenuItem
         Caption = #36865#27668#24037#36712#36857
-        OnClick = N71Click
+        OnClick = K2Click
       end
-      object N76: TMenuItem
+      object K3: TMenuItem
         Caption = #23458#25143#22312#21738#20799
-        OnClick = N76Click
+        OnClick = K3Click
       end
-      object N77: TMenuItem
+      object K4: TMenuItem
         Caption = #38050#29942#22312#21738#20799
-        OnClick = N77Click
+        OnClick = K4Click
       end
-      object N72: TMenuItem
+      object K5: TMenuItem
         Caption = #35746#21333#37197#36865#20301#32622
-        OnClick = N72Click
+        OnClick = K5Click
       end
     end
-    object N11: TMenuItem
+    object M: TMenuItem
       Caption = #31995#32479#31649#29702
-      object N40: TMenuItem
+      object M1: TMenuItem
         Caption = #31995#32479#21442#25968#35774#32622
-        OnClick = N40Click
+        OnClick = M1Click
       end
-      object N39: TMenuItem
+      object M2: TMenuItem
         Caption = #25805#20316#21592#31649#29702
-        OnClick = N39Click
+        OnClick = M2Click
       end
-      object N65: TMenuItem
+      object M3: TMenuItem
         Caption = #25805#20316#26085#24535
-        OnClick = N65Click
+        OnClick = M3Click
       end
     end
   end
@@ -2235,7 +2239,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C010107001000B40020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010107001000B80020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

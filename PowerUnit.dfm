@@ -85,8 +85,8 @@ object PowerForm: TPowerForm
       Visible = False
     end
     object Edit1: TEdit
-      Left = 101
-      Top = 8
+      Left = 100
+      Top = 0
       Width = 121
       Height = 21
       TabOrder = 2

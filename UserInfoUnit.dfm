@@ -22,7 +22,6 @@ object UserInfoFrame: TUserInfoFrame
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = -6
     object Label1: TLabel
       Left = 9
       Top = 23
@@ -200,7 +199,7 @@ object UserInfoFrame: TUserInfoFrame
     SearchFooter.HintHighlight = 'Highlight occurrences'
     SearchFooter.MatchCaseCaption = 'Match case'
     SortSettings.DefaultFormat = ssAutomatic
-    Version = '2.3.8.6'
+    Version = '2.4.0.2'
     AutoCreateColumns = False
     AutoRemoveColumns = False
     Columns = <
@@ -684,7 +683,6 @@ object UserInfoFrame: TUserInfoFrame
       80000001C0000003C0000003E0000007F000000FF800001FFC00003FFF0000FF
       FFC003FF}
     ShowUnicode = False
-    ExplicitTop = 71
     ColWidths = (
       20
       42
@@ -701,7 +699,7 @@ object UserInfoFrame: TUserInfoFrame
       147)
   end
   object Panel2: TPanel
-    Left = 246
+    Left = 247
     Top = 162
     Width = 450
     Height = 407
@@ -985,8 +983,18 @@ object UserInfoFrame: TUserInfoFrame
         #36865#27668#24037
         #23433#26816#21592)
     end
+    object Button8: TButton
+      Left = 191
+      Top = 354
+      Width = 75
+      Height = 25
+      Caption = #26435#38480#35774#32622
+      TabOrder = 14
+      OnClick = Button8Click
+    end
   end
   object UniQuery1: TUniQuery
+    DataTypeMap = <>
     Connection = Data1.UniConnection1
     Left = 272
     Top = 272
@@ -1003,7 +1011,7 @@ object UserInfoFrame: TUserInfoFrame
     Left = 264
     Top = 336
     Bitmap = {
-      494C01010F001300040120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300080120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

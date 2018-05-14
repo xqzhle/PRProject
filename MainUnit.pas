@@ -11,25 +11,25 @@ uses
 type
   TMainForm = class(TForm)
     MainMenu1: TMainMenu;
-    N1: TMenuItem;
-    N2: TMenuItem;
-    N3: TMenuItem;
-    N4: TMenuItem;
-    N5: TMenuItem;
-    N6: TMenuItem;
-    N7: TMenuItem;
-    N8: TMenuItem;
-    N9: TMenuItem;
-    N10: TMenuItem;
-    N11: TMenuItem;
-    N13: TMenuItem;
-    N14: TMenuItem;
-    N15: TMenuItem;
-    N16: TMenuItem;
-    N17: TMenuItem;
-    N18: TMenuItem;
-    N19: TMenuItem;
-    N20: TMenuItem;
+    A: TMenuItem;
+    B: TMenuItem;
+    C: TMenuItem;
+    E: TMenuItem;
+    D: TMenuItem;
+    F: TMenuItem;
+    G: TMenuItem;
+    H: TMenuItem;
+    I: TMenuItem;
+    J: TMenuItem;
+    M: TMenuItem;
+    A1: TMenuItem;
+    A2: TMenuItem;
+    A3: TMenuItem;
+    A4: TMenuItem;
+    A5: TMenuItem;
+    B1: TMenuItem;
+    B2: TMenuItem;
+    B3: TMenuItem;
     AdvOfficePagerOfficeStyler1: TAdvOfficePagerOfficeStyler;
     AdvOfficePager1: TAdvOfficePager;
     AdvOfficePager11: TAdvOfficePage;
@@ -40,54 +40,54 @@ type
     AdvSmoothButton51: TAdvSmoothButton;
     AdvSmoothButton38: TAdvSmoothButton;
     AdvSmoothButton18: TAdvSmoothButton;
-    N22: TMenuItem;
-    N23: TMenuItem;
-    N24: TMenuItem;
-    N25: TMenuItem;
-    N26: TMenuItem;
-    N27: TMenuItem;
-    N28: TMenuItem;
-    N29: TMenuItem;
-    N30: TMenuItem;
-    N31: TMenuItem;
-    N32: TMenuItem;
-    N33: TMenuItem;
-    N34: TMenuItem;
-    N35: TMenuItem;
-    N36: TMenuItem;
-    N37: TMenuItem;
-    N38: TMenuItem;
-    N39: TMenuItem;
-    N40: TMenuItem;
-    N12: TMenuItem;
-    N21: TMenuItem;
-    N41: TMenuItem;
-    N42: TMenuItem;
-    N43: TMenuItem;
+    D1: TMenuItem;
+    D2: TMenuItem;
+    D3: TMenuItem;
+    D4: TMenuItem;
+    D5: TMenuItem;
+    D6: TMenuItem;
+    D7: TMenuItem;
+    D8: TMenuItem;
+    C1: TMenuItem;
+    C2: TMenuItem;
+    C3: TMenuItem;
+    C4: TMenuItem;
+    C5: TMenuItem;
+    E1: TMenuItem;
+    E2: TMenuItem;
+    E3: TMenuItem;
+    E4: TMenuItem;
+    M2: TMenuItem;
+    M1: TMenuItem;
+    F1: TMenuItem;
+    F2: TMenuItem;
+    F3: TMenuItem;
+    F4: TMenuItem;
+    F5: TMenuItem;
     N44: TMenuItem;
-    N45: TMenuItem;
+    F6: TMenuItem;
     N46: TMenuItem;
-    N47: TMenuItem;
-    N48: TMenuItem;
-    N49: TMenuItem;
+    F9: TMenuItem;
+    F8: TMenuItem;
+    F7: TMenuItem;
     N54: TMenuItem;
-    N55: TMenuItem;
-    N56: TMenuItem;
-    N57: TMenuItem;
-    N58: TMenuItem;
-    k1: TMenuItem;
-    N59: TMenuItem;
-    N60: TMenuItem;
-    N61: TMenuItem;
-    N62: TMenuItem;
-    N63: TMenuItem;
-    N64: TMenuItem;
-    N65: TMenuItem;
-    N66: TMenuItem;
-    N67: TMenuItem;
-    m1: TMenuItem;
-    N68: TMenuItem;
-    N69: TMenuItem;
+    F10: TMenuItem;
+    G1: TMenuItem;
+    G2: TMenuItem;
+    G3: TMenuItem;
+    H1: TMenuItem;
+    H2: TMenuItem;
+    H3: TMenuItem;
+    H4: TMenuItem;
+    H5: TMenuItem;
+    G4: TMenuItem;
+    G5: TMenuItem;
+    M3: TMenuItem;
+    J2: TMenuItem;
+    J1: TMenuItem;
+    I1: TMenuItem;
+    I2: TMenuItem;
+    J3: TMenuItem;
     Panel2: TPanel;
     KhlxBox: TComboBox;
     ShopidBox: TComboBox;
@@ -98,78 +98,79 @@ type
     ComboBox2: TComboBox;
     ComboBox3: TComboBox;
     ComboBox4: TComboBox;
-    g1: TMenuItem;
+    N111: TMenuItem;
     N50: TMenuItem;
     N51: TMenuItem;
     AdvPanel2: TAdvPanel;
     AdvPanelStyler2: TAdvPanelStyler;
     AdvPanel3: TAdvPanel;
     AdvPanel6: TAdvPanel;
-    s1: TMenuItem;
+    J4: TMenuItem;
     WebBrowser1: TWebBrowser;
     ApplicationEvents1: TApplicationEvents;
-    j1: TMenuItem;
-    N70: TMenuItem;
-    N71: TMenuItem;
-    N72: TMenuItem;
-    N73: TMenuItem;
-    N74: TMenuItem;
-    N75: TMenuItem;
-    N76: TMenuItem;
-    N77: TMenuItem;
+    K: TMenuItem;
+    K1: TMenuItem;
+    K2: TMenuItem;
+    K5: TMenuItem;
+    J7: TMenuItem;
+    J8: TMenuItem;
+    J5: TMenuItem;
+    K3: TMenuItem;
+    K4: TMenuItem;
+    J6: TMenuItem;
     procedure FormCreate(Sender: TObject);
-    procedure N22Click(Sender: TObject);
+    procedure D1Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
-    procedure N23Click(Sender: TObject);
-    procedure N24Click(Sender: TObject);
-    procedure N30Click(Sender: TObject);
-    procedure N31Click(Sender: TObject);
-    procedure N32Click(Sender: TObject);
-    procedure N35Click(Sender: TObject);
-    procedure N36Click(Sender: TObject);
-    procedure N38Click(Sender: TObject);
-    procedure N33Click(Sender: TObject);
-    procedure N34Click(Sender: TObject);
-    procedure N25Click(Sender: TObject);
-    procedure N26Click(Sender: TObject);
-    procedure N27Click(Sender: TObject);
+    procedure D2Click(Sender: TObject);
+    procedure D3Click(Sender: TObject);
+    procedure C1Click(Sender: TObject);
+    procedure C2Click(Sender: TObject);
+    procedure C3Click(Sender: TObject);
+    procedure E1Click(Sender: TObject);
+    procedure E2Click(Sender: TObject);
+    procedure E4Click(Sender: TObject);
+    procedure C4Click(Sender: TObject);
+    procedure C5Click(Sender: TObject);
+    procedure D4Click(Sender: TObject);
+    procedure D5Click(Sender: TObject);
+    procedure D6Click(Sender: TObject);
     procedure AdvSmoothButton7Click(Sender: TObject);
-    procedure N39Click(Sender: TObject);
-    procedure N18Click(Sender: TObject);
-    procedure N19Click(Sender: TObject);
-    procedure N20Click(Sender: TObject);
-    procedure N13Click(Sender: TObject);
-    procedure N12Click(Sender: TObject);
-    procedure N21Click(Sender: TObject);
-    procedure N41Click(Sender: TObject);
-    procedure N42Click(Sender: TObject);
-    procedure N63Click(Sender: TObject);
-    procedure N62Click(Sender: TObject);
-    procedure N65Click(Sender: TObject);
-    procedure N61Click(Sender: TObject);
-    procedure k1Click(Sender: TObject);
-    procedure N59Click(Sender: TObject);
-    procedure N60Click(Sender: TObject);
-    procedure N28Click(Sender: TObject);
-    procedure N43Click(Sender: TObject);
-    procedure N40Click(Sender: TObject);
-    procedure N37Click(Sender: TObject);
-    procedure N66Click(Sender: TObject);
-    procedure N29Click(Sender: TObject);
-    procedure N56Click(Sender: TObject);
-    procedure N58Click(Sender: TObject);
-    procedure N67Click(Sender: TObject);
-    procedure m1Click(Sender: TObject);
-    procedure N68Click(Sender: TObject);
-    procedure N69Click(Sender: TObject);
-    procedure N47Click(Sender: TObject);
-    procedure N48Click(Sender: TObject);
-    procedure N49Click(Sender: TObject);
-    procedure N45Click(Sender: TObject);
+    procedure M2Click(Sender: TObject);
+    procedure B1Click(Sender: TObject);
+    procedure B2Click(Sender: TObject);
+    procedure B3Click(Sender: TObject);
+    procedure A1Click(Sender: TObject);
+    procedure F1Click(Sender: TObject);
+    procedure F2Click(Sender: TObject);
+    procedure F3Click(Sender: TObject);
+    procedure F4Click(Sender: TObject);
+    procedure G4Click(Sender: TObject);
+    procedure H5Click(Sender: TObject);
+    procedure M3Click(Sender: TObject);
+    procedure H4Click(Sender: TObject);
+    procedure H1Click(Sender: TObject);
+    procedure H2Click(Sender: TObject);
+    procedure H3Click(Sender: TObject);
+    procedure D7Click(Sender: TObject);
+    procedure F5Click(Sender: TObject);
+    procedure M1Click(Sender: TObject);
+    procedure E3Click(Sender: TObject);
+    procedure J2Click(Sender: TObject);
+    procedure D8Click(Sender: TObject);
+    procedure G1Click(Sender: TObject);
+    procedure G3Click(Sender: TObject);
+    procedure J1Click(Sender: TObject);
+    procedure I1Click(Sender: TObject);
+    procedure I2Click(Sender: TObject);
+    procedure J3Click(Sender: TObject);
+    procedure F9Click(Sender: TObject);
+    procedure F8Click(Sender: TObject);
+    procedure F7Click(Sender: TObject);
+    procedure F6Click(Sender: TObject);
     procedure N50Click(Sender: TObject);
     procedure N51Click(Sender: TObject);
-    procedure N55Click(Sender: TObject);
-    procedure s1Click(Sender: TObject);
+    procedure F10Click(Sender: TObject);
+    procedure J4Click(Sender: TObject);
     procedure WebBrowser1DocumentComplete(ASender: TObject;
       const pDisp: IDispatch; var URL: OleVariant);
     procedure ApplicationEvents1Message(var Msg: tagMSG; var Handled: Boolean);
@@ -178,14 +179,14 @@ type
       Headers: OleVariant; var Cancel: WordBool);
     procedure FormPaint(Sender: TObject);
     procedure FormResize(Sender: TObject);
-    procedure N75Click(Sender: TObject);
-    procedure N73Click(Sender: TObject);
-    procedure N74Click(Sender: TObject);
-    procedure N70Click(Sender: TObject);
-    procedure N71Click(Sender: TObject);
-    procedure N72Click(Sender: TObject);
-    procedure N76Click(Sender: TObject);
-    procedure N77Click(Sender: TObject);
+    procedure J5Click(Sender: TObject);
+    procedure J7Click(Sender: TObject);
+    procedure J8Click(Sender: TObject);
+    procedure K1Click(Sender: TObject);
+    procedure K2Click(Sender: TObject);
+    procedure K5Click(Sender: TObject);
+    procedure K3Click(Sender: TObject);
+    procedure K4Click(Sender: TObject);
   private
     { Private declarations }
     procedure initdata();
@@ -196,6 +197,7 @@ type
     procedure getbisentbb(stype:Integer;iswc:Boolean);
     procedure gethwbb(ismonth: Boolean);
     procedure getchart;
+    procedure getuserpower(id:string);//获取用户权限  传用户id
   public
     { Public declarations }
     TreeUtil:TTreeUtils;
@@ -258,6 +260,7 @@ begin
     Caption:=Application.Title;
     initdata;
     WebBrowser1.Navigate(extractfilepath(paramstr(0))+'Html\Main_chart.html');
+//    getuserpower('327'); //用户权限
 end;
 
 procedure TMainForm.FormPaint(Sender: TObject);
@@ -531,6 +534,27 @@ begin
 
 end;
 
+procedure TMainForm.getuserpower(id: string);
+var i:Integer;
+begin
+  Data1.ClientDataSet2.Close;
+  Data1.ClientDataSet2.SQL.Text:='Select a,a1,a2,a3,a4,a5,b,b1,b2,b3,c,c1,c2,c3,c4,c5,d,d1,d2,d3,d4,d5,d6,d7,d8,e,e1,e2,e3,e4,'+
+  'f,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,g,g1,g2,g3,g4,h,h1,h2,h3,h4,h5,i,i1,i2,j,j1,j2,j3,j4,j5,j6,j7,k,k1,k2,k3,k4,k5,m,m1,m2,m3 '+
+  ' from tbpower Where id='''+id+''' ' ;
+  Data1.ClientDataSet2.Open;
+  if not Data1.ClientDataSet2.IsEmpty then
+  begin
+     for i := 0 to Data1.ClientDataSet2.FieldCount - 1 do
+     begin
+        //Fields[i].FieldName
+        TMenuItem(FindComponent(Data1.ClientDataSet2.Fields[i].FieldName)).Visible :=Data1.ClientDataSet2.Fields[i].Value;
+     end;
+
+
+  end;
+     Data1.ClientDataSet2.Close;
+end;
+
 procedure TMainForm.getxsbb(ismonth: Boolean);
 var
   i:Integer;
@@ -657,17 +681,17 @@ begin
 
 end;
 
-procedure TMainForm.k1Click(Sender: TObject);
+procedure TMainForm.H1Click(Sender: TObject);
 begin
   LetterForm.ShowModal;
 end;
 
-procedure TMainForm.m1Click(Sender: TObject);
+procedure TMainForm.I1Click(Sender: TObject);
 begin
   MdgpForm.ShowModal;
 end;
 
-procedure TMainForm.N12Click(Sender: TObject);
+procedure TMainForm.F1Click(Sender: TObject);
  var
  comap:TBottleTypeFrame;
  aop: TAdvOfficePage;
@@ -676,7 +700,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N12.Caption then
+    if aop.Caption=F1.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -685,7 +709,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N12.Caption;
+   aop.Caption := F1.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TBottleTypeFrame.Create(aop);
    comap.Align:=alClient;
@@ -693,7 +717,7 @@ begin
 
 end;
 
-procedure TMainForm.N13Click(Sender: TObject);
+procedure TMainForm.A1Click(Sender: TObject);
   var
  comap:TForm28;
  aop: TAdvOfficePage;
@@ -702,7 +726,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N13.Caption then
+    if aop.Caption=A1.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -711,14 +735,14 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N13.Caption;
+   aop.Caption := A1.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TForm28.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
 end;
 
-procedure TMainForm.N18Click(Sender: TObject);
+procedure TMainForm.B1Click(Sender: TObject);
 var
  comap:TMdPgFrame;
  aop: TAdvOfficePage;
@@ -727,7 +751,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N18.Caption then
+    if aop.Caption=B1.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -736,7 +760,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N18.Caption;
+   aop.Caption := B1.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TMdPgFrame.Create(aop);
    comap.Align:=alClient;
@@ -744,7 +768,7 @@ begin
 
 end;
 
-procedure TMainForm.N19Click(Sender: TObject);
+procedure TMainForm.B2Click(Sender: TObject);
 var
  comap:TMdHdFrame;
  aop: TAdvOfficePage;
@@ -753,7 +777,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N19.Caption then
+    if aop.Caption=B2.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -762,7 +786,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N19.Caption;
+   aop.Caption := B2.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TMdHdFrame.Create(aop);
    comap.Align:=alClient;
@@ -770,7 +794,7 @@ begin
 
 end;
 
-procedure TMainForm.N20Click(Sender: TObject);
+procedure TMainForm.B3Click(Sender: TObject);
 var
  comap:TDdListFrame;
  aop: TAdvOfficePage;
@@ -779,7 +803,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N20.Caption then
+    if aop.Caption=B3.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -788,14 +812,14 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N20.Caption;
+   aop.Caption := B3.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TDdListFrame.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
 end;
 
-procedure TMainForm.N21Click(Sender: TObject);
+procedure TMainForm.F2Click(Sender: TObject);
 var
  comap:TBottleSpecFrame;
  aop: TAdvOfficePage;
@@ -804,7 +828,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N21.Caption then
+    if aop.Caption=F2.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -813,7 +837,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N21.Caption;
+   aop.Caption := F2.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TBottleSpecFrame.Create(aop);
    comap.Align:=alClient;
@@ -821,7 +845,7 @@ begin
 
 end;
 
-procedure TMainForm.N22Click(Sender: TObject);
+procedure TMainForm.D1Click(Sender: TObject);
 var
  comap:TComapFrame;
  aop: TAdvOfficePage;
@@ -830,7 +854,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N22.Caption then
+    if aop.Caption=D1.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -839,7 +863,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N22.Caption;
+   aop.Caption := D1.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=tcomapframe.Create(aop);
    comap.Align:=alClient;
@@ -854,7 +878,7 @@ begin
    end;
 end;
 
-procedure TMainForm.N23Click(Sender: TObject);
+procedure TMainForm.D2Click(Sender: TObject);
 var
  comap:TSpLxiFrame;
  aop: TAdvOfficePage;
@@ -863,7 +887,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N23.Caption then
+    if aop.Caption=D2.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -872,14 +896,14 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N23.Caption;
+   aop.Caption := D2.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TSpLxiFrame.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
 end;
 
-procedure TMainForm.N24Click(Sender: TObject);
+procedure TMainForm.D3Click(Sender: TObject);
 var
  comap:TSpXxFrame;
  aop: TAdvOfficePage;
@@ -888,7 +912,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N24.Caption then
+    if aop.Caption=D3.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -897,7 +921,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N24.Caption;
+   aop.Caption := D3.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TSpXxFrame.Create(aop);
    comap.Align:=alClient;
@@ -905,7 +929,7 @@ begin
 
 end;
 
-procedure TMainForm.N25Click(Sender: TObject);
+procedure TMainForm.D4Click(Sender: TObject);
 var
  comap:TDeptInfoFrame;
  aop: TAdvOfficePage;
@@ -914,7 +938,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N25.Caption then
+    if aop.Caption=D4.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -923,14 +947,14 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N25.Caption;
+   aop.Caption := D4.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TDeptInfoFrame.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
 end;
 
-procedure TMainForm.N26Click(Sender: TObject);
+procedure TMainForm.D5Click(Sender: TObject);
 var
  comap:TGwInfoFrame;
  aop: TAdvOfficePage;
@@ -939,7 +963,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N26.Caption then
+    if aop.Caption=D5.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -948,14 +972,14 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N26.Caption;
+   aop.Caption := D5.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TGwInfoFrame.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
 end;
 
-procedure TMainForm.N27Click(Sender: TObject);
+procedure TMainForm.D6Click(Sender: TObject);
 var
  comap:TYgInfoFrame;
  aop: TAdvOfficePage;
@@ -964,7 +988,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N27.Caption then
+    if aop.Caption=D6.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -973,7 +997,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N27.Caption;
+   aop.Caption := D6.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TYgInfoFrame.Create(aop);
    comap.Align:=alClient;
@@ -981,17 +1005,17 @@ begin
 
 end;
 
-procedure TMainForm.N28Click(Sender: TObject);
+procedure TMainForm.D7Click(Sender: TObject);
 begin
   GiveForm.ShowModal;
 end;
 
-procedure TMainForm.N29Click(Sender: TObject);
+procedure TMainForm.D8Click(Sender: TObject);
 begin
   YwyForm.ShowModal;
 end;
 
-procedure TMainForm.N30Click(Sender: TObject);
+procedure TMainForm.C1Click(Sender: TObject);
 var
  comap:TGpjFrame;
  aop: TAdvOfficePage;
@@ -1000,7 +1024,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N30.Caption then
+    if aop.Caption=C1.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1009,7 +1033,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N30.Caption;
+   aop.Caption := C1.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TGpjFrame.Create(aop);
    comap.Align:=alClient;
@@ -1017,7 +1041,7 @@ begin
 
 end;
 
-procedure TMainForm.N31Click(Sender: TObject);
+procedure TMainForm.C2Click(Sender: TObject);
 var
  comap:TMdJgFrame;
  aop: TAdvOfficePage;
@@ -1026,7 +1050,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N31.Caption then
+    if aop.Caption=C2.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1035,7 +1059,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N31.Caption;
+   aop.Caption := C2.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TMdJgFrame.Create(aop);
    comap.Align:=alClient;
@@ -1043,7 +1067,7 @@ begin
 
 end;
 
-procedure TMainForm.N32Click(Sender: TObject);
+procedure TMainForm.C3Click(Sender: TObject);
 var
  comap:TDjYfFrame;
  aop: TAdvOfficePage;
@@ -1052,7 +1076,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N32.Caption then
+    if aop.Caption=C3.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1061,7 +1085,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N32.Caption;
+   aop.Caption := C3.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TDjYfFrame.Create(aop);
    comap.Align:=alClient;
@@ -1069,7 +1093,7 @@ begin
 
 end;
 
-procedure TMainForm.N33Click(Sender: TObject);
+procedure TMainForm.C4Click(Sender: TObject);
 var
  comap:TTsYhFrame;
  aop: TAdvOfficePage;
@@ -1078,7 +1102,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N33.Caption then
+    if aop.Caption=C4.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1087,14 +1111,14 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N33.Caption;
+   aop.Caption := C4.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TTsYhFrame.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
 end;
 
-procedure TMainForm.N34Click(Sender: TObject);
+procedure TMainForm.C5Click(Sender: TObject);
 var
  comap:TGsKhYhFrame;
  aop: TAdvOfficePage;
@@ -1103,7 +1127,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N34.Caption then
+    if aop.Caption=C5.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1112,14 +1136,14 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N34.Caption;
+   aop.Caption := C5.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TGsKhYhFrame.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
 end;
 
-procedure TMainForm.N35Click(Sender: TObject);
+procedure TMainForm.E1Click(Sender: TObject);
 var
  comap:TKhLxFrame;
  aop: TAdvOfficePage;
@@ -1128,7 +1152,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N35.Caption then
+    if aop.Caption=E1.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1137,7 +1161,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N35.Caption;
+   aop.Caption := E1.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TKhLxFrame.Create(aop);
    comap.Align:=alClient;
@@ -1145,7 +1169,7 @@ begin
 
 end;
 
-procedure TMainForm.N36Click(Sender: TObject);
+procedure TMainForm.E2Click(Sender: TObject);
 var
  comap:TDqSzFrame;
  aop: TAdvOfficePage;
@@ -1154,7 +1178,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N36.Caption then
+    if aop.Caption=E2.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1163,19 +1187,19 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N36.Caption;
+   aop.Caption := E2.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TDqSzFrame.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
 end;
 
-procedure TMainForm.N37Click(Sender: TObject);
+procedure TMainForm.E3Click(Sender: TObject);
 begin
   DtelForm.ShowModal;
 end;
 
-procedure TMainForm.N38Click(Sender: TObject);
+procedure TMainForm.E4Click(Sender: TObject);
 var
  comap:TKhXxForm;
  aop: TAdvOfficePage;
@@ -1184,7 +1208,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N38.Caption then
+    if aop.Caption=E4.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1193,7 +1217,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N38.Caption;
+   aop.Caption := E4.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TKhXxForm.Create(aop);
    comap.Align:=alClient;
@@ -1201,7 +1225,7 @@ begin
 
 end;
 
-procedure TMainForm.N39Click(Sender: TObject);
+procedure TMainForm.M2Click(Sender: TObject);
 var
  comap:TUserInfoFrame;
  aop: TAdvOfficePage;
@@ -1210,7 +1234,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N39.Caption then
+    if aop.Caption=M2.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1219,7 +1243,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N39.Caption;
+   aop.Caption := M2.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TUserInfoFrame.Create(aop);
    comap.Align:=alClient;
@@ -1227,12 +1251,12 @@ begin
 
 end;
 
-procedure TMainForm.N40Click(Sender: TObject);
+procedure TMainForm.M1Click(Sender: TObject);
 begin
   PzForm.ShowModal;
 end;
 
-procedure TMainForm.N41Click(Sender: TObject);
+procedure TMainForm.F3Click(Sender: TObject);
 var
  comap:TBottleClassFrame;
  aop: TAdvOfficePage;
@@ -1241,7 +1265,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N41.Caption then
+    if aop.Caption=F3.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1250,14 +1274,14 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N41.Caption;
+   aop.Caption := F3.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TBottleClassFrame.Create(aop);
    comap.Align:=alClient;
    comap.Parent:=aop;
 end;
 
-procedure TMainForm.N42Click(Sender: TObject);
+procedure TMainForm.F4Click(Sender: TObject);
 var
  comap:TBottleWorkFrame;
  aop: TAdvOfficePage;
@@ -1266,7 +1290,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N41.Caption then
+    if aop.Caption=F4.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1275,7 +1299,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N41.Caption;
+   aop.Caption := F4.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TBottleWorkFrame.Create(aop);
    comap.Align:=alClient;
@@ -1283,7 +1307,7 @@ begin
 
 end;
 
-procedure TMainForm.N43Click(Sender: TObject);
+procedure TMainForm.F5Click(Sender: TObject);
 var
  comap:TBottleInsFrame;
  aop: TAdvOfficePage;
@@ -1292,7 +1316,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N43.Caption then
+    if aop.Caption=F5.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1301,7 +1325,7 @@ begin
 
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N43.Caption;
+   aop.Caption := F5.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TBottleInsFrame.Create(aop);
    comap.Align:=alClient;
@@ -1309,7 +1333,7 @@ begin
 
 end;
 
-procedure TMainForm.N45Click(Sender: TObject);
+procedure TMainForm.F6Click(Sender: TObject);
 begin
    initdata;
    with BottleInfoForm do
@@ -1326,17 +1350,17 @@ begin
    end;
 end;
 
-procedure TMainForm.N47Click(Sender: TObject);
+procedure TMainForm.F9Click(Sender: TObject);
 begin
   lzForm.ShowModal;
 end;
 
-procedure TMainForm.N48Click(Sender: TObject);
+procedure TMainForm.F8Click(Sender: TObject);
 begin
   DForm.ShowModal;
 end;
 
-procedure TMainForm.N49Click(Sender: TObject);
+procedure TMainForm.F7Click(Sender: TObject);
 var
  comap:TBottleListFrame;
  aop: TAdvOfficePage;
@@ -1345,7 +1369,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N49.Caption then
+    if aop.Caption=F7.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1353,7 +1377,7 @@ begin
   end;
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N49.Caption;
+   aop.Caption := F7.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TBottleListFrame.Create(aop);
    comap.Align:=alClient;
@@ -1411,12 +1435,12 @@ begin
 
 end;
 
-procedure TMainForm.N55Click(Sender: TObject);
+procedure TMainForm.F10Click(Sender: TObject);
 begin
    BottleManForm.show;
 end;
 
-procedure TMainForm.N56Click(Sender: TObject);
+procedure TMainForm.G1Click(Sender: TObject);
  var
  comap:TQzFrame;
  aop: TAdvOfficePage;
@@ -1425,7 +1449,7 @@ begin
   for i := 0 to AdvOfficePager1.AdvPageCount-1 do
   begin
     aop:=AdvOfficePager1.AdvPages[i];
-    if aop.Caption=N56.Caption then
+    if aop.Caption=G1.Caption then
     begin
       AdvOfficePager1.ActivePage:=aop;
       exit;
@@ -1433,7 +1457,7 @@ begin
   end;
    aop:=TAdvOfficePage.Create(AdvOfficePager1);
    aop.AdvOfficePager := AdvOfficePager1;
-   aop.Caption := N56.Caption;
+   aop.Caption := G1.Caption;
    AdvOfficePager1.ActivePage := aop;
    comap:=TQzFrame.Create(aop);
    comap.Align:=alClient;
@@ -1441,61 +1465,61 @@ begin
 
 end;
 
-procedure TMainForm.N58Click(Sender: TObject);
+procedure TMainForm.G3Click(Sender: TObject);
 begin
   CarForm.ShowModal;
 end;
 
-procedure TMainForm.N59Click(Sender: TObject);
+procedure TMainForm.H2Click(Sender: TObject);
 begin
   CustMoneyForm.ShowModal;
 end;
 
-procedure TMainForm.N60Click(Sender: TObject);
+procedure TMainForm.H3Click(Sender: TObject);
 begin
   CustBlendForm.ShowModal;
 end;
 
-procedure TMainForm.N61Click(Sender: TObject);
+procedure TMainForm.H4Click(Sender: TObject);
 begin
   CodeForm.ShowModal;
 end;
 
-procedure TMainForm.N62Click(Sender: TObject);
+procedure TMainForm.H5Click(Sender: TObject);
 begin
   CustBillForm.ShowModal;
 end;
 
-procedure TMainForm.N63Click(Sender: TObject);
+procedure TMainForm.G4Click(Sender: TObject);
 begin
   LPGForm.Show;
 end;
 
-procedure TMainForm.N65Click(Sender: TObject);
+procedure TMainForm.M3Click(Sender: TObject);
 begin
   LogForm.ShowModal;
 end;
 
-procedure TMainForm.N66Click(Sender: TObject);
+procedure TMainForm.J2Click(Sender: TObject);
 begin
   XstypeForm.ComboBox1.Clear;
   XstypeForm.ComboBox1.Items := ShopnameBox.Items;
   XstypeForm.ShowModal;
 end;
 
-procedure TMainForm.N67Click(Sender: TObject);
+procedure TMainForm.J1Click(Sender: TObject);
 begin
   GMoneyForm.ComboBox1.Clear;
   GMoneyForm.ComboBox1.Items := ShopnameBox.Items;
   GMoneyForm.ShowModal;
 end;
 
-procedure TMainForm.N68Click(Sender: TObject);
+procedure TMainForm.I2Click(Sender: TObject);
 begin
   khgpForm.ShowModal;
 end;
 
-procedure TMainForm.N69Click(Sender: TObject);
+procedure TMainForm.J3Click(Sender: TObject);
 begin
   initdata;
   CustwaingForm.ComboBox1.Items := ShopnameBox.Items;
@@ -1504,7 +1528,7 @@ begin
   CustwaingForm.ShowModal;
 end;
 
-procedure TMainForm.N70Click(Sender: TObject);
+procedure TMainForm.K1Click(Sender: TObject);
 begin
   Form94.ComboBox2.Items := ShopnameBox.Items;
   Form94.ComboBox3.Items := ShopidBox.Items;
@@ -1514,13 +1538,13 @@ begin
   Form94.getsqgadress;
 end;
 
-procedure TMainForm.N71Click(Sender: TObject);
+procedure TMainForm.K2Click(Sender: TObject);
 begin
 //  SqgInfoForm.ComboBox1.Items := Form1.ComboBox3.Items;
   SqgInfoForm.ShowModal;
 end;
 
-procedure TMainForm.N72Click(Sender: TObject);
+procedure TMainForm.K5Click(Sender: TObject);
 begin
 //  BaseInfoForm.ComboBox3.Items := Form1.ComboBox3.Items;
   BaseInfoForm.ComboBox1.Items := ShopnameBox.Items;
@@ -1528,21 +1552,21 @@ begin
   BaseInfoForm.ShowModal;
 end;
 
-procedure TMainForm.N73Click(Sender: TObject);
+procedure TMainForm.J7Click(Sender: TObject);
 begin
   SqgbbForm.ComboBox1.Clear;
   SqgbbForm.ComboBox1.Items:=ShopnameBox.Items;
   SqgbbForm.ShowModal;
 end;
 
-procedure TMainForm.N74Click(Sender: TObject);
+procedure TMainForm.J8Click(Sender: TObject);
 begin
   YwybbForm.ComboBox1.Items.Clear;
   YwybbForm.ComboBox1.Items:=ShopnameBox.Items;
   YwybbForm.ShowModal;
 end;
 
-procedure TMainForm.N75Click(Sender: TObject);
+procedure TMainForm.J5Click(Sender: TObject);
 begin
   SelajForm.DBComboBox1.Clear;
   SelajForm.DBComboBox1.Items := KhlxBox.Items;
@@ -1554,19 +1578,19 @@ begin
   SelajForm.ShowModal;
 end;
 
-procedure TMainForm.N76Click(Sender: TObject);
+procedure TMainForm.K3Click(Sender: TObject);
 begin
   CustInfoForm.ComboBox1.Items := ShopnameBox.Items;
   CustInfoForm.ComboBox2.Items := ShopidBox.Items;
   CustInfoForm.ShowModal;
 end;
 
-procedure TMainForm.N77Click(Sender: TObject);
+procedure TMainForm.K4Click(Sender: TObject);
 begin
   GpinfoForm.ShowModal;
 end;
 
-procedure TMainForm.s1Click(Sender: TObject);
+procedure TMainForm.J4Click(Sender: TObject);
 begin
    CharForm.Show;
 end;
