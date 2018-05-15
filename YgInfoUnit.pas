@@ -7,7 +7,7 @@ uses
   Controls, Forms, Dialogs, uniGUITypes, uniGUIAbstractClasses,
   uniGUIClasses, uniGUIFrame, StdCtrls, Grids, AdvObj, BaseGrid, AdvGrid,
   DBAdvGrid, ExtCtrls, DB, MemDS, DBAccess, Uni, ImgList, uniGUIBaseClasses,
-  uniDateTimePicker, ComCtrls, AdvDateTimePicker;
+  uniDateTimePicker, ComCtrls, AdvDateTimePicker, AdvUtil;
 
 type
   TYgInfoFrame = class(TUniFrame)

@@ -47,7 +47,7 @@ object PowerForm: TPowerForm
       Top = 216
       Width = 145
       Height = 40
-      ImageIndex = 3
+      ImageIndex = 4
       Images = Data1.ImageList1
       ShowCaption = True
       UseToolbarShowCaption = False
@@ -59,7 +59,7 @@ object PowerForm: TPowerForm
       Top = 356
       Width = 145
       Height = 40
-      ImageIndex = 4
+      ImageIndex = 3
       Images = Data1.ImageList1
       ShowCaption = True
       UseToolbarShowCaption = False

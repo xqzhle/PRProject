@@ -711,7 +711,7 @@ object UserInfoFrame: TUserInfoFrame
     Left = 247
     Top = 162
     Width = 450
-    Height = 407
+    Height = 439
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -873,6 +873,13 @@ object UserInfoFrame: TUserInfoFrame
       Height = 17
       Caption = #24080#21495#31867#22411
     end
+    object Label18: TLabel
+      Left = 93
+      Top = 345
+      Width = 60
+      Height = 17
+      Caption = #20805#35013#21488#31204
+    end
     object Button5: TButton
       Left = 416
       Top = 0
@@ -899,7 +906,7 @@ object UserInfoFrame: TUserInfoFrame
     end
     object Button6: TButton
       Left = 92
-      Top = 355
+      Top = 387
       Width = 75
       Height = 25
       Caption = #20445#23384
@@ -908,7 +915,7 @@ object UserInfoFrame: TUserInfoFrame
     end
     object Button7: TButton
       Left = 284
-      Top = 355
+      Top = 387
       Width = 75
       Height = 25
       Caption = #21462#28040
@@ -984,17 +991,35 @@ object UserInfoFrame: TUserInfoFrame
       Width = 181
       Height = 25
       TabOrder = 13
+      OnChange = ComboBox2Change
       Items.Strings = (
         #31995#32479#31649#29702#21592
         #38376#24215#21592
         #25509#32447#21592
         #36130#21153
         #36865#27668#24037
-        #23433#26816#21592)
+        #23433#26816#21592
+        #27668#31449#29992#25143
+        #36710#36733#29992#25143)
+    end
+    object ComboBox3: TComboBox
+      Left = 172
+      Top = 343
+      Width = 181
+      Height = 25
+      TabOrder = 14
+      Items.Strings = (
+        #31995#32479#31649#29702#21592
+        #38376#24215#21592
+        #25509#32447#21592
+        #36130#21153
+        #36865#27668#24037
+        #23433#26816#21592
+        #27668#31449#29992#25143
+        #36710#36733#29992#25143)
     end
   end
   object UniQuery1: TUniQuery
-    DataTypeMap = <>
     Connection = Data1.UniConnection1
     Left = 272
     Top = 272
@@ -1011,7 +1036,7 @@ object UserInfoFrame: TUserInfoFrame
     Left = 264
     Top = 336
     Bitmap = {
-      494C01010F001300080120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F0013000C0120002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000008000000001002000000000000000
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

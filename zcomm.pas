@@ -1,7 +1,7 @@
 unit zcomm;
 interface
 uses
-  WinSock,Windows,OleCtrls,DateUtils,SysUtils,Dialogs,IniFiles;
+  WinSock,Windows,OleCtrls,DateUtils,SysUtils,Dialogs,TlHelp32,IniFiles;
 type
   TDllRegisterServer=function:HResult; stdcall;
   function GetCpuId(): UINT;      // 获取cpuid
@@ -30,7 +30,28 @@ type
   procedure mshowmessage(msg:string);
   function botostr(fin:Boolean):string;
   function gettime:string;
-
+  function KillTask(ExeFileName: string): Integer;   //结束指定进程
+type
+ FUserInfo=record
+   usname:string;
+   userid:string;
+   shopid:string;
+   shopname:string;
+   ext:string;
+   pbxip:string;
+   usertypename:string;
+   log_czid,qzname,log_czq,usercode,czph:string;
+ end;
+ const
+ FUsertype:array[1..8] of string=(
+    '系统管理员',
+    '门店员',
+    '接线员',
+    '财务',
+    '送气工',
+    '安检员',
+    '气站用户',
+    '车载用户');
 implementation
 const
  XorKey:array[0..7] of Byte=($A1,$B7,$AC,$57,$1C,$63,$3B,$81); //字符串加密用
@@ -38,6 +59,34 @@ const
 function gettime:string;
 begin
   Result:=FormatDateTime('yyyy-mm-dd hh:mm:ss',Now);
+end;
+
+function KillTask(ExeFileName: string): Integer;   //结束指定进程
+const
+ PROCESS_TERMINATE = $0001;
+var
+ ContinueLoop: BOOL;
+ FSnapshotHandle: THandle;
+ FProcessEntry32: TProcessEntry32;
+begin
+ Result := 0;
+ FSnapshotHandle := CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+ FProcessEntry32.dwSize := SizeOf(FProcessEntry32);
+ ContinueLoop := Process32First(FSnapshotHandle, FProcessEntry32);
+
+ while Integer(ContinueLoop) <> 0 do
+ begin
+   if ((UpperCase(ExtractFileName(FProcessEntry32.szExeFile)) =
+     UpperCase(ExeFileName)) or (UpperCase(FProcessEntry32.szExeFile) =
+     UpperCase(ExeFileName))) then
+     Result := Integer(TerminateProcess(
+       OpenProcess(PROCESS_TERMINATE,
+       BOOL(0),
+       FProcessEntry32.th32ProcessID),
+       0));
+   ContinueLoop := Process32Next(FSnapshotHandle, FProcessEntry32);
+ end;
+ CloseHandle(FSnapshotHandle);
 end;
 
 function botostr(fin:Boolean):string;

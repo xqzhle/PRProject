@@ -31,9 +31,9 @@ var
 
 implementation
 {$R *.dfm}
-uses DbUnit;
+uses DbUnit, MainUnit;
 var                                               // 10+ 6 +9 +5+11+5 +6  +11 +10    30+43
-  A: array[0..72] of string = ('a','a1','a2','a3','a4','a5','b','b1','b2','b3','c','c1','c2','c3','c4','c5'
+  A: array[0..73] of string = ('a','a1','a2','a3','a4','a5','b','b4','b1','b2','b3','c','c1','c2','c3','c4','c5'
   ,'d','d1','d2','d3','d4','d5','d6','d7','d8','e','e1','e2','e3','e4','f','f1','f2','f3','f4','f5','f6','f7','f8','f9','f10'
   ,'g','g1','g2','g3','g4','h','h1','h2','h3','h4','h5','i','i1','i2','j','j1','j2','j3','j4','j5','j6','j7','k','k1','k2','k3','k4','k5','m','m1','m2','m3');
 
@@ -77,7 +77,7 @@ begin
       str :='1';
     end
     else str:='0';
-    if i = 0then  sqlstr :=A[i]+'='+str
+    if i = 0 then  sqlstr :=A[i]+'='+str
     else  sqlstr :=sqlstr+','+A[i]+'='+str;
   end;
   with data1.sqlcmd1 do
@@ -88,6 +88,9 @@ begin
       ExecSQL;
       Close;
       ShowMessage('权限设置成功');
+      if Edit1.Text=userinfo.userid then
+      MainForm.getuserpower(Edit1.Text);
+
       Self.Close;
     except
     on E: Exception do
@@ -119,7 +122,7 @@ begin
       ExecSQL;
     end;
     Close;
-    SQL.Text:='select a as 客服中心,a1 as 订单查询,a2 as 保修处理,a3 as 投诉处理,a4 as 咨询查询,a5 as 信息管理,b as 零售管理,b1 as 派工处理,b2 as 回单处理,b3 as 已完成订单,'+
+    SQL.Text:='select a as 客服中心,a1 as 订单查询,a2 as 保修处理,a3 as 投诉处理,a4 as 咨询查询,a5 as 信息管理,b as 零售管理,b4 as 呼叫中心下单,b1 as 派工处理,b2 as 回单处理,b3 as 已完成订单,'+
     ' c as 价格管理,c1 as 公司挂牌价设置,c2 as 门店价格设置,c3 as 客户优惠等级设置,c4 as 特殊优惠等级设置,c5 as 工商客户报价,d as 基础资料,d1 as 公司组织架构,d2 as 商品类型,d3 as 商品信息,d4 as 部门信息,'+
     ' d5 as 岗位信息,d6 as 员工资料,d7 as 送气费设置,d8 as 业务员,'+
     ' e as 客户管理,e1 as 客户类型设置,e2 as 地区设置,e3 as 导入客户,e4 as 客户资料,f as 钢瓶管理,f1 as 钢瓶类型,f2 as 钢瓶规格,f3 as 充装介质,'+

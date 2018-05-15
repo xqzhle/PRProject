@@ -6,7 +6,8 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, AdvOfficePager, AdvOfficePagerStylers, AdvPanel, ExtCtrls,
   AdvSmoothButton, ImgList, StdCtrls,TreeUtils, TeEngine, Series, TeeProcs,
-  Chart, OleCtrls, SHDocVw,ActiveX,superobject, AppEvnts,DateUtils;
+  Chart, OleCtrls, SHDocVw,ActiveX,superobject, AppEvnts,zcomm,DateUtils,
+  AdvOfficeStatusBar, AdvOfficeStatusBarStylers;
 
 type
   TMainForm = class(TForm)
@@ -37,9 +38,9 @@ type
     AdvPanelStyler1: TAdvPanelStyler;
     ImageList1: TImageList;
     AdvSmoothButton7: TAdvSmoothButton;
-    AdvSmoothButton51: TAdvSmoothButton;
-    AdvSmoothButton38: TAdvSmoothButton;
-    AdvSmoothButton18: TAdvSmoothButton;
+    AdvSmoothButton8: TAdvSmoothButton;
+    AdvSmoothButton9: TAdvSmoothButton;
+    AdvSmoothButton10: TAdvSmoothButton;
     D1: TMenuItem;
     D2: TMenuItem;
     D3: TMenuItem;
@@ -118,6 +119,9 @@ type
     K3: TMenuItem;
     K4: TMenuItem;
     J6: TMenuItem;
+    AdvOfficeStatusBar1: TAdvOfficeStatusBar;
+    AdvOfficeStatusBarOfficeStyler1: TAdvOfficeStatusBarOfficeStyler;
+    B4: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure D1Click(Sender: TObject);
     procedure AdvOfficePager1ClosedPage(Sender: TObject; PageIndex: Integer);
@@ -177,8 +181,6 @@ type
     procedure WebBrowser1BeforeNavigate2(ASender: TObject;
       const pDisp: IDispatch; var URL, Flags, TargetFrameName, PostData,
       Headers: OleVariant; var Cancel: WordBool);
-    procedure FormPaint(Sender: TObject);
-    procedure FormResize(Sender: TObject);
     procedure J5Click(Sender: TObject);
     procedure J7Click(Sender: TObject);
     procedure J8Click(Sender: TObject);
@@ -187,6 +189,7 @@ type
     procedure K5Click(Sender: TObject);
     procedure K3Click(Sender: TObject);
     procedure K4Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
     procedure initdata();
@@ -197,10 +200,11 @@ type
     procedure getbisentbb(stype:Integer;iswc:Boolean);
     procedure gethwbb(ismonth: Boolean);
     procedure getchart;
-    procedure getuserpower(id:string);//获取用户权限  传用户id
+
   public
     { Public declarations }
     TreeUtil:TTreeUtils;
+    procedure getuserpower(id:string);//获取用户权限  传用户id
   end;
 
 var
@@ -208,11 +212,12 @@ var
   Loginname,UsName,ext:string;
   Shopid,shopname:string;
   log_czid,qzname,log_czq,usercode:string;
+  Userinfo:FUserInfo;
 implementation
 
 uses
   ComapUnit,SpLxUnit,SpXxUnit,GpjUnit,MdJgUnit,DjYfUnit, KhLxUnit,DqSzUnit,
-  KhXxUnit,TsYhUnit,GsKhYhUnit, DbUnit,DeptInfoUnit,GwInfoUnit,YgInfoUnit, zcomm,
+  KhXxUnit,TsYhUnit,GsKhYhUnit, DbUnit,DeptInfoUnit,GwInfoUnit,YgInfoUnit,
   CallCentUnit, PowerUnit, UserInfoUnit, MdPgUnit, MdHdUnit, DdListUnit, Unit28,
   BottleTypeUnit, BottleSpecUnit, BottleClassUnit, BottleWorkUnit,LPGUnit,
   CustBillUnit, LogUnit,CodeUnit,LetterUnit,CustMoneyUnit,CustBlendUnit,
@@ -223,12 +228,11 @@ uses
 
 {$R *.dfm}
 var
- htmlstr:string;
- first:Boolean=True;
+  isshow:Boolean=False;
+
 procedure TMainForm.AdvOfficePager1ClosedPage(Sender: TObject;
   PageIndex: Integer);
 begin
-   // ShowMessage(IntToStr(PageIndex));
    AdvOfficePager1.AdvPages[PageIndex].Free;
   // AdvOfficePager1.RemoveAdvPage(AdvOfficePager1.AdvPages[PageIndex]);
 
@@ -250,7 +254,7 @@ if (Msg.message = wm_rbuttondown) or (Msg.message = wm_rbuttonup) or
     for i := 1 to 1 do
     begin
     if IsChild(TWebBrowser(Self.FindComponent('Webbrowser'+IntToStr(i))).Handle, Msg.hwnd) then
-      Handled := true;//如果有其他需要处理的，在这里加上你要处理的代码
+      Handled := true;
     end;
   end;
 end;
@@ -258,23 +262,21 @@ end;
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
     Caption:=Application.Title;
+
+
+
+end;
+
+procedure TMainForm.FormShow(Sender: TObject);
+begin
+    if isshow then Exit;
+    getuserpower(Userinfo.userid); //用户权限
     initdata;
     WebBrowser1.Navigate(extractfilepath(paramstr(0))+'Html\Main_chart.html');
-//    getuserpower('327'); //用户权限
-end;
-
-procedure TMainForm.FormPaint(Sender: TObject);
-begin
-//  ShowMessage('1');
-end;
-
-procedure TMainForm.FormResize(Sender: TObject);
-begin
-  if not first then
-  begin
-//    WebBrowser1.OleObject.document.parentWindow.execScript('getnow()','JavaScript');
-  end;
-  first := False;
+     AdvOfficeStatusBar1.Panels.Items[2].Text:=UserInfo.usname;
+     AdvOfficeStatusBar1.Panels.Items[4].Text:=UserInfo.usertypename;
+     AdvOfficeStatusBar1.Panels.Items[6].Text:=UserInfo.shopname;
+     isshow:=True;
 end;
 
 procedure TMainForm.getadduser(ismonth: Boolean);
@@ -539,7 +541,7 @@ var i:Integer;
 begin
   Data1.ClientDataSet2.Close;
   Data1.ClientDataSet2.SQL.Text:='Select a,a1,a2,a3,a4,a5,b,b1,b2,b3,c,c1,c2,c3,c4,c5,d,d1,d2,d3,d4,d5,d6,d7,d8,e,e1,e2,e3,e4,'+
-  'f,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,g,g1,g2,g3,g4,h,h1,h2,h3,h4,h5,i,i1,i2,j,j1,j2,j3,j4,j5,j6,j7,k,k1,k2,k3,k4,k5,m,m1,m2,m3 '+
+  'f,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,g,g1,g2,g3,g4,h,h1,h2,h3,h4,h5,i,i1,i2,j,j1,j2,j3,j4,j5,j6,j7,k,k1,k2,k3,k4,k5,m,m1,m2,m3,b4 '+
   ' from tbpower Where id='''+id+''' ' ;
   Data1.ClientDataSet2.Open;
   if not Data1.ClientDataSet2.IsEmpty then
@@ -549,8 +551,10 @@ begin
         //Fields[i].FieldName
         TMenuItem(FindComponent(Data1.ClientDataSet2.Fields[i].FieldName)).Visible :=Data1.ClientDataSet2.Fields[i].Value;
      end;
-
-
+     AdvSmoothButton7.Enabled:=Data1.ClientDataSet2.FieldByName('b4').Value;
+     AdvSmoothButton8.Enabled:=Data1.ClientDataSet2.FieldByName('b1').Value;
+     AdvSmoothButton9.Enabled:=Data1.ClientDataSet2.FieldByName('b2').Value;
+     AdvSmoothButton10.Enabled:=Data1.ClientDataSet2.FieldByName('b3').Value;
   end;
      Data1.ClientDataSet2.Close;
 end;

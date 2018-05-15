@@ -303,14 +303,15 @@ object ComapFrame: TComapFrame
     Top = 178
     Width = 121
     Height = 25
-    ItemIndex = 0
     TabOrder = 12
     Text = #20844#21496
     Items.Strings = (
       #20844#21496
       #20998#20844#21496
       #29255#21306
-      #38376#24215)
+      #38376#24215
+      #27668#31449
+      #36710#36733)
   end
   object Edit8: TEdit
     Left = 352

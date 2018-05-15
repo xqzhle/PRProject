@@ -13,15 +13,14 @@ object MainForm: TMainForm
   OldCreateOrder = False
   WindowState = wsMaximized
   OnCreate = FormCreate
-  OnPaint = FormPaint
-  OnResize = FormResize
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 17
   object AdvOfficePager1: TAdvOfficePager
     Left = 0
     Top = 0
     Width = 1114
-    Height = 720
+    Height = 726
     AdvOfficePagerStyler = AdvOfficePagerOfficeStyler1
     Align = alClient
     ActivePage = AdvOfficePager11
@@ -319,13 +318,14 @@ object MainForm: TMainForm
     ShowShortCutHints = False
     OnClosedPage = AdvOfficePager1ClosedPage
     TabOrder = 0
+    ExplicitHeight = 737
     NextPictureChanged = False
     PrevPictureChanged = False
     object AdvOfficePager11: TAdvOfficePage
       Left = 1
       Top = 26
       Width = 1112
-      Height = 692
+      Height = 698
       Caption = #31995#32479#39318#39029
       DoubleBuffered = True
       PageAppearance.BorderColor = 14474202
@@ -388,7 +388,7 @@ object MainForm: TMainForm
         Left = 2
         Top = 2
         Width = 217
-        Height = 688
+        Height = 694
         Align = alLeft
         BevelOuter = bvNone
         Color = 16645114
@@ -430,6 +430,7 @@ object MainForm: TMainForm
         StatusBar.ColorTo = 16571329
         StatusBar.GradientDirection = gdVertical
         Styler = AdvPanelStyler1
+        ExplicitHeight = 688
         FullHeight = 200
         object AdvSmoothButton7: TAdvSmoothButton
           Left = 63
@@ -753,7 +754,7 @@ object MainForm: TMainForm
           OnClick = AdvSmoothButton7Click
           TMSStyle = 0
         end
-        object AdvSmoothButton51: TAdvSmoothButton
+        object AdvSmoothButton8: TAdvSmoothButton
           Left = 63
           Top = 213
           Width = 97
@@ -1058,7 +1059,7 @@ object MainForm: TMainForm
           OnClick = B1Click
           TMSStyle = 0
         end
-        object AdvSmoothButton38: TAdvSmoothButton
+        object AdvSmoothButton9: TAdvSmoothButton
           Left = 63
           Top = 362
           Width = 97
@@ -1339,7 +1340,7 @@ object MainForm: TMainForm
           OnClick = B2Click
           TMSStyle = 0
         end
-        object AdvSmoothButton18: TAdvSmoothButton
+        object AdvSmoothButton10: TAdvSmoothButton
           Left = 63
           Top = 503
           Width = 97
@@ -1493,7 +1494,7 @@ object MainForm: TMainForm
         Left = 219
         Top = 2
         Width = 891
-        Height = 688
+        Height = 694
         Align = alClient
         BevelOuter = bvNone
         Color = 16645114
@@ -1534,6 +1535,7 @@ object MainForm: TMainForm
         StatusBar.ColorTo = 16571329
         StatusBar.GradientDirection = gdVertical
         Styler = AdvPanelStyler1
+        ExplicitHeight = 688
         FullHeight = 200
         object Panel2: TPanel
           Left = 336
@@ -1656,7 +1658,7 @@ object MainForm: TMainForm
           Left = 0
           Top = 0
           Width = 891
-          Height = 688
+          Height = 694
           Align = alClient
           BevelOuter = bvNone
           Color = clWhite
@@ -1695,20 +1697,22 @@ object MainForm: TMainForm
           StatusBar.Color = 15658734
           StatusBar.GradientDirection = gdVertical
           Styler = AdvPanelStyler2
+          ExplicitHeight = 688
           FullHeight = 200
           object WebBrowser1: TWebBrowser
             Left = 0
             Top = 0
             Width = 891
-            Height = 688
+            Height = 694
             Align = alClient
             TabOrder = 0
             OnBeforeNavigate2 = WebBrowser1BeforeNavigate2
             OnDocumentComplete = WebBrowser1DocumentComplete
-            ExplicitLeft = 73
-            ExplicitWidth = 818
+            ExplicitLeft = 6
+            ExplicitTop = -2
+            ExplicitHeight = 688
             ControlData = {
-              4C000000165C00001B4700000000000000000000000000000000000000000000
+              4C000000165C0000BA4700000000000000000000000000000000000000000000
               000000004C000000000000000000000001000000E0D057007335CF11AE690800
               2B2E126208000000000000004C0000000114020000000000C000000000000046
               8000000000000000000000000000000000000000000000000000000000000000
@@ -1720,9 +1724,9 @@ object MainForm: TMainForm
   end
   object AdvPanel2: TAdvPanel
     Left = 0
-    Top = 720
+    Top = 726
     Width = 1114
-    Height = 53
+    Height = 47
     Align = alBottom
     BevelOuter = bvNone
     Color = 16645114
@@ -1764,6 +1768,208 @@ object MainForm: TMainForm
     StatusBar.GradientDirection = gdVertical
     Styler = AdvPanelStyler1
     FullHeight = 200
+    object AdvOfficeStatusBar1: TAdvOfficeStatusBar
+      Left = 0
+      Top = -4
+      Width = 1114
+      Height = 51
+      AnchorHint = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clInfoText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      Panels = <
+        item
+          AppearanceStyle = psLight
+          DateFormat = 'yyyy/MM/dd'
+          Progress.BackGround = clNone
+          Progress.Indication = piPercentage
+          Progress.Min = 0
+          Progress.Max = 100
+          Progress.Position = 0
+          Progress.Level0Color = clLime
+          Progress.Level0ColorTo = 14811105
+          Progress.Level1Color = clYellow
+          Progress.Level1ColorTo = 13303807
+          Progress.Level2Color = 5483007
+          Progress.Level2ColorTo = 11064319
+          Progress.Level3Color = clRed
+          Progress.Level3ColorTo = 13290239
+          Progress.Level1Perc = 70
+          Progress.Level2Perc = 90
+          Progress.BorderColor = clBlack
+          Progress.ShowBorder = False
+          Progress.Stacked = False
+          TimeFormat = 'hh:mm:ss'
+          Width = 20
+        end
+        item
+          AppearanceStyle = psLight
+          AutoSize = True
+          DateFormat = 'yyyy/MM/dd'
+          Progress.BackGround = clNone
+          Progress.Indication = piPercentage
+          Progress.Min = 0
+          Progress.Max = 100
+          Progress.Position = 0
+          Progress.Level0Color = clLime
+          Progress.Level0ColorTo = 14811105
+          Progress.Level1Color = clYellow
+          Progress.Level1ColorTo = 13303807
+          Progress.Level2Color = 5483007
+          Progress.Level2ColorTo = 11064319
+          Progress.Level3Color = clRed
+          Progress.Level3ColorTo = 13290239
+          Progress.Level1Perc = 70
+          Progress.Level2Perc = 90
+          Progress.BorderColor = clBlack
+          Progress.ShowBorder = False
+          Progress.Stacked = False
+          Style = psText
+          Text = #30331#24405#24080#21495':'
+          TimeFormat = 'hh:mm:ss'
+          Width = 81
+        end
+        item
+          AppearanceStyle = psLight
+          AutoSize = True
+          DateFormat = 'yyyy/MM/dd'
+          Progress.BackGround = clNone
+          Progress.Indication = piPercentage
+          Progress.Min = 0
+          Progress.Max = 100
+          Progress.Position = 0
+          Progress.Level0Color = clLime
+          Progress.Level0ColorTo = 14811105
+          Progress.Level1Color = clYellow
+          Progress.Level1ColorTo = 13303807
+          Progress.Level2Color = 5483007
+          Progress.Level2ColorTo = 11064319
+          Progress.Level3Color = clRed
+          Progress.Level3ColorTo = 13290239
+          Progress.Level1Perc = 70
+          Progress.Level2Perc = 90
+          Progress.BorderColor = clBlack
+          Progress.ShowBorder = False
+          Progress.Stacked = False
+          Style = psText
+          TimeFormat = 'hh:mm:ss'
+          Width = 20
+        end
+        item
+          AppearanceStyle = psLight
+          AutoSize = True
+          DateFormat = 'yyyy/MM/dd'
+          Progress.BackGround = clNone
+          Progress.Indication = piPercentage
+          Progress.Min = 0
+          Progress.Max = 100
+          Progress.Position = 0
+          Progress.Level0Color = clLime
+          Progress.Level0ColorTo = 14811105
+          Progress.Level1Color = clYellow
+          Progress.Level1ColorTo = 13303807
+          Progress.Level2Color = 5483007
+          Progress.Level2ColorTo = 11064319
+          Progress.Level3Color = clRed
+          Progress.Level3ColorTo = 13290239
+          Progress.Level1Perc = 70
+          Progress.Level2Perc = 90
+          Progress.BorderColor = clBlack
+          Progress.ShowBorder = False
+          Progress.Stacked = False
+          Style = psText
+          Text = #24080#21495#31867#22411#65306
+          TimeFormat = 'hh:mm:ss'
+          Width = 87
+        end
+        item
+          AppearanceStyle = psLight
+          AutoSize = True
+          DateFormat = 'yyyy/MM/dd'
+          Progress.BackGround = clNone
+          Progress.Indication = piPercentage
+          Progress.Min = 0
+          Progress.Max = 100
+          Progress.Position = 0
+          Progress.Level0Color = clLime
+          Progress.Level0ColorTo = 14811105
+          Progress.Level1Color = clYellow
+          Progress.Level1ColorTo = 13303807
+          Progress.Level2Color = 5483007
+          Progress.Level2ColorTo = 11064319
+          Progress.Level3Color = clRed
+          Progress.Level3ColorTo = 13290239
+          Progress.Level1Perc = 70
+          Progress.Level2Perc = 90
+          Progress.BorderColor = clBlack
+          Progress.ShowBorder = False
+          Progress.Stacked = False
+          Style = psText
+          TimeFormat = 'hh:mm:ss'
+          Width = 20
+        end
+        item
+          AppearanceStyle = psLight
+          AutoSize = True
+          DateFormat = 'yyyy/MM/dd'
+          Progress.BackGround = clNone
+          Progress.Indication = piPercentage
+          Progress.Min = 0
+          Progress.Max = 100
+          Progress.Position = 0
+          Progress.Level0Color = clLime
+          Progress.Level0ColorTo = 14811105
+          Progress.Level1Color = clYellow
+          Progress.Level1ColorTo = 13303807
+          Progress.Level2Color = 5483007
+          Progress.Level2ColorTo = 11064319
+          Progress.Level3Color = clRed
+          Progress.Level3ColorTo = 13290239
+          Progress.Level1Perc = 70
+          Progress.Level2Perc = 90
+          Progress.BorderColor = clBlack
+          Progress.ShowBorder = False
+          Progress.Stacked = False
+          Style = psText
+          Text = #21333#20301#21517#31216#65306
+          TimeFormat = 'hh:mm:ss'
+          Width = 87
+        end
+        item
+          AppearanceStyle = psLight
+          AutoSize = True
+          DateFormat = 'yyyy/MM/dd'
+          Progress.BackGround = clNone
+          Progress.Indication = piPercentage
+          Progress.Min = 0
+          Progress.Max = 100
+          Progress.Position = 0
+          Progress.Level0Color = clLime
+          Progress.Level0ColorTo = 14811105
+          Progress.Level1Color = clYellow
+          Progress.Level1ColorTo = 13303807
+          Progress.Level2Color = 5483007
+          Progress.Level2ColorTo = 11064319
+          Progress.Level3Color = clRed
+          Progress.Level3ColorTo = 13290239
+          Progress.Level1Perc = 70
+          Progress.Level2Perc = 90
+          Progress.BorderColor = clBlack
+          Progress.ShowBorder = False
+          Progress.Stacked = False
+          Style = psText
+          TimeFormat = 'hh:mm:ss'
+          Width = 20
+        end>
+      ShowSplitter = True
+      SimplePanel = False
+      Styler = AdvOfficeStatusBarOfficeStyler1
+      UseSystemFont = False
+      Version = '1.6.2.0'
+      ExplicitTop = 2
+    end
   end
   object MainMenu1: TMainMenu
     AutoHotkeys = maManual
@@ -1791,6 +1997,10 @@ object MainForm: TMainForm
     end
     object B: TMenuItem
       Caption = #38646#21806#31649#29702
+      object B4: TMenuItem
+        Caption = #21628#21483#20013#24515#19979#21333
+        OnClick = AdvSmoothButton7Click
+      end
       object B1: TMenuItem
         Caption = #27966#24037#22788#29702
         OnClick = B1Click
@@ -1949,6 +2159,7 @@ object MainForm: TMainForm
       Caption = #27668#31449#31649#29702
       object G1: TMenuItem
         Caption = #27668#31449#20449#24687
+        Visible = False
         OnClick = G1Click
       end
       object G2: TMenuItem
@@ -2239,7 +2450,7 @@ object MainForm: TMainForm
     Left = 179
     Top = 392
     Bitmap = {
-      494C010107001000B80020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010107001000BC0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -3373,5 +3584,49 @@ object MainForm: TMainForm
     OnMessage = ApplicationEvents1Message
     Left = 56
     Top = 48
+  end
+  object AdvOfficeStatusBarOfficeStyler1: TAdvOfficeStatusBarOfficeStyler
+    Style = psWindows10
+    BorderColor = 14474202
+    PanelAppearanceLight.BorderColor = clNone
+    PanelAppearanceLight.BorderColorHot = 16371364
+    PanelAppearanceLight.BorderColorDown = 14983778
+    PanelAppearanceLight.Color = clWhite
+    PanelAppearanceLight.ColorTo = clWhite
+    PanelAppearanceLight.ColorHot = 16248808
+    PanelAppearanceLight.ColorHotTo = 16248808
+    PanelAppearanceLight.ColorDown = 16244937
+    PanelAppearanceLight.ColorDownTo = 16244937
+    PanelAppearanceLight.ColorMirror = clWhite
+    PanelAppearanceLight.ColorMirrorTo = clWhite
+    PanelAppearanceLight.ColorMirrorHot = 16248808
+    PanelAppearanceLight.ColorMirrorHotTo = 16248808
+    PanelAppearanceLight.ColorMirrorDown = 16244937
+    PanelAppearanceLight.ColorMirrorDownTo = 16244937
+    PanelAppearanceLight.TextColor = clBlack
+    PanelAppearanceLight.TextColorHot = clBlack
+    PanelAppearanceLight.TextColorDown = clBlack
+    PanelAppearanceLight.TextStyle = []
+    PanelAppearanceDark.BorderColor = 14474202
+    PanelAppearanceDark.BorderColorHot = 16371364
+    PanelAppearanceDark.BorderColorDown = 14983778
+    PanelAppearanceDark.Color = 16250613
+    PanelAppearanceDark.ColorTo = 16250613
+    PanelAppearanceDark.ColorHot = 16248808
+    PanelAppearanceDark.ColorHotTo = 16248808
+    PanelAppearanceDark.ColorDown = 16244937
+    PanelAppearanceDark.ColorDownTo = 16244937
+    PanelAppearanceDark.ColorMirror = 16250613
+    PanelAppearanceDark.ColorMirrorTo = 16250613
+    PanelAppearanceDark.ColorMirrorHot = 16248808
+    PanelAppearanceDark.ColorMirrorHotTo = 16248808
+    PanelAppearanceDark.ColorMirrorDown = 16244937
+    PanelAppearanceDark.ColorMirrorDownTo = 16244937
+    PanelAppearanceDark.TextColor = clBlack
+    PanelAppearanceDark.TextColorHot = clBlack
+    PanelAppearanceDark.TextColorDown = clBlack
+    PanelAppearanceDark.TextStyle = []
+    Left = 64
+    Top = 624
   end
 end

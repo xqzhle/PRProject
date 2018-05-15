@@ -1,4 +1,4 @@
-unit ComapUnit;
+﻿unit ComapUnit;
 
 interface
 
@@ -47,7 +47,7 @@ type
   end;
 
 implementation
-uses DbUnit,MainUnit;
+uses DbUnit,MainUnit,zcomm;
 
 {$R *.dfm}
 var
@@ -59,7 +59,7 @@ var
 begin
  if TreeView1.SelectionCount = 0 then
  begin
-  ShowMessage('请选择一项');
+  mShowMessage('请选择一项');
   Exit;
  end;
    for i := 1 to 7 do
@@ -76,19 +76,19 @@ var
 begin
    if Edit1.Text='' then
    begin
-     ShowMessage('请输入公司名称');
+     mShowMessage('请输入公司名称');
      Exit;
    end;
    if isadd then
    begin
     if ComboBox1.ItemIndex=0 then
     begin
-     ShowMessage('只能一个公司');// 是的
+     mShowMessage('只能一个公司');// 是的
      exit;
     end;
     if (Edit9.Text='1') and (combobox1.ItemIndex=1) then
     begin
-     ShowMessage('分公司下不能新增分公司');
+     mShowMessage('分公司下不能新增分公司');
       exit;
     end;
     if (Edit9.Text='0') or (Edit9.Text='1') then
@@ -124,13 +124,13 @@ begin
      try
        ExecSQL;
        MainForm.TreeUtil.FillTree;
-       ShowMessage('操作成功');
+       mShowMessage('操作成功');
        isadd:=False;
         for i := 1 to 7 do
        TEdit(FindComponent('edit'+inttostr(i))).Text:='';
      except
       on E: Exception do
-      ShowMessage('操作失败'+e.Message);
+      mShowMessage('操作失败'+e.Message);
      end;
 
    end;
@@ -142,7 +142,7 @@ procedure TComapFrame.Button3Click(Sender: TObject);
 begin
  if TreeView1.SelectionCount = 0 then
  begin
-  ShowMessage('请选择一项');
+  mShowMessage('请选择一项');
   Exit;
  end;
     if (IDYES = Application.MessageBox('确定要删除吗？',pwidechar(Application.Title),MB_YesNo+MB_IconQuestion)) then
@@ -154,13 +154,13 @@ begin
       try
        ExecSQL;
        MainForm.TreeUtil.FillTree;
-       ShowMessage('操作成功');
+       mShowMessage('操作成功');
        isadd:=False;
         for i := 1 to 7 do
        TEdit(FindComponent('edit'+inttostr(i))).Text:='';
       except
         on E: Exception do
-       ShowMessage('操作失败'+e.Message);
+       mShowMessage('操作失败'+e.Message);
        end;
 
       end;

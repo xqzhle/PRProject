@@ -312,7 +312,6 @@ type
     procedure Timer8Timer(Sender: TObject);
     procedure Timer7Timer(Sender: TObject);
     procedure Timer5Timer(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure AdvGlowButton19Click(Sender: TObject);
     procedure ComboBox8Change(Sender: TObject);
     procedure AdvSmoothButton8Click(Sender: TObject);
@@ -394,7 +393,7 @@ times:Integer;
 wherestr:string;
 callNOAsi:Boolean=false; //是否接听
 callingIn:Boolean=False;//是否呼入
-
+isshow:Boolean=False;
 
 function TCallCentForm.selectdial(const dialn: string):Boolean;
 begin
@@ -2427,10 +2426,23 @@ begin
 //    end;
 end;
 
-procedure TCallCentForm.FormCreate(Sender: TObject);
+procedure TCallCentForm.FormPaint(Sender: TObject);
+begin  //让panel 居中 不管分辨率多少
+    AdvSmoothPanel2.Left:=round((Width-AdvSmoothPanel2.Width)/2);
+    AdvSmoothPanel2.top:=round((Height-AdvSmoothPanel2.Height)/2);
+    AdvSmoothButton10.Left:=AdvSmoothPanel2.Left+673;
+    AdvSmoothButton11.Left:=AdvSmoothPanel2.Left+788;
+    AdvSmoothButton10.Top:=AdvSmoothPanel2.top-50;
+    AdvSmoothButton11.Top:=AdvSmoothPanel2.top-50;
+
+end;
+
+procedure TCallCentForm.FormShow(Sender: TObject);
 begin
+   Timer2.Enabled:=True;
+   if isshow then Exit;
     // Form1.Caption:=mainname+'燃气呼叫配送系统'+' V'+FORM2.GetBuildInfo;
-     dxRibbonStatusBar1.Panels[1].Text:=usName;
+     dxRibbonStatusBar1.Panels[1].Text:=Userinfo.usname;
     // dxRibbonStatusBar1.Panels[2].Text:='本机IP：'+compute_ip+',名称：'+compute_name;
      DateTimePicker1.Date:=Now;
      DateTimePicker3.Date:=DateTimePicker1.Date;
@@ -2443,7 +2455,7 @@ begin
      addbott:=False;
      dials:=False;
      times:=5;
-      
+
        if ext<>'' then
        begin
          Data1.ClientDataSet1.Close;
@@ -2589,13 +2601,13 @@ begin
        data1.sqlcmd1.Close;
        ComboBox3.ItemIndex:=-1;
     sfbool := False;
-    ext:='801';
+  //  ext:='801';
   try
     if (ext<>'') and (ext<>'0') then
     begin
       CTISrv2.loginType:=6;
-      CTISrv2.remoteHostIP:='192.168.1.235';
-      CTISrv2.UDPRemoteHost:='192.168.1.235';
+      CTISrv2.remoteHostIP:=Userinfo.pbxip;
+      CTISrv2.UDPRemoteHost:=Userinfo.pbxip;
       CTISrv2.login(ext,'');
     end;
     Edit13.Clear;
@@ -2610,23 +2622,7 @@ begin
   except
 
   end;
-
-end;
-
-procedure TCallCentForm.FormPaint(Sender: TObject);
-begin  //让panel 居中 不管分辨率多少
-    AdvSmoothPanel2.Left:=round((Width-AdvSmoothPanel2.Width)/2);
-    AdvSmoothPanel2.top:=round((Height-AdvSmoothPanel2.Height)/2);
-    AdvSmoothButton10.Left:=AdvSmoothPanel2.Left+673;
-    AdvSmoothButton11.Left:=AdvSmoothPanel2.Left+788;
-    AdvSmoothButton10.Top:=AdvSmoothPanel2.top-50;
-    AdvSmoothButton11.Top:=AdvSmoothPanel2.top-50;
-
-end;
-
-procedure TCallCentForm.FormShow(Sender: TObject);
-begin
-   Timer2.Enabled:=True;
+  isshow:=True;
 end;
 
 procedure TCallCentForm.initgrid;

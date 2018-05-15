@@ -56,6 +56,8 @@ type
     Label8: TLabel;
     Label10: TLabel;
     Button8: TButton;
+    Label18: TLabel;
+    ComboBox3: TComboBox;
     procedure UniFrameCreate(Sender: TObject);
     procedure UniFrameDestroy(Sender: TObject);
     procedure Button4Click(Sender: TObject);
@@ -66,6 +68,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
     procedure Button8Click(Sender: TObject);
+    procedure ComboBox2Change(Sender: TObject);
   private
     { Private declarations }
     procedure initpanel;
@@ -211,12 +214,12 @@ begin
      Exit;
    end;
    if isadd then
-    sqlstr:='INSERT INTO tuser (name,aname,crename,credate,Remark,comname,apassword,ext,tel,shopid.type) VALUES('''+edit2.Text+''','''+Edit3.Text+''', '+
+    sqlstr:='INSERT INTO tuser (name,aname,crename,credate,Remark,comname,apassword,ext,tel,shopid.type,czid) VALUES('''+edit2.Text+''','''+Edit3.Text+''', '+
       ''''+loginname+''','''+gettime+''','''+Edit9.Text+''','''+ComboBox1.Text+''','''+Edit4.Text+''''+
-      ','''+edit6.Text+''','''+edit7.Text+''','''+edit10.Text+''',''' + inttostr(combobox2.ItemIndex + 1) + ''')'
+      ','''+edit6.Text+''','''+edit7.Text+''','''+edit10.Text+''',''' + inttostr(combobox2.ItemIndex + 1) + ''','''+combobox3.Text+''')'
       else
        sqlstr:='update tuser set aname='''+edit3.Text+''',apassword='''+edit4.Text+''',comname='''+ComboBox1.Text+''',ext='''+edit6.Text+''',crename='''+loginname+''',credate='''+gettime+''','+
-      'Remark='''+Edit9.Text+''',tel='''+edit7.Text+''',shopid='''+edit10.Text+''',name='''+edit2.Text+''',type=''' + inttostr(combobox2.ItemIndex + 1) + ''' where id='''+edit8.Text+'''';
+      'Remark='''+Edit9.Text+''',tel='''+edit7.Text+''',shopid='''+edit10.Text+''',name='''+edit2.Text+''',type=''' + inttostr(combobox2.ItemIndex + 1) + ''',czid='''+combobox3.Text+''' where id='''+edit8.Text+'''';
       with Data1 do
       begin
         sqlcmd1.close;
@@ -287,6 +290,31 @@ begin
    end;
 end;
 
+procedure TUserInfoFrame.ComboBox2Change(Sender: TObject);
+begin
+    if ComboBox2.ItemIndex+1>=7 then
+     begin
+       if ComboBox2.ItemIndex+1=7 then
+       begin
+        label18.Visible:=True;
+        ComboBox3.Visible:=True;
+        Label17.Caption:='扫描枪';
+       end
+       else
+       begin
+         Label17.Caption:='车载牌号';
+         label18.Visible:=false;
+         ComboBox3.Visible:=False;
+       end;
+     end
+     else
+     begin
+       Label17.Caption:='使用分机';
+       label18.Visible:=false;
+       ComboBox3.Visible:=False;
+     end;
+end;
+
 procedure TUserInfoFrame.DBAdvGrid2DblClick(Sender: TObject);
 begin
    if UniQuery1.IsEmpty then Exit;
@@ -305,6 +333,29 @@ begin
      Edit10.Text:=FieldByName('shopid').AsString;
      ComboBox1.Text:=FieldByName('comname').AsString;
      ComboBox2.ItemIndex:=FieldByName('type').AsInteger-1;
+     ComboBox3.Text:=FieldByName('czid').AsString;
+     if FieldByName('type').AsInteger>=7 then
+     begin
+       if FieldByName('type').AsInteger=7 then
+       begin
+        label18.Visible:=True;
+        ComboBox3.Visible:=True;
+        Label17.Caption:='扫描枪';
+
+       end
+       else
+       begin
+         Label17.Caption:='车载牌号';
+         label18.Visible:=false;
+         ComboBox3.Visible:=False;
+       end;
+     end
+     else
+     begin
+       Label17.Caption:='使用分机';
+       label18.Visible:=false;
+       ComboBox3.Visible:=False;
+     end;
    end;
    initpanel;
 end;
@@ -326,12 +377,15 @@ var
 begin
     Panel2.Visible:=False;
     UserInfoFrame:=Self;
-    sqlstr:='select *,case when type=''1'' then ''系统管理员'' when type=''3'' then ''接线员'' when type=''4'' then ''财务'' when type=''5'' then ''送气工'' when type=''6'' then ''安检员'' else ''门店员'' end as stype from tuser order by id';
+    sqlstr:='select *,case when type=''1'' then ''系统管理员'' when type=''3'' then ''接线员'' when type=''4'' then ''财务'' when type=''5'' then ''送气工'' when type=''6'' then ''安检员'' when type=''2'' then ''门店员'''+
+    ' when type=''7'' then ''气站用户'' else  ''车载用户''  end as stype from tuser order by id';
     UniQuery1.Close;
     UniQuery1.SQL.Text:= sqlstr;
     UniQuery1.Open;
     ComboBox4.Text:='';
     ComboBox4.Items.Clear;
+    ComboBox3.Items.Clear;
+    ComboBox3.Text:='';
     with Data1.sqlcmd1 do
     begin
       Close;
@@ -341,6 +395,15 @@ begin
       while not Eof do
       begin
         ComboBox4.Items.Add(FieldByName('comname').AsString);
+        Next;
+      end;
+      Close;
+      SQL.Text:='select tcid from ttcinfo';
+      Open;
+      if not IsEmpty then
+      while not Eof do
+      begin
+        ComboBox3.Items.Add(FieldByName('tcid').AsString);
         Next;
       end;
       Close;

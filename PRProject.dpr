@@ -2,6 +2,8 @@ program PRProject;
 
 uses
   Forms,
+  Windows,
+  Controls,
   MainUnit in 'MainUnit.pas' {MainForm},
   ComapUnit in 'ComapUnit.pas' {ComapFrame: TFrame},
   DbUnit in 'DbUnit.pas' {Data1: TDataModule},
@@ -89,7 +91,8 @@ uses
   SqgInfo in 'SqgInfo.pas' {SqgInfoForm},
   BaseInfo in 'BaseInfo.pas' {BaseInfoForm},
   CustInfo in 'CustInfo.pas' {CustInfoForm},
-  Gpinfo in 'Gpinfo.pas' {GpinfoForm};
+  Gpinfo in 'Gpinfo.pas' {GpinfoForm},
+  loginUnit in 'loginUnit.pas' {LoginForm};
 
 {$R *.res}
 
@@ -97,6 +100,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.Title:='普燃配送管理平台';
+
   Application.CreateForm(TData1, Data1);
   Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TKhEditForm, KhEditForm);
@@ -161,5 +165,8 @@ begin
   Application.CreateForm(TBaseInfoForm, BaseInfoForm);
   Application.CreateForm(TCustInfoForm, CustInfoForm);
   Application.CreateForm(TGpinfoForm, GpinfoForm);
+ // Application.CreateForm(TLoginForm, LoginForm);
+ if LoginForm.Login then
   Application.Run;
+//  end;
 end.
